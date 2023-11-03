@@ -2,7 +2,7 @@
 
 ## Wichtige Links
 
-- [Miro]([https://miro.com/welcome/RXpjd1ZqOHR1ZlZZRWxNY3BxcE9PZ0RCZTVXeGo1QUg4cG9JQVlVWHE5QXBIRFgwd21ieEZ3c1RTQWViZTdFOHwzNDU4NzY0NTY4ODQ3MjQ5Nzc1fDQ=?share_link_id=496418186358](https://miro.com/welcome/RXpjd1ZqOHR1ZlZZRWxNY3BxcE9PZ0RCZTVXeGo1QUg4cG9JQVlVWHE5QXBIRFgwd21ieEZ3c1RTQWViZTdFOHwzNDU4NzY0NTY4ODQ3MjQ5Nzc1fDQ=?share_link_id=496418186358 "https://miro.com/welcome/RXpjd1ZqOHR1ZlZZRWxNY3BxcE9PZ0RCZTVXeGo1QUg4cG9JQVlVWHE5QXBIRFgwd21ieEZ3c1RTQWViZTdFOHwzNDU4NzY0NTY4ODQ3MjQ5Nzc1fDQ=?share_link_id=496418186358"))
+- [Miro](https://miro.com/welcome/RXpjd1ZqOHR1ZlZZRWxNY3BxcE9PZ0RCZTVXeGo1QUg4cG9JQVlVWHE5QXBIRFgwd21ieEZ3c1RTQWViZTdFOHwzNDU4NzY0NTY4ODQ3MjQ5Nzc1fDQ=?share_link_id=496418186358)
 - [Jira Tutorial](https://www.atlassian.com/agile/tutorials/how-to-do-kanban-with-jira-software)
 
 ---
