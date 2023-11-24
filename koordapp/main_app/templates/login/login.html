@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method='post'>{% csrf_token %}
+    <div class = "form-container">
+        <label for="id_password">Bitte geben Sie ihr <br> Passwort ein:</label>
+        <input type="password" name="password" id="id_password" required>
+        <br>
+        <input type='submit' class="login-button" id="id_button_login" value="Anmelden"/>
+    </div>
+</form>
+
+{% endblock %}
