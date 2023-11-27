@@ -9,7 +9,7 @@ from django.shortcuts import redirect
 
 
 class LoginInterfaceView(LoginView):
-    template_name = 'login/login.html'
+    template_name = 'user_verification/user_login.html'
 
 class HomeView(TemplateView):
     template_name = 'home/home.html'
