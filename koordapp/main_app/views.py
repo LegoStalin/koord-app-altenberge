@@ -12,7 +12,7 @@ class LoginInterfaceView(LoginView):
     template_name = 'login/login.html'
 
 class HomeView(TemplateView):
-    template_name = 'home/welcome.html' 
+    template_name = 'home/home.html'
 
 class CreateActivityView(TemplateView):
-    template_name = 'room_planner/create_activity.html'
+    template_name = 'create_activity/create_activity.html'
