@@ -1,0 +1,38 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #F6F4F3;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+/*
+.selection_board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+/*
+.selection_row{
+    background-color: #6AA73C ;
+}
+*/
+button {
+    background-color: #AEAEB3;
+    border: none;
+    color: white;
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+
+
+
+}
+
+
+button:hover{
+    text-decoration:  underline;
+    border: #1B2021;
+}

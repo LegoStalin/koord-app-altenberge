@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+
+<h1 class="default_heading"> Masteransicht </h1>
+<h2 class="default_subheading"> Wählen Sie eine der folgenden Aktionen aus: </h2>
+
+<div class="selection_board">
+    <button onclick="window.location.href = 'http://127.0.0.1:8000/dashboard/';"> Dashboard </button>
+    <button onclick="window.location.href = 'http://127.0.0.1:8000/ogs_group/';"> OGS-Gruppe </button>
+    <button onclick="window.location.href = 'http://127.0.0.1:8000/search_pupil/';"> Suche Kind </button>
+    <button onclick="window.location.href = 'http://127.0.0.1:8000/choose_room/';"> Raumübersicht </button>
+    <button onclick="window.location.href = 'http://127.0.0.1:8000/csv_import/';"> CSV-Import </button>
+</div>
+
+</body>
+</html>
+{% endblock %}

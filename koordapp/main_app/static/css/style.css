@@ -2,9 +2,33 @@ ul.errorlist {
     display: none;
 }
 * h1{
-    font: bold 40px Arial, sans-serif;
-    text-align: center;
+    text-align: left;
+    font-weight: bold;
 }
+
+* h2{
+    font-weight: normal;
+}
+
+.default_heading{
+    color: #1B2021;
+    font-size: 3em;
+    margin-bottom: 1px;
+    margin-top: 10%;
+
+}
+
+.default_subheading{
+    color: #1B2021;
+    margin-top: 10px;
+    padding-top: 0px;
+}
+
+
+
+
+
+
 .form-container {
     display: flex;
     flex-direction: column;
