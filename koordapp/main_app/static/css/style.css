@@ -1,7 +1,8 @@
 .page_title {
-  font-size: 6vw;
+  font-size: 4vw;
   font-weight: bold;
   margin: auto;
   margin-bottom: 2%;
-  margin-top: 5vh;
+  margin-top: 7vh;
+  height: 10vh;
 }
