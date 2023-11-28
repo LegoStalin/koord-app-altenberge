@@ -62,7 +62,7 @@
     align-items: center;
     height: 100vh;
     margin: auto;
-    background: linear-gradient(to bottom, #f6f4f3, #49a078);
+    background: linear-gradient(to bottom, #f6f4f3, #9b9b9b);
   }
   /*css for the reset pw page*/
   .page_title#reset_pw_mail_title {
