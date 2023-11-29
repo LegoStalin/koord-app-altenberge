@@ -1,3 +1,8 @@
+:root{
+    --font_color: #1B2021;
+}
+
+
 ul.errorlist {
     display: none;
 }
@@ -11,7 +16,7 @@ ul.errorlist {
 }
 
 .default_heading{
-    color: #1B2021;
+    color: var(--font_color);
     font-size: 3em;
     margin-bottom: 1px;
     margin-top: 10%;
@@ -19,7 +24,7 @@ ul.errorlist {
 }
 
 .default_subheading{
-    color: #1B2021;
+    color: var(--font_color);
     margin-top: 10px;
     padding-top: 0px;
 }

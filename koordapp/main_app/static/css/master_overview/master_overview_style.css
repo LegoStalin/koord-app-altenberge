@@ -1,6 +1,15 @@
+:root{
+    --background_color: #F6F4F3;
+    --button_color: #AEAEB3;
+    --button_border: #1B2021;
+}
+
+
+
+
 body {
     font-family: 'Inter', sans-serif;
-    background: #F6F4F3;
+    background: var(--background_color);
     padding-left: 10%;
     padding-right: 10%;
 
@@ -18,7 +27,7 @@ body {
 }
 */
 button {
-    background-color: #AEAEB3;
+    background-color: var(--button_color);
     border: none;
     color: white;
     padding: 20px 34px;
@@ -27,12 +36,10 @@ button {
     font-size: 25px;
     font-weight: bold;
 
-
-
 }
 
 
 button:hover{
     text-decoration:  underline;
-    border: #1B2021;
+    border: var(--button_border);
 }
