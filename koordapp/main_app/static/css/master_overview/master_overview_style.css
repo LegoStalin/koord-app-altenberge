@@ -1,45 +1,115 @@
 :root{
     --background_color: #F6F4F3;
+    --background_color_selection_board: #B4B0B0FF;
     --button_color: #AEAEB3;
     --button_border: #1B2021;
+    --select_color_background: #1daf6b;
+    --select_color_shadow: #1ea968;
+    --shadow_color: #00000033;
 }
-
-
-
 
 body {
     font-family: 'Inter', sans-serif;
     background: var(--background_color);
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.selection_board{
+    border: #1B2021;
+    background-color: var(--background_color_selection_board);
+    border-style: solid;
+    padding: 2em;
+    box-shadow:
+            inset #171616 0 0 0 5px,
+            inset #282a2a 0 0 0 1px,
+            inset #39383b 0 0 0 10px,
+            inset #3f4242 0 0 0 11px,
+            inset #5e5e60 0 0 0 16px
 
 }
-/*
-.selection_board{
+
+
+
+@media only screen and (min-width: 1250px), (min-height: 700px) {
+
+
+}
+
+
+.button_font{
+    font-size: 2em;
+}
+
+.button_container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    margin: 0em 0em 2% 0em;
 }
-*/
-/*
-.selection_row{
-    background-color: #6AA73C ;
-}
-*/
+
+/* Basic Selection-button Style*/
 button {
+    /* ALTERNATIVE
     background-color: var(--button_color);
+    background-image: none;
     border: none;
-    color: white;
-    padding: 20px 34px;
+    box-shadow: 0px 8px 15px var(--shadow_color);
+    color: var(--button_border);
     text-align: center;
     text-decoration: none;
-    font-size: 25px;
     font-weight: bold;
+    width: 49%;
+    height: 250px;
+    text-shadow: 1px 1px 1px #d0cdcd;
+    border-radius: 45px 10%;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    font-size: large;
+    */
+
+    background-color: var(--button_color);
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px;
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: var(--button_border);
+    cursor: pointer;
+    font-weight: bold;
+    width: 49%;
+    height: 250px;
+    outline: none;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 
 }
 
-
+/* Button Hover Style Transformation*/
 button:hover{
-    text-decoration:  underline;
-    border: var(--button_border);
+    /* ALTERNATIVE:
+    box-shadow: 0px 15px 20px var(--select_color_shadow);
+    color: var(--background_color);
+    background-color: var(--select_color_background);
+    transform: translateY(-7px);
+     */
+
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 4px, 0);
+    color: var(--background_color);
+
+}
+button:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }

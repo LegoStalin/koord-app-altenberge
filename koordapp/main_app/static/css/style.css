@@ -10,7 +10,6 @@ ul.errorlist {
     text-align: left;
     font-weight: bold;
 }
-
 * h2{
     font-weight: normal;
 }
@@ -22,15 +21,11 @@ ul.errorlist {
     margin-top: 10%;
 
 }
-
 .default_subheading{
     color: var(--font_color);
     margin-top: 10px;
     padding-top: 0px;
 }
-
-
-
 
 
 
