@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3be44b6-f12d-4d51-86c5-30d45c42ca92" name="Changes" comment="created master overviews help button with pop up animation for PC" />
+    <list default="true" id="b3be44b6-f12d-4d51-86c5-30d45c42ca92" name="Changes" comment="created master overviews help button with pop up animation for PC">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +50,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;nfc__demo&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -107,6 +110,8 @@
       <updated>1701256212339</updated>
       <workItem from="1701256216885" duration="16155000" />
       <workItem from="1701275581834" duration="4886000" />
+      <workItem from="1701361682914" duration="29000" />
+      <workItem from="1701361724028" duration="229000" />
     </task>
     <task id="LOCAL-00002" summary="recreated buttons and selection board structure and included button animations">
       <option name="closed" value="true" />
@@ -135,7 +140,8 @@
     <MESSAGE value="Adjusted root variables" />
     <MESSAGE value="recreated buttons and selection board structure and included button animations" />
     <MESSAGE value="adj." />
-    <option name="LAST_COMMIT_MESSAGE" value="adj." />
+    <MESSAGE value="adj. workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="adj. workspace" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
