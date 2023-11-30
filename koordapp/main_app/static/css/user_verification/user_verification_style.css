@@ -28,7 +28,6 @@
     margin: auto;
     background-color: var(--frame_background_color);
   }
-
   .btn_login {
     width: 300px;
     margin-top: 20px;
@@ -37,18 +36,15 @@
     color: #1b2021;
     margin: 20px auto;
   }
-
   .form_fields {
     margin: 5px;
     padding: 1px 2px;
   }
-
-  form input[type="text"],
-  form input[type="password"] {
+  .form_fields input[type="text"],
+  .form_fields input[type="password"] {
     margin: 0 10px;
     width: 700px;
   }
-
   form p label {
     display: inline-block;
     width: 200px;
@@ -68,13 +64,19 @@
   .page_title#reset_pw_mail_title {
     height: 160px;
   }
-  .form_fields_pw_repeat {
+
+  .input_group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 24px 10px 24px;
   }
-  /*help icon css*/
-  h4::before {
-    content: url("..\img\help_icon.jpg");
-    padding-right: 10px;
+
+  .input_group label {
+    margin-right: 10px;
+  }
+  .input_group input {
+    width: 400px;
+    margin-left: auto;
   }
 }
