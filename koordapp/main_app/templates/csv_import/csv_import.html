@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="block_container">
+    <h1> Bitte laden Sie eine csv-Datei hoch:</h1>
+    <form action="/submit" method="post" class="form_container">
+        <div id="database_flags">
+            <label><input type="checkbox" name="checkbox_database" value="option_overwrite"> overwrite data in database?</label><br>
+            <label><input type="checkbox" name="checkbox_database" value="option_extend"> extend database?</label><br>
+        </div>
+        <label><input type="checkbox" name="checkbox_sheet" value="option_user"> User-sheet?</label><br>
+        <label><input type="checkbox" name="checkbox_sheet" value="option_room"> Room-sheet?</label><br>
+        <label><input type="checkbox" name="checkbox_sheet" value="option_ag"> AG-sheet?</label><br>
+        <div class="dnd_file"> Datei auswählen</div>
+            <input type="file" id="file_input" accept=".xlsx" style="display: none;">
+        <input type="submit" value="Hochladen">
+        
+      </form>
+</div>
+
+{% endblock %}
