@@ -1,5 +1,12 @@
 :root{
     --font_color: #1B2021;
+    --background_color: #F6F4F3;
+    --background_color_selection_board: #B4B0B0FF;
+    --button_color: #AEAEB3;
+    --button_border: #1B2021;
+    --select_color_background: #1daf6b;
+    --select_color_shadow: #1ea968;
+    --shadow_color: #00000033;
 }
 
 
@@ -19,7 +26,7 @@ ul.errorlist {
     color: var(--font_color);
     font-size: 3em;
     margin-bottom: 1px;
-    margin-top: 10%;
+    margin-top: 8%;
 
 }
 .default_subheading{
