@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3be44b6-f12d-4d51-86c5-30d45c42ca92" name="Changes" comment="created master overviews help button with pop up animation for PC">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b3be44b6-f12d-4d51-86c5-30d45c42ca92" name="Changes" comment="created master overviews help button with pop up animation for PC" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +31,9 @@
         <option name="url" value="https://github.com/LegoStalin/koord-app-altenberge" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -141,7 +142,8 @@
     <MESSAGE value="recreated buttons and selection board structure and included button animations" />
     <MESSAGE value="adj." />
     <MESSAGE value="adj. workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="adj. workspace" />
+    <MESSAGE value="Fixed Help Button Hover Field Problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Help Button Hover Field Problems" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
