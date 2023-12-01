@@ -1,4 +1,4 @@
-ul.errorlist {
+/*ul.errorlist {
     display: none;
 }
 * h1{
@@ -32,7 +32,7 @@ ul.errorlist {
     background-color: #6AA73C;
     cursor: pointer;
 }
-/*page Welcome - NFC Checkin*/
+/*page Welcome - NFC Checkin*/ /*
 @media only screen and (min-width: 1401px) {
     .nfc-check-in {
         display: flex;
@@ -92,7 +92,7 @@ ul.errorlist {
         text-align: center;
     }
 }
-/* create activity form*/
+/* create activity form*/ /*
 .create_activity_form {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -122,6 +122,7 @@ ul.errorlist {
     background-color: #ffffff;
 }
 /*navbar stuff, everything for navigation including the help-icon */
+/*
 @media only screen and (min-width: 1401px) {
     .navbar-standard {
         position: fixed;
@@ -134,11 +135,11 @@ ul.errorlist {
         background-color: #aaa7a7;
         display: flex;
         justify-content: center;
-        /*padding: 10px; */
-        border-top-left-radius: 20px; /* Rounded top left corner */
-        border-top-right-radius: 20px; /* Rounded top right corner */
-        border-bottom-left-radius: 0; /* No rounding for bottom left corner */
-        border-bottom-right-radius: 0; /* No rounding for bottom right corner */
+        /*padding: 10px; */ /*
+        border-top-left-radius: 20px; /* Rounded top left corner */ /*
+        border-top-right-radius: 20px; /* Rounded top right corner */ /*
+        border-bottom-left-radius: 0; /* No rounding for bottom left corner */ /*
+        border-bottom-right-radius: 0; /* No rounding for bottom right corner */ /*
     }
     .navbar-icon-container {
         display: flex;
@@ -152,28 +153,28 @@ ul.errorlist {
         border-radius: 10px;
     }
     .navbar-icon-container img {
-        width: 70px; /* Adjust the width as desired */
+        width: 70px; /* Adjust the width as desired */ /*
         height: auto;
-        margin-bottom: 5px;
+        margin-bottom: 5px; 
         color: red;
     }
     .navbar-text {
-        font-size: 12px; /* Adjust the font size as desired */
+        font-size: 12px; /* Adjust the font size as desired */ /*
     }
     
     .navbar-standard:hover #help_icon {
-        transform: scale(1.2); /* Scale on hover */
+        transform: scale(1.2); /* Scale on hover */ /*
     }
     #help_icon {
         height: auto;
         background-color: black;
         cursor: pointer;
         position: fixed;
-        bottom: 10px; /* Adjust the distance from the top as needed */
-        right: 10px; /* Adjust the distance from the right as needed */
+        bottom: 10px; /* Adjust the distance from the top as needed */ /*
+        right: 10px; /* Adjust the distance from the right as needed */ /*
         margin: 14px;
-        transform: scale(1); /* Initial scale */
-        transition: transform 0.3s ease; /* Add transition for smooth scaling */
+        transform: scale(1); /* Initial scale */ /*
+        transition: transform 0.3s ease; /* Add transition for smooth scaling */ /*
         width: 70px;
     }
 }
@@ -189,11 +190,11 @@ ul.errorlist {
         background-color: #aaa7a7;
         display: flex;
         justify-content: center;
-        /*padding: 10px; */
-        border-top-left-radius: 20px; /* Rounded top left corner */
-        border-top-right-radius: 20px; /* Rounded top right corner */
-        border-bottom-left-radius: 0; /* No rounding for bottom left corner */
-        border-bottom-right-radius: 0; /* No rounding for bottom right corner */
+        /*padding: 10px; */ /*
+border-top-left-radius: 20px; /* Rounded top left corner */ /*
+        border-top-right-radius: 20px; /* Rounded top right corner */ /*
+        border-bottom-left-radius: 0; /* No rounding for bottom left corner */ /*
+        border-bottom-right-radius: 0; /* No rounding for bottom right corner */ /*
     }
     .navbar-icon-container {
         display: flex;
@@ -207,28 +208,30 @@ ul.errorlist {
         border-radius: 10px;
     }
     .navbar-icon-container img {
-        width: 5vw; /* Adjust the width as desired */
+        width: 5vw; /* Adjust the width as desired */ /*
         height: auto;
         margin-bottom: 5px;
         color: red;
     }
     .navbar-text {
-        font-size: 12px; /* Adjust the font size as desired */
+        font-size: 12px; /* Adjust the font size as desired */ /*
     }
     
     .navbar-standard:hover #help_icon {
-        transform: scale(1.2); /* Scale on hover */
+        transform: scale(1.2); /* Scale on hover */ /*
     }
     #help_icon {
         height: auto;
         background-color: black;
         cursor: pointer;
         position: fixed;
-        bottom: 10px; /* Adjust the distance from the top as needed */
-        right: 10px; /* Adjust the distance from the right as needed */
+        bottom: 10px; /* Adjust the distance from the top as needed */ /*
+        right: 10px; /* Adjust the distance from the right as needed */ /*
         margin: 1vw 1vw;
-        transform: scale(1); /* Initial scale */
-        transition: transform 0.3s ease; /* Add transition for smooth scaling */
+        transform: scale(1); /* Initial scale */ /*
+        transition: transform 0.3s ease; /* Add transition for smooth scaling */ /*
         width: 5vw;
     }
 }
+
+*/

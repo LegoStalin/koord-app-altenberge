@@ -1,11 +1,158 @@
-.dnd_file {
-  width: 200px;
-  height: 100px;
-  border: 2px dashed #bbb;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+:root {
+  --primary: hsl(260, 100%, 80%);
+}
+.block_container {
+  display: grid;
+  height: 98dvh;
+  grid-template-rows: 0.3fr 2fr 0.3fr;
+  grid-template-areas: "header" "content" "footer";
+  gap: 0.5%;
+}
+.header_container {
+  grid-area: header;
+  border: 10px solid #0000ff;
   text-align: center;
+  line-height: 5%;
+}
+.header_container h1 {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  letter-spacing: 3px;
+  font-size: 200%;
+  line-height: 90%;
+}
+.header_container h2 {
+  font-size: 120%;
+}
+.form_container h4 {
+  letter-spacing: 2px;
+}
+.form_container {
+  border: 10px solid #0000ff;
+  grid-area: content;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 1.6fr 0.4fr;
+  grid-template-areas: "database_flags" "sheet_flags" "file_upload" "upload_button";
+  text-align: center;
+}
+#database_flags {
+  grid-area: database_flags;
+  border: 5px solid green;
+  align-items: center;
+}
+#sheet_flags {
+  grid-area: sheet_flags;
+  border: 5px solid green;
+}
+.checkbox_container {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  border: 5px solid orange;
+  margin: auto;
+}
+.checkbox_container input {
+  margin-right: 5%;
+}
+.checkbox_container input[type="checkbox"] {
+  margin: 0 10px;
+}
+.checkbox_container label {
+  text-align: right;
+}
+.checkbox_container > * {
+  flex-basis: 50%;
+}
+
+.dnd_file {
+  grid-area: file_upload;
+  border: 5px solid green;
+}
+
+.dnd_file {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  border: 2px dashed #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  background-color: #f3f3f3;
   cursor: pointer;
+}
+
+.dnd_file:before {
+  content: "Drag and drop .xlsx files here or click to upload";
+  text-align: center;
+}
+.upload_button {
+  grid-area: upload_button;
+  border: 5px solid yellow;
+  margin: auto;
+  width: 60%;
+  height: 50%;
+}
+.upload_button input {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+/*navbar css code*/
+.navbar_menu {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #a9a9a9;
+  padding: 10px 0;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.nav_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #000000; /* black */
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 12.5%;
+  margin: auto;
+}
+
+.nav_item:last-child {
+  border-right: none;
+}
+
+.nav_item:hover {
+  color: #ffffff; /* white */
+  transform: scale(1.1);
+  background-color: #e9ecef;
+}
+.nav_item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  width: 100%;
+  font-size: max(10px, 10%);
+  height: 100%;
+}
+#nav_home,
+#nav_main,
+#nav_notifications,
+#nav_help {
+  height: 90%;
 }

@@ -3,20 +3,54 @@
 
 {% block content %}
 <div class="block_container">
-    <h1> Bitte laden Sie eine csv-Datei hoch:</h1>
+    <div class="header_container">
+        <h1>Datenbank aktualisieren</h1>
+        <h2>Bitte laden Sie eine csv-Datei hoch:</h2>
+    </div>
     <form action="/submit" method="post" class="form_container">
-        <div id="database_flags">
-            <label><input type="checkbox" name="checkbox_database" value="option_overwrite"> overwrite data in database?</label><br>
-            <label><input type="checkbox" name="checkbox_database" value="option_extend"> extend database?</label><br>
+        <div id="database_flags" class="content_container">
+            <h3>Sollen die Daten in der Datenbank überschrieben oder nur ergänzt werden?</h3>
+            <h4>« Bitte nur eine Möglichkeit ankreuzen »</h4>
+            <div class="checkbox_container">
+                <label><input type="checkbox" name="checkbox_database" value="option_overwrite"> überschreiben</label><br>
+                <label><input type="checkbox" name="checkbox_database" value="option_extend"> ergänzen</label><br>
+            </div>    
         </div>
-        <label><input type="checkbox" name="checkbox_sheet" value="option_user"> User-sheet?</label><br>
-        <label><input type="checkbox" name="checkbox_sheet" value="option_room"> Room-sheet?</label><br>
-        <label><input type="checkbox" name="checkbox_sheet" value="option_ag"> AG-sheet?</label><br>
-        <div class="dnd_file"> Datei auswählen</div>
-            <input type="file" id="file_input" accept=".xlsx" style="display: none;">
-        <input type="submit" value="Hochladen">
+        <div id="sheet_flags" class="content_container">
+            <h3>Welche sheets sind in der ".xlsx"-Datei enthalten?</h3>
+            <h4>« Eine Mehrfachauswahl ist hier möglich »</h4>
+            <div class="checkbox_container">
+            <label><input type="checkbox" name="checkbox_sheet" value="option_user">Rollen</label><br>
+            <label><input type="checkbox" name="checkbox_sheet" value="option_user">Schüler</label><br>
+            <label><input type="checkbox" name="checkbox_sheet" value="option_room">Räume</label><br>
+            <label><input type="checkbox" name="checkbox_sheet" value="option_ag">AGs</label><br>
+            </div>  
+        </div>    
+        <div class="dnd_file"><input type="file" id="file_input" accept=".xlsx" style="display: none;"></div>
+        <div class= "upload_button"><input type="submit" value="Hochladen"></div>
         
       </form>
+      <div class="navbar_container">
+        <nav class="navbar_menu" id="nav">
+            <span class="nav_item" id="nav_home">
+                <span class="icon"></span>
+                <a href="#">Home</a>
+            </span>
+            <span class="nav_item" id="nav_main">
+                <span class="icon">   
+                </span>
+                <a href="#">Hauptansicht</a>
+            </span>
+            <span class="nav_item" id="nav_notifications">
+                <span class="icon"></span>
+                <a href="#">Benachrichtigungen</a>
+            </span>
+            <span class="nav_item" id="nav_help">
+                <span class="icon"></span>
+                <a href="#">Hilfe</a>
+            </span>
+        </nav>
+      </div>
 </div>
 
 {% endblock %}
