@@ -1,84 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+        <html lang="en">
 
-<style>
-    body {
-        font-family: 'Inter', sans-serif;
-        background: var(--background_color);
-        padding-left: 10%;
-        padding-right: 10%;
-    }
+        <style>
 
-    * h1{
-        text-align: center;
-        font-weight: bold;
-    }
+            body {
+            font-family: 'Inter', sans-serif;
+            background: #F6F4F3;
+            padding-left: 10%;
+            padding-right: 10%;
+            }
 
-    * h2{
-        font-weight: normal;
-    }
+            * h1{
+                text-align: center;
+                font-weight: bold;
+            }
 
-    .default_heading{
-        color: var(--font_color);
-        font-size: 3em;
-        margin-bottom: 1px;
-        margin-top: 8%;
-    }
-    .default_subheading{
-        color: var(--font_color);
-        margin-top: 10px;
-        padding-top: 0px;
-    }
+            * h2{
+                font-weight: normal;
+            }
 
-    .button_container{
-        display: flex;
-        justify-content: space-between;
-        margin: 0em 0em 2% 0em;
-    }
+            .default_heading{
+                color: #1B2021;
+                font-size: 100px;
+                margin-bottom: 1px;
+                margin-top: 8%;
+            }
+            .default_subheading{
+                color: #1B2021;
+                font-size: 50px;
+                text-align: center;
+                margin-top: 20px;
+                padding-top: 0px;
+            }
 
-    /* Basic Selection-button Style*/
-    button {
-        background-color: var(--button_color);
-        background-image: none;
-        background-position: 0 90%;
-        background-repeat: repeat no-repeat;
-        background-size: 4px 3px;
-        border-radius: 15px 225px 255px 15px;
-        border-style: solid;
-        border-width: 3px;
-        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-        box-sizing: border-box;
-        color: var(--button_border);
-        cursor: pointer;
-        font-weight: bold;
-        width: 49%;
-        height: 250px;
-        outline: none;
-        text-decoration: none;
-        transition: all 235ms ease-in-out;
-        border-bottom-left-radius: 15px 255px;
-        border-bottom-right-radius: 225px 15px;
-        border-top-left-radius: 255px 15px;
-        border-top-right-radius: 15px 225px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
+            /* Basic Selection-button Style*/
+            button {
+                background-color: #AEAEB3;
+                background-image: none;
+                background-position: 0 90%;
+                background-repeat: repeat no-repeat;
+                background-size: 4px 3px;
+                border-radius: 15px 225px 255px 15px;
+                border-style: solid;
+                border-width: 10px;
+                box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+                box-sizing: border-box;
+                color:#1B2021;
+                cursor: pointer;
+                font-weight: bold;
+                width: 100%;
+                height: 400px;
+                outline: none;
+                text-decoration: none;
+                transition: all 235ms ease-in-out;
+                border-bottom-left-radius: 15px 255px;
+                border-bottom-right-radius: 225px 15px;
+                border-top-left-radius: 255px 15px;
+                border-top-right-radius: 15px 225px;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
 
-    }
-    .button_font{
-        font-size: 2em;
-    }
+            }
+            #NFC-btn{
+                font-size: 70px;
+                color: #F6F4F3;
+            }
 
-    /* Button Hover Style Transformation*/
-    button:hover{
-        box-shadow: rgba(0, .3, .3, .3) 2px 8px 8px -5px;
-        transform: translate3d(0, 4px, 0);
-        color: var(--background_color);
+            /* Button Hover Style Transformation*/
+            button:hover{
+                box-shadow: rgba(0, .3, .3, .3) 2px 8px 8px -5px;
+                transform: translate3d(0, 4px, 0);
+                color: #F6F4F3;
 
-    }
-    button:focus {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-    }
+            }
+            button:focus {
+                box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+            }
+
+            p{
+                font-size: 40px;
+                color: #1B2021;
+                text-align: left;
+                margin-top: 30px;
+                padding-top: 0px;
+            }
+            ol{
+                font-size: 40px;
+                color: #1B2021;
+                text-align: left;
+                margin-top: 30px;
+                padding-top: 0px;
+            }
 
 </style>
 
@@ -86,7 +99,7 @@
 
 <head>
     <title>NFC and Barcode Scanner</title>
-    <link rel="stylesheet" type=text/css href="./nfc_draft.css/>
+    <link rel="stylesheet" type=text/css href="./css/nfc_draft.css/>
 </head>
 
 <body>
@@ -99,13 +112,13 @@
 
 
 <div class="app">
-    <h2 class="default_subheading"> Drücken Sie auf Scan starten um den NFC Chip einzulesen! </h2>
+    <h2 class="default_subheading"> Klicken Sie auf "Scan starten" um den NFC Chip einzulesen! </h2>
 
     <div>
         <button id="NFC-btn" onclick="toggleNFCScanning();">Scan starten</button>
     </div>
     <div>
-        <p> NFC Results: </p>
+        <p class="basic_text"> NFC Results: </p>
         <ol id="NFC-results"></ol>
     </div>
 </div>
