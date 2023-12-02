@@ -9,7 +9,7 @@
 <div class="header_container">
     <h1 class="default_heading"> Masteransicht </h1>
 
-    <div class="question">Hilfe</div>
+    <button class="question">Hilfe</button>
     <div class="popup">
         <h3>Was muss ich in diesem Anzeigefenster beachten?</h3>
         <p>In dieser Masteransicht können Sie zwischen verschiedenen <strong>Funktionen</strong> der App <strong>navigieren</strong>.
@@ -20,24 +20,24 @@
 
 <div class="selection_board">
     <div class="button_container">
-        <button class="button_font" onclick="window.location.href = 'http://127.0.0.1:8000/dashboard/';"> Dashboard </button>
-        <button class="button_font" onclick="window.location.href = 'http://127.0.0.1:8000/ogs_group/';"> OGS-Gruppe </button>
+        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/dashboard/';"> Dashboard </button>
+        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/ogs_group/';"> OGS-Gruppe </button>
     </div>
 
     <div class="button_container">
-        <button class="button_font" onclick="window.location.href = 'http://127.0.0.1:8000/search_pupil/';"> Suche Kind </button>
-        <button class="button_font" onclick="window.location.href = 'http://127.0.0.1:8000/choose_room/';"> Raumübersicht </button>
+        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/search_pupil/';"> Suche Kind </button>
+        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/choose_room/';"> Raumübersicht </button>
     </div>
 
     <div class="button_container">
-        <button class="button_font" onclick="window.location.href = 'http://127.0.0.1:8000/csv_import/';"> CSV-Import </button>
-        <button class="button_font" onclick="window.location.href = 'http://127.0.0.1:8000/personal_preferences/';"> Persönliche Einstellungen </button>
+        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/csv_import/';"> CSV-Import </button>
+        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/personal_preferences/';"> Persönliche Einstellungen </button>
 
     </div>
-    <div class="box__line box__line--top"></div>
-    <div class="box__line box__line--right"></div>
-    <div class="box__line box__line--bottom"></div>
-    <div class="box__line box__line--left"></div>
+    <div id="box__line box__line--top"></div>
+    <div id="box__line box__line--right"></div>
+    <div id="box__line box__line--bottom"></div>
+    <div id="box__line box__line--left"></div>
 </div>
 
 </body>

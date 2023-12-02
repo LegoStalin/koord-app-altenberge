@@ -28,6 +28,7 @@
         width: 140px;
         background: var(--help_button_color);
         border-style: solid;
+        border-color: var(--font_color);
         font-size: 20px;
         font-weight: normal;
         font-family: 'Roboto', sans-serif;
@@ -79,17 +80,107 @@
     .header_container .popup strong{
         font-size: 16px;
     }
+    /* Selection Board Ansicht */
+    .button_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        margin: 0em 0em 2% 0em;
+    }
+}
+
+/* Ipad Ansicht */
+@media only screen and (min-width: 768px) and (max-width: 1279px){
+    /* Header Style*/
+    .header_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0em 0em 2% 0em;
+        padding-right: 20px;
+    }
+    .header_container :nth-child(1){
+        order:1;
+    }
+    .header_container :nth-child(2){
+        order:3;
+    }
+    .header_container :nth-child(3){
+        order:2;
+    }
+    /* Help Button Style*/
+    .header_container .question{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 140px;
+        background: var(--help_button_color);
+        border-style: solid;
+        border-color: var(--font_color);
+        font-size: 20px;
+        font-weight: normal;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        border-radius: 45px;
+        cursor: pointer;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+    }
+    .header_container .popup{
+        width: 720px;
+        height: 0px;
+        text-align: left;
+        overflow: hidden;
+        position: relative;
+        margin-left: 60px;
+        margin-right: 30px;
+        background: var(--popup_text_background);
+        opacity: 0;
+        transition: 1s; /* ggf. rausnehmen, leichter delay im button */
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .header_container .question:active + .popup{
+        height: 110px;
+        opacity: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+    .header_container .popup h3{
+        display: flex;
+        text-align: center;
+        justify-content: left;
+        margin: 0;
+        border-style: solid;
+        padding: 10px 0 0 10px;
+        height: 20px;
+        background: var(--popup_header_background);
+        color: var(--popup_header_font);
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .header_container .popup p{
+        margin: 0;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .header_container .popup strong{
+        font-size: 16px;
+    }
+    /* Selection Board Ansicht */
+    .button_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        margin: 0em 0em 2% 0em;
+    }
 }
 
 
 
-
-/* Selection Board Ansicht */
-.button_container{
-    display: flex;
-    justify-content: space-between;
-    margin: 0em 0em 2% 0em;
-}
 /* Basic Selection-button Style*/
 button {
     /* ALTERNATIVE
@@ -110,54 +201,8 @@ button {
     outline: none;
     font-size: large;
     */
-
-    background-color: var(--button_color);
-    background-image: none;
-    background-position: 0 90%;
-    background-repeat: repeat no-repeat;
-    background-size: 4px 3px;
-    border-radius: 15px 225px 255px 15px;
-    border-style: solid;
-    border-width: 3px;
-    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-    box-sizing: border-box;
-    color: var(--button_border);
-    cursor: pointer;
-    font-weight: bold;
-    width: 49%;
-    height: 250px;
-    outline: none;
-    text-decoration: none;
-    transition: all 235ms ease-in-out;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-
 }
-.button_font{
-    font-size: 2em;
-}
-/* Button Hover Style Transformation*/
-button:hover{
-    /* ALTERNATIVE:
-    box-shadow: 0px 15px 20px var(--select_color_shadow);
-    color: var(--background_color);
-    background-color: var(--select_color_background);
-    transform: translateY(-7px);
-     */
 
-    box-shadow: rgba(0, .3, .3, .3) 2px 8px 8px -5px;
-    transform: translate3d(0, 4px, 0);
-    color: var(--background_color);
-
-}
-button:focus {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-}
 /* BORDER
 .selection_board{
     border: #1B2021;
