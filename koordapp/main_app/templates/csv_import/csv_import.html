@@ -12,20 +12,24 @@
             <h3>Sollen die Daten in der Datenbank überschrieben oder nur ergänzt werden?</h3>
             <h4>« Bitte nur eine Möglichkeit ankreuzen »</h4>
             <div class="checkbox_container">
-                <label><input type="checkbox" name="checkbox_database" value="option_overwrite"> überschreiben</label><br>
-                <label><input type="checkbox" name="checkbox_database" value="option_extend"> ergänzen</label><br>
+                <label><input type="checkbox" name="checkbox_database" value="option_overwrite"> überschreiben</label>
+                <label><input type="checkbox" name="checkbox_database" value="option_extend"> ergänzen</label>
             </div>    
         </div>
         <div id="sheet_flags" class="content_container">
             <h3>Welche sheets sind in der ".xlsx"-Datei enthalten?</h3>
             <h4>« Eine Mehrfachauswahl ist hier möglich »</h4>
             <div class="checkbox_container">
-            <label><input type="checkbox" name="checkbox_sheet" value="option_user">Rollen</label><br>
-            <label><input type="checkbox" name="checkbox_sheet" value="option_user">Schüler</label><br>
-            <label><input type="checkbox" name="checkbox_sheet" value="option_room">Räume</label><br>
-            <label><input type="checkbox" name="checkbox_sheet" value="option_ag">AGs</label><br>
+                <label><input type="checkbox" name="checkbox_sheet" value="option_user">Rollen</label>
+                <label><input type="checkbox" name="checkbox_sheet" value="option_pupil">Schüler</label>
+                <label><input type="checkbox" name="checkbox_sheet" value="option_room">Räume</label>
+                <label><input type="checkbox" name="checkbox_sheet" value="option_ag">AGs</label>
             </div>  
-        </div>    
+        </div>
+        <div class="content_container" id="dummy_download">
+            <h4>« Hier können Sie die Vorlage runterladen »</h4>
+            <input type="submit" value="Vorlage herunterladen">
+        </div>   
         <div class="dnd_file"><input type="file" id="file_input" accept=".xlsx" style="display: none;"></div>
         <div class= "upload_button"><input type="submit" value="Hochladen"></div>
         
