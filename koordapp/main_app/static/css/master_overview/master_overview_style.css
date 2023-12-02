@@ -1,9 +1,3 @@
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--background_color);
-    padding-left: 10%;
-    padding-right: 10%;
-}
 
 
 /* PC Ansicht */
@@ -96,7 +90,6 @@ body {
     justify-content: space-between;
     margin: 0em 0em 2% 0em;
 }
-
 /* Basic Selection-button Style*/
 button {
     /* ALTERNATIVE
