@@ -2,120 +2,28 @@
   --primary: hsl(260, 100%, 80%);
   --page_background: #f8f9fa;
   --text_color: #212529;
+  --button_color: #49a078;
 }
 .block_container {
   display: grid;
   height: 100dvh;
-  grid-template-rows: 0.3fr 2fr 0.5fr;
   grid-template-areas: "header" "content" "footer";
-  gap: 1%;
   background-color: #f8f9fa;
   width: 100vw;
 }
 .header_container {
   grid-area: header;
   text-align: center;
-  height: 10dvh;
-  line-height: 5%;
-  background: linear-gradient(to left, #f8f9fa, #212529);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border: 3px solid #212529;
-}
-.header_container h1 {
-  margin-top: 2%;
-  margin-bottom: 1%;
-  letter-spacing: 3px;
-  font-size: 200%;
-  line-height: 90%;
-}
-.header_container h2 {
-  font-size: 120%;
-}
-.form_container h4 {
-  letter-spacing: 2px;
+  position: relative;
 }
 .form_container {
   grid-area: content;
   display: grid;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.8fr 0.3fr;
-  grid-template-areas: "database_flags" "sheet_flags" "dummy_download" "file_upload" "upload_button";
+  background: linear-gradient(to bottom, #f8f9fa, #ffc145);
   text-align: center;
-  background: linear-gradient(to bottom, #f8f9fa, #adb5bd);
-}
-#database_flags {
-  grid-area: database_flags;
-  align-items: center;
-  position: relative;
-  margin-bottom: 5%;
-  padding-bottom: 5%;
-}
-
-.checkbox_container {
-  width: 80%;
-  margin: auto;
-}
-#database_flags .checkbox_container {
-  display: grid;
-  text-align: center;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "overwrite extend";
-  gap: 5%;
-}
-#database_flags .checkbox_container label:nth-child(1) {
-  grid-area: overwrite;
-}
-
-#database_flags .checkbox_container label:nth-child(2) {
-  grid-area: extend;
-}
-#sheet_flags {
-  grid-area: sheet_flags;
-  position: relative;
-}
-#sheet_flags .checkbox_container {
-  margin-bottom: 5%;
-  padding-bottom: 5%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-#sheet_flags .checkbox_container label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-right: 10px;
-}
-
-#sheet_flags .checkbox_container input {
-  margin-right: 10px;
-}
-.checkbox_container input {
-  width: 15px;
-  height: 15px;
-  margin-right: 1%;
-}
-.checkbox_container label {
-  text-align: center;
-  font-size: 130%;
-}
-
-#dummy_download {
-  grid-area: dummy_download;
-  position: relative;
-  margin-bottom: 5%;
-  padding-bottom: 5%;
 }
 .dnd_file {
   grid-area: file_upload;
-}
-
-.dnd_file {
   width: 80%;
   height: 80%;
   margin: auto;
@@ -127,113 +35,351 @@
   background-color: #f3f3f3;
   cursor: pointer;
 }
-
-.dnd_file:before {
-  content: "Drag and drop .xlsx files here or click to upload";
-  text-align: center;
-}
 .upload_button {
   grid-area: upload_button;
-  margin: auto;
-  width: 60%;
-  height: 50%;
+  position: relative;
 }
-.upload_button input {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  background-color: #49a078;
-  color: var(--page_background);
-  font-weight: bold;
+#database_flags {
+  position: relative;
 }
-/*navbar css code*/
-.navbar_menu {
-  display: flex;
-  position: fixed;
-  height: 10dvh;
-  justify-content: space-around;
-  align-items: center;
-  background: linear-gradient(to right, #f8f9fa, #212529);
+#sheet_flags {
+  position: relative;
+}
+#dummy_download {
+  grid-area: dummy_download;
+  position: relative;
+}
+@media only screen and (max-width: 450px) {
+  .block_container {
+    display: grid;
+    height: 100dvh;
+    grid-template-rows: 0.3fr 2fr 0.5fr;
+    gap: 1%;
+  }
+  .header_container {
+    height: 10dvh;
+    line-height: 5%;
+    background: linear-gradient(to left, #f8f9fa, #212529);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 3px solid #212529;
+  }
+  .header_container h1 {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    letter-spacing: 3px;
+    font-size: 200%;
+    line-height: 90%;
+  }
+  .header_container h2 {
+    font-size: 120%;
+  }
+  .form_container h4 {
+    letter-spacing: 2px;
+  }
+  .form_container {
+    grid-template-areas: "database_flags" "dummy_download" "file_upload" "upload_button";
+    grid-template-rows: 0.5fr 0.5fr 0.45fr 0.2fr;
+  }
+  #database_flags {
+    grid-area: database_flags;
+    align-items: center;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+  }
+  #sheet_flags {
+    grid-area: sheet_flags;
+  }
+  .checkbox_container {
+    width: 80%;
+    margin: auto;
+  }
+  #database_flags .checkbox_container {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "overwrite extend";
+    gap: 5%;
+  }
+  #database_flags .checkbox_container label:nth-child(1) {
+    grid-area: overwrite;
+  }
 
-  padding: 10px 0;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border: 3px solid #212529;
-  width: 100vw;
-}
+  #database_flags .checkbox_container label:nth-child(2) {
+    grid-area: extend;
+  }
+  #sheet_flags .checkbox_container {
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 
-.nav_item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: #000000; /* black */
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.3s ease, transform 0.3s ease;
-  border-left: 1px solid #dee2e6;
-  border-right: 1px solid #dee2e6;
-  padding-left: 5%;
-  padding-right: 5%;
-  width: 12.5%;
-  margin: auto;
-}
+  #sheet_flags .checkbox_container label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 10px;
+  }
 
-.nav_item:last-child {
-  border-right: none;
-}
+  #sheet_flags .checkbox_container input {
+    margin-right: 10px;
+  }
+  .checkbox_container input {
+    width: 15px;
+    height: 15px;
+    margin-right: 1%;
+  }
+  .checkbox_container label {
+    text-align: center;
+    font-size: 130%;
+  }
 
-.nav_item:hover {
-  color: #ffffff; /* white */
-  transform: scale(1.1);
-  background-color: #e9ecef;
-}
-.nav_item a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-  width: 100%;
-  font-size: max(10px, 10%);
-  height: 100%;
-}
-#nav_home,
-#nav_main,
-#nav_notifications,
-#nav_help {
-  height: 90%;
-}
+  #dummy_download {
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+  }
 
-/* style changes */
-#database_flags::after,
-#sheet_flags::after,
-#dummy_download::after {
-  content: "";
-  position: absolute;
-  left: 5%; /* to center the border */
-  bottom: 0;
-  height: 3px; /* adjust as needed */
-  width: 90%;
-  background-color: #495057;
-}
+  .dnd_file:before {
+    content: "Drag and drop .xlsx files here or click to upload";
+    text-align: center;
+  }
+  .upload_button {
+    margin: auto;
+    width: 60%;
+    height: 50%;
+  }
+  .upload_button input {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #49a078;
+    color: var(--page_background);
+    font-weight: bold;
+  }
+  /*navbar css code*/
+  .navbar_menu {
+    display: flex;
+    position: fixed;
+    height: 10dvh;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, #f8f9fa, #212529);
 
-#database_flags::before {
-  content: "";
-  position: absolute;
-  left: 5%; /* to center the border */
-  top: 0;
-  height: 3px; /* adjust as needed */
-  width: 90%;
-  background-color: #495057;
+    padding: 10px 0;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 3px solid #212529;
+    width: 100vw;
+  }
+
+  .nav_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #000000; /* black */
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 12.5%;
+    margin: auto;
+  }
+
+  .nav_item:last-child {
+    border-right: none;
+  }
+
+  .nav_item:hover {
+    color: #ffffff; /* white */
+    transform: scale(1.1);
+    background-color: #e9ecef;
+  }
+  .nav_item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    width: 100%;
+    font-size: max(10px, 10%);
+    height: 100%;
+  }
+  #nav_home,
+  #nav_main,
+  #nav_notifications,
+  #nav_help {
+    height: 90%;
+  }
+
+  /* style changes */
+  #database_flags::after,
+  #sheet_flags::after,
+  #dummy_download::after {
+    content: "";
+    position: absolute;
+    left: 5%; /* to center the border */
+    bottom: 0;
+    height: 3px; /* adjust as needed */
+    width: 90%;
+    background-color: #495057;
+  }
+
+  #database_flags::before {
+    content: "";
+    position: absolute;
+    left: 5%; /* to center the border */
+    top: 0;
+    height: 3px; /* adjust as needed */
+    width: 90%;
+    background-color: #495057;
+  }
+  .content_container input[type="submit"] {
+    width: 60%;
+    height: 30%;
+    font-weight: bold;
+    background-color: var(--button_color);
+    color: var(--page_background);
+  }
 }
-.content_container input[type="submit"] {
-  width: 60%;
-  height: 30%;
-  font-weight: bold;
-  background-color: #49a078;
-  color: var(--page_background);
+@media only screen and (min-width: 451px) {
+  .block_container {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    width: 100%;
+  }
+  .form_container {
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.3fr;
+    width: 100%;
+    grid-template-areas:
+      "dummy_download"
+      "flags"
+      "file_upload"
+      "upload_button";
+  }
+  #database_flags,
+  #sheet_flags {
+    grid-area: flags;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    height: 100%;
+    padding: 3% 3% 3% 3%;
+    margin: 2% 2% 2% 2%;
+  }
+  #dummy_download,
+  .upload_container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  #sheet_flags h3 {
+    line-height: 230%;
+  }
+  #flags {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: auto; /* Adjust as needed */
+  }
+  #flags::after,
+  .header_container::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Move the left edge of the line to the center of the parent element */
+    transform: translateX(
+      -50%
+    ); /* Move the line left by half its width to truly center it */
+    bottom: 0;
+    height: 3px; /* adjust as needed */
+    width: 90vw; /* Set a fixed width */
+    background-color: #495057;
+  }
+
+  #flags::before {
+    content: "";
+    position: absolute;
+    left: 50%; /* Move the left edge of the line to the center of the parent element */
+    transform: translateX(
+      -50%
+    ); /* Move the line left by half its width to truly center it */
+    top: 0; /* position at the top of the container */
+    height: 3px; /* adjust as needed */
+    width: 90vw; /* Set a fixed width */
+    background-color: #495057;
+  }
+  .dnd_file {
+    width: 60%;
+    margin-bottom: 1%;
+  }
+  .upload_button {
+    margin: auto;
+  }
+  .block_container input[type="submit"] {
+    width: 20vw;
+    height: 3vh;
+    background-color: var(--button_color);
+    border-radius: 7%;
+  }
+  .upload_container {
+    height: 100%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+  }
+
+  .navbar_container {
+    position: fixed;
+    display: flex;
+    left: 50%; /* Keep the navbar centered */
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 10vh; /* Slightly reduce the height for a sleeker look */
+    width: 100%;
+    justify-content: center;
+    background-color: #b8c0ff; /* Use one of the provided colors for the navbar background */
+    border: none; /* Remove the border */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+  }
+
+  .navbar_container:hover {
+    background-color: #bbd0ff; /* Slightly lighter background on hover */
+  }
+
+  .nav_item {
+    height: 80%; /* Reduce the height to create some space around the items */
+    width: 90%;
+    text-align: center;
+    background-color: #c8b6ff; /* Use another provided color for the nav item background */
+    margin: auto 0.2%; /* Uniform margin */
+    padding: 1em 2em; /* Add padding to give the items some breathing room */
+    border-radius: 10%;
+    border: 2px solid #e7c6ff; /* Use another provided color for the border */
+    color: #ffd6ff; /* Use the last provided color for the text */
+    font-size: 1.2em; /* Larger text */
+    line-height: 1.5; /* Center the text vertically */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Add a subtle shadow to the items */
+  }
+
+  .nav_item:hover {
+    background-color: #e7c6ff; /* Lighter background on hover */
+    color: #b8c0ff; /* Darker text on hover */
+    transform: scale(1.05); /* Slightly enlarge the items on hover */
+  }
 }
