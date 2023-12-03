@@ -155,7 +155,6 @@
         text-align: center;
         justify-content: left;
         margin: 0;
-        border-style: solid;
         padding: 10px 0 0 10px;
         height: 20px;
         background: var(--popup_header_background);
