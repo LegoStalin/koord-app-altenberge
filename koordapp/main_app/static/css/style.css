@@ -35,6 +35,13 @@ ul.errorlist {
 
 /* PC Ansicht */
 @media only screen and (min-width: 1280px) {
+    /* Body */
+    body {
+        font-family: 'Inter', sans-serif;
+        background: var(--background_color);
+        padding-left: 10%;
+        padding-right: 10%;
+    }
     /* Header Style*/
     .default_heading{
         color: var(--font_color);
@@ -101,6 +108,13 @@ ul.errorlist {
 
 /* Tablet Ansicht */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
+    /* Body */
+    body {
+        font-family: 'Inter', sans-serif;
+        background: var(--background_color);
+        padding-left: 10%;
+        padding-right: 10%;
+    }
     /* Header Style*/
     .default_heading{
         color: var(--font_color);
@@ -168,25 +182,31 @@ ul.errorlist {
 
 /* Mobile Endgeräte Ansicht */
 @media only screen and (min-width: 320px) and (max-width: 767px){
+    /* Body */
+    body {
+        font-family: 'Inter', sans-serif;
+        background: var(--background_color);
+        padding-left: 7%;
+        padding-right: 7%;
+    }
     /* Header Style*/
     .default_heading{
         color: var(--font_color);
-        font-size: 1em;
-        border-style: solid;
+        font-size: 1.8em;
         margin-bottom: 1px;
-        margin-top: 8%;
+        margin-top: 20%;
 
     }
     /* Subheader Style*/
     .default_subheading{
         color: var(--font_color);
-        font-size: 1.2em;
-        margin-top: 10px;
+        font-size: 1.0em;
+        margin-top: 3px;
         padding-top: 0px;
     }
     /* Button Style 1*/
     #button_style1 {
-        font-size: 1.7em;
+        font-size: 1.3em;
         background-color: var(--button_color);
         background-image: none;
         background-position: 0 90%;
@@ -201,7 +221,7 @@ ul.errorlist {
         cursor: pointer;
         font-weight: bold;
         width: 98%;
-        height: 150px;
+        height: 120px;
         outline: none;
         text-decoration: none;
         transition: all 235ms ease-in-out;
