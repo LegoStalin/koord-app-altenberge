@@ -7,7 +7,7 @@
     --select_color_background: #1daf6b;
     --select_color_shadow: #1ea968;
     --shadow_color: #00000033;
-    --help_button_color: #c91f1f;
+    --help_button_color: #fffffff;
     --popup_text_background: #e1e1e1;
     --popup_header_font: #1B2021;
     --popup_header_background: #C3D6E8;
@@ -105,6 +105,73 @@ ul.errorlist {
     .default_heading{
         color: var(--font_color);
         font-size: 2.4em;
+        margin-bottom: 1px;
+        margin-top: 8%;
+
+    }
+    /* Subheader Style*/
+    .default_subheading{
+        color: var(--font_color);
+        font-size: 1.2em;
+        margin-top: 10px;
+        padding-top: 0px;
+    }
+    /* Button Style 1*/
+    #button_style1 {
+        font-size: 1.7em;
+        background-color: var(--button_color);
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 15px 225px 255px 15px;
+        border-style: solid;
+        border-width: 3px;
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: var(--button_border);
+        cursor: pointer;
+        font-weight: bold;
+        width: 98%;
+        height: 150px;
+        outline: none;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        border-bottom-left-radius: 15px 255px;
+        border-bottom-right-radius: 225px 15px;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    /* Button Hover Style Transformation*/
+    #button_style1:hover {
+        /* ALTERNATIVE:
+        box-shadow: 0px 15px 20px var(--select_color_shadow);
+        color: var(--background_color);
+        background-color: var(--select_color_background);
+        transform: translateY(-7px);
+         */
+
+        box-shadow: rgba(0, .3, .3, .3) 2px 8px 8px -5px;
+        transform: translate3d(0, 4px, 0);
+        color: var(--background_color);
+
+    }
+
+    #button_style1:focus {
+        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    }
+}
+
+/* Mobile Endgeräte Ansicht */
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    /* Header Style*/
+    .default_heading{
+        color: var(--font_color);
+        font-size: 1em;
         margin-bottom: 1px;
         margin-top: 8%;
 
