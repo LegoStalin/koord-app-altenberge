@@ -272,7 +272,6 @@
   #database_flags,
   #sheet_flags {
     grid-area: flags;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 75%;
     height: 100%;
     padding: 3% 3% 3% 3%;
@@ -290,12 +289,16 @@
     line-height: 230%;
   }
   #flags {
+    width: 90%;
     display: flex;
     position: relative;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     margin: auto; /* Adjust as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 5%;
+    margin-right: 5%;
   }
   #flags::after,
   .header_container::after {
