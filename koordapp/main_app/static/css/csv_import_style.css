@@ -3,6 +3,9 @@
   --page_background: #f8f9fa;
   --text_color: #212529;
   --button_color: #49a078;
+  --navbar_hover_text: #b8c0ff;
+  --navbar_background: #bbd0ff;
+  --navicon_hover: #e7c6ff;
 }
 .block_container {
   display: grid;
@@ -18,8 +21,8 @@
 }
 .form_container {
   grid-area: content;
-  display: grid;
-  background: linear-gradient(to bottom, #f8f9fa, #ffc145);
+  display: grid; /*
+  background: linear-gradient(to bottom, #f8f9fa, #ffc145);*/
   text-align: center;
 }
 .dnd_file {
@@ -57,14 +60,14 @@
     gap: 1%;
   }
   .header_container {
-    height: 10dvh;
     line-height: 5%;
+    /*
     background: linear-gradient(to left, #f8f9fa, #212529);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    border: 3px solid #212529;
+    border: 3px solid #212529;*/
   }
   .header_container h1 {
     margin-top: 2%;
@@ -151,77 +154,92 @@
   }
   .upload_button {
     margin: auto;
-    width: 60%;
-    height: 50%;
-  }
-  .upload_button input {
     width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background-color: #49a078;
-    color: var(--page_background);
-    font-weight: bold;
+    height: 8vh;
+  }
+  .block_container input[type="submit"] {
+    width: 40vw;
+    height: 4vh;
+    background-color: var(--button_color);
+    border-radius: 8px;
+    margin: 1vh 1vh 1vh 1vh;
   }
   /*navbar css code*/
-  .navbar_menu {
-    display: flex;
+  .navbar_container {
     position: fixed;
-    height: 10dvh;
-    justify-content: space-around;
-    align-items: center;
-    background: linear-gradient(to right, #f8f9fa, #212529);
+    display: flex;
+    left: 50%; /* Keep the navbar centered */
+    transform: translateX(-50%);
+    bottom: 1vh; /* Raise the navbar */
+    height: 8vh; /* Slightly reduce the height for a sleeker look */
+    width: 95%;
+    justify-content: center;
+    background-color: var(
+      --navbar_background
+    ); /* Use one of the provided colors for the navbar background */
+    border: none; /* Remove the border */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 18px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.15);
+    border: 2px solid black;
+  }
 
-    padding: 10px 0;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border: 3px solid #212529;
-    width: 100vw;
+  .navbar_container:hover {
+    background-color: var(
+      --navbar_background
+    ); /* Slightly lighter background on hover */
   }
 
   .nav_item {
+    height: min(
+      80%,
+      100px
+    ); /* Reduce the height to create some space around the items */
+    width: 20%;
+    text-align: center;
+    background-color: #c8b6ff; /* Use another provided color for the nav item background */
+    margin: auto 0.2%; /* Uniform margin */
+    border-radius: 5%;
+    border: 3px solid var(--navicon_hover); /* Use another provided color for the border */
+    color: #ffd6ff; /* Use the last provided color for the text */
+    font-size: 0.8em; /* Larger text */
+    line-height: 1.5; /* Center the text vertically */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Add a subtle shadow to the items */
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    color: #000000; /* black */
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease, transform 0.3s ease;
-    border-left: 1px solid #dee2e6;
-    border-right: 1px solid #dee2e6;
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 12.5%;
-    margin: auto;
-  }
-
-  .nav_item:last-child {
-    border-right: none;
   }
 
   .nav_item:hover {
-    color: #ffffff; /* white */
-    transform: scale(1.1);
-    background-color: #e9ecef;
+    background-color: var(--navicon_hover); /* Lighter background on hover */
+    color: var(--navbar_hover_text); /* Darker text on hover */
+    transform: scale(1.05); /* Slightly enlarge the items on hover */
   }
-  .nav_item a {
+  .icon {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    width: 100%;
-    font-size: max(10px, 10%);
-    height: 100%;
+    align-items: space-around;
   }
-  #nav_home,
-  #nav_main,
-  #nav_notifications,
-  #nav_help {
-    height: 90%;
+  .icon a {
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    margin: auto;
+    /*margin-bottom: 20px;*/
+    word-wrap: break-word;
+    display: none;
+  }
+  .icon img {
+    width: min(60%, 90px);
+    height: min(60%, 90px);
+    margin: auto;
   }
 
   /* style changes */
@@ -245,13 +263,6 @@
     height: 3px; /* adjust as needed */
     width: 90%;
     background-color: #495057;
-  }
-  .content_container input[type="submit"] {
-    width: 60%;
-    height: 30%;
-    font-weight: bold;
-    background-color: var(--button_color);
-    color: var(--page_background);
   }
 }
 @media only screen and (min-width: 451px) {
@@ -337,52 +348,81 @@
     width: 20vw;
     height: 3vh;
     background-color: var(--button_color);
-    border-radius: 7%;
+    border-radius: 8px;
   }
   .upload_container {
     height: 100%;
     padding-top: 1%;
     padding-bottom: 2%;
   }
-
   .navbar_container {
     position: fixed;
     display: flex;
     left: 50%; /* Keep the navbar centered */
     transform: translateX(-50%);
-    bottom: 0;
-    height: 10vh; /* Slightly reduce the height for a sleeker look */
-    width: 100%;
+    bottom: 2.5vh; /* Raise the navbar */
+    height: 13vh; /* Slightly reduce the height for a sleeker look */
+    width: 60%;
     justify-content: center;
-    background-color: #b8c0ff; /* Use one of the provided colors for the navbar background */
+    background-color: var(
+      --navbar_background
+    ); /* Use one of the provided colors for the navbar background */
     border: none; /* Remove the border */
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
     transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 18px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.15);
+    border: 2px solid black;
   }
 
   .navbar_container:hover {
-    background-color: #bbd0ff; /* Slightly lighter background on hover */
+    background-color: var(
+      --navbar_background
+    ); /* Slightly lighter background on hover */
   }
-
   .nav_item {
-    height: 80%; /* Reduce the height to create some space around the items */
-    width: 90%;
+    height: min(
+      80%,
+      100px
+    ); /* Reduce the height to create some space around the items */
+    width: 20%;
     text-align: center;
     background-color: #c8b6ff; /* Use another provided color for the nav item background */
     margin: auto 0.2%; /* Uniform margin */
-    padding: 1em 2em; /* Add padding to give the items some breathing room */
-    border-radius: 10%;
-    border: 2px solid #e7c6ff; /* Use another provided color for the border */
+    border-radius: 5%;
+    border: 3px solid var(--navicon_hover); /* Use another provided color for the border */
     color: #ffd6ff; /* Use the last provided color for the text */
     font-size: 1.2em; /* Larger text */
     line-height: 1.5; /* Center the text vertically */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Add a subtle shadow to the items */
+    padding-top: 0.8vh;
+    padding-bottom: 0.8vh;
+    overflow: hidden;
   }
 
   .nav_item:hover {
-    background-color: #e7c6ff; /* Lighter background on hover */
-    color: #b8c0ff; /* Darker text on hover */
+    background-color: var(--navicon_hover); /* Lighter background on hover */
+    color: var(--navbar_hover_text); /* Darker text on hover */
     transform: scale(1.05); /* Slightly enlarge the items on hover */
+  }
+  .icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+  }
+  .icon a {
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .icon img {
+    width: min(50%, 90px);
+    height: min(50%, 90px);
+    margin: auto;
   }
 }

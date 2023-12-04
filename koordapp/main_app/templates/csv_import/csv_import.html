@@ -40,21 +40,30 @@
 
         <nav class="navbar_container" id="nav">
             <span class="nav_item" id="nav_home">
-                <span class="icon"></span>
-                <a href="#">Home</a>
+                <span class="icon">
+                    <img src="{% static 'img/home.png' %}" alt="Home Icon">
+                    <span class="icon_text"><a href="#">Home</a></span>
+                </span>
             </span>
             <span class="nav_item" id="nav_main">
                 <span class="icon">   
+                <img src="{% static 'img/menu.png' %}" alt="Menu Icon">
+                <span class="icon_text"><a href="#">Hauptansicht</a></span>
                 </span>
-                <a href="#">Hauptansicht</a>
             </span>
             <span class="nav_item" id="nav_notifications">
-                <span class="icon"></span>
-                <a href="#">Benachrichtigungen</a>
+                <span class="icon">
+                    <img src="{% static 'img/bell.png' %}" alt="Bell Icon">
+                    <span class="icon_text"><a href="#">Benachrichtigungen</a></span>
+                </span>
+                
             </span>
             <span class="nav_item" id="nav_help">
-                <span class="icon"></span>
-                <a href="#">Hilfe</a>
+                <span class="icon">
+                    <img src="{% static 'img/help.png' %}" alt="Help Icon">
+                    <span class="icon_text"><a href="#">Hilfe</a></span>
+                </span>
+                
             </span>
         </nav>
        
