@@ -1,140 +1,50 @@
-:root{
-    --font_color: #1B2021;
-    --background_color: #F6F4F3;
-    --button_color: #AEAEB3;
-    --shadow_color: #00000033;
-}
 body {
     font-family: 'Inter', sans-serif;
-    background: var(--background_color);
+    background: #F6F4F3;
     padding-left: 10%;
     padding-right: 10%;
 }
 
 * h1{
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
-
 * h2{
     font-weight: normal;
 }
 
 .default_heading{
-    color: var(--font_color);
-    font-size: 3em;
+    color: #1B2021;
+    font-size: 100px;
     margin-bottom: 1px;
     margin-top: 8%;
 }
 .default_subheading{
-    color: var(--font_color);
-    margin-top: 10px;
+    color: #1B2021;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
     padding-top: 0px;
 }
-@media only screen and (min-width: 1280px){
 
-    /* Help Button Style*/
-    .app .question{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 45px;
-        width: 140px;
-        background: #ffffff;
-        border-style: solid;
-        font-size: 20px;
-        font-weight: normal;
-        font-family: 'Roboto', sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-align: center;
-        border-radius: 45px;
-        cursor: pointer;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        margin-top: 50px;
-    }
-
-    .app .popup{
-        width: 700px;
-        height: 0px;
-        text-align: left;
-        overflow: hidden;
-        position: relative;
-        margin-left: 60px;
-        margin-right: 30px;
-        background: #e1e1e1;
-        opacity: 0;
-        transition: 1s;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-
-    }
-
-    .app:hover .popup{
-        height: 140px;
-        opacity: 1;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    }
-
-
-    .app .popup h3{
-        display: flex;
-        justify-content: left;
-        text-align: center;
-        margin: 0;
-        padding: 10px 0 0 10px;
-        height: 30px;
-        background: #5c86d5;
-        color: var(--background_color);
-        font-weight: 600;
-        font-size: 18px;
-    }
-
-    .app .popup p{
-        margin: 0;
-        padding: 10px;
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    .app .popup strong{
-        font-size: 16px;
-    }
-}
-
-
-.app{
-    display: flex;
-    justify-content: space-between;
-    margin: 0em 0em 2% 0em;
-    padding-right: 20px;
-}
-
-
-
-.button_container{
-    display: flex;
-    justify-content: space-between;
-    margin: 0em 0em 2% 0em;
-}
 
 /* Basic Selection-button Style*/
 button {
-    background-color: var(--button_color);
+    background-color: #AEAEB3;
     background-image: none;
     background-position: 0 90%;
     background-repeat: repeat no-repeat;
     background-size: 4px 3px;
     border-radius: 15px 225px 255px 15px;
     border-style: solid;
-    border-width: 3px;
+    border-width: 10px;
     box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
     box-sizing: border-box;
-    color: var(--button_border);
+    color:#1B2021;
     cursor: pointer;
     font-weight: bold;
-    width: 49%;
-    height: 250px;
+    width: 100%;
+    height: 400px;
     outline: none;
     text-decoration: none;
     transition: all 235ms ease-in-out;
@@ -145,19 +55,33 @@ button {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-
 }
-.button_font{
-    font-size: 2em;
+#NFC-btn{
+    font-size: 70px;
+    color: #F6F4F3;
 }
 
 /* Button Hover Style Transformation*/
 button:hover{
     box-shadow: rgba(0, .3, .3, .3) 2px 8px 8px -5px;
     transform: translate3d(0, 4px, 0);
-    color: var(--background_color);
+    color: #F6F4F3;
 
 }
 button:focus {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+p{
+    font-size: 40px;
+    color: #1B2021;
+    text-align: left;
+    margin-top: 30px;
+    padding-top: 0px;
+}
+ol{
+    font-size: 40px;
+    color: #1B2021;
+    text-align: left;
+    margin-top: 30px;
+    padding-top: 0px;
 }
