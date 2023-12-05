@@ -16,3 +16,6 @@ class HomeView(TemplateView):
 
 class CreateActivityView(TemplateView):
     template_name = 'create_activity/create_activity.html'
+
+class MasterHomeView(TemplateView):
+    template_name = 'master_overview/master_web.html'
