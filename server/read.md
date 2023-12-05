@@ -1,3 +1,6 @@
+## Dependencies
+Es müssen Docker und OpenSSL installiert sein.
+
 ## self-signed certificate and key
 Beim ersten Starten des Servers muss diese Zeile ausgeführt werden und die Fragen beantwortet werden.
 
