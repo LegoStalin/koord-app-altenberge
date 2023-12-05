@@ -121,7 +121,7 @@ def csv_import(request):
                             max_anzahl = int(max_anzahl)
                             if(offene_AG.lower()=='true' or offene_AG.lower()=='ja'):
                                     is_offene_AG = True
-                            AG.objects.create(name=name,beschreibung=beschreibung,max_anzahl=max_anzahl,offene_AG=is_offene_AG)
+                            AG.objects.create(name=name,beschreibung=beschreibung,max_anzahl=max_anzahl,offene_AG=is_offene_AG, leiter=leiter)
                     
                     if 'option_group' in optionlist:
                         if 'option_overwrite' in optionlist_reset:
