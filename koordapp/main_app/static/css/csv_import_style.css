@@ -6,6 +6,7 @@
   --navbar_hover_text: #b8c0ff;
   --navbar_background: #bbd0ff;
   --navicon_hover: #e7c6ff;
+  --navicon_background_color: #c8b6ff;
 }
 .block_container {
   display: grid;
@@ -197,7 +198,9 @@
     ); /* Reduce the height to create some space around the items */
     width: 20%;
     text-align: center;
-    background-color: #c8b6ff; /* Use another provided color for the nav item background */
+    background-color: var(
+      --navicon_background_color
+    ); /* Use another provided color for the nav item background */
     margin: auto 0.2%; /* Uniform margin */
     border-radius: 5%;
     border: 3px solid var(--navicon_hover); /* Use another provided color for the border */
@@ -285,7 +288,7 @@
     grid-area: flags;
     width: 75%;
     height: 100%;
-    padding: 3% 3% 3% 3%;
+    /*padding: 3% 3% 3% 3%;*/
     margin: 2% 2% 2% 2%;
   }
   #dummy_download,
@@ -351,7 +354,7 @@
     border-radius: 8px;
   }
   .upload_container {
-    height: 100%;
+    height: min(100%, 150px);
     padding-top: 1%;
     padding-bottom: 2%;
   }
@@ -386,7 +389,9 @@
     ); /* Reduce the height to create some space around the items */
     width: 20%;
     text-align: center;
-    background-color: #c8b6ff; /* Use another provided color for the nav item background */
+    background-color: var(
+      --navicon_background_color
+    ); /* Use another provided color for the nav item background */
     margin: auto 0.2%; /* Uniform margin */
     border-radius: 5%;
     border: 3px solid var(--navicon_hover); /* Use another provided color for the border */
@@ -421,8 +426,8 @@
     margin-bottom: 20px;
   }
   .icon img {
-    width: min(50%, 90px);
-    height: min(50%, 90px);
+    width: min(50%, 80px);
+    height: min(50%, 80px);
     margin: auto;
   }
 }
