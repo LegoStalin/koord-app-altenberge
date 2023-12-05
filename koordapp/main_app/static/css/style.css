@@ -7,17 +7,10 @@
     --select_color_background: #1daf6b;
     --select_color_shadow: #1ea968;
     --shadow_color: #00000033;
-    --help_button_color: #fffffff;
+    --help_button_color: #ffffff;
     --popup_text_background: #e1e1e1;
     --popup_header_font: #1B2021;
     --popup_header_background: #C3D6E8;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--background_color);
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 ul.errorlist {
