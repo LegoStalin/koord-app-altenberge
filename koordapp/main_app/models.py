@@ -54,7 +54,7 @@ class AG(models.Model):
     offene_AG = models.BooleanField() 
     leiter = models.ForeignKey(Personal, on_delete=models.CASCADE, null=True)       # null=True entfernen
     angebots_datum_raum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE, null=True)    # null=True entfernen
-    ag_zeit = models.ManyToManyField(AGZeit, null=True)
+    ag_zeit = models.ManyToManyField(AGZeit)
 
 class Schueler(models.Model):
     klasse = models.CharField(max_length=3)             # optional
