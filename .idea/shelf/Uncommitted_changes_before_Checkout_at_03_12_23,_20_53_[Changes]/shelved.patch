@@ -1,0 +1,32 @@
+Index: server/html/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <title>NFC and Barcode Scanner</title>\n    <link rel=\"stylesheet\" type=text/css href=\"nfc_draft.css\"/>\n</head>\n\n<body>\n<div class=\"app\">\n    <h1 class=\"default_heading\"> NFC Prototyp </h1>\n\n</div>\n\n\n<div class=\"app\">\n    <h2 class=\"default_subheading\"> Drücken Sie auf Scan starten um den NFC Chip einzulesen! </h2>\n\n    <div>\n        <button id=\"NFC-btn\" onclick=\"toggleNFCScanning();\">Scan starten</button>\n    </div>\n    <div>\n        <p> NFC Results: </p>\n        <ol id=\"NFC-results\"></ol>\n    </div>\n</div>\n<script type=\"text/javascript\" , src=\"main.js\"></script>\n</body>\n</html>\n
+===================================================================
+diff --git a/server/html/index.html b/server/html/index.html
+--- a/server/html/index.html	
++++ b/server/html/index.html	
+@@ -14,7 +14,7 @@
+ 
+ 
+ <div class="app">
+-    <h2 class="default_subheading"> Drücken Sie auf Scan starten um den NFC Chip einzulesen! </h2>
++    <h2 class="default_subheading"> Drücken Sie auf Scan starten, um den NFC Chip einzulesen! </h2>
+ 
+     <div>
+         <button id="NFC-btn" onclick="toggleNFCScanning();">Scan starten</button>
+Index: server/docker-compose.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>services:\n  nfc-demo:\n    build: .\n    ports:\n      - 80:80\n      - 443:443\n    restart: always\n    volumes:\n      - .:/usr/share/nginx/\n      - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
+===================================================================
+diff --git a/server/docker-compose.yaml b/server/docker-compose.yaml
+--- a/server/docker-compose.yaml	
++++ b/server/docker-compose.yaml	
+@@ -7,4 +7,4 @@
+     restart: always
+     volumes:
+       - .:/usr/share/nginx/
+-      - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
+\ No newline at end of file
++      - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
