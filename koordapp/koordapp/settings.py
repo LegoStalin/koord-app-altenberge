@@ -78,10 +78,12 @@ WSGI_APPLICATION = 'koordapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'LOCALHOST',
-        'NAME': 'postgres',
+        'HOST': 'postgres',
+        'NAME': 'koordapp',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 

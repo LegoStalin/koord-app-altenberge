@@ -1,3 +1,5 @@
 ./.obsidian/*
 *obsidian
 .idea/*
+/.idea/
+koordapp/__pycache__/*
