@@ -52,20 +52,18 @@ def csv_import(request):
                     # wsa = wb['Ags']         
                     # wsg = wb['Gruppen']
                     optionlist_reset = request.POST.getlist('checkbox_database')
-                    if 'option_overwrite' in optionlist_reset:
-                        Schueler.objects.all().delete()
-                        AG.objects.all().delete()
-                        Gruppe.objects.all().delete()
-                        Raum.objects.all().delete()
 
                     optionlist = request.POST.getlist('checkbox_sheet')
 
                     if 'option_room' in optionlist:
+                        if 'option_overwrite' in optionlist_reset:
+                            Raum.objects.all().delete()
+
                         wss = wb['Raeume']
                         for row in wss.iter_rows(min_row=2, values_only=True):              # Erstellung Nutzer
-                
                             raum_nr, geschoss, kapazitaet = row
-                            Raum.objects.create(raum_nr=raum_nr,geschoss=geschoss,kapazitaet=kapazitaet)
+                            if(Raum.objects.filter(raum_nr=raum_nr).exists()==False):
+                                Raum.objects.create(raum_nr=raum_nr,geschoss=geschoss,kapazitaet=kapazitaet)
 
                     if 'option_user' in optionlist:
                         wb_otp = Workbook()
@@ -100,26 +98,46 @@ def csv_import(request):
                         wb_otp.save(response)
 
                     if 'option_ag' in optionlist:
+                        if 'option_overwrite' in optionlist_reset:
+                            AG.objects.all().delete()
                         wss = wb['AGs']
                         for row in wss.iter_rows(min_row=2, values_only=True):              # Erstellung Nutzer
                 
-                            name, beschreibung, max_anzahl, offene_AG = row
+                            name, beschreibung, max_anzahl, offene_AG, ag_leiter = row
+                            zahl = 1
+                            is_name_unique = False
+                            while not is_name_unique:
+                                un2 = name
+                                if(zahl > 1):
+                                    un2 = name + str(zahl)
+                                if (AG.objects.filter(name=un2).exists()==True):
+                                    zahl += 1
+                                else:
+                                    name=un2
+                                    is_name_unique=True
+                            
+                            leiter = Personal.objects.get(user=(User.objects.get(username=ag_leiter)))
                             is_offene_AG = False
                             max_anzahl = int(max_anzahl)
                             if(offene_AG.lower()=='true' or offene_AG.lower()=='ja'):
                                     is_offene_AG = True
-                            AG.objects.create(name=name,beschreibung=beschreibung,max_anzahl=max_anzahl,offene_AG=is_offene_AG)
+                            AG.objects.create(name=name,beschreibung=beschreibung,max_anzahl=max_anzahl,offene_AG=is_offene_AG, leiter=leiter)
                     
                     if 'option_group' in optionlist:
+                        if 'option_overwrite' in optionlist_reset:
+                            Gruppe.objects.all().delete()
                         wss = wb['Gruppen']
                         for row in wss.iter_rows(min_row=2, values_only=True):              # Erstellung Nutzer
                             #print(row)
                             name, gruppenleiter_leiter, raum = row
-                            gruppenleiter_leiter = Personal.objects.get(user=(User.objects.get(username=gruppenleiter_leiter)))
-                            raum = Raum.objects.get(raum_nr=raum)
-                            Gruppe.objects.create(name=name,gruppenleiter_leiter=gruppenleiter_leiter,raum=raum)
+                            if(Gruppe.objects.filter(name=name).exists()==False):
+                                gruppenleiter_leiter = Personal.objects.get(user=(User.objects.get(username=gruppenleiter_leiter)))
+                                raum = Raum.objects.get(raum_nr=raum)
+                                Gruppe.objects.create(name=name,gruppenleiter_leiter=gruppenleiter_leiter,raum=raum)
 
                     if 'option_pupil' in optionlist:
+                        if 'option_overwrite' in optionlist_reset:
+                            Schueler.objects.all().delete()
                         wss = wb['Schueler']
                         for row in wss.iter_rows(min_row=2, values_only=True):              # Erstellung Nutzer
                 
