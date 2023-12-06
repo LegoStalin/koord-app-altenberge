@@ -154,4 +154,7 @@ def csv_import(request):
                                   
         print('Falscher Dateityp')        
         return render(request, 'csv_import/csv_import.html')      # Weiterleitung bei flaschen datei Typen   
-    return render(request, 'csv_import/csv_import.html')    
+    return render(request, 'csv_import/csv_import.html')  
+
+def roomplan(request):
+    return render(request, 'room_plan/room_overview.html', {'rooms':Raum.objects.all()})
