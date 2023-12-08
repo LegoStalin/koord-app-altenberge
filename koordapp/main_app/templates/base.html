@@ -15,37 +15,11 @@
     </head>
 
     <body>
-    <!--
-    <nav class='navbar navbar-dark bg-dark'>
-        <div class= "help_icon_class">
-            <a href="">
-                <img id="help_icon" src="{% static 'img/help_icon.jpg' %}" alt="clickable helper icon">
-            </a>
-        </div>
-        make following div with class "navbar-standard" to a navigation bar which is always at the bottom of the screen and displays the both clickable image-icons for navigation -->
-        <!--
-        <div class="navbar-standard">
-          <div class="navbar-icon-container">
-            <img id="back_icon" src="{% static 'img/help_icon.jpg' %}" alt="clickable back icon">
-            <div class="navbar-text">Zurück</div>
-          </div>
-          <div class="navbar-icon-container">
-            <img id="home_icon" src="{% static 'img/help_icon.jpg' %}" alt="clickable home icon">
-            <div class="navbar-text">Home</div>
-          </div>
-          <div class="navbar-icon-container">
-            <img id="master_icon" src="{% static 'img/help_icon.jpg' %}" alt="clickable helper icon">
-            <div class="navbar-text">Master</div>
-          </div>
-        </div>
-        <div class='ms-auto'>
           {% if user.is_authenticated %}
           {% else %}
           {% endif %}
 
-        </div>
 
-      </nav>
         -->
       <div class="my-5 text-center container"> 
         {% block content %}

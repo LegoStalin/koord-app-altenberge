@@ -8,14 +8,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect
 
 
-class LoginInterfaceView(LoginView):
-    template_name = 'login/login.html'
-
-class HomeView(TemplateView):
-    template_name = 'home/home.html'
-
-class CreateActivityView(TemplateView):
-    template_name = 'create_activity/create_activity.html'
 
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
