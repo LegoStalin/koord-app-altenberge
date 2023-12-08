@@ -9,5 +9,5 @@ urlpatterns = [
 ]
 
 urlpatterns = [
-    path('master_web/', views.MasterHomeView.as_view(), name='choose_room')
+    path('choose_room/', views.ChooseRoomView.as_view(), name='choose_room')
 ]

@@ -4,16 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="adj" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Setting up new Branch for Frame choose_room">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/choose_room/choose_room.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/choose_room/choose_room.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/choose_room/choose_room.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/choose_room/choose_room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master_overview" />
+        <entry key="$PROJECT_DIR$/.." value="frontend" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -30,11 +44,13 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;f__choose__room&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/flo/IdeaProjects/koord-app-altenberge/koordapp&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -64,6 +80,7 @@
       <workItem from="1701609429250" duration="131000" />
       <workItem from="1701609974390" duration="87000" />
       <workItem from="1701716570226" duration="776000" />
+      <workItem from="1702050840994" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="Created Media Queries for Devices Desktop, Tablet, Handy.">
       <option name="closed" value="true" />
@@ -105,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701609347616</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Setting up new Branch for Frame choose_room">
+      <option name="closed" value="true" />
+      <created>1702050573588</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702050573588</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +143,8 @@
     <MESSAGE value="Created Popup For Ipads" />
     <MESSAGE value="adj" />
     <MESSAGE value="color adjustments" />
-    <option name="LAST_COMMIT_MESSAGE" value="color adjustments" />
+    <MESSAGE value="Setting up new Branch for Frame choose_room" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting up new Branch for Frame choose_room" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
