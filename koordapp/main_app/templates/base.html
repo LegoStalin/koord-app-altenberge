@@ -4,10 +4,14 @@
         <title>KoordApp!</title>
 
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+<<<<<<< HEAD
         <link rel="stylesheet" type="text/css" href="{% static 'css/master_overview/master_overview_style.css' %}"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+=======
+        <link rel="stylesheet" type="text/css" href="{% static 'css/user_verification/user_verification_style.css' %}"/>
+>>>>>>> main
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
     <meta charset="UTF-8">
@@ -15,15 +19,25 @@
     </head>
 
     <body>
+<<<<<<< HEAD
     <!--
     <nav class='navbar navbar-dark bg-dark'>
+=======
+      <nav class='navbar navbar-dark bg-dark'>
+        <!-- help icon segment
+>>>>>>> main
         <div class= "help_icon_class">
             <a href="">
                 <img id="help_icon" src="{% static 'img/help_icon.jpg' %}" alt="clickable helper icon">
             </a>
         </div>
+<<<<<<< HEAD
         make following div with class "navbar-standard" to a navigation bar which is always at the bottom of the screen and displays the both clickable image-icons for navigation -->
         <!--
+=======
+        -->
+        <!-- make following div with class "navbar-standard" to a navigation bar which is always at the bottom of the screen and displays the both clickable image-icons for navigation 
+>>>>>>> main
         <div class="navbar-standard">
           <div class="navbar-icon-container">
             <img id="back_icon" src="{% static 'img/help_icon.jpg' %}" alt="clickable back icon">
@@ -38,6 +52,7 @@
             <div class="navbar-text">Master</div>
           </div>
         </div>
+        -->
         <div class='ms-auto'>
           {% if user.is_authenticated %}
           {% else %}

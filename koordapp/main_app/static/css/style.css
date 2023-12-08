@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
     --font_color: #1B2021;
     --background_color: #F6F4F3;
@@ -253,3 +254,13 @@ ul.errorlist {
         box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
     }
 }
+=======
+.page_title {
+  font-size: 4vw;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 7vh;
+  height: 10vh;
+}
+>>>>>>> main
