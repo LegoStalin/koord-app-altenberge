@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Geben Sie folgende <br>Informationen an:</h1>
+<div class="create_activity_form">
+    <label for="id_supervisor">Aufsichtsperson:</label>
+    <input type="text" name="aufsichtsperson" required>
+    <label for= "id_activity">Aktivität:</label>
+    <input type="text" name="aktivität" id="id_activity"required>
+    <label for="id_category">Kategorie:</label>
+    <input type="text" name="kategorie" id="id_category"required>
+    <label for="id_max_children">Maximale Kinderanzahl:</label>
+    <input type="text" name="maximale_kinderanzahl" id="id_max_children" required>
+</div>
+
+
+{% endblock %}

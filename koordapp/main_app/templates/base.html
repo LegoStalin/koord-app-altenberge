@@ -2,9 +2,9 @@
 <!DOCTYPE html>
     <head>
         <title>KoordApp!</title>
-
         <!link rel="stylesheet" type="text/css" href="./css/style.css"/>
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/user_verification/user_verification_style.css' %}"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <!link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -13,12 +13,14 @@
 
     <body>
       <nav class='navbar navbar-dark bg-dark'>
+        <!-- help icon segment
         <div class= "help_icon_class">
             <a href="">
                 <img id="help_icon" src="{% static 'img/help_icon.jpg' %}" alt="clickable helper icon">
             </a>
         </div>
-        <!-- make following div with class "navbar-standard" to a navigation bar which is always at the bottom of the screen and displays the both clickable image-icons for navigation -->
+        -->
+        <!-- make following div with class "navbar-standard" to a navigation bar which is always at the bottom of the screen and displays the both clickable image-icons for navigation 
         <div class="navbar-standard">
           <div class="navbar-icon-container">
             <img id="back_icon" src="{% static 'img/help_icon.jpg' %}" alt="clickable back icon">
@@ -33,6 +35,7 @@
             <div class="navbar-text">Master</div>
           </div>
         </div>
+        -->
         <div class='ms-auto'>
           {% if user.is_authenticated %}
           {% else %}
