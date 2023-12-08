@@ -1,91 +1,53 @@
-/* Header Style*/
-.header_container{
+.big_heading{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: var(--font_color);
+    margin-bottom: 0px;
+    margin-top: 10%;
+
+}
+.big_subheading{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--font_color);
+    margin-top: 0px;
+    padding-top: 0px;
+    border-bottom-style: solid;
+    border-color: var(--font_color);
+    height:  1.6em;
+    width: 760px;
+    margin-bottom: 25px;
+}
+.room_container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0em 0em 2% 0em;
-    padding-right: 20px;
+    height:  4em;
+    width: 100%;
+    margin-top: 0px;
+    background-color: var(--listblock_background);
+    border-radius: 18px;
 }
-.header_container :nth-child(1){
-    order:1;
-}
-.header_container :nth-child(2){
-    order:3;
-}
-.header_container :nth-child(3){
-    order:2;
-}
-/* Help Button Style*/
-.header_container .question{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    width: 140px;
-    background: var(--help_button_color);
-    border-style: solid;
-    border-color: var(--font_color);
+.text_room{
+    margin-top: 18px;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: var(--font_color);
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: normal;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    border-radius: 45px;
-    cursor: pointer;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
+    margin-left: 25px;
+    height:  1.6em;
+    width: 760px;
 }
-.header_container .popup{
-    width: 700px;
-    height: 0px;
-    text-align: left;
-    overflow: hidden;
-    position: relative;
-    margin-left: 60px;
-    margin-right: 30px;
-    background: var(--popup_text_background);
-    opacity: 0;
-    transition: 1s;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-.header_container .question:hover + .popup{
-    height: 125px;
-    opacity: 1;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-.header_container .popup h3{
-    display: flex;
-    justify-content: left;
-    text-align: center;
-    margin: 0;
-    padding: 10px 0 0 10px;
-    height: 30px;
-    background: var(--popup_header_background);
-    color: var(--popup_header_font);
-    font-weight: 600;
-    font-size: 18px;
-}
-.header_container .popup p{
-    margin: 0;
-    padding: 10px;
-    font-size: 16px;
-    line-height: 20px;
-}
-.header_container .popup strong{
-    font-size: 16px;
-}
-/* Selection Board Ansicht */
-.button_container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    margin: 0em 0em 2% 0em;
-}
-/* PopUp Klick Style*/
-.close{
-    visibility: hidden;
+#select_button{
+    margin: auto;
+    background-color: var(--select_color_background);
+    color: var(--font_color);
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 0px;
+    height:  2em;
+    width: 200px;
+    margin-right: 25px;
+
 }

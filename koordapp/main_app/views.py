@@ -14,3 +14,4 @@ class MasterHomeView(TemplateView):
 
 class ChooseRoomView(TemplateView):
     template_name = 'choose_room/choose_room.html'
+
