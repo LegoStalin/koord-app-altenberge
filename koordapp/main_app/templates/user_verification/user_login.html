@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id='user_login'>
+    
+    <form method='post' class="login_form">{% csrf_token %}
+        <h1 class='page_title'>Bitte melden Sie sich an:</h1>
+        <div class="form_container">
+            <span class="form_fields">{{form.as_p}}</span>
+        </div>
+        <div class="form_container">
+            <a href="/reset_password_mail" class ="redirect">Passwort vergessen?</a>
+            <input type='submit' class="btn_login" value='Anmelden'/>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
