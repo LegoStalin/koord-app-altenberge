@@ -7,14 +7,9 @@ class LogsystemConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'main_app'
     def ready(self):
-<<<<<<< HEAD
 
         # Erstellung der Rechte Gruppen
         try:
-=======
-        try:
-            # Erstellung der Rechte Gruppen
->>>>>>> main
             models = importlib.import_module('django.contrib.auth.models')
             if not models.Group.objects.filter(name='Admin').exists():
                 models.Group.objects.create(name='Admin')
@@ -25,8 +20,4 @@ class LogsystemConfig(AppConfig):
             if not models.Group.objects.filter(name='Ohne Rolle').exists():
                 models.Group.objects.create(name='Ohne Rolle')
         except:
-<<<<<<< HEAD
             print('')
-=======
-            print('')
->>>>>>> main
