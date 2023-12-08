@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+
+{% extends 'base.html' %}
+{% block content %}
+
+    <body>
+
+    <div class="header_container">
+        <h1 class="default_heading"> Hallo. <br> Bitte ordne dem Gerät einen Raum zu. </h1>
+
+        <a class="question" href="#popup1">Hilfe</a>
+
+        <div id="popup1" class="popup">
+            <div class="popup2">
+                <h3>Was muss ich in diesem Anzeigefenster beachten?</h3>
+
+                <div class="content">
+                    <p>In dieser Masteransicht können Sie zwischen verschiedenen <strong>Funktionen</strong> der App <strong>navigieren</strong>.
+                        Sie müssen auf die grauen <strong>Schaltflächen klicken</strong>, um in das <strong> nächste Fenster</strong> zu navigieren.</p>
+                </div>
+
+                <a class="close" href="#">&times;</a>
+
+            </div>
+        </div>
+    </div>
+    <h2 class="default_subheading"> Wählen Sie eine der folgenden Aktionen aus: </h2>
+
+
+    </body>
+    </html>
+{% endblock %}

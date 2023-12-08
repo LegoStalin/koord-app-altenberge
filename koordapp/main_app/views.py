@@ -11,3 +11,6 @@ from django.shortcuts import redirect
 
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
+
+class ChooseRoomView(TemplateView):
+    template_name = 'choose_room/choose_room.html'
