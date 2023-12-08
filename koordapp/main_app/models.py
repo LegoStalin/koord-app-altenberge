@@ -19,15 +19,9 @@ class Nutzer(models.Model):
     # email = models.CharField(max_length=100)
 class Personal(models.Model):
     rolle = models.CharField(max_length=40)
-<<<<<<< HEAD
-    rechte_gruppe = models.ForeignKey(Group, on_delete=models.CASCADE)
-    nutzer = models.ForeignKey(Nutzer, on_delete=models.CASCADE)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-=======
     rechte_gruppe = models.ForeignKey(Group, on_delete=models.CASCADE, null=True)       # null=True rausmachen
     nutzer = models.ForeignKey(Nutzer, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null= True)    # null=True rausmachen
->>>>>>> main
     is_password_otp = models.BooleanField(default=True)
 
     class Meta:
@@ -39,11 +33,7 @@ class Raum(models.Model):
     kapazitaet = models.SmallIntegerField()
 class Gruppe(models.Model):
     name = models.CharField(max_length=50)
-<<<<<<< HEAD
     gruppenleiter_leiter = models.ForeignKey(Personal, on_delete=models.SET_NULL, null=True)        # ?
-=======
-    gruppenleiter_leiter = models.ForeignKey(Personal, on_delete=models.SET_NULL, null = True)        # ?
->>>>>>> main
     raum = models.ForeignKey(Raum, on_delete=models.SET_NULL, null=True)
 
 class AGZeit(models.Model):
@@ -62,13 +52,8 @@ class AG(models.Model):
     beschreibung = models.CharField(max_length=500)
     max_anzahl = models.SmallIntegerField()
     offene_AG = models.BooleanField() 
-<<<<<<< HEAD
-    leiter = models.ForeignKey(Personal, on_delete=models.CASCADE)       
-    angebots_datum_raum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE)
-=======
     leiter = models.ForeignKey(Personal, on_delete=models.CASCADE, null=True)       # null=True entfernen
     angebots_datum_raum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE, null=True)    # null=True entfernen
->>>>>>> main
     ag_zeit = models.ManyToManyField(AGZeit)
 
 class Schueler(models.Model):
@@ -101,12 +86,8 @@ class Aufenthalt(models.Model):                # Zuordnung wo sich Kinder befund
     tag = models.DateField
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
     raum_id = models.ForeignKey(Raum, on_delete=models.CASCADE)
-<<<<<<< HEAD
-    zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
-=======
     zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
 # class Buchung_AG(models.Model):            # Zuordunung zwischen Schüler und AGS
 #     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
 #     ag_id = models.ForeignKey(AG, on_delete=models.CASCADE)
     
->>>>>>> main
