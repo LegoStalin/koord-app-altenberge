@@ -1,2 +1,11 @@
 ./.obsidian/*
 *obsidian
+<<<<<<< HEAD
+.idea/*
+koordapp/__pycache__/*
+/.idea/
+=======
+server/.idea
+server/.idea/*
+.idea/*
+>>>>>>> main

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method='post'>{% csrf_token %}
+    <div class = "form-container">
+        {% for room in rooms %}
+            <p>{{room.raum_nr}}, {{room.geschoss}}, {{room.kapazitaet}}</p>
+        {% endfor %}
+    </div>
+</form>
+
+{% endblock %}
