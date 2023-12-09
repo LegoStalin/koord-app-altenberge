@@ -40,7 +40,7 @@
 }
 #select_button{
     margin: auto;
-    background-color: var(--select_color_background);
+    background-color: #06D85F;
     color: var(--font_color);
     border-radius: 10px;
     border: none;
