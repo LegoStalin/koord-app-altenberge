@@ -27,6 +27,7 @@
     margin-top: 0px;
     background-color: var(--listblock_background);
     border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
 }
 .text_room{
     margin-top: 18px;
@@ -49,5 +50,4 @@
     height:  2em;
     width: 200px;
     margin-right: 25px;
-
 }
