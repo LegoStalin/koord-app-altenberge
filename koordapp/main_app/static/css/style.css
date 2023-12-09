@@ -353,7 +353,7 @@ ul.errorlist {
         color: #333;
     }
     .popup2 .close:hover{
-        color: #06D85F;
+        color: var(--select_color_background);
     }
     .popup2 .content{
         max-height: 30%;
@@ -524,7 +524,7 @@ ul.errorlist {
         color: #333;
     }
     .popup2 .close:hover{
-        color: #06D85F;
+        color: var(--select_color_background);
     }
     .popup2 .content{
         max-height: 30%;
