@@ -15,12 +15,7 @@ from django.shortcuts import render
 
 from .models import Nutzer, Personal, Raum, Gruppe, AG, Schueler
 from .view.csv_import.csv_import_view import csv_import_view
-
-
-
-class LoginInterfaceView(LoginView):
-    template_name = 'user_verification/user_login.html'
-
+from .view.user_verification.login_view import login_view
 
 
 class ResetPasswordMailView(View):
@@ -50,4 +45,7 @@ def csv_import(request):
 
 def roomplan(request):
     return render(request, 'room_plan/room_overview.html', {'rooms':Raum.objects.all()})
+
+def login(request):
+    return login_view(request)
 

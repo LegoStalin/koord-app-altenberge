@@ -8,7 +8,7 @@ urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
 
 
-    path('login/', views.LoginInterfaceView.as_view(), name='login'),
+    path('login/', views.login, name='login'),
 
 
     path('create_activity/', views.CreateActivityView.as_view(), name='create_activity'),
