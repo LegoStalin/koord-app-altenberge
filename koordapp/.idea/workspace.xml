@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="unversioned files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Bootstrap Backend Draft">
       <change beforePath="$PROJECT_DIR$/main_app/templates/choose_room/choose_room.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/choose_room/choose_room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702193190341</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Bootstrap Backend Draft">
+      <option name="closed" value="true" />
+      <created>1702193815385</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702193815385</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +193,7 @@
     <MESSAGE value="adj" />
     <MESSAGE value="further development of room container and buttons" />
     <MESSAGE value="unversioned files" />
-    <option name="LAST_COMMIT_MESSAGE" value="unversioned files" />
+    <MESSAGE value="Bootstrap Backend Draft" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bootstrap Backend Draft" />
   </component>
 </project>

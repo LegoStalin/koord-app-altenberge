@@ -74,7 +74,7 @@
             {% for room in rooms %}
                 <p>{{room.raum_nr}}</p>
                 <div class="room_container">
-                <p class="text_room"> {{room.raum_nr}} </p>
+                <p class="text_room"> Raum {{room.raum_nr}} </p>
 
                 {% if room.occupied == 1 %}
                 	<button id="occupied_button"> Belegt </button>
