@@ -21,7 +21,7 @@
 }
 
 
-
+/*  Single Rooom Bars in List */
 .room_container{
     display: flex;
     flex-direction: row;
@@ -47,6 +47,7 @@
     height:  1.6em;
     width: 760px;
 }
+/* Button styles */
 #select_button{
     margin: auto;
     background-color: var(--select_color_background);
