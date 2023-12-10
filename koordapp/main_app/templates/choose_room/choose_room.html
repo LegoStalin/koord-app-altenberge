@@ -72,14 +72,13 @@
     <form method='post'>{% csrf_token %}
         <div class = "list_container">
             {% for room in rooms %}
-                <p>{{room.raum_nr}}</p>
                 <div class="room_container">
                 <p class="text_room"> Raum {{room.raum_nr}} </p>
 
                 {% if room.occupied == 1 %}
                 	<button id="occupied_button"> Belegt </button>
                 {% elif room.occupied == 0 %}
-                    <button id="select_button"> Auswählen </button>
+                    <button name="{{room.raum_nr}}" id="select_button"> Auswählen </button>
                 {% endif %}
                 </div>
             {% endfor %}
