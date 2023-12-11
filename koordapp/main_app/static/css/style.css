@@ -36,7 +36,7 @@ ul.errorlist {
         padding-left: 10%;
         padding-right: 10%;
     }
-    /* Header Style*/
+    /* Header Style "default" in view without back button*/
     .default_heading{
         color: var(--font_color);
         font-size: 3em;
@@ -50,6 +50,27 @@ ul.errorlist {
         margin-top: 10px;
         padding-top: 0px;
     }
+
+
+    /* Header Style 2*/
+    .heading_2{
+        color: var(--font_color);
+        font-size: 3em;
+        margin-bottom: 1px;
+        margin-top: 1%;
+        margin-left: 3%;
+    }
+    /* Subheading Style 2 */
+    .subheading_2{
+        color: var(--font_color);
+        font-size: 1.5em;
+        padding-top: 0px;
+        margin-top: 10px;
+        margin-left: 3%;
+    }
+
+
+
     /* Button Style 1*/
     #button_style1 {
         font-size: 2em;
@@ -98,7 +119,7 @@ ul.errorlist {
     #button_style1:focus {
         box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
     }
-    /* Header Style*/
+    /* Header Style without Back Button*/
     .header_container{
         display: flex;
         flex-direction: row;
@@ -115,15 +136,34 @@ ul.errorlist {
     .header_container :nth-child(3){
         order:2;
     }
-    /* Help Button Style*/
-    .header_container .question{
+    /* Header Style with Back Button*/
+    .header_container_back_help{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0em 0em 2% 0em;
+        padding-right: 20px;
+        height: 125px;
+    }
+    .header_container_back_help :nth-child(1){
+         order:1;
+     }
+    .header_container_back_help :nth-child(2){
+        order:3;
+    }
+    .header_container_back_help :nth-child(3){
+        order:2;
+    }
+    /* Back Button Style */
+.back{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 45px;
-        width: 140px;
+        height: 51px;
+        width: 155px;
         background: var(--help_button_color);
         border-style: solid;
+        border-width: 3px;
         border-color: var(--font_color);
         color: var(--font_color);
         text-decoration: none;
@@ -138,7 +178,45 @@ ul.errorlist {
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         margin-top: 50px;
     }
-    .header_container .popup{
+    /* Back Arrow Style*/
+    .arrow{
+        order: 1;
+        font-size: 50px;
+        font-weight: 100;
+
+    }
+    .backtext{
+        order: 2;
+        margin-left: 5px;
+
+    }
+
+
+    /* Help Button Style*/
+    .question{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 140px;
+        background: var(--help_button_color);
+        border-style: solid;
+        border-width: 3px;
+        border-color: var(--font_color);
+        color: var(--font_color);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: normal;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        border-radius: 45px;
+        cursor: pointer;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+    }
+     .popup{
         width: 700px;
         height: 0px;
         text-align: left;
@@ -152,12 +230,12 @@ ul.errorlist {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
-    .header_container .question:hover + .popup{
+    .question:hover + .popup{
         height: 125px;
         opacity: 1;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     }
-    .header_container .popup h3{
+     .popup h3{
         display: flex;
         justify-content: left;
         text-align: center;
@@ -169,13 +247,13 @@ ul.errorlist {
         font-weight: 600;
         font-size: 18px;
     }
-    .header_container .popup p{
+    .popup p{
         margin: 0;
         padding: 10px;
         font-size: 16px;
         line-height: 20px;
     }
-    .header_container .popup strong{
+    .popup strong{
         font-size: 16px;
     }
     /* Selection Board Ansicht */
@@ -215,6 +293,24 @@ ul.errorlist {
         margin-top: 10px;
         padding-top: 0px;
     }
+    /* Header Style 2*/
+    .heading_2{
+        color: var(--font_color);
+        font-size: 2.6em;
+        margin-bottom: 1px;
+        margin-top: 1%;
+        margin-left: 3%;
+    }
+    /* Subheading Style 2 */
+    .subheading_2{
+        color: var(--font_color);
+        font-size: 1.4em;
+        padding-top: 0px;
+        margin-top: 10px;
+        margin-left: 3%;
+    }
+
+
     /* Button Style 1*/
     #button_style1 {
         font-size: 1.7em;
@@ -280,8 +376,66 @@ ul.errorlist {
     .header_container :nth-child(3){
         order:2;
     }
+
+    /* Header Style with Back Button*/
+    .header_container_back_help{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0em 0em 2% 0em;
+        padding-right: 20px;
+        height: 100px;
+    }
+    .header_container_back_help :nth-child(1){
+        order:1;
+    }
+    .header_container_back_help :nth-child(2){
+        order:3;
+    }
+    .header_container_back_help :nth-child(3){
+        order:2;
+    }
+    /* Back Button Style */
+    .back{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 47px;
+        width: 145px;
+        background: var(--help_button_color);
+        border-style: solid;
+        border-width: 3px;
+        border-color: var(--font_color);
+        color: var(--font_color);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: normal;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        border-radius: 45px;
+        cursor: pointer;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+    }
+    /* Back Arrow Style*/
+    .arrow{
+        order: 1;
+        font-size: 50px;
+        font-weight: 100;
+
+    }
+    .backtext{
+        order: 2;
+        margin-left: 5px;
+
+    }
+
+
+
     /* Help Button Style*/
-    .header_container .question{
+    .question{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -386,6 +540,27 @@ ul.errorlist {
         margin-top: 3px;
         padding-top: 0px;
     }
+    /* Header Style 2*/
+    .heading_2{
+        color: var(--font_color);
+        font-size: 1.8em;
+        margin-bottom: 1px;
+        margin-top: 5%;
+        margin-left: 3%;
+    }
+    /* Subheading Style 2 */
+    .subheading_2{
+        color: var(--font_color);
+        font-size: 1.0em;
+        padding-top: 0px;
+        margin-top: 3px;
+        margin-left: 3%;
+    }
+
+
+
+
+
     /* Button Style 1*/
     #button_style1 {
         font-size: 1.3em;
@@ -451,13 +626,68 @@ ul.errorlist {
     .header_container :nth-child(3){
         order:2;
     }
+
+    /* Header Style with Back Button*/
+    .header_container_back_help{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0em 0em 0em 0em;
+        height: 55px;
+    }
+    .header_container_back_help :nth-child(1){
+        order:1;
+    }
+    .header_container_back_help :nth-child(2){
+        order:3;
+    }
+    .header_container_back_help :nth-child(3){
+        order:2;
+    }
+    /* Back Button Style */
+    .back{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 29px;
+        width: 90px;
+        background: var(--help_button_color);
+        border-style: solid;
+        border-width: 2px;
+        border-color: var(--font_color);
+        color: var(--font_color);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: normal;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        border-radius: 45px;
+        cursor: pointer;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 25px;
+    }
+    /* Back Arrow Style*/
+    .arrow{
+        order: 1;
+        font-size: 22px;
+        font-weight: 100;
+
+
+    }
+    .backtext{
+        order: 2;
+
+    }
+
     /* Help Button Style*/
-    .header_container .question{
+    .question{
         display: flex;
         align-items: center;
         justify-content: center;
         height: 25px;
-        width: 60px;
+        width: 80px;
         background: var(--help_button_color);
         border-style: solid;
         border-width: 2px;
