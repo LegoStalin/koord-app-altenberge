@@ -37,16 +37,40 @@
             <label class = "category">Aufsichtsperson:</label>
             <div class="custom-select">
                 <select>
-                    <option value="">Bitte auswählen..</option>
-                    <option value="">Päd. Fachkraft 1</option>
-                    <option value="">Päd. Fachkraft 2</option>
-                    <option value="">Päd. Fachkraft 3</option>
-                    <option value="">Päd. Fachkraft 4</option>
-                    <option value="">Päd. Fachkraft 5</option>
-                    <option value="">Päd. Fachkraft 6</option>
-                    <option value="">Päd. Fachkraft 7</option>
+                    <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                    <option value="1">Päd. Fachkraft 1</option>
+                    <option value="2">Päd. Fachkraft 2</option>
+                    <option value="3">Päd. Fachkraft 3</option>
+                    <option value="4">Päd. Fachkraft 4</option>
+                    <option value="5">Päd. Fachkraft 5</option>
+                    <option value="6">Päd. Fachkraft 6</option>
+                    <option value="7">Päd. Fachkraft 7</option>
                 </select>
             </div>
+        </div>
+
+        <div class = "inputblock">
+            <label class = "category">Aktivität:</label>
+            <input type="text" class="inputfield" name="activity" placeholder="Aktivität" required/>
+        </div>
+
+        <div class="inputblock">
+            <label class = "category">Kategorie:</label>
+            <div class="custom-select">
+                <select>
+                    <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                    <option value="1">Sport</option>
+                    <option value="2">Ruhe</option>
+                    <option value="3">Lernen</option>
+                    <option value="4">Kreativ</option>
+                    <option value="5">Sonstige</option>
+                </select>
+            </div>
+        </div>
+
+        <div class = "inputblock">
+            <label class = "category">Maximale Kinderanzahl:</label>
+            <input type="text" class="inputfield" name="capacity" placeholder="Maximale Kinderanzahl" required/>
         </div>
 
         <div class = "submit_container">
