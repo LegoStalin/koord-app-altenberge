@@ -3,6 +3,7 @@
     --background_color: #F6F4F3;
     --background_color_selection_board: #B4B0B0FF;
     --button_color: #AEAEB3;
+    --inputflield_background: rgba(217, 217, 217, 0.5);
     --button_border: #1B2021;
     --select_color_background: #BAD87A;
     --shadow_color: #00000033;
@@ -183,11 +184,18 @@ ul.errorlist {
         order: 1;
         font-size: 50px;
         font-weight: 100;
-
     }
-    .backtext{
+    .arrow_left {
+        border: solid var(--font_color);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 5px;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+    }
+        .backtext{
         order: 2;
-        margin-left: 5px;
 
     }
 
@@ -424,11 +432,18 @@ ul.errorlist {
         order: 1;
         font-size: 50px;
         font-weight: 100;
-
+    }
+    .arrow_left{
+        border: solid var(--font_color);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 5px;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
     }
     .backtext{
         order: 2;
-        margin-left: 5px;
 
     }
 
@@ -650,7 +665,7 @@ ul.errorlist {
         align-items: center;
         justify-content: center;
         height: 29px;
-        width: 90px;
+        width: 95px;
         background: var(--help_button_color);
         border-style: solid;
         border-width: 2px;
@@ -673,8 +688,16 @@ ul.errorlist {
         order: 1;
         font-size: 22px;
         font-weight: 100;
-
-
+    }
+    .arrow_left {
+        border: solid var(--font_color);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        margin-bottom: 1px;
+        margin-left: 5px;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
     }
     .backtext{
         order: 2;
