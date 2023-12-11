@@ -36,7 +36,9 @@
 
     <h2 class="big_subheading"> Bitte ordne dem Gerät einen Raum zu: </h2>
 
+    <!--
     <div class="list_container">
+        
         <div class="room_container">
             <p class="text_room"> Raum 1.1 </p>
             <button id="select_button"> Auswählen </button>
@@ -66,25 +68,25 @@
             <button id="select_button"> Auswählen </button>
         </div>
     </div>
+    -->
 
-
-    <!--
+    
     <form method='post'>{% csrf_token %}
         <div class = "list_container">
             {% for room in rooms %}
                 <div class="room_container">
                 <p class="text_room"> Raum {{room.raum_nr}} </p>
 
-                {% if room.occupied == 1 %}
-                	<button id="occupied_button"> Belegt </button>
-                {% elif room.occupied == 0 %}
+                {% if room_occupancy.objects.filter(raum=room).count() == 0 %}
                     <button name="{{room.raum_nr}}" id="select_button"> Auswählen </button>
+                {% else %}
+                    <button id="occupied_button"> Belegt </button>                   
                 {% endif %}
                 </div>
             {% endfor %}
         </div>
     </form>
-    -->
+    
 
     </body>
 </html>
