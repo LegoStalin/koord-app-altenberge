@@ -12,4 +12,6 @@ urlpatterns = [
     path('choose_room/', views.ChooseRoomView.as_view(), name='choose_room'),
     path('create_activity/', views.CreateActivityView.as_view(), name='create_activity'),
     path('home/', views.HomeView.as_view(), name='home'),
+    path('checked_in/', views.CheckedInView.as_view(), name='checked_in'),
+    path('checked_out/', views.CheckedOutView.as_view(), name='checked_out'),
 ]
