@@ -12,6 +12,15 @@ from django.shortcuts import redirect
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
 
+class MasterAndoridHomeView(TemplateView):
+    template_name = 'master_android/master_tablet.html'
+
+class RemoveTabletView(TemplateView):
+    template_name = 'master_android/remove_tablet.html'
+
+class SetNfcScanAndroidView(TemplateView):
+    template_name = 'master_android/set_nfc_scan.html'
+
 class ChooseRoomView(TemplateView):
     template_name = 'choose_room/choose_room.html'
 

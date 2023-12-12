@@ -20,7 +20,7 @@
             <h3>Was muss ich in diesem Anzeigefenster beachten?</h3>
 
             <div class="content">
-                <p>In dieser Masteransicht können Sie zwischen verschiedenen <strong>Funktionen</strong> der App <strong>navigieren</strong>.
+                <p>In dieser Hauptansicht können Sie zwischen verschiedenen <strong>Funktionen</strong> der App <strong>navigieren</strong>.
                     Sie müssen auf die grauen <strong>Schaltflächen klicken</strong>, um in das <strong> nächste Fenster</strong> zu navigieren.</p>
             </div>
 
@@ -33,19 +33,12 @@
 
 <div class="selection_board">
     <div class="button_container">
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/dashboard/';"> Dashboard </button>
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/ogs_group/';"> OGS-Gruppe </button>
+        <button id="button_style1" onclick="window.location.href = '/remove_tablet'"> Gerät abmelden </button>
+        <button id="button_style1" onclick="window.location.href = '/change_roomdata'"> Raumangaben ändern </button>
     </div>
 
     <div class="button_container">
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/search_pupil/';"> Suche Kind </button>
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/choose_room/';"> Raumübersicht </button>
-    </div>
-
-    <div class="button_container">
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/csv_import/';"> CSV-Import </button>
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/personal_preferences/';"> Persönliche Einstellungen </button>
-
+        <button id="button_style1" onclick="window.location.href = '/set_nfc_scan'"> NFC Chip neu zuweisen </button>
     </div>
 </div>
 
