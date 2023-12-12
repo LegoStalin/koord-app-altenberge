@@ -14,9 +14,9 @@
     font-size: 70px;
 }
 
-.checked_in_logo {
-    margin-left: 7%;
+.checked_in_out_logo {
+    margin-left: 6%;
+    margin-top: 4%;
     height: 30vw;
     width: auto;
-
 }

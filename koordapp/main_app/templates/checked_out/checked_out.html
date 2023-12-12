@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="de">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-</body>
-</html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/checked_in_out/checked_in_out_style.css' %}"/>
+    </head>
+
+    <body>
+
+    <div class ="mid_container">
+        <h1 class="default_heading_mid"> Tschüss Max! </h1>
+        <img src="{% static 'img/checked_out.png' %}" alt="Checked-Out" class="checked_in_out_logo">
+    </div>
+    </body>
+    </html>
+{% endblock %}
