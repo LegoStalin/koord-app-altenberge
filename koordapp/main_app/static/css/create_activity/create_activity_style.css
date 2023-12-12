@@ -32,13 +32,13 @@
     align-content: center;
     margin-top: 15px;
 }
-
+/* Style of text in front of input field*/
 .category{
     font-size: 24px;
     font-weight: 400;
     color: var(--font_color);
 }
-
+/* Style of inputfield */
 .inputfield {
     height: 50px;
     width: 410px;
@@ -79,28 +79,3 @@ select {
     cursor: pointer;
 }
 
-
-/*
-.custom-select::before,
-.custom-select::after {
-    --size: 0.3rem;
-    content: "";
-    right: 2rem;
-    pointer-events: none;
-}
-
-
-.custom-select::before {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-bottom: var(--size) solid black;
-    top: 40%;
-}
-
-.custom-select::after {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-top: var(--size) solid black;
-    top: 55%;
-}
-*/
