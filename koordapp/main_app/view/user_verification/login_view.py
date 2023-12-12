@@ -18,7 +18,7 @@ from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler
 
 def login_view(request):
     if request.method == "POST":
-        form = AuthenticationForm(request.POST)
+        form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             cleandata=form.cleaned_data
             #authenticate checks if credentials exists in db
@@ -29,8 +29,11 @@ def login_view(request):
                     auth_login(request, user)
                     return redirect("home")
             else:
+                messages.error(request,"Benutzername oder Passwort Falsch")
                 return redirect("login")
         else:
-            print('')
-    form=AuthenticationForm()
+            messages.error(request,"Benutzername oder Passwort Falsch")
+    else:
+        form=AuthenticationForm()
+    
     return render(request, "user_verification/user_login.html", {'form':form})
