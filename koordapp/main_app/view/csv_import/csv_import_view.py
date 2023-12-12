@@ -16,7 +16,7 @@ from django.http import HttpResponse
 
 from openpyxl import Workbook, load_workbook
 
-from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler, Zeitraum, AGZeit 
+from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler, Zeitraum, AGZeit, Datumsraum 
 
 def csv_import_view(request):
     if request.method == 'POST':
@@ -27,8 +27,8 @@ def csv_import_view(request):
         try:
             excel_file = request.FILES['excel_file']
         except:
-            print("keine Datei vorhanden")
-            return redirect('home')
+            messages.error(request, "Keine Datei Hochgeladen")
+            return redirect('csv_import')
         
         if(excel_file.name.endswith(".xlsx")):              # check if xlsx datei
 
@@ -58,7 +58,7 @@ def csv_import_view(request):
                         activ_sheet.title = "OTP"
                         activ_sheet.append(['Username', 'Einmal Passwort'])
                         wsp = wb['Personal']
-                        for row in wsp.iter_rows(min_row=2, values_only=True):              # Erstellung Personal
+                        for index, row in enumerate(wsp.iter_rows(min_row=2, values_only=True)):              # Erstellung Personal
                             
                             error = False
                             vorname, nachname, funktion, rechte = row
@@ -69,7 +69,7 @@ def csv_import_view(request):
                                 rechte_gruppe = Group.objects.get(name=rechte)
                             except:
                                 error=True
-                                messages.error(request, fehler_tabelle+"rechte_gruppe "+rechte+" vom Personal "+vorname+" "+nachname+" in Zeile " + row.count +" existiert nicht. Options: (Admin, Gruppenleitung, Raumbetreuer, Ohne Rolle)")
+                                messages.error(request, fehler_tabelle+"rechte_gruppe "+str(rechte)+" vom Personal "+str(vorname)+" "+str(nachname)+" in Zeile " + str(index) +" existiert nicht. Options: (Admin, Gruppenleitung, Raumbetreuer, Ohne Rolle)")
                             randompw = ''.join(random.choice(string.ascii_letters+string.digits) for _ in range(6))     #erstellung random passwort
                             #print(randompw)
                             username = (vorname+nachname).lower()
@@ -98,9 +98,9 @@ def csv_import_view(request):
                         if 'option_overwrite' in optionlist_reset:
                             AG.objects.all().delete()
                         wss = wb['AGs']
-                        for row in wss.iter_rows(min_row=2, values_only=True):              # Erstellung Nutzer
+                        for index, row in enumerate(wss.iter_rows(min_row=2, values_only=True)):              # Erstellung Nutzer
                             error = False
-                            name, beschreibung, max_anzahl, offene_AG, ag_leiter, montag, dienstag, mittwoch, donnerstag, freitag = row
+                            name, beschreibung, max_anzahl, offene_AG, ag_leiter, montag, dienstag, mittwoch, donnerstag, freitag, angebotsstart, angebotsende = row
 
                             zahl = 1
                             is_name_unique = False
@@ -114,93 +114,111 @@ def csv_import_view(request):
                                     name=un2
                                     is_name_unique=True
                             try:
-                                leiter = Personal.objects.get(user=(User.objects.get(username=ag_leiter)))
+                                user = User.objects.get(username=ag_leiter)
+                                leiter = Personal.objects.get(user=user)
                             except:
                                 error=True
-                                messages.error(request, fehler_tabelle+"ag_leiter "+name+" in Zeile " + row.count +" existiert nicht.")
+                                messages.error(request, fehler_tabelle + "ag_leiter " + str(name)+" in Zeile " + str(index) +" existiert nicht.")
                             is_offene_AG = False
                             try:
                                 max_anzahl = int(max_anzahl)
                             except:
                                 error=True
-                                messages.error(request, fehler_tabelle+"max_anzahl "+max_anzahl+" in Zeile " + row.count +" muss eine Zahl sein")
+                                messages.error(request, fehler_tabelle+"max_anzahl "+str(max_anzahl)+" in Zeile " + str(index) +" muss eine Zahl sein")
+                            if(type(angebotsstart)==datetime and type(angebotsende)==datetime):                           
+                                datumsraum = Datumsraum.objects.create(startdatum=angebotsstart, enddatum=angebotsende)
+                            else:
+                                error = True
+                                messages.error(request, fehler_tabelle+"Datum in Zeile " + str(index) +" kann nicht Formatiert werden. Format: dd.mm.YYYY")
+                            print()                          
                             if(offene_AG.lower()=='true' or offene_AG.lower()=='ja'):
                                     is_offene_AG = True
                             if not error:        
-                                ag = AG.objects.create(name=name,beschreibung=beschreibung,max_anzahl=max_anzahl,offene_AG=is_offene_AG, leiter=leiter)
+                                ag = AG.objects.create(name=name,beschreibung=beschreibung,max_anzahl=max_anzahl,offene_AG=is_offene_AG, leiter=leiter, angebots_datum_raum=datumsraum)
                                 
                                 # TODO: Error Handling
-                                montag = montag.replace(" ","")
-                                dienstag = dienstag.replace(" ","")
-                                mittwoch = mittwoch.replace(" ","")
-                                donnerstag = donnerstag.replace(" ","")
-                                freitag = freitag.replace(" ","")
-                                montag = montag.split(";")
-                                dienstag = dienstag.split(";")
-                                mittwoch = mittwoch.split(";")
-                                donnerstag = donnerstag.split(";") 
-                                freitag = freitag.split(";")
-                                create_ag_zeiten(montag, "MONTAG", ag)
-                                create_ag_zeiten(dienstag, "DIENSTAG", ag)
-                                create_ag_zeiten(mittwoch, "MITTWOCH", ag)
-                                create_ag_zeiten(donnerstag, "DONNERSTAG", ag)
-                                create_ag_zeiten(freitag, "FREITAG", ag)
+                                if not montag==None:
+                                    montag = montag.replace(" ","")
+                                    montag = montag.split(";")
+                                    create_ag_zeiten(montag, AGZeit.WOCHENTAG.MONTAG, ag)
+
+                                if not dienstag == None:
+                                    dienstag = dienstag.replace(" ","")
+                                    dienstag = dienstag.split(";")
+                                    create_ag_zeiten(dienstag, AGZeit.WOCHENTAG.DIENSTAG, ag)
+
+                                if not mittwoch == None:
+                                    mittwoch = mittwoch.replace(" ","")
+                                    mittwoch = mittwoch.split(";")
+                                    create_ag_zeiten(mittwoch, AGZeit.WOCHENTAG.MITTWOCH, ag)
+
+                                if not donnerstag == None:
+                                    donnerstag = donnerstag.replace(" ","")
+                                    donnerstag = donnerstag.split(";")
+                                    create_ag_zeiten(donnerstag, AGZeit.WOCHENTAG.DONNERSTAG, ag)
+
+                                if not freitag == None:
+                                    freitag = freitag.replace(" ","")
+                                    freitag = freitag.split(";")
+                                    create_ag_zeiten(freitag, AGZeit.WOCHENTAG.FREITAG, ag)
 
                     if 'option_group' in optionlist:
                         fehler_tabelle='Fehler in Tabelle Gruppen: '
                         if 'option_overwrite' in optionlist_reset:
                             Gruppe.objects.all().delete()
                         wss = wb['Gruppen']
-                        for row in wss.iter_rows(min_row=2, values_only=True):              # Erstellung Nutzer
+                        for index, row in enumerate(wss.iter_rows(min_row=2, values_only=True)):              # Erstellung Nutzer
                             #print(row)c
                             error = False
                             name, gruppenleiter_leiter, raum = row
                             if(Gruppe.objects.filter(name=name).exists()==False):
                                 try:
-                                    gruppenleiter_leiter = Personal.objects.get(user=(User.objects.get(username=gruppenleiter_leiter)))
+                                    user = (User.objects.get(username=gruppenleiter_leiter))
+                                    gruppenleiter_leiter = Personal.objects.get(user=user)
                                 except:
                                     error=True
-                                    messages.error(request, fehler_tabelle+"gruppen_leiter "+gruppenleiter_leiter+" in Zeile " + row.count +" existiert nicht.")
+                                    messages.error(request, fehler_tabelle+"gruppen_leiter "+str(gruppenleiter_leiter)+" in Zeile " + str(index) +" existiert nicht.")
                                 try:
                                     raum = Raum.objects.get(raum_nr=raum)
                                 except:
                                     error=True
-                                    messages.error(request, fehler_tabelle+"raum "+raum+" in Zeile " + row.count +" existiert nicht.")
+                                    messages.error(request, fehler_tabelle+"raum "+ str(raum) +" in Zeile " + str(index) +" existiert nicht.")
                                 if not error:
                                     Gruppe.objects.create(name=name,gruppenleiter_leiter=gruppenleiter_leiter,raum=raum)
                             else:
-                                messages.error(request, fehler_tabelle+"Gruppe "+name+" in Zeile " + row.count +" existiert bereits.")
+                                messages.error(request, fehler_tabelle+"Gruppe "+ str(name)+" in Zeile " + str(index) +" existiert bereits.")
 
                     if 'option_pupil' in optionlist:
                         fehler_tabelle='Fehler in Tabelle Schueler: '
                         if 'option_overwrite' in optionlist_reset:
                             Schueler.objects.all().delete()
                         wss = wb['Schueler']
-                        for row in wss.iter_rows(min_row=2, values_only=True):              # Erstellung Nutzer
+                        for index, row in enumerate(wss.iter_rows(min_row=2, values_only=True)):              # Erstellung Nutzer
                             
                             error = False
                             vorname, nachname, gruppen_name, klasse, bus_kind, name_eb, kontakt_eb  = row
                             if(bus_kind.lower()=='true' or bus_kind.lower()=='ja'):
-                                    is_offene_AG = True
+                                    bus_kind = True
                             else:
                                 bus_kind = False
                             try:
                                 gruppen_id = Gruppe.objects.get(name=gruppen_name)
                             except:
                                 error=True
-                                messages.error(request, fehler_tabelle+"Gruppe "+gruppen_id+" in Zeile " + row.count +" existiert nicht.")
+                                messages.error(request, fehler_tabelle+"Gruppe "+str(gruppen_id)+" in Zeile " + str(index) +" existiert nicht.")
                             new_nutzer = Nutzer.objects.create(vorname=vorname,nachname=nachname)
                             Schueler.objects.create(klasse=klasse, bus_kind=bus_kind, name_eb=name_eb, kontakt_eb=kontakt_eb, user_id=new_nutzer,gruppen_id=gruppen_id)
  
-                    return redirect('home')
+                    return redirect('csv_import')
                     # return response                              # Site after Download
                 # return response           # Weiterleitung wenn alles funktioniert hat
             except:
                 messages.error(request, "Fehler bei importieren der Excel datei. Bitte überprüfe ob die Datei als 'Excel Arbeitsmappe (*.xlsx)' gespeichter ist, alle Tabellen die importier oder zurückgesetzt werden sollen existieren und ob die Spalten, wie in der Vorlage, richtig bennant sind.")              
-                return redirect('home')      # Weiterleitung bei falscher xlsx datei
+                return redirect('master_web')      # Weiterleitung bei falscher xlsx datei
                                   
         print('Falscher Dateityp')        
-        return render(request, 'csv_import/csv_import.html')      # Weiterleitung bei flaschen datei Typen   
+        return render(request, 'csv_import/csv_import.html')      # Weiterleitung bei flaschen datei Typen
+
     return render(request, 'csv_import/csv_import.html')
 
 def create_ag_zeiten(list, day, ag):
@@ -208,13 +226,13 @@ def create_ag_zeiten(list, day, ag):
     for uhrzeit in list:
         if not uhrzeit == "":
             uhrzeit = uhrzeit.split("-")
-            if(uhrzeit[0].split(":").count>1):
+            if(len(uhrzeit[0].split(":"))>1):
                 startzeit_stunde = uhrzeit[0].split(":")[0]
                 startzeit_minute = uhrzeit[0].split(":")[1]
             else:
                 startzeit_stunde = uhrzeit[0]
                 startzeit_minute = "00"
-            if(uhrzeit[1].split(":").count>1):
+            if(len(uhrzeit[1].split(":"))>1):
                 endzeit_stunde = uhrzeit[1].split(":")[0]
                 endzeit_minute = uhrzeit[1].split(":")[1]
             else:
@@ -224,10 +242,6 @@ def create_ag_zeiten(list, day, ag):
             startzeit = datetime.strptime(startzeit_stunde+':'+startzeit_minute, '%H:%M').time()
             endzeit = datetime.strptime(endzeit_stunde+':'+endzeit_minute, '%H:%M').time()
             zeitraum = Zeitraum.objects.create(startzeit=startzeit, endzeit=endzeit)
-            wochentag = None
-            for wt in AGZeit.WOCHENTAG.choices():
-                if(wt[0].lower()==day.lower()):
-                    wochentag=wt[0]
-            agzeit = AGZeit.objects.create(wochentag=wochentag, zeitraum=zeitraum)
+            agzeit = AGZeit.objects.create(wochentag=day, zeitraum=zeitraum)
             ag.ag_zeit.add(agzeit)
     

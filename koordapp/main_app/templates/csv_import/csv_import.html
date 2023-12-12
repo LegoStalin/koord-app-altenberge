@@ -5,26 +5,31 @@
 <div class="block_container">
     <div class="header_container">
         <h1>Datenbank aktualisieren</h1>
-        <h2>Bitte laden Sie eine csv-Datei hoch:</h2>
+        <h2>Bitte laden Sie eine xlsx-Datei hoch:</h2>
     </div>
-    <form action="/submit" method="post" class="form_container">
+    {% for message in messages %}
+    <div class="alert alert-danger">
+        {{message}}
+    </div>
+    {% endfor %}
+    <form method="post" class="form_container" enctype="multipart/form-data">
+        {% csrf_token %}
         <div id="flags">
             <div id="database_flags" class="content_container">
                 <h3>Sollen die Daten in der Datenbank überschrieben oder nur ergänzt werden?</h3>
-                <h4>« Bitte nur eine Möglichkeit ankreuzen »</h4>
                 <div class="checkbox_container">
                     <label><input type="checkbox" name="checkbox_database" value="option_overwrite"> überschreiben</label>
-                    <label><input type="checkbox" name="checkbox_database" value="option_extend"> ergänzen</label>
                 </div>    
             </div>
             <div id="sheet_flags" class="content_container">
                 <h3>Welche sheets sind in der ".xlsx"-Datei enthalten?</h3>
                 <h4>« Eine Mehrfachauswahl ist hier möglich »</h4>
                 <div class="checkbox_container">
-                    <label><input type="checkbox" name="checkbox_sheet" value="option_user">Rollen</label>
+                    <label><input type="checkbox" name="checkbox_sheet" value="option_user">Personal</label>
                     <label><input type="checkbox" name="checkbox_sheet" value="option_pupil">Schüler</label>
                     <label><input type="checkbox" name="checkbox_sheet" value="option_room">Räume</label>
                     <label><input type="checkbox" name="checkbox_sheet" value="option_ag">AGs</label>
+                    <label><input type="checkbox" name="checkbox_sheet" value="option_group">Gruppen</label>
                 </div>  
             </div>
         </div>
@@ -33,7 +38,7 @@
             <input type="submit" value="Vorlage herunterladen">
         </div>
         <div class = "upload_container">
-            <div class="dnd_file"><input type="file" id="file_input" accept=".xlsx" style="display: none;"></div>
+            <div class="dnd_file"><input type="file" accept=".xlsx" name="excel_file"></div>
             <div class= "upload_button"><input type="submit" value="Hochladen"></div>
         </div>
       </form>
