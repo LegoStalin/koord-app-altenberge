@@ -29,3 +29,9 @@ class CreateActivityView(TemplateView):
 
 class HomeView(TemplateView):
     template_name = 'home/home.html'
+
+class CheckedInView(TemplateView):
+    template_name = 'checked_in/checked_in.html'
+
+class CheckedOutView(TemplateView):
+    template_name = 'checked_out/checked_out.html'

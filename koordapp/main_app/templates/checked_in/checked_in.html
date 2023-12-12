@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/checked_in_out/checked_in_out_style.css' %}"/>
+    </head>
+
+    <body>
+
+    <div class ="mid_container">
+        <h1 class="default_heading_mid"> Hallo Max! </h1>
+        <img src="{% static 'img/checked_in.png' %}" alt="Checked-In" class="checked_in_logo">
+    </div>
+    </body>
+    </html>
+{% endblock %}
