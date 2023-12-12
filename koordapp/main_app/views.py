@@ -24,3 +24,5 @@ class SetNfcScanAndroidView(TemplateView):
 class ChooseRoomView(TemplateView):
     template_name = 'choose_room/choose_room.html'
 
+class CreateActivityView(TemplateView):
+    template_name = 'create_activity/create_activity.html'
