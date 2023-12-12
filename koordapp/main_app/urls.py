@@ -17,7 +17,7 @@ urlpatterns = [
     path('master_web/', views.MasterHomeView.as_view(), name='master_web'),
 
 
-    # path('csv_import/', views.csv_import, name='csv_import'),
+    path('csv_import/', views.csv_import, name='csv_import'),
     # path('roomplan/', views.roomplan, name='roomplan'),
     path('reset_password_mail/', views.ResetPasswordMailView.as_view(), name='reset_password_mail'),
     path('reset_password_confirmation/', views.ResetPasswordConfirmationView.as_view(), name='reset_password_confirmation'),

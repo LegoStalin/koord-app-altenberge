@@ -16,7 +16,7 @@ from django.http import HttpResponse
 
 from openpyxl import Workbook, load_workbook
 
-from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler 
+from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler, Zeitraum, AGZeit 
 
 def csv_import_view(request):
     if request.method == 'POST':
@@ -100,7 +100,8 @@ def csv_import_view(request):
                         wss = wb['AGs']
                         for row in wss.iter_rows(min_row=2, values_only=True):              # Erstellung Nutzer
                             error = False
-                            name, beschreibung, max_anzahl, offene_AG, ag_leiter = row
+                            name, beschreibung, max_anzahl, offene_AG, ag_leiter, montag, dienstag, mittwoch, donnerstag, freitag = row
+
                             zahl = 1
                             is_name_unique = False
                             while not is_name_unique:
@@ -126,8 +127,25 @@ def csv_import_view(request):
                             if(offene_AG.lower()=='true' or offene_AG.lower()=='ja'):
                                     is_offene_AG = True
                             if not error:        
-                                AG.objects.create(name=name,beschreibung=beschreibung,max_anzahl=max_anzahl,offene_AG=is_offene_AG, leiter=leiter)
-                    
+                                ag = AG.objects.create(name=name,beschreibung=beschreibung,max_anzahl=max_anzahl,offene_AG=is_offene_AG, leiter=leiter)
+                                
+                                # TODO: Error Handling
+                                montag = montag.replace(" ","")
+                                dienstag = dienstag.replace(" ","")
+                                mittwoch = mittwoch.replace(" ","")
+                                donnerstag = donnerstag.replace(" ","")
+                                freitag = freitag.replace(" ","")
+                                montag = montag.split(";")
+                                dienstag = dienstag.split(";")
+                                mittwoch = mittwoch.split(";")
+                                donnerstag = donnerstag.split(";") 
+                                freitag = freitag.split(";")
+                                create_ag_zeiten(montag, "MONTAG", ag)
+                                create_ag_zeiten(dienstag, "DIENSTAG", ag)
+                                create_ag_zeiten(mittwoch, "MITTWOCH", ag)
+                                create_ag_zeiten(donnerstag, "DONNERSTAG", ag)
+                                create_ag_zeiten(freitag, "FREITAG", ag)
+
                     if 'option_group' in optionlist:
                         fehler_tabelle='Fehler in Tabelle Gruppen: '
                         if 'option_overwrite' in optionlist_reset:
@@ -184,3 +202,32 @@ def csv_import_view(request):
         print('Falscher Dateityp')        
         return render(request, 'csv_import/csv_import.html')      # Weiterleitung bei flaschen datei Typen   
     return render(request, 'csv_import/csv_import.html')
+
+def create_ag_zeiten(list, day, ag):
+
+    for uhrzeit in list:
+        if not uhrzeit == "":
+            uhrzeit = uhrzeit.split("-")
+            if(uhrzeit[0].split(":").count>1):
+                startzeit_stunde = uhrzeit[0].split(":")[0]
+                startzeit_minute = uhrzeit[0].split(":")[1]
+            else:
+                startzeit_stunde = uhrzeit[0]
+                startzeit_minute = "00"
+            if(uhrzeit[1].split(":").count>1):
+                endzeit_stunde = uhrzeit[1].split(":")[0]
+                endzeit_minute = uhrzeit[1].split(":")[1]
+            else:
+                endzeit_stunde = uhrzeit[1]
+                endzeit_minute = "00"
+
+            startzeit = datetime.strptime(startzeit_stunde+':'+startzeit_minute, '%H:%M').time()
+            endzeit = datetime.strptime(endzeit_stunde+':'+endzeit_minute, '%H:%M').time()
+            zeitraum = Zeitraum.objects.create(startzeit=startzeit, endzeit=endzeit)
+            wochentag = None
+            for wt in AGZeit.WOCHENTAG.choices():
+                if(wt[0].lower()==day.lower()):
+                    wochentag=wt[0]
+            agzeit = AGZeit.objects.create(wochentag=wochentag, zeitraum=zeitraum)
+            ag.ag_zeit.add(agzeit)
+    
