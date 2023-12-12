@@ -26,3 +26,6 @@ class ChooseRoomView(TemplateView):
 
 class CreateActivityView(TemplateView):
     template_name = 'create_activity/create_activity.html'
+
+class HomeView(TemplateView):
+    template_name = 'home/home.html'
