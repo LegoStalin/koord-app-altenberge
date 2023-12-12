@@ -27,7 +27,7 @@ def login_view(request):
             if user is not None:
                 if user.is_active:
                     auth_login(request, user)
-                    return redirect("home")
+                    return redirect("master_web")       # TODO: Differenzierung wenn OTP noch nicht gesetzt worden ist (!User mit OTP müssen dieses erst ändern. Wenn nicht sollten diese automatisch ausgeloggt werden)
             else:
                 messages.error(request,"Benutzername oder Passwort Falsch")
                 return redirect("login")
