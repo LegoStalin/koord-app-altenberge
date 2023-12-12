@@ -1,6 +1,5 @@
 from django.urls import path
 from .views import CreateActivityView
-from .views import LoginInterfaceView
 from . import views
 
 

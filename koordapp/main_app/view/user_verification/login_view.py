@@ -31,5 +31,6 @@ def login_view(request):
             else:
                 return redirect("login")
         else:
-            form=AuthenticationForm()
-    return render(request, "user_verification/user_login.html",{'form':form})
+            print('')
+    form=AuthenticationForm()
+    return render(request, "user_verification/user_login.html", {'form':form})
