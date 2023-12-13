@@ -52,6 +52,9 @@ def csv_import_view(request):
                                 Raum.objects.create(raum_nr=raum_nr,geschoss=geschoss,kapazitaet=kapazitaet)
 
                     if 'option_user' in optionlist:
+                        if 'option_overwrite' in optionlist_reset:
+                            Personal.objects.all().delete()
+                            User.objects.all().delete()
                         fehler_tabelle='Fehler in Tabelle Personal: '
                         wb_otp = Workbook()
                         activ_sheet = wb_otp.active
