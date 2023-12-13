@@ -16,5 +16,20 @@ from django import forms
 
 from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler
 
+@login_required(redirect_field_name='login')
 def su_pw_reset_view(request):
-    return render(request, "user_verification/su_pw_reset.html", {"allPersonal":Personal.objects.all()})
+    user = request.user
+    # user = User.objects.get(user = user)
+    if(user.is_superuser):
+        if request.method == "POST":
+            nutzername = request.POST["reset_button"]
+            randompw = ''.join(random.choice(string.ascii_letters+string.digits) for _ in range(6))
+            nutzer = User.objects.get(username=nutzername)
+            nutzer.set_password(randompw)
+            nutzer.save()
+            personal = Personal.objects.get(user=nutzer)
+            personal.is_password_otp = True
+            personal.save()
+            messages.success(request, "Das neue OTP für den Nutzer " + nutzername +  " ist " + randompw)
+        return render(request, "user_verification/su_pw_reset.html", {"allPersonal":Personal.objects.all()})
+    return redirect("master_web")
