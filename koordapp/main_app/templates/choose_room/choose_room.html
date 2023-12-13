@@ -4,6 +4,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load choose_room_filter %}
 
 
     <head>
@@ -77,10 +78,10 @@
                 <div class="room_container">
                 <p class="text_room"> Raum {{room.raum_nr}} </p>
 
-                {% if room_occupancy.objects.filter(raum=room).count() == 0 %}
-                    <button name="{{room.raum_nr}}" id="select_button"> Auswählen </button>
-                {% else %}
+                {% if room_occupancy|is_occupied:room %}
                     <button id="occupied_button"> Belegt </button>                   
+                {% else %}
+                    <button value="{{room.raum_nr}}" id="select_button"> Auswählen </button>                  
                 {% endif %}
                 </div>
             {% endfor %}
