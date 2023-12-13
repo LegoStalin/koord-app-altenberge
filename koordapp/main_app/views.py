@@ -17,6 +17,7 @@ from .models import Nutzer, Personal, Raum, Gruppe, AG, Schueler
 from .view.csv_import.csv_import_view import csv_import_view
 from .view.user_verification.login_view import login_view
 from .view.user_verification.set_new_password_view import set_new_password_view
+from .view.user_verification.su_pw_reset_view import su_pw_reset_view
 
 
 class ResetPasswordMailView(View):
@@ -36,6 +37,9 @@ class CreateActivityView(TemplateView):
 
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
+
+def su_pw_reset(request):
+    return su_pw_reset_view(request)
 
 def set_new_password(request):
     return set_new_password_view(request)

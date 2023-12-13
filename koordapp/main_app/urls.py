@@ -20,5 +20,6 @@ urlpatterns = [
     # path('roomplan/', views.roomplan, name='roomplan'),
     path('reset_password_mail/', views.ResetPasswordMailView.as_view(), name='reset_password_mail'),
     path('reset_password_confirmation/', views.ResetPasswordConfirmationView.as_view(), name='reset_password_confirmation'),
-    path('set_new_password/', views.set_new_password, name='set_new_password')
+    path('set_new_password/', views.set_new_password, name='set_new_password'),
+    path('su_pw_reset/', views.su_pw_reset, name='su_pw_reset')
 ]

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method='post' class="login_form">{% csrf_token %}
+    {%for message in messages%}
+    <div class="alert alert-danger"> {{message}} </div> 
+    {%endfor%}
+    <h1 class='page_title' >Setzte Passwort von Nutzer zurück</h1>
+    
+    {% for personal in allPersonal %}
+
+    <p>
+        <input type='submit' name="reset_button" value={{personal.user.username}} type="button"></input>
+        
+    </p>
+    {% endfor %}
+
+</form>
+
+{% endblock %}
