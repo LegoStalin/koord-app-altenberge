@@ -35,3 +35,9 @@ class CheckedInView(TemplateView):
 
 class CheckedOutView(TemplateView):
     template_name = 'checked_out/checked_out.html'
+
+class LeaveRoomView(TemplateView):
+    template_name = 'leave_room/leave_room.html'
+
+class GoHomeView(TemplateView):
+    template_name = 'go_home/go_home.html'

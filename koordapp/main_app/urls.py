@@ -14,4 +14,6 @@ urlpatterns = [
     path('home/', views.HomeView.as_view(), name='home'),
     path('checked_in/', views.CheckedInView.as_view(), name='checked_in'),
     path('checked_out/', views.CheckedOutView.as_view(), name='checked_out'),
+    path('leave_room/', views.LeaveRoomView.as_view(), name='leave_room'),
+    path('go_home/', views.GoHomeView.as_view(), name='go_home'),
 ]

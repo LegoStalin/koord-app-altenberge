@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/checked_in_out/checked_in_out_style.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/go_home/go_home.css' %}"/>
+    </head>
+
+    <body>
+    
+    <div class ="mid_container">
+        <h1 class="default_heading_mid">Auf Wiedersehen! </h1>
+        <div class="selection_board">
+            <div class="button_container_row">
+                <div class="button_container_icon" id="very_well_smiley">
+                    <a href="" id="icon_button_style">
+                        <img src="{% static 'img/smiley.png' %}"">
+                        <p class="icon_description">Sehr gut!</p> 
+                    </a>
+                </div>  
+                <div class="button_container_icon" id="okay_smiley">
+                    <a href="" id="icon_button_style">
+                        <img src="{% static 'img/smiley.png' %}""> 
+                        <p class="icon_description">Okay!</p>
+                    </a>
+                </div>
+                <div class="button_container_icon" id="bad_smiley">
+                    <a href="" id="icon_button_style"> 
+                        <img src="{% static 'img/bad_smiley.png' %}">
+                        <p class="icon_description">Meh!</p> 
+                    </a>   
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="default_subheading_mid">Wie war dein Tag heute?</h2>
+    </div>
+    </body>
+    </html>
+{% endblock %}
