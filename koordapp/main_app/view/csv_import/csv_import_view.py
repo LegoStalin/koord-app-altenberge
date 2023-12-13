@@ -71,7 +71,6 @@ def csv_import_view(request):
                                 error=True
                                 messages.error(request, fehler_tabelle+"rechte_gruppe "+str(rechte)+" vom Personal "+str(vorname)+" "+str(nachname)+" in Zeile " + str(index) +" existiert nicht. Options: (Admin, Gruppenleitung, Raumbetreuer, Ohne Rolle)")
                             randompw = ''.join(random.choice(string.ascii_letters+string.digits) for _ in range(6))     #erstellung random passwort
-                            #print(randompw)
                             username = (vorname+nachname).lower()
                             zahl = 0
                             is_username_unique = False
@@ -84,7 +83,8 @@ def csv_import_view(request):
                                 else:
                                     username=un2
                                     is_username_unique=True
-                            #print(username)
+                            # print(username)
+                            # print(randompw)
                             activ_sheet.append([username, randompw])
                             newuser = User.objects.create_user(username=username, password=randompw)
                             newuser.groups.add(rechte_gruppe)
