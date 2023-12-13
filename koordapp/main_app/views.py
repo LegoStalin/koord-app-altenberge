@@ -7,6 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django.shortcuts import redirect
 from .view.choose_room.choose_room_view import choose_room_view
+from .view.choose_room.choose_roomNr_view import choose_roomNr_view
 
 
 
@@ -15,3 +16,6 @@ class MasterHomeView(TemplateView):
 
 def choose_Room(request):
     return choose_room_view(request)
+
+def choose_RoomNr(request, raum_nr):
+    return choose_roomNr_view(request, raum_nr)

@@ -15,7 +15,7 @@
     <body>
 
     <div id="startscreen "class="header_container">
-        <h1 class="big_heading"> Hallo.  </h1>
+        <h1 class="big_heading"> Hallo. </h1>
 
         <a class="question" href="#popup1">Hilfe</a>
 
@@ -81,7 +81,7 @@
                 {% if room_occupancy|is_occupied:room %}
                     <button id="occupied_button"> Belegt </button>                   
                 {% else %}
-                    <button value="{{room.raum_nr}}" id="select_button"> Auswählen </button>                  
+                <input type="button" id="select_button" value="Auswählen" onclick="location.href='{% url 'choose_room_nr' raum_nr=room.raum_nr %}';">                 
                 {% endif %}
                 </div>
             {% endfor %}
