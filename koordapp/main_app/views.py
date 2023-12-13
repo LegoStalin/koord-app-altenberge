@@ -16,14 +16,11 @@ from django.shortcuts import render
 from .models import Nutzer, Personal, Raum, Gruppe, AG, Schueler
 from .view.csv_import.csv_import_view import csv_import_view
 from .view.user_verification.login_view import login_view
+from .view.user_verification.set_new_password_view import set_new_password_view
 
 
 class ResetPasswordMailView(View):
     template_name = 'user_verification/reset_pw_mail.html'
-    def get(self, request):
-        return render(request, self.template_name)
-class SetNewPasswordView(View):
-    template_name = 'user_verification/set_new_pw.html'
     def get(self, request):
         return render(request, self.template_name)
 class ResetPasswordConfirmationView(View):
@@ -39,6 +36,9 @@ class CreateActivityView(TemplateView):
 
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
+
+def set_new_password(request):
+    return set_new_password_view(request)
 
 def csv_import(request):
     return csv_import_view(request)

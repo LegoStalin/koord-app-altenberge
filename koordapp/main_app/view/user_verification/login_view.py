@@ -27,6 +27,10 @@ def login_view(request):
             if user is not None:
                 if user.is_active:
                     auth_login(request, user)
+                    if(Personal.objects.filter(user=user).exists()):
+                        personal = Personal.objects.get(user=user)
+                        if(personal.is_password_otp == True):
+                            return redirect("set_new_password")
                     return redirect("master_web")       # TODO: Differenzierung wenn OTP noch nicht gesetzt worden ist (!User mit OTP müssen dieses erst ändern. Wenn nicht sollten diese automatisch ausgeloggt werden)
             else:
                 messages.error(request,"Benutzername oder Passwort Falsch")
@@ -35,5 +39,5 @@ def login_view(request):
             messages.error(request,"Benutzername oder Passwort Falsch")
     else:
         form=AuthenticationForm()
-    
+
     return render(request, "user_verification/user_login.html", {'form':form})
