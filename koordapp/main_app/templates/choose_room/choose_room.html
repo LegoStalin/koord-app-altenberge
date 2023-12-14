@@ -4,6 +4,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load choose_room_filter %}
 
 
     <head>
@@ -14,7 +15,7 @@
     <body>
 
     <div id="startscreen "class="header_container">
-        <h1 class="big_heading"> Hallo.  </h1>
+        <h1 class="big_heading"> Hallo. </h1>
 
         <a class="question" href="#popup1">Hilfe</a>
 
@@ -36,7 +37,9 @@
 
     <h2 class="big_subheading"> Bitte ordne dem Gerät einen Raum zu: </h2>
 
+    <!--
     <div class="list_container">
+        
         <div class="room_container">
             <p class="text_room"> Raum 1.1 </p>
             <button id="select_button"> Auswählen </button>
@@ -66,25 +69,25 @@
             <button id="select_button"> Auswählen </button>
         </div>
     </div>
+    -->
 
-
-    <!--
+    
     <form method='post'>{% csrf_token %}
         <div class = "list_container">
             {% for room in rooms %}
                 <div class="room_container">
                 <p class="text_room"> Raum {{room.raum_nr}} </p>
 
-                {% if room.occupied == 1 %}
-                	<button id="occupied_button"> Belegt </button>
-                {% elif room.occupied == 0 %}
-                    <button name="{{room.raum_nr}}" id="select_button"> Auswählen </button>
+                {% if room_occupancy|is_occupied:room %}
+                    <button id="occupied_button"> Belegt </button>                   
+                {% else %}
+                <input type="button" id="select_button" value="Auswählen" onclick="location.href='{% url 'create_activity' raum_nr=room.raum_nr %}';">                 
                 {% endif %}
                 </div>
             {% endfor %}
         </div>
     </form>
-    -->
+    
 
     </body>
 </html>
