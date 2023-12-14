@@ -29,7 +29,7 @@
             </div>"
         </div>
     </div>
-    <h1 class="heading_2"> Raum 1.1 </h1>
+    <h1 class="heading_2"> Raum {{room.raum_nr}} </h1>
     <h2 class="subheading_2"> Geben Sie folgende Informationen an: </h2>
 
     <form method="post" class="input_container">{% csrf_token %}
@@ -38,13 +38,9 @@
             <div class="custom-select">
                 <select>
                     <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
-                    <option value="1">Päd. Fachkraft 1</option>
-                    <option value="2">Päd. Fachkraft 2</option>
-                    <option value="3">Päd. Fachkraft 3</option>
-                    <option value="4">Päd. Fachkraft 4</option>
-                    <option value="5">Päd. Fachkraft 5</option>
-                    <option value="6">Päd. Fachkraft 6</option>
-                    <option value="7">Päd. Fachkraft 7</option>
+                    {% for personal in personallist %}
+                    <option value="{{personal.user.username}}">{{personal.user.username}}</option>
+                    {% endfor %}
                 </select>
             </div>
         </div>
@@ -59,11 +55,9 @@
             <div class="custom-select">
                 <select>
                     <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
-                    <option value="1">Sport</option>
-                    <option value="2">Ruhe</option>
-                    <option value="3">Lernen</option>
-                    <option value="4">Kreativ</option>
-                    <option value="5">Sonstige</option>
+                    {% for ag_kategorie in ag_kategorien %}
+                    <option value="{{ag_kategorie.name}}">{{ag_kategorie.name}}</option>
+                    {% endfor %}
                 </select>
             </div>
         </div>
