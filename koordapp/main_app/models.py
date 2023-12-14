@@ -28,7 +28,7 @@ class Personal(models.Model):
         permissions = [("can_import", "Can import excel data")]
 
 class Raum(models.Model):
-    raum_nr = models.SmallIntegerField()
+    raum_nr = models.CharField(max_length=12)
     geschoss = models.CharField(max_length=4)
     kapazitaet = models.SmallIntegerField()
 class Gruppe(models.Model):
