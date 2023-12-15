@@ -1,4 +1,4 @@
-
+/* Style of one row of the table*/
 .inputblock{
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,6 @@
     color: var(--font_color);
     justify-self: center;
 }
-
 .change_button{
     background-color: var(--select_color_background);
     color: var(--font_color);
@@ -34,11 +33,6 @@
 
     justify-self: end;
 }
-
-.input_container{
-
-}
-
 /* Style of text in front of input field*/
 .category{
     font-size: 24px;
@@ -59,10 +53,7 @@
     color: var(--font_color);
     justify-self: center;
 }
-
-
 /* Style of Dropdown Select */
-
 select {
     width: 250px;
     height: 50px;
@@ -104,7 +95,7 @@ select {
     font-weight: 600;
     color: var(--font_color);
     align-self: center;
-    width: 180px;
+    width: 190px;
 }
 .new_header{
     font-size: 24px;
