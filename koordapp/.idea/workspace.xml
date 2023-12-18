@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="First version of home nfc Screen" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="xml changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="home" />
+        <entry key="$PROJECT_DIR$/.." value="f_create_activity" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -60,11 +60,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/main_app/static/img" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -221,51 +216,30 @@
       <option name="project" value="LOCAL" />
       <updated>1702320737961</updated>
     </task>
-    <task id="LOCAL-00018" summary="Adjusted Help Text, changed positioning (to fix popup) and added border radius">
+    <task id="LOCAL-00018" summary="xml changes">
       <option name="closed" value="true" />
-      <created>1702400969590</created>
+      <created>1702638097349</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1702400969590</updated>
+      <updated>1702638097349</updated>
     </task>
-    <task id="LOCAL-00019" summary="Adjusted Help Text, changed positioning (to fix popup) in set_nfc_scan">
-      <option name="closed" value="true" />
-      <created>1702401288349</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1702401288349</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Switched button colors">
-      <option name="closed" value="true" />
-      <created>1702401440928</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1702401440928</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Created Draft for home">
-      <option name="closed" value="true" />
-      <created>1702401787191</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1702401787191</updated>
-    </task>
-    <task id="LOCAL-00022" summary="First version of home nfc Screen">
-      <option name="closed" value="true" />
-      <created>1702402943229</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1702402943229</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Media Queries for Devices Desktop, Tablet, Handy." />
@@ -286,11 +260,7 @@
     <MESSAGE value="Created new header with Back Button" />
     <MESSAGE value="Created Dropdown" />
     <MESSAGE value="Finished Input Container" />
-    <MESSAGE value="Adjusted Help Text, changed positioning (to fix popup) and added border radius" />
-    <MESSAGE value="Adjusted Help Text, changed positioning (to fix popup) in set_nfc_scan" />
-    <MESSAGE value="Switched button colors" />
-    <MESSAGE value="Created Draft for home" />
-    <MESSAGE value="First version of home nfc Screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="First version of home nfc Screen" />
+    <MESSAGE value="xml changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml changes" />
   </component>
 </project>

@@ -35,3 +35,6 @@ class CheckedInView(TemplateView):
 
 class CheckedOutView(TemplateView):
     template_name = 'checked_out/checked_out.html'
+
+class ChangeRoomDataView(TemplateView):
+    template_name = 'change_roomdata/change_roomdata.html'
