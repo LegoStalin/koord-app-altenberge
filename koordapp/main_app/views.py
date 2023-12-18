@@ -38,3 +38,6 @@ class CheckedOutView(TemplateView):
 
 class ChangeRoomDataView(TemplateView):
     template_name = 'change_roomdata/change_roomdata.html'
+
+class SetNfcSetView(TemplateView):
+    template_name = 'set_nfc_set/set_nfc_set.html'

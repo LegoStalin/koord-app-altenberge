@@ -4,7 +4,7 @@
     --background_color: #F6F4F3;
     --background_color_selection_board: #B4B0B0FF;
     --button_color: #AEAEB3;
-    --inputflield_background: rgba(217, 217, 217, 0.5);
+    --inputfield_background: rgba(217, 217, 217, 0.5);
     --button_border: #1B2021;
     --select_color_background: #BAD87A;
     --shadow_color: #00000033;
@@ -14,8 +14,9 @@
     --popup_header_background: #C3D6E8;
     --red_color: #DE675F;
     --listblock_background: #D9D9D9;
-    --label_background: #eeeeee;
+    --label_background: rgba(217, 217, 217, 0.25);
     --list_line_color: #c0c0c0;
+    --blue_color: #4A90E2;
 }
 
 ul.errorlist {
