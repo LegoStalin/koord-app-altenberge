@@ -10,15 +10,8 @@
   }
   
   /* Container styles */
-  .header_container{
-    margin: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-  .default_subheading{
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+
+
   .block_container {
     width: 80%;
     height:min(820px, 100%);
@@ -26,6 +19,9 @@
     padding: 20px;
   }
   
+  .header_container{
+    padding-right: 0;
+  }
   /* Form styles */
   .form_container {
     width: 100%;
@@ -52,7 +48,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    border-top: 2px dashed #000;
+    border-top: 2px solid #000;
 }
 
 #flags::before {
@@ -141,17 +137,27 @@
     width: 33%;
     height: 5vh;
     font: bold 20px 'Inter';
-    background-color: var(--select_color_background);
+    
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   .submit_button:hover {
     opacity: 0.8;
+    cursor: pointer;
   }
 .submit_button[value="Hochladen"] {
-    border: dashed 3px black;
+    border: solid 3px black;
+    background-color: var(--select_color_background);
 }
+.submit_button[value="Vorlage herunterladen"] {
+  background-color: var(--blue_color);
+  color: white;
+}
+.submit_button[value="Dateien entfernen"] {
+  background-color: var(--red_color);
+}
+
   /* Upload container styles */
   .upload_container {
     margin: auto;
@@ -195,15 +201,6 @@
   
   /* Media query for larger computer screens */
   @media screen and (min-width: 1181px) {
-    .block_container {
-      /* Adjustments for larger computer screens */
-
-      height: 100%; /* Height adjusts to content */
-      padding: 40px; /* Larger padding */
-      max-width: 1200px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-
-    }
     
     .form_container, .upload_container {
       /* Adjust the internal containers for larger screens */
@@ -217,6 +214,15 @@
     }
     .upload_container{
         padding-bottom: 10vh;
+    }
+    .header_container{
+      margin: auto;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .default_subheading{
+      padding-left: 5%;
+      padding-right: 5%;
     }
   }
 
