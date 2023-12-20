@@ -37,9 +37,9 @@
             <label class = "category">Aufsichtsperson:</label>
             <div class="custom-select">
                 <select>
-                    <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                    <option name="aufsichtsperson" value="0" style="color:#ffff00;">Bitte auswählen..</option>
                     {% for personal in personallist %}
-                    <option value="{{personal.user.username}}">{{personal.user.username}}</option>
+                    <option name="aufsichtsperson" value="{{personal.user.username}}">{{personal.user.username}}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -54,9 +54,9 @@
             <label class = "category">Kategorie:</label>
             <div class="custom-select">
                 <select>
-                    <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                    <option name="ag_kategorie" value="0" style="color:#ffff00;">Bitte auswählen..</option>
                     {% for ag_kategorie in ag_kategorien %}
-                    <option value="{{ag_kategorie.name}}">{{ag_kategorie.name}}</option>
+                    <option name="ag_kategorie" value="{{ag_kategorie.name}}">{{ag_kategorie.name}}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -64,7 +64,7 @@
 
         <div class = "inputblock">
             <label class = "category">Maximale Kinderanzahl:</label>
-            <input type="text" class="inputfield" name="capacity" placeholder="Maximale Kinderanzahl" required/>
+            <input type="text" class="inputfield" name="capacity" placeholder="Maximal {{room.kapazitaet}}" required/>
         </div>
 
         <div class = "submit_container">

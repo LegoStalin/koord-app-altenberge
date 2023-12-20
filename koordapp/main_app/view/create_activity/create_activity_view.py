@@ -1,14 +1,35 @@
 from django.shortcuts import redirect, render
-from main_app.models import Raum, Raum_Belegung, Personal, AGKategorie
+from main_app.models import Raum, Raum_Belegung, Personal, AGKategorie, AG
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
 
 def create_activity_view(request, raum):
-    if request.method == "POST":
-        pass
     if(Raum.objects.filter(raum_nr=raum).exists()):
         raum = Raum.objects.get(raum_nr=raum)
         if not(Raum_Belegung.objects.filter(raum=raum).exists()):
+            if request.method == "POST":
+                username_aufsichtsperson = request.POST["aufsichtsperson"]
+                if(User.objects.filter(username=username_aufsichtsperson).exists()):
+                    max_anzahl = request.POST["capacity"]
+                    try:
+                        max_anzahl = int(max_anzahl)
+                        name_ag_kategorie = request.POST[""]
+                        if(AGKategorie.objects.filter(name=name_ag_kategorie).exists):
+                            ag_kategorie = AGKategorie.objects.get(name=name_ag_kategorie)
+                            name_activity = request.POST["activity"]
+                            if(AG.objects.filter(name=name_activity).exists()):
+                                ag = AG.objects.get(name=name_activity)
+                                ag.ag_kategorie = ag_kategorie
+                                ag.max_anzahl = max_anzahl
+                                ag.save()
+                            else:
+                                pass 
+                        else:
+                            # Error message wen kategorie nicht existiert
+                            pass
+                    except:
+                        #error message wenn capazitaet keine Zahl ist!
+                        pass
             gruppenleiter_gruppe = Group.objects.get(name="Gruppenleitung")
             raumbetreuer_gruppe = Group.objects.get(name="Raumbetreuer")
             personallist = Personal.objects.filter(rechte_gruppe=gruppenleiter_gruppe) | Personal.objects.filter(rechte_gruppe=raumbetreuer_gruppe)
