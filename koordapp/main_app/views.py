@@ -41,3 +41,6 @@ class ChangeRoomDataView(TemplateView):
 
 class SetNfcSetView(TemplateView):
     template_name = 'set_nfc_set/set_nfc_set.html'
+
+class OgsGroupView(TemplateView):
+    template_name = 'ogs_group/ogs_group.html'

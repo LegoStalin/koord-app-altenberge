@@ -182,6 +182,43 @@ ul.errorlist {
         cursor: pointer;
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         margin-top: 50px;
+        transition: all 0.35s;
+        position: relative;
+        border-color: var(--font_color);
+        color: var(--font_color);
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-color: var(--font_color); /* andere Farbe ?? */
+            border-radius: 45px;
+            border-style: solid;
+            transition: all 0.35s;
+            content: "";
+            z-index: 1;
+        }
+        &::before {
+            width: 0;
+            height: 100%;
+            border-width: 1px 0 1px 0;
+        }
+        &::after {
+            width: 100%;
+            height: 0;
+            border-width: 0 1px 0 1px;
+        }
+        &:hover {
+            border-color: var(--font_color); /* andere Farbe ?? */
+            &::before {
+                width: 100%;
+                border-width: 1px 0 1px 0;
+            }
+            &::after {
+                height: 100%;
+                border-width: 0 1px 0 1px;
+            }
+        }
     }
     /* Back Arrow Style*/
     .arrow{
@@ -278,6 +315,14 @@ ul.errorlist {
     /* PopUp Klick Style*/
     .close{
         visibility: hidden;
+    }
+    .block_container {
+        /* Adjustments for larger computer screens */
+        height: 100%; /* Height adjusts to content */
+        padding: 0px 40px 40px 40px; /* Larger padding */
+        max-width: 1200px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        margin: 0 auto; /* Centering on larger screens */
     }
 }
 

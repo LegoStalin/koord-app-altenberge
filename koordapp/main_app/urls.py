@@ -15,5 +15,6 @@ urlpatterns = [
     path('checked_in/', views.CheckedInView.as_view(), name='checked_in'),
     path('checked_out/', views.CheckedOutView.as_view(), name='checked_out'),
     path('change_roomdata/', views.ChangeRoomDataView.as_view(), name='change_roomdata'),
-    path('set_nfc_set/', views.SetNfcSetView.as_view(), name='set_nfc_set')
+    path('set_nfc_set/', views.SetNfcSetView.as_view(), name='set_nfc_set'),
+    path('ogs_group/', views.OgsGroupView.as_view(), name='ogs_group'),
 ]
