@@ -8,7 +8,7 @@ def ogs_group_view(request, gruppe):
 
     gruppe = Gruppe.objects.get(name=gruppe)
     if not gruppe == None:
-        schueler = Schueler.objects.get(gruppen_id=gruppe)
+        schueler = Schueler.objects.filter(gruppen_id=gruppe)
         user = request.user()
         user = User.objects.get("")
         personal = Personal.objects.get(user=user)
