@@ -46,5 +46,5 @@ class SetNfcSetView(TemplateView):
 class OgsGroupView(TemplateView):
     template_name = 'ogs_group/ogs_group.html'
 
-def ogs_group(request):
-    return ogs_group_view(request)
+def ogs_group(request, gruppe):
+    return ogs_group_view(request, gruppe)
