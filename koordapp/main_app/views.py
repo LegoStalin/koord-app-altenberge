@@ -7,6 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django.shortcuts import redirect
 
+from main_app.view.ogs_group.ogs_group_view import ogs_group_view
 
 
 class MasterHomeView(TemplateView):
@@ -44,3 +45,6 @@ class SetNfcSetView(TemplateView):
 
 class OgsGroupView(TemplateView):
     template_name = 'ogs_group/ogs_group.html'
+
+def ogs_group(request):
+    return ogs_group_view(request)
