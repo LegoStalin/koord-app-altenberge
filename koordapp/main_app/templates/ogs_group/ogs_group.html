@@ -39,54 +39,14 @@
                 <button class="search_button">Suchen</button>
             </div>
 
+            {% for schuler in schueler%}
             <div class = "pupil">
                 <div class="pupil_container">
-                    <p class="text_pupil"> Maria Musterfrau </p>
+                    <p class="text_pupil"> {{ schuler.user_id.vorname }} {{ schuler.user_id.nachname }} </p>
                     <button class="assign_button"> Auswählen </button>
                 </div>
             </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Max Mustermann </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Anton Ampelmann </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Berta Meier </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Caesar Müller </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Dora Dreisler </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Emil Engelmann </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Friedrich Fliege </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 
