@@ -1,16 +1,43 @@
-{% extends 'base.html' %}
-{% block content %}
-<div id='user_login'>
-    
-    <form method='post' class="login_form">{% csrf_token %}
-        <h1 class='page_title' id="reset_pw_mail_title">Bitte geben Sie Ihre Emailadresse ein:</h1>
-        <div class="form_container">
-            <span class="form_fields"><input type="email"/></span>
-        </div>
-        <div class="form_container">
-            <input type='submit' class="btn_login" value='Bestätigen'/>
-        </div>
-    </form>
-</div>
+<!DOCTYPE html>
+<html lang="de">
 
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <title> Nutzer-Login </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user_verification/user_verification_style.css' %}"/>
+</head>
+<body>
+    <div class="block_container mid_container" id="user_login">
+        <div class="header_container_type2">
+            <h1 class='heading_type1'>Bitte geben Sie Ihre Emailadresse ein:</h1>
+            <a class="question" href="#popup1">Hilfe</a>
+
+            <div id="popup1" class="popup">
+                <div class="popup2">
+                    <h3 id="popupheaderstyle">Was muss ich in diesem Anzeigefenster beachten?</h3>
+
+                    <div class="content">
+                        <p>
+                            Geben Sie Ihre Email-Adresse in das dafür vorgesehene Feld ein.
+                            Sie erhalten dann eine Email mit einem Link, über den Sie Ihr Passwort zurücksetzen können.
+                        </p>
+                    </div>
+
+                    <a class="close" href="#">&times;</a>
+
+                </div>
+            </div>
+
+        </div>
+        <form method='post' class="login_form" id="email_input_container">{% csrf_token %}
+            <span class="form_fields"><input type="email"/></span>
+            <div class="controls_container">
+                <input type='submit' class="green_button" value='Bestätigen'/>
+            </div>
+        </form>
+    </div>
+
+</body>
 {% endblock %}

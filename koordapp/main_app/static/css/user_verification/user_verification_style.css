@@ -1,82 +1,261 @@
-:root {
-  --button_color: #49a078;
-  --background_color: rgba(23, 5, 72, 0);
-  --frame_background_color: #f6f4f3;
+/*general styles for all queries*/
+.green_button {
+  background-color: var(--select_color_background);
+  color: var(--font_color);
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  cursor: pointer;
 }
-
-@media only screen and (min-width: 1250px), (min-height: 700px) {
-  .page_title {
-    width: 1000px;
-    height: 70px;
-    font-size: 80px;
-    text-align: center;
-    margin-bottom: 5vh;
+.controls_container a {
+  color: black;
+}
+.login_form {
+  width: 90%;
+  margin: auto;
+}
+#user_login input {
+  border-radius: 10px;
+  border: none;
+}
+.heading_type1 {
+  text-align: center;
+}
+#email_input_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 13vh;
+}
+/*Computer Screen Media Quarry*/
+@media only screen and (min-width: 1200px) {
+  /*erstmal die max-width überschreiben*/
+  #user_login {
+    max-width: 1000px;
   }
 
   .form_container {
     display: flex;
     flex-direction: column;
-  }
-
-  .login_form {
-    padding: 62px;
-    text-align: center;
-    font: 40px "Arial";
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.461);
-    border: 1px solid #d0bbbb;
-    width: 1000px;
-    margin: auto;
-    background-color: var(--frame_background_color);
-  }
-  .btn_login {
-    width: 300px;
-    margin-top: 20px;
-    font-weight: bold;
-    background-color: #49a078;
-    color: #1b2021;
-    margin: 20px auto;
-  }
-  .form_fields {
-    margin: 5px;
-    padding: 1px 2px;
-  }
-  .form_fields input[type="text"],
-  .form_fields input[type="password"] {
-    margin: 0 10px;
-    width: 700px;
-  }
-  form p label {
-    display: inline-block;
-    width: 200px;
-    text-align: right;
-    margin-right: 10px;
-  }
-
-  #user_login {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: auto;
-    background: linear-gradient(to bottom, #f6f4f3, #9b9b9b);
+    justify-content: space-evenly;
   }
-  /*css for the reset pw page*/
-  .page_title#reset_pw_mail_title {
-    height: 160px;
+  .header_container_type2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center; /* Add this line */
+    width: 95%;
+  }
+  .header_container_type2 h1 {
+    width: 80%;
+    order: 1;
   }
 
-  .input_group {
+  .header_container_type2 .question {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .heading_type1 {
+    font-size: 4vh;
+    font-weight: 600;
+    margin-bottom: 5vh;
+  }
+  .mid_container {
+    height: 50vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #user_login input[type="text"],
+  #user_login input[type="password"],
+  #user_login input[type="email"],
+  #user_login label {
+    font-size: 3vh;
+  }
+  .form_fields p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 10px 24px 10px 24px;
+    justify-content: space-between;
+    width: 100%;
   }
 
-  .input_group label {
-    margin-right: 10px;
+  .header_container {
+    padding-right: 0;
   }
-  .input_group input {
-    width: 400px;
+
+  .controls_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    font-size: 2vh;
+    gap: 1vh;
+  }
+
+  .green_button {
+    font-size: 1.5rem;
+    padding-top: 0px;
+    height: 3em;
+    width: 200px;
+  }
+}
+/*Tablet Media Quarry*/
+@media only screen and (min-width: 1050px) and (max-width: 1200px) {
+  .form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .header_container_type2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center; /* Add this line */
+    width: 95%;
+  }
+  .header_container_type2 h1 {
+    width: 90%;
+    order: 1;
+  }
+
+  .header_container_type2 .question {
+    order: 2;
     margin-left: auto;
+  }
+
+  .heading_type1 {
+    font-size: 4.7vh;
+    font-weight: 600;
+    margin-bottom: 5vh;
+  }
+
+  #user_login input[type="text"],
+  #user_login input[type="password"],
+  #user_login input[type="email"],
+  #user_login label {
+    font-size: 3vh;
+  }
+  .form_fields p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header_container {
+    padding-right: 0;
+  }
+
+  .controls_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    font-size: 2vh;
+    gap: 1vh;
+  }
+
+  .green_button {
+    font-size: 1.5rem;
+    padding-top: 0px;
+    height: 3em;
+    width: 200px;
+  }
+  .heading_type1 {
+    margin-top: 20vh;
+  }
+  #user_login {
+    margin: auto;
+  }
+}
+
+/*Phone Media Quarry*/
+@media only screen and (min-width: 400px) and (max-width: 1050px) {
+  .header_container_type2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center; /* Add this line */
+    width: 95%;
+    margin: auto;
+  }
+  .header_container_type2 h1 {
+    width: 90%;
+    order: 1;
+    font-size: 5vh;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .header_container_type2 .question {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .heading_type1 {
+    font-size: 4vh;
+    font-weight: 600;
+    margin-bottom: 5vh;
+  }
+  .header_container_type2 .heading_type2 h1 {
+    font-size: 3vh;
+    font-weight: 600;
+    margin-bottom: 5vh;
+  }
+
+  #user_login input[type="text"],
+  #user_login input[type="password"],
+  #user_login input[type="email"],
+  #user_login label {
+    font-size: 3vh;
+  }
+  .form_fields p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .form_fields p label {
+    margin: 10px 0 10px 0;
+  }
+  .form_fields input {
+    width: 100%;
+  }
+  .header_container {
+    padding-right: 0;
+  }
+
+  .controls_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    font-size: 2vh;
+    gap: 1vh;
+  }
+
+  .green_button {
+    font-size: 1.5rem;
+    padding-top: 0px;
+    height: 3em;
+    width: 200px;
+  }
+  .login_form {
+    margin-top: 10vh;
   }
 }

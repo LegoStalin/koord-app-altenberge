@@ -1,7 +1,7 @@
 from django.urls import path
 from django.views.generic import RedirectView
 from . import views
-
+from django.urls import include, path
 
 
 urlpatterns = [
@@ -17,4 +17,6 @@ urlpatterns = [
     path('change_roomdata/', views.ChangeRoomDataView.as_view(), name='change_roomdata'),
     path('set_nfc_set/', views.SetNfcSetView.as_view(), name='set_nfc_set'),
     path('ogs_group/', views.OgsGroupView.as_view(), name='ogs_group'),
+    path('user_login/', views.UserLoginView.as_view(), name='user_login'),
+    path('reset_pw_mail/', views.UserPwResetView.as_view(), name='reset_pw_mail'),
 ]

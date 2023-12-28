@@ -44,3 +44,9 @@ class SetNfcSetView(TemplateView):
 
 class OgsGroupView(TemplateView):
     template_name = 'ogs_group/ogs_group.html'
+
+class UserLoginView(LoginView):
+    template_name = 'user_verification/user_login.html'
+
+class UserPwResetView(TemplateView):
+    template_name = 'user_verification/reset_pw_mail.html'
