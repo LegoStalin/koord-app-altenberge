@@ -122,7 +122,6 @@ ul.errorlist {
   /* Header Style without Back Button*/
   .header_container {
     display: flex;
-    border-style: solid;
     flex-direction: row;
     justify-content: space-between;
     margin: 0em 0em 2% 0em;
@@ -279,7 +278,6 @@ ul.errorlist {
     height: 100%; /* Height adjusts to content */
     padding: 0px 40px 40px 40px; /* Larger padding */
     max-width: 1200px;
-    border-style: solid;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     margin: 0 auto; /* Centering on larger screens */
   }
