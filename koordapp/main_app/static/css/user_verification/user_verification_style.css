@@ -56,14 +56,19 @@
   }
   .header_container_type2 h1 {
     width: 80%;
-    order: 1;
+    /*order: 3;*/
   }
-
+  /*
   .header_container_type2 .question {
     order: 2;
     margin-left: auto;
   }
-
+  .header_container_type2 .back {
+    order: 1;
+  }*/
+  .align_right {
+    margin-left: auto;
+  }
   .heading_type1 {
     font-size: 5vh;
     font-weight: 600;
@@ -111,7 +116,7 @@
   .green_button {
     font-size: 1.5rem;
     padding-top: 0px;
-    height: 3em;
+    height: 2em;
     width: 200px;
   }
   #email_input {
@@ -124,11 +129,20 @@
   }
   #user_login input[type="text"],
   #user_login input[type="password"] {
-    width: 60%;
+    width: 61%;
   }
   #user_login input[type="email"] {
     width: min(64vw, 900px);
     height: 7vh;
+  }
+  /*für page set_new_pw*/
+  .input_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    margin-bottom: 1vh;
   }
 }
 
@@ -194,7 +208,7 @@
   .green_button {
     font-size: 1.5rem;
     padding-top: 0px;
-    height: 3em;
+    height: 80%;
     width: 200px;
   }
   .heading_type1 {
@@ -205,7 +219,7 @@
   }
   #user_login input[type="text"],
   #user_login input[type="password"] {
-    width: 60%;
+    width: 61%;
   }
   #pw_mail {
     display: flex;
@@ -217,7 +231,7 @@
     margin-bottom: 0;
   }
   .heading_type1 {
-    margin-top: 0;
+    margin-top: 15vh;
   }
   #email_input_container {
     width: 100%;
@@ -227,8 +241,22 @@
     width: 70vw;
     height: 7vh;
   }
+  #user_login input[type="password"],
+  #user_login input[type="text"] {
+    height: 6vh;
+  }
   .vertically_mid_container {
     margin-top: 15vh;
+  }
+  /*set new pw page*/
+  .input_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    margin-bottom: 1vh;
+    width: 100%;
   }
 }
 
@@ -259,7 +287,7 @@
   .heading_type1 {
     font-size: 4vh;
     font-weight: 600;
-    margin-bottom: 5vh;
+    margin-top: 15vh;
   }
   .header_container_type2 .heading_type2 h1 {
     font-size: 3vh;
@@ -303,12 +331,10 @@
   .green_button {
     font-size: 1.5rem;
     padding-top: 0px;
-    height: 3em;
+    height: 2em;
     width: 200px;
   }
-  .login_form {
-    margin-top: 10vh;
-  }
+
   .vertically_mid_container {
     display: flex;
     flex-direction: column;
@@ -330,5 +356,22 @@
   #user_login input[type="email"] {
     width: 80vw;
     height: 6vh;
+  }
+  /*set new pw page*/
+  .input_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    margin-bottom: 1vh;
+    width: 100%;
+  }
+  #set_new_pw_fields {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 }

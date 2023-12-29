@@ -8,13 +8,12 @@
     <title> Nutzer-Login </title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/user_verification/user_verification_style.css' %}"/>
 </head>
-<body>
+<body id="user_login_page">
 
     <div class="block_container mid_container" id="user_login">
     
         <div class="header_container_type2">
-            <h1 class='heading_type1'>Bitte melden Sie sich an:</h1>
-            <a class="question" href="#popup1">Hilfe</a>
+            <a class="question align_right" href="#popup1">Hilfe</a>
 
             <div id="popup1" class="popup">
                 <div class="popup2">
@@ -33,6 +32,7 @@
             </div>
 
         </div>
+        <h1 class='heading_type1'>Bitte melden Sie sich an:</h1>
         <form method='post' class="login_form">{% csrf_token %}
             <span class="form_fields">{{form.as_p}}</span>
             <div class="controls_container">

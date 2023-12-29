@@ -50,3 +50,9 @@ class UserLoginView(LoginView):
 
 class UserPwResetView(TemplateView):
     template_name = 'user_verification/reset_pw_mail.html'
+
+class UserPwConfirmationView(TemplateView):
+    template_name = 'user_verification/reset_pw_confirmation.html'
+
+class UserSetNewPwView(TemplateView):
+    template_name = 'user_verification/set_new_pw.html'

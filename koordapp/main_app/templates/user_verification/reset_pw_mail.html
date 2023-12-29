@@ -5,14 +5,14 @@
 {% load static %}
 {% block content %}
 <head>
-    <title> Nutzer-Login </title>
+    <title> Nutzer-Password-Zurücksetzen </title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/user_verification/user_verification_style.css' %}"/>
 </head>
 <body>
     <div class="block_container mid_container" id="user_login">
         <div class = "vertically_mid_container">
-            <div class="header_container_type2">
-                <h1 class='heading_type1'>Bitte geben Sie Ihre Emailadresse ein:</h1>
+            <div class="header_container_back_help ">
+                <button class="back" onclick="window.location.href = '/user_login'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
                 <a class="question" href="#popup1">Hilfe</a>
 
                 <div id="popup1" class="popup">
@@ -31,6 +31,9 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="header_container_type2">
+                <h1 class='heading_type1'>Bitte geben Sie Ihre Emailadresse ein:</h1>
             </div>
             <form method='post' class="login_form" id="email_input_container">{% csrf_token %}
                 <span class="form_fields"><input id ="email_input" type="email"/></span>

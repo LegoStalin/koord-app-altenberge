@@ -19,4 +19,6 @@ urlpatterns = [
     path('ogs_group/', views.OgsGroupView.as_view(), name='ogs_group'),
     path('user_login/', views.UserLoginView.as_view(), name='user_login'),
     path('reset_pw_mail/', views.UserPwResetView.as_view(), name='reset_pw_mail'),
+    path('reset_pw_confirmation/', views.UserPwConfirmationView.as_view(), name='reset_pw_confirmation'),
+    path('set_new_pw/', views.UserSetNewPwView.as_view(), name='set_new_pw'),
 ]
