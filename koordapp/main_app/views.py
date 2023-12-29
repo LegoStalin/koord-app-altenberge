@@ -44,3 +44,6 @@ class SetNfcSetView(TemplateView):
 
 class OgsGroupView(TemplateView):
     template_name = 'ogs_group/ogs_group.html'
+
+class SearchPupilView(TemplateView):
+    template_name = 'search_pupil/search_pupil.html'
