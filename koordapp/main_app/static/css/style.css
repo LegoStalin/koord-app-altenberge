@@ -32,6 +32,7 @@ ul.errorlist {
   font-weight: normal;
 }
 
+
 /* PC Ansicht */
 @media only screen and (min-width: 1280px) {
 
@@ -362,6 +363,35 @@ ul.errorlist {
     #button_style2:focus {
         box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
     }
+    .label_style1{
+        align-items: center;
+        align-content: center;
+        display: flex;
+        height: 75px;
+        width: 46%;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--label_background);
+        font-size: 26px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: var(--font_color);
+    }
+
+    .label_style2{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        height: 75px;
+        width: 46%;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--label_background);
+        font-size: 26px;
+        font-weight: 600;
+        color: var(--font_color);
+    }
 }
 
 /* Tablet Ansicht */
@@ -654,6 +684,35 @@ ul.errorlist {
     #button_style2:focus {
         box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
     }
+    .label_style1{
+        align-items: center;
+        align-content: center;
+        display: flex;
+        height: 75px;
+        width: 46%;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--label_background);
+        font-size: 23px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: var(--font_color);
+    }
+
+    .label_style2{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        height: 75px;
+        width: 46%;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--label_background);
+        font-size: 23px;
+        font-weight: 600;
+        color: var(--font_color);
+    }
 
 }
 
@@ -944,6 +1003,35 @@ ul.errorlist {
 
     #button_style2:focus {
         box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    }
+    .label_style1{
+        align-items: center;
+        align-content: center;
+        display: flex;
+        height: 60px;
+        width: 50%;
+        border-radius: 10px 0px 0px 10px;
+        border: none;
+        background-color: var(--label_background);
+        font-size: 19px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: var(--font_color);
+    }
+
+    .label_style2{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        height: 60px;
+        width: 50%;
+        border-radius: 0px 10px 10px 0px;
+        border: none;
+        background-color: var(--label_background);
+        font-size: 19px;
+        font-weight: 600;
+        color: var(--font_color);
     }
 }
 

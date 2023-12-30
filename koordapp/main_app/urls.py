@@ -20,4 +20,5 @@ urlpatterns = [
     path('search_pupil/', views.SearchPupilView.as_view(), name='search_pupil'),
     path('select_room/', views.SelectRoomView.as_view(), name='select_room'),
     path('room_selection/', views.RoomSelectionView.as_view(), name='room_selection'),
+    path('room_information/', views.RoomInformationView.as_view(), name='room_information')
 ]
