@@ -53,3 +53,6 @@ class SelectRoomView(TemplateView):
 
 class RoomSelectionView(TemplateView):
     template_name = 'room_selection/room_selection.html'
+
+class RoomInformationView(TemplateView):
+    template_name = 'room_information/room_information.html'
