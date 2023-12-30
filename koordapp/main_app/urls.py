@@ -18,5 +18,6 @@ urlpatterns = [
     path('set_nfc_set/', views.SetNfcSetView.as_view(), name='set_nfc_set'),
     path('ogs_group/', views.OgsGroupView.as_view(), name='ogs_group'),
     path('search_pupil/', views.SearchPupilView.as_view(), name='search_pupil'),
-    path('select_room/', views.SelectRoomView.as_view(), name='select_room')
+    path('select_room/', views.SelectRoomView.as_view(), name='select_room'),
+    path('room_selection/', views.RoomSelectionView.as_view(), name='room_selection'),
 ]
