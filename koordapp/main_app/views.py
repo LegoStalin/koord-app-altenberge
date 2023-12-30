@@ -50,3 +50,6 @@ class SearchPupilView(TemplateView):
 
 class SelectRoomView(TemplateView):
     template_name = 'select_room/select_room.html'
+
+class RoomSelectionView(TemplateView):
+    template_name = 'room_selection/room_selection.html'
