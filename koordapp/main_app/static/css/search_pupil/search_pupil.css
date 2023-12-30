@@ -138,6 +138,16 @@
         border-radius: 18px;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     }
+    .no_results{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        color: var(--list_line_color);
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 15px;
+    }
 }
 
 /* Tablet Ansicht */
@@ -214,6 +224,16 @@
         border-radius: 18px;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     }
+    .no_results{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        color: var(--list_line_color);
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 15px;
+    }
 }
 
 /* Mobile Endgeräte Ansicht */
@@ -289,6 +309,16 @@
         background-color: var(--listblock_background);
         border-radius: 18px;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    }
+    .no_results{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        color: var(--list_line_color);
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 15px;
     }
 }
 
