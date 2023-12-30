@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment=" Block container adjustment">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="First version of select room and changes link from master overview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/search_pupil/search_pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/search_pupil/search_pupil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/search_pupil/search_pupil.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/search_pupil/search_pupil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/select_room/select_room.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/select_room/select_room.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/select_room/select_room.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/select_room/select_room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -52,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "f__search__pupil",
+    "git-widget-placeholder": "f__select__room",
     "last_opened_file_path": "/Users/flo/IdeaProjects/koord-app-altenberge/koordapp",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -280,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703875465996</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="First version of select room and changes link from master overview">
+      <option name="closed" value="true" />
+      <created>1703921955537</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1703921955537</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +307,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Media Queries for Devices Desktop, Tablet, Handy." />
     <MESSAGE value="First Version of popup for tablet query" />
     <MESSAGE value="adjustments" />
     <MESSAGE value="Created Popup For Ipads" />
@@ -323,6 +331,7 @@
     <MESSAGE value="Added media queries, button revision and hover effects" />
     <MESSAGE value="Setting up search_pupil page" />
     <MESSAGE value=" Block container adjustment" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Block container adjustment" />
+    <MESSAGE value="First version of select room and changes link from master overview" />
+    <option name="LAST_COMMIT_MESSAGE" value="First version of select room and changes link from master overview" />
   </component>
 </project>

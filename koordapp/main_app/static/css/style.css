@@ -4,6 +4,7 @@
     --background_color: #F6F4F3;
     --background_color_selection_board: #B4B0B0FF;
     --button_color: #AEAEB3;
+    --button_color2: rgba(185, 185, 185, 0.75);
     --inputfield_background: rgba(217, 217, 217, 0.5);
     --button_border: #1B2021;
     --select_color_background: #BAD87A;
@@ -324,6 +325,43 @@ ul.errorlist {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
         margin: 0 auto; /* Centering on larger screens */
     }
+    /* Button Style 2*/
+    #button_style2 {
+        font-size: 2em;
+        background-color: var(--button_color2);
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 3px;
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: var(--font_color);
+        cursor: pointer;
+        font-weight: bold;
+        width: 98%;
+        height: 200px;
+        outline: none;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    /* Button Hover Style Transformation*/
+    #button_style2:hover {
+        box-shadow: rgba(0, 0.3, 0.3, 0.3) 2px 8px 8px -5px;
+        transform: translate3d(0, 4px, 0);
+        color: var(--background_color);
+    }
+
+
+    #button_style2:focus {
+        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    }
 }
 
 /* Tablet Ansicht */
@@ -579,6 +617,44 @@ ul.errorlist {
     padding-top: 0px;
     overflow: auto;
   }
+    /* Button Style 2*/
+    #button_style2 {
+        font-size: 1.7em;
+        background-color: var(--button_color2);
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 3px;
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: var(--font_color);
+        cursor: pointer;
+        font-weight: bold;
+        width: 98%;
+        height: 150px;
+        outline: none;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    /* Button Hover Style Transformation*/
+    #button_style2:hover {
+        box-shadow: rgba(0, 0.3, 0.3, 0.3) 2px 8px 8px -5px;
+        transform: translate3d(0, 4px, 0);
+        color: var(--background_color);
+    }
+
+
+    #button_style2:focus {
+        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    }
+
 }
 
 /* Mobile Endgeräte Ansicht */
@@ -782,7 +858,6 @@ ul.errorlist {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         justify-content: space-between;
-        margin: 0em 0em 2% 0em;
     }
     /* PopUp Klick Style*/
     .popup{
@@ -832,6 +907,43 @@ ul.errorlist {
         max-height: 30%;
         padding-top: 0px;
         overflow: auto;
+    }
+    /* Button Style 2*/
+    #button_style2 {
+        font-size: 1.3em;
+        background-color: var(--button_color2);
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 3px;
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: var(--font_color);
+        cursor: pointer;
+        font-weight: bold;
+        width: 98%;
+        height: 120px;
+        outline: none;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    /* Button Hover Style Transformation*/
+    #button_style2:hover {
+        box-shadow: rgba(0, 0.3, 0.3, 0.3) 2px 8px 8px -5px;
+        transform: translate3d(0, 4px, 0);
+        color: var(--background_color);
+    }
+
+
+    #button_style2:focus {
+        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
     }
 }
 
