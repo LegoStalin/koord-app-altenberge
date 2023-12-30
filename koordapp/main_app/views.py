@@ -47,3 +47,6 @@ class OgsGroupView(TemplateView):
 
 class SearchPupilView(TemplateView):
     template_name = 'search_pupil/search_pupil.html'
+
+class SelectRoomView(TemplateView):
+    template_name = 'select_room/select_room.html'
