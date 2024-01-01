@@ -56,3 +56,15 @@ class RoomSelectionView(TemplateView):
 
 class RoomInformationView(TemplateView):
     template_name = 'room_information/room_information.html'
+
+class RoomHistoryView(TemplateView):
+    template_name = 'history_pages/room_history.html'
+
+class FoodHistoryView(TemplateView):
+    template_name = 'history_pages/food_history.html'
+
+class FeedbackHistoryView(TemplateView):
+    template_name = 'history_pages/feedback_history.html'
+
+class RoomUsageHistoryView(TemplateView):
+    template_name = 'history_pages/room_usage_history.html'

@@ -20,5 +20,9 @@ urlpatterns = [
     path('search_pupil/', views.SearchPupilView.as_view(), name='search_pupil'),
     path('select_room/', views.SelectRoomView.as_view(), name='select_room'),
     path('room_selection/', views.RoomSelectionView.as_view(), name='room_selection'),
-    path('room_information/', views.RoomInformationView.as_view(), name='room_information')
+    path('room_information/', views.RoomInformationView.as_view(), name='room_information'),
+    path('room_history/', views.RoomHistoryView.as_view(), name='room_history'),
+    path('food_history/', views.FoodHistoryView.as_view(), name='food_history'),
+    path('feedback_history/', views.FeedbackHistoryView.as_view(), name='feedback_history'),
+    path('room_usage_history/', views.RoomUsageHistoryView.as_view(), name='room_usage_history'),
 ]
