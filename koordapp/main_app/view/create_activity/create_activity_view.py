@@ -25,7 +25,7 @@ def create_activity_view(request, raum):
                             else:
                                 pass 
                         else:
-                            # Error message wen kategorie nicht existiert
+                            # Error message wenn kategorie nicht existiert
                             pass
                     except:
                         #error message wenn capazitaet keine Zahl ist!
