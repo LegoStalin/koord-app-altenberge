@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from main_app.models import Personal, Raum, Gruppe, Schueler
 from django.contrib.auth.models import User
 
-# @login_required(login_url="login/")
+@login_required(login_url="login/")
 def ogs_group_view(request, gruppe):
 
     gruppe = Gruppe.objects.get(name=gruppe)
