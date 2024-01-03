@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 @login_required(login_url="login/")
 def ogs_group_view(request, gruppe):
 
-    gruppe = Gruppe.objects.get(name=gruppe)
-    if not gruppe == None:
+    if Gruppe.objects.filter(name=gruppe).exists():
+        gruppe = Gruppe.objects.get(name=gruppe)
         schueler = Schueler.objects.filter(gruppen_id=gruppe)
         user = request.user
         personal = Personal.objects.get(user=user)
