@@ -27,8 +27,12 @@ def create_activity_view(request, raum):
                                 
                                 pass 
                         else:
+<<<<<<< HEAD
                             # Error message wen kategorie nicht existiert
                             messages.error(request, 'AG Kategorie existiert nicht')
+=======
+                            # Error message wenn kategorie nicht existiert
+>>>>>>> 37a3d68a1644b3480493a3b97125c4b50db1e5ed
                             pass
                     except ValueError:
                         #error message wenn capazitaet keine Zahl ist!
