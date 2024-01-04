@@ -81,7 +81,7 @@
                 {% if room_occupancy|is_occupied:room %}
                     <button id="occupied_button"> Belegt </button>                   
                 {% else %}
-                <input type="button" id="select_button" value="Auswählen" onclick="location.href='{% url 'create_activity' raum_nr=room.raum_nr %}';">                 
+                <input type="button" id="select_button" value="Auswählen" onclick="location.href='{% url 'create_activity' raum=room.raum_nr %}';">                 
                 {% endif %}
                 </div>
             {% endfor %}
