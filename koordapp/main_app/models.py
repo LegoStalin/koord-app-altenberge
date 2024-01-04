@@ -52,7 +52,6 @@ class AGKategorie(models.Model):
 
 class AG(models.Model):
     name = models.CharField(max_length=50)
-    beschreibung = models.CharField(max_length=500)
     max_anzahl = models.SmallIntegerField()
     offene_AG = models.BooleanField() 
     leiter = models.ForeignKey(Personal, on_delete=models.CASCADE, null=True)       # null=True entfernen
@@ -80,11 +79,8 @@ class Feedback(models.Model):
     tag = models.DateField
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
 class Raum_Belegung(models.Model):
-    tablet_id = models.BigIntegerField()
+    tablet_id = models.BigIntegerField(null=True)
     raum = models.ForeignKey(Raum, on_delete=models.CASCADE)
-    aufsichtsperson = models.ForeignKey(Personal, on_delete=models.CASCADE)             # in Raum_Belegung oder AG oder beides?
-    angebots_zeit = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
-    angebots_zeitraum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE)
     ag = models.ForeignKey(AG, on_delete=models.CASCADE)
 class Aufenthalt(models.Model):                # Zuordnung wo sich Kinder befunden haben, wird mit löschen des Zeitraums auch gelöscht
     tag = models.DateField

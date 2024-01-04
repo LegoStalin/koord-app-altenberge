@@ -42,10 +42,10 @@
         <div class="inputblock">
             <label class = "category">Aufsichtsperson:</label>
             <div class="custom-select">
-                <select>
-                    <option name="aufsichtsperson" value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                <select name="aufsichtsperson">
+                    <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
                     {% for personal in personallist %}
-                    <option name="aufsichtsperson" value="{{personal.user.username}}">{{personal.user.username}}</option>
+                    <option value="{{personal.user.username}}">{{personal.user.username}}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -59,10 +59,10 @@
         <div class="inputblock">
             <label class = "category">Kategorie:</label>
             <div class="custom-select">
-                <select>
-                    <option name="ag_kategorie" value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                <select name="ag_kategorie">
+                    <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
                     {% for ag_kategorie in ag_kategorien %}
-                    <option name="ag_kategorie" value="{{ag_kategorie.name}}">{{ag_kategorie.name}}</option>
+                    <option value="{{ag_kategorie.name}}">{{ag_kategorie.name}}</option>
                     {% endfor %}
                 </select>
             </div>
