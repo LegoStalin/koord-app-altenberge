@@ -47,6 +47,9 @@ class AGZeit(models.Model):
     wochentag = models.TextField(choices=WOCHENTAG.choices, default=WOCHENTAG.MONTAG, max_length=10)
     zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
 
+class AGKategorie(models.Model):
+    name = models.CharField(max_length=20)
+
 class AG(models.Model):
     name = models.CharField(max_length=50)
     beschreibung = models.CharField(max_length=500)
@@ -55,6 +58,7 @@ class AG(models.Model):
     leiter = models.ForeignKey(Personal, on_delete=models.CASCADE, null=True)       # null=True entfernen
     angebots_datum_raum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE, null=True)    # null=True entfernen
     ag_zeit = models.ManyToManyField(AGZeit)
+    ag_kategorie = models.ForeignKey(AGKategorie, on_delete=models.CASCADE, null = True)
 
 class Schueler(models.Model):
     klasse = models.CharField(max_length=3)             # optional
