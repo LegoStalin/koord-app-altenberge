@@ -1,53 +1,35 @@
-import string, random
 from datetime import datetime
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView
-from django.contrib.auth import login as auth_login, authenticate, logout as auth_logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.decorators import login_required, permission_required
-from django.contrib.auth.models import User
-from django.contrib import messages
-from django.views import View
+from django.contrib.auth.forms import UserCreationForm
+
 from django.shortcuts import redirect
-from django.shortcuts import render
 
-from .models import Nutzer, Personal, Raum, Gruppe, AG, Schueler
-from .view.csv_import.csv_import_view import csv_import_view
-
-
-
-class LoginInterfaceView(LoginView):
-    template_name = 'user_verification/user_login.html'
-
-
-
-class ResetPasswordMailView(View):
-    template_name = 'user_verification/reset_pw_mail.html'
-    def get(self, request):
-        return render(request, self.template_name)
-class SetNewPasswordView(View):
-    template_name = 'user_verification/set_new_pw.html'
-    def get(self, request):
-        return render(request, self.template_name)
-class ResetPasswordConfirmationView(View):
-    template_name = 'user_verification/reset_pw_confirmation.html'
-    def get(self, request):
-        return render(request, self.template_name)
-
-class HomeView(TemplateView):
-    template_name = 'home/home.html'
-
-class CreateActivityView(TemplateView):
-    template_name = 'create_activity/create_activity.html'
+from main_app.view.choose_room.choose_room_view import choose_room_view
+from main_app.view.create_activity.create_activity_view import create_activity_view
 
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
 
-def csv_import(request):
-    return csv_import_view(request)
+class MasterAndoridHomeView(TemplateView):
+    template_name = 'master_android/master_tablet.html'
 
-def roomplan(request):
-    return render(request, 'room_plan/room_overview.html', {'rooms':Raum.objects.all()})
+class RemoveTabletView(TemplateView):
+    template_name = 'master_android/remove_tablet.html'
 
+class SetNfcScanAndroidView(TemplateView):
+    template_name = 'master_android/set_nfc_scan.html'
+
+class ChooseRoomView(TemplateView):
+    template_name = 'choose_room/choose_room.html'
+
+class CreateActivityView(TemplateView):
+    template_name = 'create_activity/create_activity.html'
+
+def choose_room(request):
+    return choose_room_view(request)
+
+def create_activity(request, raum):
+    return create_activity_view(request, raum)

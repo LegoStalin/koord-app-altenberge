@@ -28,7 +28,7 @@ class Personal(models.Model):
         permissions = [("can_import", "Can import excel data")]
 
 class Raum(models.Model):
-    raum_nr = models.SmallIntegerField()
+    raum_nr = models.CharField(max_length=12)
     geschoss = models.CharField(max_length=4)
     kapazitaet = models.SmallIntegerField()
 class Gruppe(models.Model):
@@ -47,14 +47,17 @@ class AGZeit(models.Model):
     wochentag = models.TextField(choices=WOCHENTAG.choices, default=WOCHENTAG.MONTAG, max_length=10)
     zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
 
+class AGKategorie(models.Model):
+    name = models.CharField(max_length=100)
+
 class AG(models.Model):
     name = models.CharField(max_length=50)
-    beschreibung = models.CharField(max_length=500)
     max_anzahl = models.SmallIntegerField()
     offene_AG = models.BooleanField() 
     leiter = models.ForeignKey(Personal, on_delete=models.CASCADE, null=True)       # null=True entfernen
     angebots_datum_raum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE, null=True)    # null=True entfernen
     ag_zeit = models.ManyToManyField(AGZeit)
+    ag_kategorie = models.ForeignKey(AGKategorie, on_delete=models.CASCADE, null=True)
 
 class Schueler(models.Model):
     klasse = models.CharField(max_length=3)             # optional
@@ -76,11 +79,8 @@ class Feedback(models.Model):
     tag = models.DateField
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
 class Raum_Belegung(models.Model):
-    tablet_id = models.BigIntegerField()
+    tablet_id = models.BigIntegerField(null=True)
     raum = models.ForeignKey(Raum, on_delete=models.CASCADE)
-    aufsichtsperson = models.ForeignKey(Personal, on_delete=models.CASCADE)             # in Raum_Belegung oder AG oder beides?
-    angebots_zeit = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
-    angebots_zeitraum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE)
     ag = models.ForeignKey(AG, on_delete=models.CASCADE)
 class Aufenthalt(models.Model):                # Zuordnung wo sich Kinder befunden haben, wird mit löschen des Zeitraums auch gelöscht
     tag = models.DateField
