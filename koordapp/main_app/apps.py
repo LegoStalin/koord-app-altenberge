@@ -20,4 +20,15 @@ class LogsystemConfig(AppConfig):
             if not models.Group.objects.filter(name='Ohne Rolle').exists():
                 models.Group.objects.create(name='Ohne Rolle')
         except:
-            print('')
+            pass
+        # Erstelle verschiedene AGKategorien 
+        try:
+            models = importlib.import_module('main_app.models')
+            if not models.AGKategorie.objects.filter(name='Sport').exists():
+                models.AGKategorie.objects.create(name='Sport')
+            if not models.AGKategorie.objects.filter(name='Lernen').exists():
+                models.AGKategorie.objects.create(name='Lernen')
+            if not models.AGKategorie.objects.filter(name='Kreativ').exists():
+                models.AGKategorie.objects.create(name='Kreativ')
+        except:
+            pass

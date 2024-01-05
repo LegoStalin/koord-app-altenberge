@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="block_container">
+    <div class="header_container">
+        <h1>Datenbank aktualisieren</h1>
+        <h2>Bitte laden Sie eine xlsx-Datei hoch:</h2>
+    </div>
+    {% for message in messages %}
+    <div class="alert alert-danger">
+        {{message}}
+    </div>
+    {% endfor %}
+    <form method="post" class="form_container" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div id="flags">
+            <div id="database_flags" class="content_container">
+                <h3>Sollen die Daten in der Datenbank überschrieben oder nur ergänzt werden?</h3>
+                <div class="checkbox_container">
+                    <label><input type="checkbox" name="checkbox_database" value="option_overwrite"> überschreiben</label>
+                </div>    
+            </div>
+            <div id="sheet_flags" class="content_container">
+                <h3>Welche sheets sind in der ".xlsx"-Datei enthalten?</h3>
+                <h4>« Eine Mehrfachauswahl ist hier möglich »</h4>
+                <div class="checkbox_container">
+                    <label><input type="checkbox" name="checkbox_sheet" value="option_user">Personal</label>
+                    <label><input type="checkbox" name="checkbox_sheet" value="option_pupil">Schüler</label>
+                    <label><input type="checkbox" name="checkbox_sheet" value="option_room">Räume</label>
+                    <label><input type="checkbox" name="checkbox_sheet" value="option_ag">AGs</label>
+                    <label><input type="checkbox" name="checkbox_sheet" value="option_group">Gruppen</label>
+                </div>  
+            </div>
+        </div>
+        <div class="content_container" id="dummy_download">
+            <h4>« Hier können Sie die Vorlage runterladen »</h4>
+            <input type="submit" value="Vorlage herunterladen">
+        </div>
+        <div class = "upload_container">
+            <div class="dnd_file"><input type="file" accept=".xlsx" name="excel_file"></div>
+            <div class= "upload_button"><input type="submit" value="Hochladen"></div>
+        </div>
+      </form>
+
+        <nav class="navbar_container" id="nav">
+            <span class="nav_item" id="nav_home">
+                <span class="icon">
+                    <img src="{% static 'img/home.png' %}" alt="Home Icon">
+                    <span class="icon_text"><a href="#">Home</a></span>
+                </span>
+            </span>
+            <span class="nav_item" id="nav_main">
+                <span class="icon">   
+                <img src="{% static 'img/menu.png' %}" alt="Menu Icon">
+                <span class="icon_text"><a href="#">Hauptansicht</a></span>
+                </span>
+            </span>
+            <span class="nav_item" id="nav_notifications">
+                <span class="icon">
+                    <img src="{% static 'img/bell.png' %}" alt="Bell Icon">
+                    <span class="icon_text"><a href="#">Benachrichtigungen</a></span>
+                </span>
+                
+            </span>
+            <span class="nav_item" id="nav_help">
+                <span class="icon">
+                    <img src="{% static 'img/help.png' %}" alt="Help Icon">
+                    <span class="icon_text"><a href="#">Hilfe</a></span>
+                </span>
+                
+            </span>
+        </nav>
+       
+</div>
+
+{% endblock %}
