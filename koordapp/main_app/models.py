@@ -52,7 +52,6 @@ class AGKategorie(models.Model):
 
 class AG(models.Model):
     name = models.CharField(max_length=50)
-    beschreibung = models.CharField(max_length=500)
     max_anzahl = models.SmallIntegerField()
     offene_AG = models.BooleanField() 
     leiter = models.ForeignKey(Personal, on_delete=models.CASCADE, null=True)       # null=True entfernen

@@ -16,7 +16,7 @@ from django.http import HttpResponse
 
 from openpyxl import Workbook, load_workbook
 
-from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler, Zeitraum, AGZeit, Datumsraum 
+from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler, Zeitraum, AGZeit, Datumsraum, AGKategorie 
 
 def csv_import_view(request):
     if request.method == 'POST':
@@ -103,7 +103,7 @@ def csv_import_view(request):
                         wss = wb['AGs']
                         for index, row in enumerate(wss.iter_rows(min_row=2, values_only=True)):              # Erstellung Nutzer
                             error = False
-                            name, beschreibung, max_anzahl, offene_AG, ag_leiter, montag, dienstag, mittwoch, donnerstag, freitag, angebotsstart, angebotsende = row
+                            name, ag_kategorie, max_anzahl, offene_AG, ag_leiter, montag, dienstag, mittwoch, donnerstag, freitag, angebotsstart, angebotsende = row
 
                             zahl = 1
                             is_name_unique = False
@@ -124,20 +124,24 @@ def csv_import_view(request):
                                 messages.error(request, fehler_tabelle + "ag_leiter " + str(name)+" in Zeile " + str(index) +" existiert nicht.")
                             is_offene_AG = False
                             try:
+                                ag_kategorie = AGKategorie.objects.get(name=ag_kategorie)
+                            except:
+                                error=True
+                                messages.error(request, fehler_tabelle+"ag_kategorie "+str(max_anzahl)+" in Zeile " + str(index) +" existiert nicht.")
+                            try:
                                 max_anzahl = int(max_anzahl)
                             except:
                                 error=True
-                                messages.error(request, fehler_tabelle+"max_anzahl "+str(max_anzahl)+" in Zeile " + str(index) +" muss eine Zahl sein")
+                                messages.error(request, fehler_tabelle+"max_anzahl "+str(max_anzahl)+" in Zeile " + str(index) +" muss eine Zahl sein.")
                             if(type(angebotsstart)==datetime and type(angebotsende)==datetime):                           
                                 datumsraum = Datumsraum.objects.create(startdatum=angebotsstart, enddatum=angebotsende)
                             else:
                                 error = True
-                                messages.error(request, fehler_tabelle+"Datum in Zeile " + str(index) +" kann nicht Formatiert werden. Format: dd.mm.YYYY")
-                            print()                          
+                                messages.error(request, fehler_tabelle+"Datum in Zeile " + str(index) +" kann nicht Formatiert werden. Format: dd.mm.YYYY")                         
                             if(offene_AG.lower()=='true' or offene_AG.lower()=='ja'):
                                     is_offene_AG = True
                             if not error:        
-                                ag = AG.objects.create(name=name,beschreibung=beschreibung,max_anzahl=max_anzahl,offene_AG=is_offene_AG, leiter=leiter, angebots_datum_raum=datumsraum)
+                                ag = AG.objects.create(name=name,ag_kategorie=ag_kategorie,max_anzahl=max_anzahl,offene_AG=is_offene_AG, leiter=leiter, angebots_datum_raum=datumsraum)
                                 
                                 # TODO: Error Handling
                                 if not montag==None:
