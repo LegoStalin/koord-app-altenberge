@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added TODO Comments">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added transparency feature for absent pupil">
       <change beforePath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/ogs_group/ogs_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/ogs_group/ogs_group.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704643393139</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added transparency feature for absent pupil">
+      <option name="closed" value="true" />
+      <created>1704643926533</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1704643926533</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +336,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="color adjustments" />
     <MESSAGE value="Setting up new Branch for Frame choose_room" />
     <MESSAGE value="Created first Draft of Opening Page, Including Room List Block" />
     <MESSAGE value="adjusted room_container" />
@@ -355,6 +360,7 @@
     <MESSAGE value="Created infomation lists according to media queries" />
     <MESSAGE value="Refinement of logo position" />
     <MESSAGE value="Added TODO Comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TODO Comments" />
+    <MESSAGE value="Added transparency feature for absent pupil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added transparency feature for absent pupil" />
   </component>
 </project>
