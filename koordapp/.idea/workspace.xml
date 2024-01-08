@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="adjusted block container">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="xml adjustments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -334,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704644457024</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="xml adjustments">
+      <option name="closed" value="true" />
+      <created>1704716560903</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1704716560903</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +358,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjusted room_container" />
     <MESSAGE value="adj" />
     <MESSAGE value="further development of room container and buttons" />
     <MESSAGE value="unversioned files" />
@@ -377,6 +382,7 @@
     <MESSAGE value="Added transparency feature for absent pupil" />
     <MESSAGE value="Added transparency feature for absent pupil in further media queries" />
     <MESSAGE value="adjusted block container" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjusted block container" />
+    <MESSAGE value="xml adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml adjustments" />
   </component>
 </project>
