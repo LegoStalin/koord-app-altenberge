@@ -68,3 +68,6 @@ class FeedbackHistoryView(TemplateView):
 
 class RoomUsageHistoryView(TemplateView):
     template_name = 'history_pages/room_usage_history.html'
+
+class PreferencesView(TemplateView):
+    template_name = 'preferences/preferences.html'
