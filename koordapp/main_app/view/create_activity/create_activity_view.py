@@ -39,4 +39,7 @@ def create_activity_view(request, raum):
             personallist = Personal.objects.filter(rechte_gruppe=gruppenleiter_gruppe) | Personal.objects.filter(rechte_gruppe=raumbetreuer_gruppe)
             return render(request, "create_activity/create_activity.html", {"room":raum, "personallist":personallist, "ag_kategorien":AGKategorie.objects.all()})
 
+        else:
+            pass
+
     return redirect("master_web")
