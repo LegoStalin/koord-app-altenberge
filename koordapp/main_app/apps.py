@@ -36,6 +36,7 @@ class LogsystemConfig(AppConfig):
         try:
             models = importlib.import_module('main_app.models')
             models.Raum_Belegung.objects.all().delete()
+            models.AG.objects.all().delete()
 
         except:
             pass
