@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'main_app.middleware.DeviceMiddelware'
+    'main_app.middleware.deviceID.DeviceMiddleware'
 ]
 
 ROOT_URLCONF = 'koordapp.urls'

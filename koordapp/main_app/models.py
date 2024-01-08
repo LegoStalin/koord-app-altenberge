@@ -79,7 +79,7 @@ class Feedback(models.Model):
     tag = models.DateField
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
 class Raum_Belegung(models.Model):
-    tablet_id = models.CharField(max_length= 200,null=True)
+    tablet_id = models.CharField(max_length=200,null=True)
     raum = models.ForeignKey(Raum, on_delete=models.CASCADE)
     ag = models.ForeignKey(AG, on_delete=models.CASCADE)
 class Aufenthalt(models.Model):                # Zuordnung wo sich Kinder befunden haben, wird mit löschen des Zeitraums auch gelöscht

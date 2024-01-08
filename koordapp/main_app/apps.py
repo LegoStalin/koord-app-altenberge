@@ -20,9 +20,9 @@ class LogsystemConfig(AppConfig):
             if not models.Group.objects.filter(name='Ohne Rolle').exists():
                 models.Group.objects.create(name='Ohne Rolle')
         except:
-            print('')
+            pass
         try:
             models = importlib.import_module('main_app.models')
-            models.Raum_Belegung.objects.delete()
+            models.Raum_Belegung.objects.all().delete()
         except:
             pass
