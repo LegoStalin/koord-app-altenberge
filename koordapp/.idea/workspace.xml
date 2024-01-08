@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Initial setup of preferences">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Developed first media query for PC">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/static/css/preferences/preferences.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/preferences/preferences.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/preferences/preferences.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/preferences/preferences.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -368,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704727380427</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Developed first media query for PC">
+      <option name="closed" value="true" />
+      <created>1704728252395</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1704728252395</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +393,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="unversioned files" />
     <MESSAGE value="Bootstrap Backend Draft" />
     <MESSAGE value="merge conflicts" />
     <MESSAGE value="comments" />
@@ -411,6 +417,7 @@
     <MESSAGE value="xml adjustments" />
     <MESSAGE value="updates" />
     <MESSAGE value="Initial setup of preferences" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial setup of preferences" />
+    <MESSAGE value="Developed first media query for PC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Developed first media query for PC" />
   </component>
 </project>
