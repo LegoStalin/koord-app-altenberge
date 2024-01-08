@@ -10,5 +10,5 @@ urlpatterns = [
     path('set_nfc_scan/', views.SetNfcScanAndroidView.as_view(), name='set_nfc_scan'),
     path('choose_room/', views.choose_room, name='choose_room'),
     path('create_activity/<str:raum>', views.create_activity, name='create_activity'),
-    path('csv_import/', views.csv_import_view, name='csv_import'),
+    path('csv_import/', views.csv_import, name='csv_import'),
 ]
