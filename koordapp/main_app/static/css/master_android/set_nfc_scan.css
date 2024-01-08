@@ -5,10 +5,8 @@
   margin-right: 11vw;
 }
 .mid_container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 15%;
+  margin-left: 10%;
   height: 75vh;
   width: 65vw;
   display: flex;
