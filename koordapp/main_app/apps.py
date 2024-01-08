@@ -21,6 +21,7 @@ class LogsystemConfig(AppConfig):
                 models.Group.objects.create(name='Ohne Rolle')
         except:
             pass
+
         # Erstelle verschiedene AGKategorien 
         try:
             models = importlib.import_module('main_app.models')
@@ -30,5 +31,11 @@ class LogsystemConfig(AppConfig):
                 models.AGKategorie.objects.create(name='Lernen')
             if not models.AGKategorie.objects.filter(name='Kreativ').exists():
                 models.AGKategorie.objects.create(name='Kreativ')
+        except:
+            pass
+        try:
+            models = importlib.import_module('main_app.models')
+            models.Raum_Belegung.objects.all().delete()
+
         except:
             pass
