@@ -21,3 +21,8 @@ class LogsystemConfig(AppConfig):
                 models.Group.objects.create(name='Ohne Rolle')
         except:
             print('')
+        try:
+            models = importlib.import_module('main_app.models')
+            models.Raum_Belegung.objects.delete()
+        except:
+            pass
