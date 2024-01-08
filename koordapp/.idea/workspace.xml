@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added transparency feature for absent pupil">
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="adjusted block container">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +318,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704643926533</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added transparency feature for absent pupil in further media queries">
+      <option name="closed" value="true" />
+      <created>1704644212427</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1704644212427</updated>
+    </task>
+    <task id="LOCAL-00031" summary="adjusted block container">
+      <option name="closed" value="true" />
+      <created>1704644457024</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1704644457024</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,8 +352,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Setting up new Branch for Frame choose_room" />
-    <MESSAGE value="Created first Draft of Opening Page, Including Room List Block" />
     <MESSAGE value="adjusted room_container" />
     <MESSAGE value="adj" />
     <MESSAGE value="further development of room container and buttons" />
@@ -361,6 +375,8 @@
     <MESSAGE value="Refinement of logo position" />
     <MESSAGE value="Added TODO Comments" />
     <MESSAGE value="Added transparency feature for absent pupil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added transparency feature for absent pupil" />
+    <MESSAGE value="Added transparency feature for absent pupil in further media queries" />
+    <MESSAGE value="adjusted block container" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjusted block container" />
   </component>
 </project>
