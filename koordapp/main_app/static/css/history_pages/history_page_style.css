@@ -41,7 +41,8 @@
 @media only screen and (min-width: 400px) and (max-width: 1050px) {
   .column_title_type1,
   .data_row_type1 {
-    font-size: 3.5vw;
+    /*font-size: 3vw;*/
+    word-break: break-all;
   }
   .table_data_row {
     margin-top: 2%;
@@ -54,5 +55,12 @@
   .data_row_type1 {
     margin-left: 3%;
     margin-right: 3%;
+  }
+  /*Phone extra Media Quarry*/
+  @media only screen and (min-width: 400px) and (max-width: 700px) {
+    .column_title_type1,
+    .data_row_type1 {
+      font-size: 2.3vw;
+    }
   }
 }
