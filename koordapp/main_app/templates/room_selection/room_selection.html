@@ -11,7 +11,7 @@
     <body>
     <div class = "block_container">
         <div class="header_container_back_help">
-            <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/master_web/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+            <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/select_room/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
 
             <a class="question" href="#popup1">Hilfe</a>
 
@@ -29,11 +29,11 @@
             </div>
         </div>
 
-        <h1 class="heading_2"> Raum 1.1 </h1>
+        <h1 class="heading_2"> Raum {{raum.raum_nr}} </h1>
         <h2 class="subheading_2"> Welche Informationen benötigen Sie? </h2>
 
         <div class = "selection_container">
-            <button id="button_style2" onclick="window.location.href = 'http://127.0.0.1:8000/room_information/';"> Informationen </button>
+            <button id="button_style2" onclick="location.href='{% url 'room_information' raum=raum.raum_nr %}';"> Informationen </button>
             <button id="button_style2" onclick="window.location.href = 'http://127.0.0.1:8000/room_usage_history/';"> Nutzungshistorie </button>
         </div>
     </div>

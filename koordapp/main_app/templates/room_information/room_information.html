@@ -11,7 +11,7 @@
     <body>
     <div class = "block_container">
         <div class="header_container_back_help">
-            <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/room_selection/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+            <button class="back" onclick="location.href='{% url 'room_selection' raum=raum.raum_nr %}';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
 
             <a class="question" href="#popup1">Hilfe</a>
 
@@ -29,54 +29,56 @@
             </div>
         </div>
 
-        <h1 class="heading_2"> Raum 1.1 </h1>
+        <h1 class="heading_2"> Raum {{raum.raum_nr}} </h1>
         <h2 class="subheading_2"> Informationen </h2>
 
         <div class = "information_container">
             <div class =  "information_row">
                 <label class = "label_style1">Aktuelle Belegung:</label>
-                <label class = "label_style2"> Malen </label>
+                <label class = "label_style2"> {{raum_belegung}} </label>
             </div>
-
+            {% if not nutzungstyp == None %}
             <div class =  "information_row">
                 <label class = "label_style1"> Nutzungstyp:</label>
-                <label class = "label_style2"> Kreativ </label>
+                <label class = "label_style2"> {{nutzungstyp}} </label>
             </div>
-
+            {% endif %}
+            {% if not aufsichtsperson == None %}
             <div class =  "information_row">
                 <label class = "label_style1"> Aufsichtsperson:</label>
-                <label class = "label_style2"> Mahlmann </label>
+                <label class = "label_style2"> {{aufsichtsperson}} </label>
             </div>
-
+            {% endif %}
             <div class =  "information_row">
                 <label class = "label_style1"> Aktuelle Kinderanzahl:</label>
-                <label class = "label_style2"> 17 </label>
+                <label class = "label_style2"> {{aktuelle_kinderanzahl}} </label>
             </div>
 
             <div class =  "information_row">
                 <label class = "label_style1"> Maximale Kinderanzahl:</label>
-                <label class = "label_style2"> 20 </label>
+                <label class = "label_style2"> {{raum.kapazitaet}} </label>
             </div>
 
-            <div class =  "information_row">
+            <!--<div class =  "information_row">
                 <label class = "label_style1"> Gebäude:</label>
                 <label class = "label_style2"> OGS </label>
-            </div>
+            </div>-->
 
             <div class =  "information_row">
                 <label class = "label_style1"> Geschoss: </label>
-                <label class = "label_style2"> 2 </label>
+                <label class = "label_style2"> {{raum.geschoss}} </label>
             </div>
 
             <div class =  "information_row">
                 <label class = "label_style1"> Raumnummer: </label>
-                <label class = "label_style2"> 2.1 </label>
+                <label class = "label_style2"> {{raum.raum_nr}} </label>
             </div>
-
+            {% if not ogs_gruppe == None %}
             <div class =  "information_row">
-                <label class = "label_style1"> Bezeichnung: </label>
-                <label class = "label_style2"> Zebraraum </label>
+                <label class = "label_style1"> OGS-Gruppe: </label>
+                <label class = "label_style2"> {{ogs_gruppe}} </label>
             </div>
+            {% endif %}
         </div>
 
     </div>

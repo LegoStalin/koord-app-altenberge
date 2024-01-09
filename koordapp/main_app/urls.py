@@ -20,6 +20,9 @@ urlpatterns = [
     path('reset_pw_confirmation/', views.reset_pw_confirmation, name='reset_pw_confirmation'),
     path('pupil/<int:pupil>', views.pupil, name='pupil'),
     path('ogs_group/', views.ogs_group, name='ogs_group'),
+    path('select_room/', views.select_room, name='select_room'),
+    path('room_selection/<str:raum>', views.room_selection, name='room_selection'),
+    path('room_information/<str:raum>', views.room_information, name='room_information'),
 ]
 
 
@@ -49,5 +52,8 @@ allowed_urls_web = [
     'reset_pw_confirmation',
     'pupil',
     'ogs_group',
+    'select_room',
+    'room_selection',
+    'room_information',
     ]
 main_url_web = 'master_web'
