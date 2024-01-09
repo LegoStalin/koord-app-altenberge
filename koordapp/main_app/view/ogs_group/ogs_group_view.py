@@ -4,21 +4,27 @@ from main_app.models import Personal, Raum, Gruppe, Schueler
 from django.contrib.auth.models import User
 
 @login_required(login_url="login/")
-def ogs_group_view(request, gruppe):
+def ogs_group_view(request):
 
-    if Gruppe.objects.filter(name=gruppe).exists():
-        gruppe = Gruppe.objects.get(name=gruppe)
-        schueler = Schueler.objects.filter(gruppen_id=gruppe)
-        user = request.user
+    user = request.user
+    if(Personal.objects.filter(user=user).exists()):
         personal = Personal.objects.get(user=user)
-        if not Personal == None:
-            if gruppe.gruppenleiter_leiter == personal:
-                pass
-            else:
-                #fehler Nachricht?
-                return redirect("master_web")
+        if(Gruppe.objects.filter(gruppen_leiter=personal).exists()):
+            gruppe = Gruppe.objects.get(gruppen_leiter=personal)
+            schueler = Schueler.objects.filter(gruppen_id=gruppe)
+
+            if request.method == 'POST':
+                search = request.POST.get('search')
+                if 'serach_button' in request.POST:
+                    schueler2 = []
+                    for schueler1 in schueler:
+                        name = schueler1.user_id.vorname + " " + schueler1.user_id.nachname
+                        if(search in name):
+                            schueler2.append(schueler1)
+                    schueler = schueler2
         else:
-            pass
+            #fehler Nachricht?
+            return redirect("master_web")  
     else:
         #fehler Nachricht?
         return redirect("master_web")
