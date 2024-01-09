@@ -22,6 +22,7 @@ from main_app.view.ogs_group.ogs_group_view import ogs_group_view
 from main_app.view.room.select_room_view import select_room_view
 from main_app.view.room.room_selection_view import room_selection_view
 from main_app.view.room.room_information_view import room_information_view
+from main_app.view.preferences.preferences_view import preferences_view
 
 
 class MasterHomeView(TemplateView):
@@ -77,3 +78,6 @@ def room_selection(request, raum):
 
 def room_information (request, raum):
     return room_information_view(request,raum)
+
+def preferences(request):
+    return preferences_view(request)

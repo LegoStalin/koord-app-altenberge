@@ -23,6 +23,7 @@ urlpatterns = [
     path('select_room/', views.select_room, name='select_room'),
     path('room_selection/<str:raum>', views.room_selection, name='room_selection'),
     path('room_information/<str:raum>', views.room_information, name='room_information'),
+    path('preferences/', views.preferences, name='preferences'),
 ]
 
 
@@ -55,5 +56,6 @@ allowed_urls_web = [
     'select_room',
     'room_selection',
     'room_information',
+    'preferences',
     ]
 main_url_web = 'master_web'

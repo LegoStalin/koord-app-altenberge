@@ -32,23 +32,24 @@
         <h1 class="heading_2"> OGS-Gruppe </h1>
         <h2 class="subheading_2"> Für weitere Infos wählen sie das entsprechende Kind </h2>
 
-        <form method="post" class="input_container">{% csrf_token %}
-            <div class = "list">
+        
+        <div class = "list">
+            <form method="post" class="input_container">{% csrf_token %}
                 <div class = "searchcontainer">
                     <input type="text" class="searchbar" name="search" placeholder="Namen eingeben.." />
                     <input type="submit" name="button_search" class="search_button" value="Suchen"></input>
                 </div>
-
-                {% for schuler in schueler%}
-                <div class = "pupil">
-                    <div class="pupil_container">
-                        <p class="text_pupil"> {{ schuler.user_id.vorname }} {{ schuler.user_id.nachname }} </p>
-                        <button class="assign_button"> Auswählen </button>
-                    </div>
+            </form>
+            {% for schuler in schueler%}
+            <div class = "pupil">
+                <div class="pupil_container">
+                    <p class="text_pupil"> {{ schuler.user_id.vorname }} {{ schuler.user_id.nachname }} </p>
+                    <button class="assign_button" onclick="location.href='{% url 'pupil' pupil=schuler.user_id.id %}';"> Auswählen </input>
                 </div>
-                {% endfor %}
             </div>
-        </form>
+            {% endfor %}
+        </div>
+
     </div>
 
 

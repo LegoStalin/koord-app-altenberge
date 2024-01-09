@@ -40,41 +40,42 @@
         <label class="submit_header"></label>
 
     </div>
+    <form method="post" class="input_container">{% csrf_token %}
+        <div class="input_container">
+            <div class="inputblock">
+                <label class = "category">Benutzername:</label>
 
-    <div class="input_container">
-        <div class="inputblock">
-            <label class = "category">Benutzername:</label>
+                <label class = "current">{{user.username}}</label>
+                <input type="text" class="inputfield" name="username" placeholder="Neuer Benutzername.." />
+                <input type='submit' class="change_button" name="change_button_username" value='Ändern'/>
+            </div>
 
-            <label class = "current">mahlmann</label>
-            <input type="text" class="inputfield" name="username" placeholder="Neuer Benutzername.." />
-            <button class="change_button">Ändern</button>
+            <div class = "line"></div>
+
+            <div class = "inputblock">
+                <label class = "category">Passwort:</label>
+                <label class = "current">abcd1234!</label>
+                <input type="text" class="inputfield" name="password" placeholder="Neues Passwort.." />
+                <button class="change_button">Ändern</button>
+            </div>
+            <div class = "line"></div>
+            <div class="inputblock">
+                <label class = "category">Vorname:</label>
+                <label class = "current">{{nutzer.vorname}}</label>
+                <input type="text" class="inputfield" name="firstname" placeholder="Neuer Vorname.." />
+
+                <input type='submit' class="change_button" name="change_button_vorname" value='Ändern'/>
+            </div>
+            <div class = "line"></div>
+            <div class = "inputblock">
+                <label class = "category">Nachname:</label>
+                <label class = "current">{{nutzer.nachname}}</label>
+
+                <input type="text" class="inputfield" name="surname" placeholder="Neuer Nachname.." />
+                <input type='submit' class="change_button" name="change_button_nachname" value='Ändern'/>
+            </div>
         </div>
-
-        <div class = "line"></div>
-
-        <div class = "inputblock">
-            <label class = "category">Passwort:</label>
-            <label class = "current">abcd1234!</label>
-            <input type="text" class="inputfield" name="password" placeholder="Neues Passwort.." />
-            <button class="change_button">Ändern</button>
-        </div>
-        <div class = "line"></div>
-        <div class="inputblock">
-            <label class = "category">Vorname:</label>
-            <label class = "current">Franziska</label>
-            <input type="text" class="inputfield" name="firstname" placeholder="Neuer Vorname.." />
-
-            <button class="change_button">Ändern</button>
-        </div>
-        <div class = "line"></div>
-        <div class = "inputblock">
-            <label class = "category">Nachname:</label>
-            <label class = "current">Mahlmann</label>
-
-            <input type="text" class="inputfield" name="surname" placeholder="Neuer Nachname.." />
-            <button class="change_button">Ändern</button>
-        </div>
-    </div>
+    </form>
 
 
     </body>
