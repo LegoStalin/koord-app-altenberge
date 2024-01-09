@@ -9,11 +9,6 @@ def pupil_view(request, pupil):
         if Schueler.objects.filter(user_id=nutzer).exists():
             schueler = Schueler.objects.get(user_id=nutzer)
 
-            if schueler.bus_kind == True:
-                bus_kind = 'Ja'
-            else:
-                bus_kind = 'Nein'
-
             aufenthalt = "Abgemeldet"
             aktuelle_ag = "Keine"
             if schueler.angemeldet == True:
@@ -26,9 +21,47 @@ def pupil_view(request, pupil):
                         if(Raum_Belegung.objects.filter(raum=raum).exists):
                             r_b = Raum_Belegung.get.filter(raum=raum)
                             aktuelle_ag = r_b.ag.name
-            
+            klassen = []
+            for schueler in Schueler.objects.all():
+                if not (schueler.klasse in klassen):
+                    klassen.append(schueler.klasse)
             ogs_groups = Gruppe.objects.all()
+            
+            if request.method == "POST":
+                if 'change_button_ogs_group' in request.POST:
+                    ogs_group = request.POST.get('ogs_group')
+                    if(Gruppe.objects.filter(name=ogs_group).exists()):
+                        ogs_group = Gruppe.objects.get(name=ogs_group)
+                        schueler.gruppen_id = ogs_group
+                        schueler.save()
+                elif 'change_button_name_eb' in request.POST:
+                    name_eb = request.POST.get('name_eb')
+                    if not(name_eb==''):
+                        schueler.name_eb = name_eb
+                        schueler.save()
+                elif 'change_button_kontakt_eb' in request.POST:
+                    kontakt_eb = request.POST.get('kontakt_eb')
+                    if not(kontakt_eb==''):
+                        schueler.kontakt_eb = kontakt_eb
+                        schueler.save()
+                elif 'change_button_klasse' in request.POST:
+                    klasse = request.POST.get('klasse')
+                    if(klasse in klassen):
+                        schueler.klasse = klasse
+                        schueler.save
+                elif 'change_button_bus_kind' in request.POST:
+                    bus_kind = request.POST.get('bus_kind')
+                    if(bus_kind=='1'):
+                        schueler.bus_kind=True
+                    elif(bus_kind=='2'):
+                        schueler.bus_kind=False
+                    schueler.save()
 
-            return render(request, "pupil/pupil.html", {"schueler":schueler, "nutzer":nutzer, "bus_kind":bus_kind, "aufenthalt":aufenthalt, "aktuelle_ag":aktuelle_ag, "ogs_groups":ogs_groups})
+            if schueler.bus_kind == True:
+                bus_kind = 'Ja'
+            else:
+                bus_kind = 'Nein'
+                
+            return render(request, "pupil/pupil.html", {"schueler":schueler, "nutzer":nutzer, "bus_kind":bus_kind, "aufenthalt":aufenthalt, "aktuelle_ag":aktuelle_ag, "ogs_groups":ogs_groups, "klassen":klassen})
         
     return redirect("master_web")
