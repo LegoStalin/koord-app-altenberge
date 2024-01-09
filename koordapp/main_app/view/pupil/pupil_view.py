@@ -22,9 +22,9 @@ def pupil_view(request, pupil):
                             r_b = Raum_Belegung.get.filter(raum=raum)
                             aktuelle_ag = r_b.ag.name
             klassen = []
-            for schueler in Schueler.objects.all():
-                if not (schueler.klasse in klassen):
-                    klassen.append(schueler.klasse)
+            for schueler1 in Schueler.objects.all():
+                if not (schueler1.klasse in klassen):
+                    klassen.append(schueler1.klasse)
             ogs_groups = Gruppe.objects.all()
             
             if request.method == "POST":

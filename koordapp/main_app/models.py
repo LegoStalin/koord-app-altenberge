@@ -29,7 +29,7 @@ class Personal(models.Model):
 
 class Raum(models.Model):
     raum_nr = models.CharField(max_length=12)
-    geschoss = models.CharField(max_length=4)
+    geschoss = models.CharField(max_length=12)
     kapazitaet = models.SmallIntegerField()
 class Gruppe(models.Model):
     name = models.CharField(max_length=50)
