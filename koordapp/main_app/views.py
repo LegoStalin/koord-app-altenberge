@@ -18,6 +18,7 @@ from main_app.view.user_verification.su_pw_reset_view import su_pw_reset_view
 from main_app.view.user_verification.set_new_password_view import set_new_password_view
 from main_app.view.user_verification.reset_pw_confirmation_view import reset_pw_confirmation_view
 from main_app.view.pupil.pupil_view import pupil_view
+from main_app.view.ogs_group.ogs_group_view import ogs_group_view
 
 
 class MasterHomeView(TemplateView):
@@ -61,4 +62,7 @@ def reset_pw_confirmation(request):
 
 def pupil(request, pupil):
     return pupil_view(request, pupil)
+
+def ogs_group(request):
+    return ogs_group_view(request)
 

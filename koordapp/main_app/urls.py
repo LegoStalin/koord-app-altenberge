@@ -1,49 +1,20 @@
 from django.urls import path
+from django.views.generic import RedirectView
 from . import views
 
 
-urlpatterns = [ 
+
+urlpatterns = [
     path('master_web/', views.MasterHomeView.as_view(), name='master_web'),
     path('master_tablet/', views.MasterAndoridHomeView.as_view(), name='master_tablet'),
-    path('remove_tablet/', views.remove_tablet, name='remove_tablet'),
+    path('remove_tablet/', views.RemoveTabletView.as_view(), name='remove_tablet'),
     path('set_nfc_scan/', views.SetNfcScanAndroidView.as_view(), name='set_nfc_scan'),
-    path('choose_room/', views.choose_room, name='choose_room'),
-    path('create_activity/<str:raum>', views.create_activity, name='create_activity'),
-    path('csv_import/', views.csv_import, name='csv_import'),
-    path('change_roomdata/', views.change_roomdata, name='change_roomdata'),
-    path('login/', views.login, name='login'),
-    path('logout/', views.logout, name='logout'),
-    path('superuser/', views.superuser, name='superuser'),
-    path('set_new_pw/', views.set_new_pw, name='set_new_pw'),
-    path('reset_pw_confirmation/', views.reset_pw_confirmation, name='reset_pw_confirmation'),
-    path('pupil/<int:pupil>', views.pupil, name='pupil'),
+    path('choose_room/', views.ChooseRoomView.as_view(), name='choose_room'),
+    path('create_activity/', views.CreateActivityView.as_view(), name='create_activity'),
+    path('home/', views.HomeView.as_view(), name='home'),
+    path('checked_in/', views.CheckedInView.as_view(), name='checked_in'),
+    path('checked_out/', views.CheckedOutView.as_view(), name='checked_out'),
+    path('change_roomdata/', views.ChangeRoomDataView.as_view(), name='change_roomdata'),
+    path('set_nfc_set/', views.SetNfcSetView.as_view(), name='set_nfc_set'),
+    path('ogs_group/', views.ogs_group, name='ogs_group'),
 ]
-
-
-allowed_urls_android = [
-    'master_tablet',
-    'remove_tablet',
-    'set_nfc_scan',
-    'choose_room',
-    'create_activity',
-    'change_roomdata',
-    ]
-main_url_android = 'master_tablet'
-
-allowed_urls_android_no_room = [
-    'choose_room',
-    'create_activity',
-    ]
-main_url_android_no_room = 'choose_room'
-
-allowed_urls_web = [
-    'master_web',
-    'csv_import',
-    'login',
-    'logout',
-    'superuser',
-    'set_new_pw',
-    'reset_pw_confirmation',
-    'pupil',
-    ]
-main_url_web = 'master_web'

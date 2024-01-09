@@ -33,7 +33,7 @@ class Raum(models.Model):
     kapazitaet = models.SmallIntegerField()
 class Gruppe(models.Model):
     name = models.CharField(max_length=50)
-    gruppenleiter_leiter = models.ForeignKey(Personal, on_delete=models.SET_NULL, null=True)        # ?
+    gruppen_leiter = models.ForeignKey(Personal, on_delete=models.SET_NULL, null=True)        # ? mehere Gruppenleiter?
     raum = models.ForeignKey(Raum, on_delete=models.SET_NULL, null=True)
 
 class AGZeit(models.Model):

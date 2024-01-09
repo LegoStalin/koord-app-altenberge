@@ -25,69 +25,30 @@
 
                     <a class="close" href="#">&times;</a>
 
-                </div>
+                </div>"
             </div>
         </div>
 
         <h1 class="heading_2"> OGS-Gruppe </h1>
         <h2 class="subheading_2"> Für weitere Infos wählen sie das entsprechende Kind </h2>
 
-        <!-- TODO: Kind sollte Transparent sein, oder irgednwie direkt ersichtlich gemacht werden, wenn es abgemeldet (zu Hause) ist -->
-        <div class = "list">
-            <div class = "searchcontainer">
-                <input type="text" class="searchbar" name="Search" placeholder="Namen eingeben.." />
-                <button class="search_button">Suchen</button>
-            </div>
+        <form method="post" class="input_container">{% csrf_token %}
+            <div class = "list">
+                <div class = "searchcontainer">
+                    <input type="text" class="searchbar" name="search" placeholder="Namen eingeben.." />
+                    <input type="submit" name="button_search" class="search_button" value="Suchen"></input>
+                </div>
 
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Maria Musterfrau </p>
-                    <button class="assign_button"> Auswählen </button>
+                {% for schuler in schueler%}
+                <div class = "pupil">
+                    <div class="pupil_container">
+                        <p class="text_pupil"> {{ schuler.user_id.vorname }} {{ schuler.user_id.nachname }} </p>
+                        <button class="assign_button"> Auswählen </button>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            <div class = "pupil">
-                <div class="pupil_container_transp">
-                    <p class="text_pupil_transp"> Max Mustermann </p>
-                    <button class="assign_button_transp"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Anton Ampelmann </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Berta Meier </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Caesar Müller </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Dora Dreisler </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Emil Engelmann </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Friedrich Fliege </p>
-                    <button class="assign_button"> Auswählen </button>
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
 
 
