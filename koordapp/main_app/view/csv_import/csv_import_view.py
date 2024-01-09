@@ -183,7 +183,7 @@ def csv_import_view(request):
                                     gruppen_leiter = Personal.objects.get(user=user)
                                 except:
                                     error=True
-                                    messages.error(request, fehler_tabelle+"gruppen_leiter "+str(gruppenleiter_leiter)+" in Zeile " + str(index) +" existiert nicht.")
+                                    messages.error(request, fehler_tabelle+"gruppen_leiter "+str(gruppen_leiter)+" in Zeile " + str(index) +" existiert nicht.")
                                 try:
                                     raum = Raum.objects.get(raum_nr=raum)
                                 except:
