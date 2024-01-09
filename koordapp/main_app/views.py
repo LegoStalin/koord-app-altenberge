@@ -12,6 +12,7 @@ from main_app.view.create_activity.create_activity_view import create_activity_v
 from main_app.view.csv_import.csv_import_view import csv_import_view
 from main_app.view.change_roomdata.change_roomdata_view import change_roomdata_view
 from main_app.view.remove_tablet.remove_tablet_view import remove_tablet_view
+from main_app.view.pupil.pupil_view import pupil_view
 
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
@@ -42,3 +43,6 @@ def csv_import(request):
 
 def change_roomdata(request):
     return change_roomdata_view(request)
+
+def pupil(request, pupil):
+    return pupil_view(request, pupil)

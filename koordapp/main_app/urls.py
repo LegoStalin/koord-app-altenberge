@@ -12,6 +12,7 @@ urlpatterns = [
     path('create_activity/<str:raum>', views.create_activity, name='create_activity'),
     path('csv_import/', views.csv_import, name='csv_import'),
     path('change_roomdata/', views.change_roomdata, name='change_roomdata'),
+    path('pupil/<int:pupil>', views.pupil, name='pupil'),
 ]
 
 
@@ -34,5 +35,6 @@ main_url_android_no_room = 'choose_room'
 allowed_urls_web = [
     'master_web',
     'csv_import',
+    'pupil',
     ]
 main_url_web = 'master_web'
