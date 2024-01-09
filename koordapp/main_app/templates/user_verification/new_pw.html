@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <title> Nutzer-Passwort-Neuvergabe </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user_verification/user_verification_style.css' %}"/>
+</head>
+<body>
+    <div class="block_container mid_container" id="user_login">
+        <div class="header_container_type2">
+            <h1 class='heading_type1'>Bitte melden Sie sich an:</h1>
+            <a class="question align_right" href="#popup1">Hilfe</a>
+
+            <div id="popup1" class="popup">
+                <div class="popup2">
+                    <h3 id="popupheaderstyle">Was muss ich in diesem Anzeigefenster beachten?</h3>
+
+                    <div class="content">
+                        <p>
+                            Hier können Sie sich ein neues Passwort für ihr Nutzerkonto vergeben. 
+                            Falls Sie noch kein Nutzerkonto besitzen, wenden Sie sich an einen Administrator.
+                        </p>
+                    </div>
+
+                    <a class="close" href="#">&times;</a>
+
+                </div>
+            </div>
+
+        </div>
+        <form method='post' class="login_form">{% csrf_token %}
+            <div class="form_fields" >
+                <div id ="set_new_pw_fields">
+                    <div class="input_group">
+                        <label for="new_password">Benutzername:</label>
+                        <input id="new_password"type="text"/>
+                    </div>
+                    <div class="input_group">
+                        <label for="repeat_new_password">Einmalpasswort:</label>
+                        <input id="repeat_new_password" type="password"/>
+                    </div>
+                </div>   
+            </div>
+            <div class="controls_container">
+                <input type='submit' class="green_button" value='Bestätigen'/>
+            </div>
+            
+        </form>
+    </div>
+</body>
+{% endblock %}
