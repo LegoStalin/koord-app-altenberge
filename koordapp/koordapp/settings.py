@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'main_app.middleware.deviceId.DeviceMiddleware',
+    'main_app.middleware.deviceID.DeviceMiddleware',
     'main_app.middleware.osDetection.OsDetectionMiddleware',
 ]
 
