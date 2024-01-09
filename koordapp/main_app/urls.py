@@ -25,5 +25,6 @@ urlpatterns = [
     path('food_history/', views.FoodHistoryView.as_view(), name='food_history'),
     path('feedback_history/', views.FeedbackHistoryView.as_view(), name='feedback_history'),
     path('room_usage_history/', views.RoomUsageHistoryView.as_view(), name='room_usage_history'),
+    path('pupil/', views.PupilView.as_view(), name='pupil'),
     path('preferences/', views.PreferencesView.as_view(), name='preferences'),
 ]
