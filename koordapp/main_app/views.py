@@ -56,3 +56,9 @@ class UserPwConfirmationView(TemplateView):
 
 class UserSetNewPwView(TemplateView):
     template_name = 'user_verification/set_new_pw.html'
+
+class UserNewOtpView(TemplateView):
+    template_name = 'user_verification/new_pw.html'
+
+class UserSuperuserView(TemplateView):
+    template_name = 'user_verification/superuser.html'

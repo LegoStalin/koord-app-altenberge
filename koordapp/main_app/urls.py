@@ -21,4 +21,6 @@ urlpatterns = [
     path('reset_pw_mail/', views.UserPwResetView.as_view(), name='reset_pw_mail'),
     path('reset_pw_confirmation/', views.UserPwConfirmationView.as_view(), name='reset_pw_confirmation'),
     path('set_new_pw/', views.UserSetNewPwView.as_view(), name='set_new_pw'),
+    path('new_pw/', views.UserNewOtpView.as_view(), name='new_pw'),
+    path('superuser/', views.UserSuperuserView.as_view(), name='superuser'),
 ]

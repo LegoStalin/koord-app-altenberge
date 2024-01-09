@@ -33,6 +33,9 @@
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
+.mid_text {
+  text-align: left;
+}
 
 /*Computer Screen Media Quarry*/
 @media only screen and (min-width: 1200px) {
@@ -143,6 +146,9 @@
     align-items: center;
     height: 7vh;
     margin-bottom: 1vh;
+  }
+  .mid_text {
+    font-size: 4vh;
   }
 }
 
@@ -258,6 +264,13 @@
     margin-bottom: 1vh;
     width: 100%;
   }
+  .mid_text {
+    font-size: 6vh;
+    width: 90%;
+    margin: auto;
+    margin-top: 20vh;
+    letter-spacing: 1px;
+  }
 }
 
 /*Phone Media Quarry*/
@@ -311,9 +324,9 @@
   .form_fields p label {
     margin: 10px 0 10px 0;
   }
-  .form_fields input {
+  /*.form_fields input {
     width: 100%;
-  }
+  }*/
   .header_container {
     padding-right: 0;
   }
