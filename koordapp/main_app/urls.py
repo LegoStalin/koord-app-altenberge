@@ -1,5 +1,4 @@
 from django.urls import path
-from .views import CreateActivityView
 from . import views
 
 
@@ -12,6 +11,11 @@ urlpatterns = [
     path('create_activity/<str:raum>', views.create_activity, name='create_activity'),
     path('csv_import/', views.csv_import, name='csv_import'),
     path('change_roomdata/', views.change_roomdata, name='change_roomdata'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
+    path('superuser/', views.superuser, name='superuser'),
+    path('set_new_pw/', views.set_new_pw, name='set_new_pw'),
+    path('reset_pw_confirmation/', views.reset_pw_confirmation, name='reset_pw_confirmation'),
 ]
 
 
@@ -34,5 +38,10 @@ main_url_android_no_room = 'choose_room'
 allowed_urls_web = [
     'master_web',
     'csv_import',
+    'login',
+    'logout',
+    'superuser',
+    'set_new_pw',
+    'reset_pw_confirmation',
     ]
 main_url_web = 'master_web'
