@@ -81,9 +81,6 @@ class Feedback(models.Model):
 class Raum_Belegung(models.Model):
     tablet_id = models.BigIntegerField()
     raum = models.ForeignKey(Raum, on_delete=models.CASCADE)
-    aufsichtsperson = models.ForeignKey(Personal, on_delete=models.CASCADE)             # in Raum_Belegung oder AG oder beides?
-    angebots_zeit = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
-    angebots_zeitraum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE)
     ag = models.ForeignKey(AG, on_delete=models.CASCADE)
 class Aufenthalt(models.Model):                # Zuordnung wo sich Kinder befunden haben, wird mit löschen des Zeitraums auch gelöscht
     tag = models.DateField

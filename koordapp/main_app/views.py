@@ -5,6 +5,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm
 
+from main_app.view.csv_import.csv_import_view import csv_import_view
+
 from django.shortcuts import redirect
 
 
@@ -36,5 +38,5 @@ class CheckedInView(TemplateView):
 class CheckedOutView(TemplateView):
     template_name = 'checked_out/checked_out.html'
 
-class CsvImportView(TemplateView):
-    template_name = 'csv_import/csv_import.html'
+def csv_import(request):
+    return csv_import_view(request)
