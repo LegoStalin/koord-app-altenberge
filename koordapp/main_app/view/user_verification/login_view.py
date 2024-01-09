@@ -17,8 +17,8 @@ from django import forms
 from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler
 
 def login_view(request):
-    if request.method == "POST":
-        if not request.user.is_authenticated:
+    if not request.user.is_authenticated:
+        if request.method == "POST":  
             form = AuthenticationForm(data=request.POST)
             if form.is_valid():
                 cleandata=form.cleaned_data
@@ -38,7 +38,10 @@ def login_view(request):
                     return redirect("login")
             else:
                 messages.error(request,"Benutzername oder Passwort Falsch")
+        else:
+            form=AuthenticationForm()
+            
     else:
-        form=AuthenticationForm()
+        return redirect("master_web")
 
     return render(request, "user_verification/user_login.html", {'form':form})

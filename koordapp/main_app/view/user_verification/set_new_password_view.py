@@ -23,8 +23,8 @@ def set_new_password_view(request):
         if(Personal.objects.filter(user=user).exists()):
             personal = Personal.objects.get(user=user)
             if(personal.is_password_otp):
-                passwort1 = request.POST["new_password_1"]
-                passwort2 = request.POST["new_password_2"]
+                passwort1 = request.POST["new_password"]
+                passwort2 = request.POST["repeat_new_password"]
                 if(passwort1 == passwort2):
                     if(len(str(passwort1))>=5):       # TODO: Passwort requirements                       
                         user.set_password(passwort1)
