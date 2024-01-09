@@ -9,6 +9,9 @@
     </head>
 
     <body>
+        {%for message in messages%}
+        <div class="alert alert-danger"> {{message}} </div> 
+        {%endfor%}
     <div class = "block_container">
         <div class="header_container_back_help">
             <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/master_web/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
@@ -28,58 +31,24 @@
                 </div>
             </div>
         </div>
+            <form method='post' class="login_form">{% csrf_token %}
+                <h1 class="heading_2"> Zurücksetzung </h1>
 
-        <h1 class="heading_2"> Zurücksetzung </h1>
-
-
-            <div class = "user">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Maria Musterfrau </p>
-                    <button class="assign_button"> Zurücksetzen </button>
+                {%for personal in allPersonal%}
+                <div class = "user">
+                    <div class="pupil_container">
+                        <p class="text_pupil"> {{personal.nutzer.vorname}} {{personal.nutzer.nachname}} </p>
+                        <input class="assign_button" type='submit' name="{{personal.user.username}}" value="Zurücksetzen" type="button"></input>
+                    </div>
                 </div>
-            </div>
-            <div class = "user">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Max Mustermann </p>
-                    <button class="assign_button"> Zurücksetzen </button>
-                </div>
-            </div>
-            <div class = "pupil">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Anton Ampelmann </p>
-                    <button class="assign_button"> Zurücksetzen </button>
-                </div>
-            </div>
-            <div class = "user">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Berta Meier </p>
-                    <button class="assign_button"> Zurücksetzen </button>
-                </div>
-            </div>
-            <div class = "user">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Caesar Müller </p>
-                    <button class="assign_button"> Zurücksetzen </button>
-                </div>
-            </div>
-            <div class = "user">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Dora Dreisler </p>
-                    <button class="assign_button"> Zurücksetzen </button>
-                </div>
-            </div>
-            <div class = "user">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Emil Engelmann </p>
-                    <button class="assign_button"> Zurücksetzen </button>
-                </div>
-            </div>
-            <div class = "user">
-                <div class="pupil_container">
-                    <p class="text_pupil"> Friedrich Fliege </p>
-                    <button class="assign_button"> Zurücksetzen </button>
-                </div>
-            </div>
+                {%endfor%}
+                <!--<div class = "user">
+                    <div class="pupil_container">
+                        <p class="text_pupil"> Maria Musterfrau </p>
+                        <button class="assign_button"> Zurücksetzen </button>
+                    </div>
+                </div>-->
+            </form>
         </div>
     </div>
 

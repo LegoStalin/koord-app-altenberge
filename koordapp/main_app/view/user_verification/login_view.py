@@ -18,25 +18,26 @@ from main_app.models import Nutzer, Personal, Raum, Gruppe, AG, Schueler
 
 def login_view(request):
     if request.method == "POST":
-        form = AuthenticationForm(data=request.POST)
-        if form.is_valid():
-            cleandata=form.cleaned_data
-            #authenticate checks if credentials exists in db
-            user=authenticate(username=cleandata['username'],
-                            password=cleandata['password'])
-            if user is not None:
-                if user.is_active:
-                    auth_login(request, user)
-                    if(Personal.objects.filter(user=user).exists()):
-                        personal = Personal.objects.get(user=user)
-                        if(personal.is_password_otp == True):
-                            return redirect("set_new_password")
-                    return redirect("master_web")       # TODO: Differenzierung wenn OTP noch nicht gesetzt worden ist (!User mit OTP müssen dieses erst ändern. Wenn nicht sollten diese automatisch ausgeloggt werden)
+        if not request.user.is_authenticated:
+            form = AuthenticationForm(data=request.POST)
+            if form.is_valid():
+                cleandata=form.cleaned_data
+                #authenticate checks if credentials exists in db
+                user=authenticate(username=cleandata['username'],
+                                password=cleandata['password'])
+                if user is not None:
+                    if user.is_active:
+                        auth_login(request, user)
+                        if(Personal.objects.filter(user=user).exists()):
+                            personal = Personal.objects.get(user=user)
+                            if(personal.is_password_otp == True):
+                                return redirect("set_new_password")
+                        return redirect("master_web")       # TODO: Differenzierung wenn OTP noch nicht gesetzt worden ist (!User mit OTP müssen dieses erst ändern. Wenn nicht sollten diese automatisch ausgeloggt werden)
+                else:
+                    messages.error(request,"Benutzername oder Passwort Falsch")
+                    return redirect("login")
             else:
                 messages.error(request,"Benutzername oder Passwort Falsch")
-                return redirect("login")
-        else:
-            messages.error(request,"Benutzername oder Passwort Falsch")
     else:
         form=AuthenticationForm()
 

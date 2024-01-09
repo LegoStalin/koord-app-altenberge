@@ -22,6 +22,8 @@ def su_pw_reset_view(request):
     # user = User.objects.get(user = user)
     if(user.is_superuser):
         if request.method == "POST":
+            for personal in Personal.objects.all():
+                if(personal.user.username in request.POST)
             nutzername = request.POST["reset_button"]
             randompw = ''.join(random.choice(string.ascii_letters+string.digits) for _ in range(6))
             nutzer = User.objects.get(username=nutzername)
@@ -31,5 +33,5 @@ def su_pw_reset_view(request):
             personal.is_password_otp = True
             personal.save()
             messages.success(request, "Das neue OTP für den Nutzer " + nutzername +  " ist " + randompw)
-        return render(request, "user_verification/su_pw_reset.html", {"allPersonal":Personal.objects.all()})
+        return render(request, "user_verification/superuser.html", {"allPersonal":Personal.objects.all()})
     return redirect("master_web")
