@@ -2,11 +2,11 @@ import string, random
 from datetime import datetime
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView
-from django.contrib.auth import login as auth_login, authenticate, logout as auth_logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.views import View
@@ -30,6 +30,7 @@ def set_new_password_view(request):
                     user.save()
                     personal.is_password_otp = False
                     personal.save()
+                    login(request, user)
                     return redirect("master_web")
                 else:
                     messages.error(request,"Passwörter erfüllen nicht die bedingungen") 

@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from main_app.models import Personal, Raum, Gruppe, Schueler
 from django.contrib.auth.models import User
 
-@login_required(login_url="login/")
+@login_required(redirect_field_name="login")
 def ogs_group_view(request):
 
     user = request.user
@@ -12,10 +12,9 @@ def ogs_group_view(request):
         if(Gruppe.objects.filter(gruppen_leiter=personal).exists()):
             gruppe = Gruppe.objects.get(gruppen_leiter=personal)
             schueler = Schueler.objects.filter(gruppen_id=gruppe)
-
             if request.method == 'POST':
                 search = request.POST.get('search')
-                if 'serach_button' in request.POST:
+                if 'button_search' in request.POST:
                     schueler2 = []
                     for schueler1 in schueler:
                         name = schueler1.user_id.vorname + " " + schueler1.user_id.nachname

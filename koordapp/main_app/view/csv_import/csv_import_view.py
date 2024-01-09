@@ -50,6 +50,7 @@ def csv_import_view(request):
                         if 'option_overwrite' in optionlist_reset:
                             Personal.objects.all().delete()
                             User.objects.all().delete()
+                            User.objects.create_superuser(username="root", password="1234")
                         fehler_tabelle='Fehler in Tabelle Personal: '
                         wb_otp = Workbook()
                         activ_sheet = wb_otp.active
@@ -175,11 +176,11 @@ def csv_import_view(request):
                         for index, row in enumerate(wss.iter_rows(min_row=2, values_only=True)):              # Erstellung Nutzer
                             #print(row)c
                             error = False
-                            name, gruppenleiter_leiter, raum = row
+                            name, gruppen_leiter, raum = row
                             if(Gruppe.objects.filter(name=name).exists()==False):
                                 try:
-                                    user = (User.objects.get(username=gruppenleiter_leiter))
-                                    gruppenleiter_leiter = Personal.objects.get(user=user)
+                                    user = (User.objects.get(username=gruppen_leiter))
+                                    gruppen_leiter = Personal.objects.get(user=user)
                                 except:
                                     error=True
                                     messages.error(request, fehler_tabelle+"gruppen_leiter "+str(gruppenleiter_leiter)+" in Zeile " + str(index) +" existiert nicht.")
@@ -189,7 +190,7 @@ def csv_import_view(request):
                                     error=True
                                     messages.error(request, fehler_tabelle+"raum "+ str(raum) +" in Zeile " + str(index) +" existiert nicht.")
                                 if not error:
-                                    Gruppe.objects.create(name=name,gruppenleiter_leiter=gruppenleiter_leiter,raum=raum)
+                                    Gruppe.objects.create(name=name,gruppen_leiter=gruppen_leiter,raum=raum)
                             else:
                                 messages.error(request, fehler_tabelle+"Gruppe "+ str(name)+" in Zeile " + str(index) +" existiert bereits.")
 
@@ -213,7 +214,7 @@ def csv_import_view(request):
                                 messages.error(request, fehler_tabelle+"Gruppe "+str(gruppen_id)+" in Zeile " + str(index) +" existiert nicht.")
                             new_nutzer = Nutzer.objects.create(vorname=vorname,nachname=nachname)
                             Schueler.objects.create(klasse=klasse, bus_kind=bus_kind, name_eb=name_eb, kontakt_eb=kontakt_eb, user_id=new_nutzer,gruppen_id=gruppen_id)
- 
+
                     return redirect('csv_import')
                     # return response                              # Site after Download
                 # return response           # Weiterleitung wenn alles funktioniert hat
