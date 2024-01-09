@@ -22,20 +22,19 @@ def set_new_password_view(request):
     if request.method == "POST":
         if(Personal.objects.filter(user=user).exists()):
             personal = Personal.objects.get(user=user)
-            if(personal.is_password_otp):
-                passwort1 = request.POST["new_password"]
-                passwort2 = request.POST["repeat_new_password"]
-                if(passwort1 == passwort2):
-                    if(len(str(passwort1))>=5):       # TODO: Passwort requirements                       
-                        user.set_password(passwort1)
-                        user.save()
-                        personal.is_password_otp = False
-                        personal.save()
-                        return redirect("master_web")
-                    else:
-                        messages.error(request,"Passwörter erfüllen nicht die bedingungen") 
+            passwort1 = request.POST["new_password"]
+            passwort2 = request.POST["repeat_new_password"]
+            if(passwort1 == passwort2):
+                if(len(str(passwort1))>=5):       # TODO: Passwort requirements                       
+                    user.set_password(passwort1)
+                    user.save()
+                    personal.is_password_otp = False
+                    personal.save()
+                    return redirect("master_web")
                 else:
-                    messages.error(request,"Passwoörter stimmen nicht überein")
+                    messages.error(request,"Passwörter erfüllen nicht die bedingungen") 
+            else:
+                messages.error(request,"Passwoörter stimmen nicht überein")
         else:
             pass    #Wenn kein OTP
 

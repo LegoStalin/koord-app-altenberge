@@ -29,6 +29,6 @@ def su_pw_reset_view(request):
                     personal.user.save()
                     personal.is_password_otp = True
                     personal.save()
-                    messages.success(request, "Das neue OTP für den Nutzer " + personal.user.username +  " ist " + randompw)
+                    return render(request, "user_verification/new_pw.html", {"username":personal.user.username,"otp":randompw})
         return render(request, "user_verification/superuser.html", {"allPersonal":Personal.objects.all()})
     return redirect("master_web")

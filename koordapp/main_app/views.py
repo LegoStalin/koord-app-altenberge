@@ -19,7 +19,6 @@ from .view.user_verification.login_view import login_view
 from .view.user_verification.set_new_password_view import set_new_password_view
 from .view.user_verification.su_pw_reset_view import su_pw_reset_view
 from .view.user_verification.logout_view import logout_view
-from .view.user_verification.new_pw_view import new_pw_view
 
 
 class ResetPasswordMailView(View):
@@ -58,5 +57,3 @@ def login(request):
 def logout(request):
     return logout_view(request)
 
-def new_pw(request):
-    return new_pw_view(request)

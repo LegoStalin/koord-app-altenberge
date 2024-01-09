@@ -23,5 +23,4 @@ urlpatterns = [
     path('set_new_password/', views.set_new_password, name='set_new_password'),
     path('su_pw_reset/', views.su_pw_reset, name='su_pw_reset'),
     path('logout/', views.logout, name='logout'),
-    path('new_pw/', views.new_pw, name='new_pw'),
 ]

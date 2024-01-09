@@ -11,7 +11,7 @@
 <body>
     <div class="block_container mid_container" id="user_login">
         <div class="header_container_type2">
-            <h1 class='heading_type1'>Bitte melden Sie sich an:</h1>
+            <h1 class='heading_type1'>Neue Anmeldedaten</h1>
             <a class="question align_right" href="#popup1">Hilfe</a>
 
             <div id="popup1" class="popup">
@@ -36,11 +36,11 @@
                 <div id ="set_new_pw_fields">
                     <div class="input_group">
                         <label for="new_password">Benutzername:</label>
-                        <input id="new_password"type="text"/>
+                        <input id="new_password"type="text"value="{{username}}"/>
                     </div>
                     <div class="input_group">
                         <label for="repeat_new_password">Einmalpasswort:</label>
-                        <input id="repeat_new_password" type="password"/>
+                        <input id="repeat_new_password" type="text" value="{{otp}}"/>
                     </div>
                 </div>   
             </div>
