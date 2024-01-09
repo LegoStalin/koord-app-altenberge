@@ -10,6 +10,7 @@ from django.shortcuts import redirect
 from main_app.view.choose_room.choose_room_view import choose_room_view
 from main_app.view.create_activity.create_activity_view import create_activity_view
 from main_app.view.csv_import.csv_import_view import csv_import_view
+from main_app.view.change_roomdata.change_roomdata_view import change_roomdata_view
 
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
@@ -37,3 +38,6 @@ def create_activity(request, raum):
 
 def csv_import(request):
     return csv_import_view(request)
+
+def change_roomdata(request):
+    return change_roomdata_view(request)

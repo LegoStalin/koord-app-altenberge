@@ -29,7 +29,7 @@
             </div>"
         </div>
     </div>
-    <h1 class="heading_2"> Raumangaben </h1>
+    <h1 class="heading_2"> Raumangaben für Raum {{room_name}}</h1>
     <h2 class="subheading_2"> Ändern Sie bei Bedarf folgende Informationen: </h2>
 
 
@@ -40,64 +40,59 @@
         <label class="submit_header"></label>
 
     </div>
+    <form method="post" class="input_container">{% csrf_token %}
+        <div class="input_container">
+            <div class="inputblock">
+                <label class = "category">Aufsichtsperson:</label>
 
-    <div class="input_container">
-        <div class="inputblock">
-            <label class = "category">Aufsichtsperson:</label>
+                <label class = "current">{{nutzer.vorname}} {{nutzer.nachname}}</label>
 
-            <label class = "current">F. Mahlmann</label>
+                <div class="custom-select">
+                    <select name="user">
+                        <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                        {% for personal in personallist %}
+                        <option value="{{personal.user.username}}">{{personal.nutzer.vorname}} {{personal.nutzer.nachname}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
 
-            <div class="custom-select">
-                <select>
-                    <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
-                    <option value="1">Päd. Fachkraft 1</option>
-                    <option value="2">Päd. Fachkraft 2</option>
-                    <option value="3">Päd. Fachkraft 3</option>
-                    <option value="4">Päd. Fachkraft 4</option>
-                    <option value="5">Päd. Fachkraft 5</option>
-                    <option value="6">Päd. Fachkraft 6</option>
-                    <option value="7">Päd. Fachkraft 7</option>
-                </select>
+                <input type='submit' class="change_button" name="change_button_user" value='Ändern'/>
             </div>
 
-            <button class="change_button">Ändern</button>
-        </div>
+            <div class = "line"></div>
 
-        <div class = "line"></div>
-
-        <div class = "inputblock">
-            <label class = "category">Aktivität:</label>
-            <label class = "current">Malen</label>
-            <input type="text" class="inputfield" name="activity" placeholder="Neue Aktivität.." />
-            <button class="change_button">Ändern</button>
-        </div>
-        <div class = "line"></div>
-        <div class="inputblock">
-            <label class = "category">Kategorie:</label>
-            <label class = "current">Kreativ</label>
-            <div class="custom-select">
-                <select>
-                    <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
-                    <option value="1">Sport</option>
-                    <option value="2">Ruhe</option>
-                    <option value="3">Lernen</option>
-                    <option value="4">Kreativ</option>
-                    <option value="5">Sonstige</option>
-                </select>
+            <div class = "inputblock">
+                <label class = "category">Aktivität:</label>
+                <label class = "current">{{ag.name}}</label>
+                <input type="text" class="inputfield" name="activity" placeholder="Neue Aktivität.." />
+                <input type='submit' class="change_button" name="change_button_activity" value='Ändern'/>
             </div>
+            <div class = "line"></div>
+            <div class="inputblock">
+                <label class = "category">Kategorie:</label>
+                <label class = "current">{{ag.ag_kategorie.name}}</label>
+                <div class="custom-select">
+                    <select name="category_name">
+                        <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                        {% for ag_kategorie in ag_kategorien %}
+                        <option value="{{ag_kategorie.name}}">{{ag_kategorie.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
 
-            <button class="change_button">Ändern</button>
+                <input type='submit' class="change_button" name="change_button_category" value='Ändern'/>
+            </div>
+            <div class = "line"></div>
+            <div class = "inputblock">
+                <label class = "category">Kinderanzahl:</label>
+                <label class = "current">{{ag.max_anzahl}}</label>
+
+                <input type="text" class="inputfield" name="capacity" placeholder="Neue Anzahl.." />
+                <input type='submit' class="change_button" name="change_button_capacity" value='Ändern'/>
+            </div>
         </div>
-        <div class = "line"></div>
-        <div class = "inputblock">
-            <label class = "category">Kinderanzahl:</label>
-            <label class = "current">12</label>
 
-            <input type="text" class="inputfield" name="capacity" placeholder="Neue Anzahl.." />
-            <button class="change_button">Ändern</button>
-        </div>
-    </div>
-
+    </form>
 
     </body>
     </html>

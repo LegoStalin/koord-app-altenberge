@@ -11,4 +11,5 @@ urlpatterns = [
     path('choose_room/', views.choose_room, name='choose_room'),
     path('create_activity/<str:raum>', views.create_activity, name='create_activity'),
     path('csv_import/', views.csv_import, name='csv_import'),
+    path('change_roomdata', views.change_roomdata, name='change_roomdata'),
 ]
