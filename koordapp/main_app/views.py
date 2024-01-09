@@ -71,3 +71,7 @@ class RoomUsageHistoryView(TemplateView):
 
 class PupilView(TemplateView):
     template_name = 'pupil/pupil.html'
+
+class PreferencesView(TemplateView):
+    template_name = 'preferences/preferences.html'
+
