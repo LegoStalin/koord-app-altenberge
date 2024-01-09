@@ -15,20 +15,24 @@ urlpatterns = [
 ]
 
 
-allowed_urls_android = ['master_tablet',
-                        'remove_tablet',
-                        'set_nfc_scan',
-                        'choose_room',
-                        'create_activity',
-                        'change_roomdata',
-                        ]
+allowed_urls_android = [
+    'master_tablet',
+    'remove_tablet',
+    'set_nfc_scan',
+    'choose_room',
+    'create_activity',
+    'change_roomdata',
+    ]
 main_url_android = 'master_tablet'
-allowed_urls_android_no_room = ['choose_room',
-                                'create_activity',
-                                ]
 
+allowed_urls_android_no_room = [
+    'choose_room',
+    'create_activity',
+    ]
 main_url_android_no_room = 'choose_room'
-allowed_urls_web = ['master_web',
-                    'csv_import',
-                    ]
+
+allowed_urls_web = [
+    'master_web',
+    'csv_import',
+    ]
 main_url_web = 'master_web'
