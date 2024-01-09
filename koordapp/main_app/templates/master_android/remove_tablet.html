@@ -29,14 +29,16 @@
         </div>
             
     </div>
-    <div class ="mid_container">
-    
-        <h1 class="default_heading_mid"> Wollen Sie das Gerät wirklich abmelden? </h1>
-        <div class="selection_menu">
-                <button id="abort_button" class="decision_button" onclick="window.location.href = '/choose_room'"> Nein </button>
-                <button id="select_button" class="decision_button" onclick="window.location.href = '/master_tablet'"> Ja </button>
+    <form method="post" class="input_container">{% csrf_token %}
+        <div class ="mid_container">
+        
+            <h1 class="default_heading_mid"> Wollen Sie das Gerät wirklich abmelden? </h1>
+            <div class="selection_menu">
+                    <input id="abort_button" class="decision_button" type="submit", name="abort_rr" value="Nein"></input>
+                    <input id="select_button" class="decision_button" type="submit", name="submit_rr" value="Ja"></input>
+            </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>
 {% endblock %}

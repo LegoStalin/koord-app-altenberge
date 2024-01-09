@@ -53,7 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'main_app.middleware.deviceID.DeviceMiddleware'
+    'main_app.middleware.deviceId.DeviceMiddleware',
+    'main_app.middleware.osDetection.OsDetectionMiddleware',
 ]
 
 ROOT_URLCONF = 'koordapp.urls'
@@ -135,4 +136,4 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main_app/static'),]
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1']
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'

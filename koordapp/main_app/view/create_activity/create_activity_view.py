@@ -26,7 +26,7 @@ def create_activity_view(request, raum):
                                 
                                 ag = AG.objects.create(name=name_activity, max_anzahl=max_anzahl,offene_AG=True,leiter=aufsichtsperson,ag_kategorie=ag_kategorie)
                                 raum_belegung = Raum_Belegung.objects.create(raum=raum, ag=ag, tablet_id=device_id)
-                                return redirect("choose_room")  # Weiterleitung bei erfolgreichen erstellen des raumes
+                                return redirect("master_tablet")  # Weiterleitung bei erfolgreichen erstellen des raumes
                             else:
                                 # Error message wen kategorie nicht existiert
                                 messages.error(request, 'AG Kategorie existiert nicht')
@@ -43,4 +43,4 @@ def create_activity_view(request, raum):
             else:
                 pass
 
-    return redirect("master_web")
+    return redirect("master_tablet")

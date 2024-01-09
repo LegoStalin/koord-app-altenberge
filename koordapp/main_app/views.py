@@ -11,6 +11,7 @@ from main_app.view.choose_room.choose_room_view import choose_room_view
 from main_app.view.create_activity.create_activity_view import create_activity_view
 from main_app.view.csv_import.csv_import_view import csv_import_view
 from main_app.view.change_roomdata.change_roomdata_view import change_roomdata_view
+from main_app.view.remove_tablet.remove_tablet_view import remove_tablet_view
 
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
@@ -18,8 +19,8 @@ class MasterHomeView(TemplateView):
 class MasterAndoridHomeView(TemplateView):
     template_name = 'master_android/master_tablet.html'
 
-class RemoveTabletView(TemplateView):
-    template_name = 'master_android/remove_tablet.html'
+def remove_tablet(request):
+    return remove_tablet_view(request)
 
 class SetNfcScanAndroidView(TemplateView):
     template_name = 'master_android/set_nfc_scan.html'
