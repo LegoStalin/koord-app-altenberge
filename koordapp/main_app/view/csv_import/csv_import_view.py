@@ -1,11 +1,6 @@
 import string, random
 from datetime import datetime
-from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView
 from django.contrib.auth import login as auth_login, authenticate, logout as auth_logout
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.views import LoginView, LogoutView
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import User, Group
 from django.contrib import messages
@@ -91,6 +86,9 @@ def csv_import_view(request):
                             activ_sheet.append([username, randompw])
                             newuser = User.objects.create_user(username=username, password=randompw)
                             newuser.groups.add(rechte_gruppe)
+                            if(rechte_gruppe.name=='Admin'):
+                                newuser.is_superuser = True
+                            newuser.save()
                             if not error:
                                 Personal.objects.create(rolle=funktion, nutzer=new_nutzer, user=newuser, rechte_gruppe=rechte_gruppe)
     
