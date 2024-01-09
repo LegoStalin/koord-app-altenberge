@@ -17,10 +17,10 @@ class OsDetectionMiddleware:
             name_path = match.url_name
         except:
             pass
-        if 'Android' in user_agent:        
+        if 'Windows' in user_agent:        
             if not (path in allowed_urls_web or name_path in allowed_urls_web):
                 return HttpResponseRedirect(reverse(main_url_web)) 
-        elif 'Windows' in user_agent:
+        elif 'Android' in user_agent:
             if(path in allowed_urls_android or name_path in allowed_urls_android):
                 if 'device_id' in request.COOKIES:
                     device_id = request.COOKIES.get('device_id')                
