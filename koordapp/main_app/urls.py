@@ -16,6 +16,7 @@ urlpatterns = [
     path('superuser/', views.superuser, name='superuser'),
     path('set_new_pw/', views.set_new_pw, name='set_new_pw'),
     path('reset_pw_confirmation/', views.reset_pw_confirmation, name='reset_pw_confirmation'),
+    path('pupil/<int:pupil>', views.pupil, name='pupil'),
 ]
 
 
@@ -43,5 +44,6 @@ allowed_urls_web = [
     'superuser',
     'set_new_pw',
     'reset_pw_confirmation',
+    'pupil',
     ]
 main_url_web = 'master_web'

@@ -17,6 +17,8 @@ from main_app.view.user_verification.logout_view import logout_view
 from main_app.view.user_verification.su_pw_reset_view import su_pw_reset_view
 from main_app.view.user_verification.set_new_password_view import set_new_password_view
 from main_app.view.user_verification.reset_pw_confirmation_view import reset_pw_confirmation_view
+from main_app.view.pupil.pupil_view import pupil_view
+
 
 class MasterHomeView(TemplateView):
     template_name = 'master_overview/master_web.html'
@@ -56,3 +58,7 @@ def set_new_pw(request):
 
 def reset_pw_confirmation(request):
     return reset_pw_confirmation_view(request)
+
+def pupil(request, pupil):
+    return pupil_view(request, pupil)
+

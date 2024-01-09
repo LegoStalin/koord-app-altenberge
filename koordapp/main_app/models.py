@@ -65,7 +65,7 @@ class Schueler(models.Model):
     bus_kind = models.BooleanField()
     name_eb = models.CharField(max_length=100)
     kontakt_eb = models.CharField(max_length=300)
-    # angemeldet = models.BooleanField(default=FALSE)      # Ist kind überhaupt an diesem Tag in der OGS
+    angemeldet = models.BooleanField(default=False)      # Ist kind überhaupt an diesem Tag in der OGS
     user_id = models.ForeignKey(Nutzer, on_delete=models.CASCADE)
     gruppen_id = models.ForeignKey(Gruppe, on_delete=models.CASCADE)
     ag_buchungen = models.ManyToManyField(AG)
