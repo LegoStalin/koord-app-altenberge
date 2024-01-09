@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
-
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/master_overview/master_overview_style.css' %}"/>
+</head>
 
 <body>
 
@@ -43,10 +47,6 @@
         <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/personal_preferences/';"> Persönliche Einstellungen </button>
 
     </div>
-    <div id="box__line box__line--top"></div>
-    <div id="box__line box__line--right"></div>
-    <div id="box__line box__line--bottom"></div>
-    <div id="box__line box__line--left"></div>
 </div>
 
 </body>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="First version of home nfc Screen" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="home" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2YzFJC10mDyWRVKAIU1Gl0BEGD4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/flo/IdeaProjects/koord-app-altenberge/koordapp&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main_app/static/img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="" />
+      <created>1701520426080</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701520426080</updated>
+      <workItem from="1701520427096" duration="52000" />
+      <workItem from="1701520486529" duration="11925000" />
+      <workItem from="1701606917586" duration="2106000" />
+      <workItem from="1701609038637" duration="102000" />
+      <workItem from="1701609173396" duration="62000" />
+      <workItem from="1701609324940" duration="95000" />
+      <workItem from="1701609429250" duration="131000" />
+      <workItem from="1701609974390" duration="87000" />
+      <workItem from="1701716570226" duration="776000" />
+      <workItem from="1702050840994" duration="1698000" />
+      <workItem from="1702126435765" duration="8126000" />
+    </task>
+    <task id="LOCAL-00001" summary="Created Media Queries for Devices Desktop, Tablet, Handy.">
+      <option name="closed" value="true" />
+      <created>1701526767856</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701526767856</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First Version of popup for tablet query">
+      <option name="closed" value="true" />
+      <created>1701599655298</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701599655298</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adjustments">
+      <option name="closed" value="true" />
+      <created>1701599961809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701599961809</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created Popup For Ipads">
+      <option name="closed" value="true" />
+      <created>1701608993212</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701608993212</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adj">
+      <option name="closed" value="true" />
+      <created>1701609347616</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701609347616</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Setting up new Branch for Frame choose_room">
+      <option name="closed" value="true" />
+      <created>1702050573588</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702050573588</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Created first Draft of Opening Page, Including Room List Block">
+      <option name="closed" value="true" />
+      <created>1702059876380</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702059876380</updated>
+    </task>
+    <task id="LOCAL-00008" summary="adjusted room_container">
+      <option name="closed" value="true" />
+      <created>1702111242173</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702111242173</updated>
+    </task>
+    <task id="LOCAL-00009" summary="adj">
+      <option name="closed" value="true" />
+      <created>1702111662377</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702111662377</updated>
+    </task>
+    <task id="LOCAL-00010" summary="further development of room container and buttons">
+      <option name="closed" value="true" />
+      <created>1702143578135</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702143578135</updated>
+    </task>
+    <task id="LOCAL-00011" summary="unversioned files">
+      <option name="closed" value="true" />
+      <created>1702193190341</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702193190341</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Bootstrap Backend Draft">
+      <option name="closed" value="true" />
+      <created>1702193815385</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702193815385</updated>
+    </task>
+    <task id="LOCAL-00013" summary="comments">
+      <option name="closed" value="true" />
+      <created>1702212394709</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702212394709</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Created first Draft for create_activity Page">
+      <option name="closed" value="true" />
+      <created>1702212738931</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702212738931</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Created new header with Back Button">
+      <option name="closed" value="true" />
+      <created>1702302250449</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702302250449</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Created Dropdown">
+      <option name="closed" value="true" />
+      <created>1702313296375</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702313296375</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Finished Input Container">
+      <option name="closed" value="true" />
+      <created>1702320737961</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702320737961</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Adjusted Help Text, changed positioning (to fix popup) and added border radius">
+      <option name="closed" value="true" />
+      <created>1702400969590</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702400969590</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Adjusted Help Text, changed positioning (to fix popup) in set_nfc_scan">
+      <option name="closed" value="true" />
+      <created>1702401288349</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1702401288349</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Switched button colors">
+      <option name="closed" value="true" />
+      <created>1702401440928</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1702401440928</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Created Draft for home">
+      <option name="closed" value="true" />
+      <created>1702401787191</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1702401787191</updated>
+    </task>
+    <task id="LOCAL-00022" summary="First version of home nfc Screen">
+      <option name="closed" value="true" />
+      <created>1702402943229</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1702402943229</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created Media Queries for Devices Desktop, Tablet, Handy." />
+    <MESSAGE value="First Version of popup for tablet query" />
+    <MESSAGE value="adjustments" />
+    <MESSAGE value="Created Popup For Ipads" />
+    <MESSAGE value="color adjustments" />
+    <MESSAGE value="Setting up new Branch for Frame choose_room" />
+    <MESSAGE value="Created first Draft of Opening Page, Including Room List Block" />
+    <MESSAGE value="adjusted room_container" />
+    <MESSAGE value="adj" />
+    <MESSAGE value="further development of room container and buttons" />
+    <MESSAGE value="unversioned files" />
+    <MESSAGE value="Bootstrap Backend Draft" />
+    <MESSAGE value="merge conflicts" />
+    <MESSAGE value="comments" />
+    <MESSAGE value="Created first Draft for create_activity Page" />
+    <MESSAGE value="Created new header with Back Button" />
+    <MESSAGE value="Created Dropdown" />
+    <MESSAGE value="Finished Input Container" />
+    <MESSAGE value="Adjusted Help Text, changed positioning (to fix popup) and added border radius" />
+    <MESSAGE value="Adjusted Help Text, changed positioning (to fix popup) in set_nfc_scan" />
+    <MESSAGE value="Switched button colors" />
+    <MESSAGE value="Created Draft for home" />
+    <MESSAGE value="First version of home nfc Screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="First version of home nfc Screen" />
+  </component>
+</project>
