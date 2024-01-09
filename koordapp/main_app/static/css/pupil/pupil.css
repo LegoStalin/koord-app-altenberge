@@ -1,0 +1,514 @@
+
+
+
+@media only screen and (min-width: 1280px) {
+    /* Style of one row of the table*/
+    .inputblock {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Label Style of current values */
+    .current {
+        align-items: center;
+        align-content: center;
+        display: flex;
+        height: 50px;
+        width: 230px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--label_background);
+        font-size: 24px;
+        padding-left: 20px;
+        color: var(--font_color);
+        justify-self: center;
+    }
+
+    /* Style of change button*/
+    .change_button {
+        background-color: var(--select_color_background);
+        color: var(--font_color);
+        border-radius: 10px;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: 600;
+        height: 50px;
+        width: 120px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+        justify-self: end;
+    }
+
+    /* Style of text in front of input field*/
+    .category {
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--font_color);
+        align-self: center;
+        width: 250px;
+    }
+
+    /* Style of inputfield */
+    .inputfield {
+        height: 50px;
+        width: 270px; /* 250px */
+        border-radius: 10px;
+        border: none;
+        background-color: rgba(217, 217, 217, 0.5);
+        font-size: 24px;
+        padding-left: 20px;
+        color: var(--font_color);
+        justify-self: center;
+    }
+
+    /* TABLE STYLE */
+    .header_line {
+        border-bottom-style: solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 75px;
+        height: 40px;
+    }
+
+    .category_header {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 200px;
+    }
+
+    .current_header {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 190px;
+    }
+
+    .new_header {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 235px;
+    }
+
+    .submit_header {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 120px;
+    }
+
+    .line {
+        height: 0px;
+        width: 100%;
+        border: 1px solid var(--list_line_color);
+    }
+
+
+    .navcontainer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+
+    .information{
+
+    }
+
+    .historybutton{
+        font-size: 2em;
+        background-color: var(--button_color2);
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 3px;
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: var(--font_color);
+        cursor: pointer;
+        font-weight: bold;
+        width: 32%;
+        height: 125px;
+        outline: none;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+    /* Button Hover Style Transformation*/
+    .historybutton:hover {
+        box-shadow: rgba(0, 0.3, 0.3, 0.3) 2px 8px 8px -5px;
+        transform: translate3d(0, 4px, 0);
+        color: var(--background_color);
+    }
+
+
+    .historybutton:focus {
+        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    }
+    .change_button_transparent{
+        background-color: var(--select_color_background);
+        color: var(--font_color);
+        border-radius: 10px;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: 600;
+        height: 50px;
+        width: 120px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        justify-self: end;
+        opacity: 0.5;
+    }
+}
+
+/* Tablet Ansicht */
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+    /* Style of one row of the table*/
+    .inputblock {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Label Style of current values */
+    .current {
+        align-items: center;
+        align-content: center;
+        display: flex;
+        height: 50px;
+        width: 170px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--label_background);
+        font-size: 20px;
+        padding-left: 20px;
+        color: var(--font_color);
+        justify-self: center;
+    }
+
+    /* Style of change button*/
+    .change_button {
+        background-color: var(--select_color_background);
+        color: var(--font_color);
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        font-weight: 600;
+        height: 50px;
+        width: 120px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+        justify-self: end;
+    }
+
+    /* Style of text in front of input field*/
+    .category {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--font_color);
+        align-self: center;
+        width: 170px;
+    }
+
+    /* Style of inputfield */
+    .inputfield {
+        height: 50px;
+        width: 160px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgba(217, 217, 217, 0.5);
+        font-size: 20px;
+        padding-left: 20px;
+        color: var(--font_color);
+        justify-self: center;
+    }
+
+
+
+    /* TABLE STYLE */
+    .header_line {
+        border-bottom-style: solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 75px;
+        height: 40px;
+    }
+
+    .category_header {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 170px;
+    }
+
+    .current_header {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 170px;
+    }
+
+    .new_header {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 160px;
+    }
+
+    .submit_header {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 120px;
+    }
+
+    .line {
+        height: 0px;
+        width: 100%;
+        border: 1px solid var(--list_line_color);
+    }
+
+
+    .navcontainer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .historybutton{
+        font-size: 1.4em;
+        background-color: var(--button_color2);
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 3px;
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: var(--font_color);
+        cursor: pointer;
+        font-weight: bold;
+        width: 32%;
+        height: 125px;
+        outline: none;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+    /* Button Hover Style Transformation*/
+    .historybutton:hover {
+        box-shadow: rgba(0, 0.3, 0.3, 0.3) 2px 8px 8px -5px;
+        transform: translate3d(0, 4px, 0);
+        color: var(--background_color);
+    }
+
+
+    .historybutton:focus {
+        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    }
+    .change_button_transparent{
+        background-color: var(--select_color_background);
+        color: var(--font_color);
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        font-weight: 600;
+        height: 50px;
+        width: 120px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+        justify-self: end;
+        opacity: 0.5;
+    }
+}
+
+/* Mobile Endgeräte Ansicht */
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    /* Style of one row of the table*/
+    .inputblock {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Label Style of current values */
+    .current {
+        align-items: center;
+        align-content: center;
+        display: flex;
+        height: 30px;
+        width: 80px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--label_background);
+        font-size: 12px;
+        padding-left: 5px;
+        color: var(--font_color);
+        justify-self: center;
+    }
+
+    /* Style of change button*/
+    .change_button {
+        background-color: var(--select_color_background);
+        color: var(--font_color);
+        border-radius: 10px;
+        border: none;
+        font-size: 12px;
+        font-weight: 600;
+        height: 30px;
+        width: 60px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        justify-self: end;
+    }
+
+    /* Style of text in front of input field*/
+    .category {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--font_color);
+        align-self: center;
+        width: 80px;
+    }
+
+    /* Style of inputfield */
+    .inputfield {
+        height: 30px;
+        width: 60px; /* 250px*/
+        border-radius: 10px;
+        border: none;
+        background-color: rgba(217, 217, 217, 0.5);
+        font-size: 12px;
+        padding-left: 5px;
+        color: var(--font_color);
+        justify-self: center;
+    }
+
+
+    /* TABLE STYLE */
+    .header_line {
+        border-bottom-style: solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        height: 40px;
+    }
+
+    .category_header {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 230px;
+    }
+
+    .current_header {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 260px;
+    }
+
+    .new_header {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 235px;
+    }
+
+    .submit_header {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--font_color);
+        align-self: center;
+        width: 120px;
+    }
+
+    .line {
+        height: 0px;
+        width: 100%;
+        border: 1px solid var(--list_line_color);
+    }
+    .navcontainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+
+    .historybutton{
+        font-size: 1.4em;
+        background-color: var(--button_color2);
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 3px;
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: var(--font_color);
+        cursor: pointer;
+        font-weight: bold;
+        width: 98%;
+        height: 100px;
+        outline: none;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+    /* Button Hover Style Transformation*/
+    .historybutton:hover {
+        box-shadow: rgba(0, 0.3, 0.3, 0.3) 2px 8px 8px -5px;
+        transform: translate3d(0, 4px, 0);
+        color: var(--background_color);
+    }
+
+
+    .historybutton:focus {
+        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    }
+    .change_button_transparent{
+        background-color: var(--select_color_background);
+        color: var(--font_color);
+        border-radius: 10px;
+        border: none;
+        font-size: 12px;
+        font-weight: 600;
+        height: 30px;
+        width: 60px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        justify-self: end;
+        opacity: 0.5;
+    }
+}
