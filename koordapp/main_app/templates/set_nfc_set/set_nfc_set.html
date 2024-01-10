@@ -30,32 +30,35 @@
         </div>
     </div>
 
-    <h1 class="heading_2"> Chip erkannt: [ID] </h1>
+    <h1 class="heading_2"> Chip erkannt: [{{id}}] </h1>
     <h2 class="subheading_2"> Weisen Sie das Armband bei Bedarf neu zu. </h2>
 
 
 
     <div class = "current">
         <p class = "text_current">Aktuell Zugewiesen:</p>
-        <label class = "current_value">Max Mustermann</label>
+        <label class = "current_value">{{tag_username}}</label>
     </div>
 
-    <div class = "new">
-        <p class = "text_new">Neu zuweisen:</p>
-        <div class = "searchcontainer">
-            <input type="text" class="searchbar" name="Search" placeholder="Namen eingeben.." />
-            <button class="search_button">Suchen</button>
-        </div>
-
-        <div class = "results">
-            <div class="pupil_container">
-                <p class="text_pupil"> Maria Musterfrau </p>
-                <button class="assign_button"> Zuweisen </button>
+    <form method="post">{% csrf_token %}
+        <div class = "new">
+            <p class = "text_new">Neu zuweisen:</p>
+            <div class = "searchcontainer">
+                <input type="text" class="searchbar" name="search" placeholder="Namen eingeben.." />
+                <button class="search_button" name="button_search">Suchen</button>
             </div>
+
+            <div class = "results">
+                {% for user in users %}
+                <div class="pupil_container">
+                    <p class="text_pupil"> {{user.vorname}} {{user.nachname}} </p>
+                    <button class="assign_button" name="button_change_tag" value="{{user.id}}" type="submit"> Zuweisen </button>
+                </div>
+                {% endfor %}
+            </div>
+
         </div>
-
-    </div>
-
+    </form>
 
     </body>
     </html>

@@ -5,7 +5,7 @@ from django.contrib.auth.models import Group, User
 from django.contrib import messages
 from datetime import datetime
 
-@login_required(login_url="/login")
+# @login_required(login_url="/login")
 def create_activity_view(request, raum):
     if(Raum.objects.filter(raum_nr=raum).exists()):
         raum = Raum.objects.get(raum_nr=raum)
@@ -46,7 +46,7 @@ def create_activity_view(request, raum):
                     gruppe = Gruppe.objects.get(raum=raum)
                     zeitraum = Zeitraum.objects.create(startzeit=datetime.now().time(), endzeit=None)
                     raum_belegung = Raum_Belegung.objects.create(raum=raum, gruppe=gruppe, tablet_id=device_id, zeitraum=zeitraum)
-                    return redirect("master_tablet")
+                    return redirect("home")
             else:
                 pass
 

@@ -19,7 +19,7 @@ def ogs_group_view(request):
                     schueler2 = []
                     for schueler1 in schueler:
                         name = schueler1.user_id.vorname + " " + schueler1.user_id.nachname
-                        if(search in name):
+                        if(search.lower() in name.lower()):
                             schueler2.append(schueler1)
                     schueler = schueler2
         else:

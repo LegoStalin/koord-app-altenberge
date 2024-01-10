@@ -125,6 +125,16 @@
                     <input type="text" class="inputfield" name="surname" placeholder="-" />
                     <button class="change_button_transparent">Ändern</button>
                 </div>
+                <!-- % if user.is_superuser % -->
+                {% if not nutzer.tag_id == None %}
+                <div class = "line"></div>
+                <div class = "inputblock">
+                    <label class = "category">Tag-ID:</label>
+                    <label class = "current">{{nutzer.tag_id}}</label>
+                    <input type="text" class="inputfield" name="tag_id" placeholder="-" />
+                    <button class="change_button_transparent">Ändern</button>
+                </div>
+                {% endif %}
 
             </div>
         </form>

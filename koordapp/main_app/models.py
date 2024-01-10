@@ -16,6 +16,7 @@ class Datumsraum(models.Model):
 class Nutzer(models.Model):
     vorname = models.CharField(max_length=100)
     nachname = models.CharField(max_length=100)
+    tag_id = models.CharField(max_length=100, null=True)          #max_length abhängig von Tags id länge
     # email = models.CharField(max_length=100)
 class Personal(models.Model):
     rolle = models.CharField(max_length=40)
@@ -62,7 +63,6 @@ class AG(models.Model):
 
 class Schueler(models.Model):
     klasse = models.CharField(max_length=3)             # optional
-    tag_id = models.CharField(max_length=100)          #max_length abhängig von Tags id länge
     bus_kind = models.BooleanField()
     name_eb = models.CharField(max_length=100)
     kontakt_eb = models.CharField(max_length=300)

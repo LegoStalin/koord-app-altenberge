@@ -26,6 +26,8 @@ from main_app.view.preferences.preferences_view import preferences_view
 from main_app.view.master_android.master_android_view import master_android_view
 from main_app.view.master_web.master_web_view import master_web_view
 from main_app.view.room.room_usage_history_view import room_usage_history_view
+from main_app.view.home.home_view import home_view
+from main_app.view.set_nfc_set.set_nfc_set_view import set_nfc_set_view
 
 
 def master_web(request):
@@ -87,3 +89,9 @@ def preferences(request):
 
 def room_usage_history(request, raum):
     return room_usage_history_view(request, raum)
+
+def home(request):
+    return home_view(request)
+
+def set_nfc_set(request, id):
+    return set_nfc_set_view(request, id)

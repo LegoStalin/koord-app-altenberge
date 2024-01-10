@@ -25,6 +25,8 @@ urlpatterns = [
     path('room_information/<str:raum>', views.room_information, name='room_information'),
     path('preferences/', views.preferences, name='preferences'),
     path('room_usage_history/<str:raum>', views.room_usage_history, name='room_usage_history'),
+    path('home/', views.home, name='home'),
+    path('set_nfc_set/<int:id>', views.set_nfc_set, name='set_nfc_set'),
 ]
 
 
@@ -38,6 +40,8 @@ allowed_urls_android = [
     'login',
     'logout',
     'set_new_pw',
+    'home',
+    'set_nfc_set',
     ]
 main_url_android = 'master_tablet'
 
