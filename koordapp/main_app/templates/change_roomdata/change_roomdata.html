@@ -40,59 +40,66 @@
         <label class="submit_header"></label>
 
     </div>
-    <form method="post" class="input_container">{% csrf_token %}
+    
         <div class="input_container">
-            <div class="inputblock">
-                <label class = "category">Aufsichtsperson:</label>
+            <form method="post">{% csrf_token %}
+                <div class="inputblock">           
+                    <label class = "category">Aufsichtsperson:</label>
 
-                <label class = "current">{{nutzer.vorname}} {{nutzer.nachname}}</label>
+                    <label class = "current">{{nutzer.vorname}} {{nutzer.nachname}}</label>
 
-                <div class="custom-select">
-                    <select name="user">
-                        <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
-                        {% for personal in personallist %}
-                        <option value="{{personal.user.username}}">{{personal.nutzer.vorname}} {{personal.nutzer.nachname}}</option>
-                        {% endfor %}
-                    </select>
+                    <div class="custom-select">
+                        <select name="user">
+                            <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                            {% for personal in personallist %}
+                            <option value="{{personal.user.username}}">{{personal.nutzer.vorname}} {{personal.nutzer.nachname}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <input type='submit' class="change_button" name="change_button_user" value='Ändern'/>
+                
                 </div>
-
-                <input type='submit' class="change_button" name="change_button_user" value='Ändern'/>
-            </div>
+            </form>
 
             <div class = "line"></div>
-
-            <div class = "inputblock">
-                <label class = "category">Aktivität:</label>
-                <label class = "current">{{ag.name}}</label>
-                <input type="text" class="inputfield" name="activity" placeholder="Neue Aktivität.." />
-                <input type='submit' class="change_button" name="change_button_activity" value='Ändern'/>
-            </div>
-            <div class = "line"></div>
-            <div class="inputblock">
-                <label class = "category">Kategorie:</label>
-                <label class = "current">{{ag.ag_kategorie.name}}</label>
-                <div class="custom-select">
-                    <select name="category_name">
-                        <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
-                        {% for ag_kategorie in ag_kategorien %}
-                        <option value="{{ag_kategorie.name}}">{{ag_kategorie.name}}</option>
-                        {% endfor %}
-                    </select>
+            <form method="post">{% csrf_token %}
+                <div class = "inputblock">
+                    <label class = "category">Aktivität:</label>
+                    <label class = "current">{{ag.name}}</label>
+                    <input type="text" class="inputfield" name="activity" placeholder="Neue Aktivität.." />
+                    <input type='submit' class="change_button" name="change_button_activity" value='Ändern'/>
                 </div>
-
-                <input type='submit' class="change_button" name="change_button_category" value='Ändern'/>
-            </div>
+            </form>
             <div class = "line"></div>
-            <div class = "inputblock">
-                <label class = "category">Kinderanzahl:</label>
-                <label class = "current">{{ag.max_anzahl}}</label>
+            <form method="post">{% csrf_token %}
+                <div class="inputblock">
+                    <label class = "category">Kategorie:</label>
+                    <label class = "current">{{ag.ag_kategorie.name}}</label>
+                    <div class="custom-select">
+                        <select name="category_name">
+                            <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                            {% for ag_kategorie in ag_kategorien %}
+                            <option value="{{ag_kategorie.name}}">{{ag_kategorie.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
 
-                <input type="text" class="inputfield" name="capacity" placeholder="Neue Anzahl.." />
-                <input type='submit' class="change_button" name="change_button_capacity" value='Ändern'/>
-            </div>
+                    <input type='submit' class="change_button" name="change_button_category" value='Ändern'/>
+                </div>
+            </form>
+            <div class = "line"></div>
+            <form method="post">{% csrf_token %}
+                <div class = "inputblock">
+                    <label class = "category">Kinderanzahl:</label>
+                    <label class = "current">{{ag.max_anzahl}}</label>
+
+                    <input type="text" class="inputfield" name="capacity" placeholder="Neue Anzahl.." />
+                    <input type='submit' class="change_button" name="change_button_capacity" value='Ändern'/>
+                </div>
+            </form>
         </div>
 
-    </form>
 
     </body>
     </html>

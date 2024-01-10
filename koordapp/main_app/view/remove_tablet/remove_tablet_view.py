@@ -14,7 +14,7 @@ def remove_tablet_view(request):
                     for aufenthalt in aufenthalte:
                         aufenthalt.zeitraum.endzeit = datetime.now().time()
                         aufenthalt.save()
-                zeitraum = raum_belegung.ag.zeitraum
+                zeitraum = raum_belegung.zeitraum
                 zeitraum.endzeit = datetime.now().time()
                 zeitraum.save()
                 if not(raum_belegung.ag == None):

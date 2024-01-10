@@ -78,7 +78,7 @@
                 <div class="room_container">
                 <p class="text_room"> Raum {{room.raum_nr}} </p>
 
-                {% if room_occupancy|is_occupied:room or groups|is_occupied:room %}
+                {% if room_occupancy|is_occupied:room %}
                     <button id="occupied_button"> Belegt </button>                   
                 {% else %}
                 <input type="button" id="select_button" value="Auswählen" onclick="location.href='{% url 'create_activity' raum=room.raum_nr %}';">                 

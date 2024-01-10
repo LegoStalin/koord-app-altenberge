@@ -58,7 +58,7 @@ class AG(models.Model):
     angebots_datum_raum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE, null=True)    # null=True entfernen
     ag_zeit = models.ManyToManyField(AGZeit)
     ag_kategorie = models.ForeignKey(AGKategorie, on_delete=models.CASCADE, null=True)
-    zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
+    zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE, null = True)
 
 class Schueler(models.Model):
     klasse = models.CharField(max_length=3)             # optional
@@ -84,6 +84,7 @@ class Raum_Belegung(models.Model):
     raum = models.ForeignKey(Raum, on_delete=models.CASCADE)
     ag = models.ForeignKey(AG, on_delete=models.CASCADE, null = True)
     gruppe = models.ForeignKey(Gruppe, on_delete=models.CASCADE, null=True)
+    zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
 class Aufenthalt(models.Model):                # Zuordnung wo sich Kinder befunden haben, wird mit löschen des Zeitraums auch gelöscht
     tag = models.DateField
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)

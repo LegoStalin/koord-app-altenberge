@@ -11,7 +11,7 @@ def room_usage_history_view(request, raum):
         list_histories = []
         for raum_historie in raum_historien:
             date = raum_historie.tag.strftime("%d-%m-%Y")
-            time = raum_historie.zeitraum.startzeit.strftime("%H:%M")
+            time = raum_historie.zeitraum.startzeit.strftime("%H:%M") + " - " + raum_historie.zeitraum.endzeit.strftime("%H:%M")
             number=0
             alle_schueler_im_raum = Aufenthalt.objects.filter(raum_id=raum)
             for schueler_in_raum in alle_schueler_im_raum:
