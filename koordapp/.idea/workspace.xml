@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="xml adjustments">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="First draft of new dropdowns">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/choose_room/choose_room.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/choose_room/choose_room.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/choose_room/choose_room.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/choose_room/choose_room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,7 +376,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704728252395</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="First draft of new dropdowns">
+      <option name="closed" value="true" />
+      <created>1704822921247</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1704822921247</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +402,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bootstrap Backend Draft" />
     <MESSAGE value="merge conflicts" />
     <MESSAGE value="comments" />
     <MESSAGE value="Created first Draft for create_activity Page" />
@@ -419,6 +426,7 @@
     <MESSAGE value="updates" />
     <MESSAGE value="Initial setup of preferences" />
     <MESSAGE value="Developed first media query for PC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Developed first media query for PC" />
+    <MESSAGE value="First draft of new dropdowns" />
+    <option name="LAST_COMMIT_MESSAGE" value="First draft of new dropdowns" />
   </component>
 </project>
