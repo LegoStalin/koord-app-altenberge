@@ -59,7 +59,7 @@ def pupil_view(request, pupil):
                             klasse = request.POST.get('klasse')
                             if(klasse in klassen):
                                 schueler.klasse = klasse
-                                schueler.save
+                                schueler.save()
                         elif 'change_button_bus_kind' in request.POST:
                             bus_kind = request.POST.get('bus_kind')
                             if(bus_kind=='1'):

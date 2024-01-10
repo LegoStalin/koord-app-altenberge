@@ -21,18 +21,21 @@ def create_activity_view(request, raum):
                             max_anzahl = request.POST["capacity"]
                             try:
                                 max_anzahl = int(max_anzahl)
-                                name_ag_kategorie = request.POST["ag_kategorie"]
-                                if AGKategorie.objects.filter(name=name_ag_kategorie).exists():
-                                    ag_kategorie = AGKategorie.objects.get(name=name_ag_kategorie)
-                                    name_activity = request.POST["activity"]
-                                    zeitraum = Zeitraum.objects.create(startzeit=datetime.now().time(), endzeit=None)
-                                    
-                                    ag = AG.objects.create(name=name_activity, max_anzahl=max_anzahl,offene_AG=True,leiter=aufsichtsperson,ag_kategorie=ag_kategorie)
-                                    raum_belegung = Raum_Belegung.objects.create(raum=raum, ag=ag, tablet_id=device_id, zeitraum=zeitraum)
-                                    return redirect("master_tablet")  # Weiterleitung bei erfolgreichen erstellen des raumes
+                                if max_anzahl <= raum.kapazitaet:
+                                    name_ag_kategorie = request.POST["ag_kategorie"]
+                                    if AGKategorie.objects.filter(name=name_ag_kategorie).exists():
+                                        ag_kategorie = AGKategorie.objects.get(name=name_ag_kategorie)
+                                        name_activity = request.POST["activity"]
+                                        zeitraum = Zeitraum.objects.create(startzeit=datetime.now().time(), endzeit=None)
+                                        
+                                        ag = AG.objects.create(name=name_activity, max_anzahl=max_anzahl,offene_AG=True,leiter=aufsichtsperson,ag_kategorie=ag_kategorie)
+                                        raum_belegung = Raum_Belegung.objects.create(raum=raum, ag=ag, tablet_id=device_id, zeitraum=zeitraum)
+                                        return redirect("home")  # Weiterleitung bei erfolgreichen erstellen des raumes
+                                    else:
+                                        # Error message wen kategorie nicht existiert
+                                        messages.error(request, 'AG Kategorie existiert nicht')
                                 else:
-                                    # Error message wen kategorie nicht existiert
-                                    messages.error(request, 'AG Kategorie existiert nicht')
+                                    messages.error(request, 'Maximale Anzahl ist zu groß')
                             except ValueError:
                                 #error message wenn capazitaet keine Zahl ist!
                                 messages.error(request, 'Ungültige kapazitätsanzahl')
