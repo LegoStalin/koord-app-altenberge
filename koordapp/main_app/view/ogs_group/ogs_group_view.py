@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 def ogs_group_view(request):
 
     user = request.user
+    search = ''
     if(Personal.objects.filter(user=user).exists()):
         personal = Personal.objects.get(user=user)
         if(Gruppe.objects.filter(gruppen_leiter=personal).exists()):
@@ -28,4 +29,4 @@ def ogs_group_view(request):
         #fehler Nachricht?
         return redirect("master_web")
 
-    return render(request, "ogs_group/ogs_group.html",{"schueler":schueler})
+    return render(request, "ogs_group/ogs_group.html",{"schueler":schueler, "search":search, "group_name":gruppe.name})

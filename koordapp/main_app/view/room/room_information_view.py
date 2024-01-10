@@ -12,7 +12,7 @@ def room_information_view(request, raum):
             r_b = Raum_Belegung.objects.get(raum=raum)
             raum_belegung = r_b.ag.name
             nutzungstyp = r_b.ag.ag_kategorie.name
-            aufsichtsperson = r_b.ag.leiter.nutzer.vorname + " " + r_b.ag.leiter.nutzer.vorname
+            aufsichtsperson = r_b.ag.leiter.nutzer.vorname + " " + r_b.ag.leiter.nutzer.nachname
         if(Gruppe.objects.filter(raum=raum).exists()):
             gruppe = Gruppe.objects.get(raum=raum)
             ogs_group = gruppe.name

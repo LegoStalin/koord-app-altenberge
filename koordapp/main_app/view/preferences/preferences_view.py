@@ -15,10 +15,12 @@ def preferences_view(request):
                 user.save()
         elif 'change_button_vorname' in request.POST:
             firstname = request.POST.get("firstname")
-            personal.nutzer.vorname = firstname
-            personal.nutzer.save()
+            if not firstname == '':
+                personal.nutzer.vorname = firstname
+                personal.nutzer.save()
         elif 'change_button_nachname' in request.POST:
             surname = request.POST.get("surname")
-            personal.nutzer.nachname = surname
-            personal.nutzer.save()
+            if not surname == '':
+                personal.nutzer.nachname = surname
+                personal.nutzer.save()
     return render(request, 'preferences/preferences.html', {"user":user, "nutzer":personal.nutzer})

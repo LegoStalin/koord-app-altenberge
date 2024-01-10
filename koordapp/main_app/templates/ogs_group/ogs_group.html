@@ -29,14 +29,14 @@
             </div>
         </div>
 
-        <h1 class="heading_2"> OGS-Gruppe </h1>
+        <h1 class="heading_2"> {{group_name}} </h1>
         <h2 class="subheading_2"> Für weitere Infos wählen sie das entsprechende Kind </h2>
 
         
         <div class = "list">
             <form method="post" class="input_container">{% csrf_token %}
                 <div class = "searchcontainer">
-                    <input type="text" class="searchbar" name="search" placeholder="Namen eingeben.." />
+                    <input type="text" class="searchbar" name="search" placeholder="Namen eingeben.." value="{{search}}"/>
                     <input type="submit" name="button_search" class="search_button" value="Suchen"></input>
                 </div>
             </form>
