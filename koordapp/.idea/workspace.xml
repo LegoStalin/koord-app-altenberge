@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Fixed help banner issue of choose_room" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="FIxed help text of master_tablet">
+      <change beforePath="$PROJECT_DIR$/main_app/templates/master_overview/master_web.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/master_overview/master_web.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -396,7 +398,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704916556814</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Added back button of master_tablet">
+      <option name="closed" value="true" />
+      <created>1704916871356</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1704916871356</updated>
+    </task>
+    <task id="LOCAL-00041" summary="FIxed help text of master_tablet">
+      <option name="closed" value="true" />
+      <created>1704916970894</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1704916970894</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,8 +432,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created first Draft for create_activity Page" />
-    <MESSAGE value="Created new header with Back Button" />
     <MESSAGE value="Created Dropdown" />
     <MESSAGE value="Finished Input Container" />
     <MESSAGE value="xml changes" />
@@ -439,6 +455,8 @@
     <MESSAGE value="First draft of new dropdowns" />
     <MESSAGE value="Fixed subline issue of choose_room" />
     <MESSAGE value="Fixed help banner issue of choose_room" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed help banner issue of choose_room" />
+    <MESSAGE value="Added back button of master_tablet" />
+    <MESSAGE value="FIxed help text of master_tablet" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIxed help text of master_tablet" />
   </component>
 </project>
