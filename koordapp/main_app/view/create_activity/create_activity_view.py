@@ -1,8 +1,9 @@
 from django.shortcuts import redirect, render
-from main_app.models import Raum, Raum_Belegung, Personal, AGKategorie, AG
+from main_app.models import Raum, Raum_Belegung, Personal, AGKategorie, AG, Zeitraum
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group, User
 from django.contrib import messages
+from datetime import datetime
 
 # @login_required(login_url="/login")
 def create_activity_view(request, raum):
@@ -23,8 +24,9 @@ def create_activity_view(request, raum):
                             if AGKategorie.objects.filter(name=name_ag_kategorie).exists():
                                 ag_kategorie = AGKategorie.objects.get(name=name_ag_kategorie)
                                 name_activity = request.POST["activity"]
+                                zeitraum = Zeitraum.objects.create(startzeit=datetime.now().time(), endzeit=None)
                                 
-                                ag = AG.objects.create(name=name_activity, max_anzahl=max_anzahl,offene_AG=True,leiter=aufsichtsperson,ag_kategorie=ag_kategorie)
+                                ag = AG.objects.create(name=name_activity, max_anzahl=max_anzahl,offene_AG=True,leiter=aufsichtsperson,ag_kategorie=ag_kategorie, zeitraum=zeitraum)
                                 raum_belegung = Raum_Belegung.objects.create(raum=raum, ag=ag, tablet_id=device_id)
                                 return redirect("master_tablet")  # Weiterleitung bei erfolgreichen erstellen des raumes
                             else:

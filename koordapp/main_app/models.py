@@ -58,6 +58,7 @@ class AG(models.Model):
     angebots_datum_raum = models.ForeignKey(Datumsraum, on_delete=models.CASCADE, null=True)    # null=True entfernen
     ag_zeit = models.ManyToManyField(AGZeit)
     ag_kategorie = models.ForeignKey(AGKategorie, on_delete=models.CASCADE, null=True)
+    zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
 
 class Schueler(models.Model):
     klasse = models.CharField(max_length=3)             # optional
@@ -87,6 +88,13 @@ class Aufenthalt(models.Model):                # Zuordnung wo sich Kinder befund
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
     raum_id = models.ForeignKey(Raum, on_delete=models.CASCADE)
     zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
+class Raum_Historie(models.Model):
+    raum = models.ForeignKey(Raum, on_delete=models.CASCADE)
+    ag_name = models.CharField(max_length=50)
+    tag = models.DateField
+    zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
+    ag_kategorie = models.ForeignKey(AGKategorie, on_delete=models.CASCADE)
+    leiter = models.ForeignKey(Personal, on_delete=models.CASCADE)
 # class Buchung_AG(models.Model):            # Zuordunung zwischen Schüler und AGS
 #     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
 #     ag_id = models.ForeignKey(AG, on_delete=models.CASCADE)

@@ -5,8 +5,8 @@ from . import views
 
 
 urlpatterns = [
-    path('master_web/', views.MasterHomeView.as_view(), name='master_web'),
-    path('master_tablet/', views.MasterAndoridHomeView.as_view(), name='master_tablet'),
+    path('master_web/', views.master_web, name='master_web'),
+    path('master_tablet/', views.master_android, name='master_tablet'),
     path('remove_tablet/', views.remove_tablet, name='remove_tablet'),
     path('set_nfc_scan/', views.SetNfcScanAndroidView.as_view(), name='set_nfc_scan'),
     path('choose_room/', views.choose_room, name='choose_room'),
@@ -34,6 +34,9 @@ allowed_urls_android = [
     'choose_room',
     'create_activity',
     'change_roomdata',
+    'login',
+    'logout',
+    'set_new_pw',
     ]
 main_url_android = 'master_tablet'
 

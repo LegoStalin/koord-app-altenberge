@@ -23,13 +23,15 @@ from main_app.view.room.select_room_view import select_room_view
 from main_app.view.room.room_selection_view import room_selection_view
 from main_app.view.room.room_information_view import room_information_view
 from main_app.view.preferences.preferences_view import preferences_view
+from main_app.view.master_android.master_android_view import master_android_view
+from main_app.view.master_web.master_web_view import master_web_view
 
 
-class MasterHomeView(TemplateView):
-    template_name = 'master_overview/master_web.html'
+def master_web(request):
+    return master_web_view(request)
 
-class MasterAndoridHomeView(TemplateView):
-    template_name = 'master_android/master_tablet.html'
+def master_android(request):
+    return master_android_view(request)
 
 def remove_tablet(request):
     return remove_tablet_view(request)
