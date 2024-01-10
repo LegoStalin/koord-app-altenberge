@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="FIxed help text of master_tablet">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added logout button for master_web">
+      <change beforePath="$PROJECT_DIR$/main_app/templates/master_android/set_nfc_scan.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/master_android/set_nfc_scan.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/master_overview/master_web.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/master_overview/master_web.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -414,7 +415,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704916970894</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Added logout button for master_web">
+      <option name="closed" value="true" />
+      <created>1704917151093</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1704917151093</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +441,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Dropdown" />
     <MESSAGE value="Finished Input Container" />
     <MESSAGE value="xml changes" />
     <MESSAGE value="First Creation of set_nfc_set page" />
@@ -457,6 +465,7 @@
     <MESSAGE value="Fixed help banner issue of choose_room" />
     <MESSAGE value="Added back button of master_tablet" />
     <MESSAGE value="FIxed help text of master_tablet" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIxed help text of master_tablet" />
+    <MESSAGE value="Added logout button for master_web" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logout button for master_web" />
   </component>
 </project>

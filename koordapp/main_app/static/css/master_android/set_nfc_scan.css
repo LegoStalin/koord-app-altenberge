@@ -5,7 +5,7 @@
   margin-right: 11vw;
 }
 .mid_container {
-  margin-top: 15%;
+  margin-top: 5%;
   margin-left: 10%;
   height: 75vh;
   width: 65vw;
@@ -17,9 +17,11 @@
 .default_heading_mid {
   text-align: center;
   font: 600 max(50px, 2vw) "Inter";
+  margin-bottom: 0px;
 }
 
 .nfc_scan {
   height: 30vw;
   width: auto;
+  margin-top: 0px;
 }
