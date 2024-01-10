@@ -29,7 +29,8 @@ def pupil_view(request, pupil):
                                 aufenthalt = "Raum " + raum.raum_nr
                                 if(Raum_Belegung.objects.filter(raum=raum).exists):
                                     r_b = Raum_Belegung.get.filter(raum=raum)
-                                    aktuelle_ag = r_b.ag.name
+                                    if not (r_b.ag==None):
+                                        aktuelle_ag = r_b.ag.name
                     klassen = []
                     for schueler1 in Schueler.objects.all():
                         if not (schueler1.klasse in klassen):

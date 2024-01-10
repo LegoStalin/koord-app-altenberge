@@ -10,14 +10,15 @@ def room_information_view(request, raum):
         ogs_group, nutzungstyp, aufsichtsperson, aktuelle_kinderanzahl = [None, None, None, None]
         if(Raum_Belegung.objects.filter(raum=raum).exists()):
             r_b = Raum_Belegung.objects.get(raum=raum)
-            raum_belegung = r_b.ag.name
-            nutzungstyp = r_b.ag.ag_kategorie.name
-            aufsichtsperson = r_b.ag.leiter.nutzer.vorname + " " + r_b.ag.leiter.nutzer.nachname
-        if(Gruppe.objects.filter(raum=raum).exists()):
-            gruppe = Gruppe.objects.get(raum=raum)
-            ogs_group = gruppe.name
-            raum_belegung = "Gruppenraum"
-            aufsichtsperson = gruppe.gruppen_leiter.nutzer.vorname + " " + gruppe.gruppen_leiter.nutzer.nachname
+            if not(r_b.ag == None):
+                raum_belegung = r_b.ag.name
+                nutzungstyp = r_b.ag.ag_kategorie.name
+                aufsichtsperson = r_b.ag.leiter.nutzer.vorname + " " + r_b.ag.leiter.nutzer.nachname
+            elif not (r_b.gruppe==None):
+                gruppe = Gruppe.objects.get(raum=raum)
+                ogs_group = gruppe.name
+                raum_belegung = "Gruppenraum"
+                aufsichtsperson = gruppe.gruppen_leiter.nutzer.vorname + " " + gruppe.gruppen_leiter.nutzer.nachname
 
         kinder_in_raum = Aufenthalt.objects.filter(raum_id = raum)
         aktuelle_kinderanzahl = len(kinder_in_raum)

@@ -34,7 +34,7 @@
 
         <div class = "selection_container">
             <button id="button_style2" onclick="location.href='{% url 'room_information' raum=raum.raum_nr %}';"> Informationen </button>
-            <button id="button_style2" onclick="window.location.href = 'http://127.0.0.1:8000/room_usage_history/';"> Nutzungshistorie </button>
+            <button id="button_style2" onclick="location.href='{% url 'room_usage_history' raum=raum.raum_nr %}';"> Nutzungshistorie </button>
         </div>
     </div>
 

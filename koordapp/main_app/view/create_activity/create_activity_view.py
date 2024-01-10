@@ -5,7 +5,7 @@ from django.contrib.auth.models import Group, User
 from django.contrib import messages
 from datetime import datetime
 
-# @login_required(login_url="/login")
+@login_required(login_url="/login")
 def create_activity_view(request, raum):
     if(Raum.objects.filter(raum_nr=raum).exists()):
         raum = Raum.objects.get(raum_nr=raum)
