@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added logout button for master_web">
-      <change beforePath="$PROJECT_DIR$/main_app/templates/master_android/set_nfc_scan.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/master_android/set_nfc_scan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/master_overview/master_web.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/master_overview/master_web.html" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Redesigned set_nfc_set">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -423,7 +423,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704917151093</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Redesigned set_nfc_set">
+      <option name="closed" value="true" />
+      <created>1704917525696</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1704917525696</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +449,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finished Input Container" />
     <MESSAGE value="xml changes" />
     <MESSAGE value="First Creation of set_nfc_set page" />
     <MESSAGE value="xml updates" />
@@ -466,6 +473,7 @@
     <MESSAGE value="Added back button of master_tablet" />
     <MESSAGE value="FIxed help text of master_tablet" />
     <MESSAGE value="Added logout button for master_web" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logout button for master_web" />
+    <MESSAGE value="Redesigned set_nfc_set" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redesigned set_nfc_set" />
   </component>
 </project>
