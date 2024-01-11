@@ -9,26 +9,26 @@ class OsDetectionMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        user_agent = request.META.get('HTTP_USER_AGENT', '')
-        path = request.path
-        name_path = ''
-        try:
-            match = resolve(path)
-            name_path = match.url_name
-        except:
-            pass
-        if 'Windows' in user_agent:        
-            if not (path in allowed_urls_web or name_path in allowed_urls_web):
-                return HttpResponseRedirect(reverse(main_url_web)) 
-        elif 'Android' in user_agent:
-            if(path in allowed_urls_android or name_path in allowed_urls_android):
-                if 'device_id' in request.COOKIES:
-                    device_id = request.COOKIES.get('device_id')                
-                    if not(Raum_Belegung.objects.filter(tablet_id=device_id).exists()):
-                        if not(path in allowed_urls_android_no_room or name_path in allowed_urls_android_no_room):
-                            return HttpResponseRedirect(reverse(main_url_android_no_room))
-            else:
-                return HttpResponseRedirect(reverse(main_url_android))    
+        # user_agent = request.META.get('HTTP_USER_AGENT', '')
+        # path = request.path
+        # name_path = ''
+        # try:
+        #     match = resolve(path)
+        #     name_path = match.url_name
+        # except:
+        #     pass
+        # if 'Windows' in user_agent:        
+        #     if not (path in allowed_urls_web or name_path in allowed_urls_web):
+        #         return HttpResponseRedirect(reverse(main_url_web)) 
+        # elif 'Android' in user_agent:
+        #     if(path in allowed_urls_android or name_path in allowed_urls_android):
+        #         if 'device_id' in request.COOKIES:
+        #             device_id = request.COOKIES.get('device_id')                
+        #             if not(Raum_Belegung.objects.filter(tablet_id=device_id).exists()):
+        #                 if not(path in allowed_urls_android_no_room or name_path in allowed_urls_android_no_room):
+        #                     return HttpResponseRedirect(reverse(main_url_android_no_room))
+        #     else:
+        #         return HttpResponseRedirect(reverse(main_url_android))    
         response = self.get_response(request)
 
         return response

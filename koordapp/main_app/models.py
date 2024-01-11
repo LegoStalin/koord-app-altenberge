@@ -72,12 +72,12 @@ class Schueler(models.Model):
     ag_buchungen = models.ManyToManyField(AG)
 class Feedback(models.Model):
     class Feedbacks(models.TextChoices):
-        GOOD = "GOOD"
-        MEDIUM = "MEDIUM"
-        BAD = "BAD"
+        GOOD = "GOOD", "Good"
+        MEDIUM = "MEDIUM", "Medium"
+        BAD = "BAD", "Bad"
 
     feedback_wert = models.CharField(choices=Feedbacks.choices, default=Feedbacks.MEDIUM, max_length=6)
-    tag = models.DateField
+    tag = models.DateField()
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
 class Raum_Belegung(models.Model):
     tablet_id = models.CharField(max_length=200,null=True)
@@ -85,8 +85,9 @@ class Raum_Belegung(models.Model):
     ag = models.ForeignKey(AG, on_delete=models.CASCADE, null = True)
     gruppe = models.ForeignKey(Gruppe, on_delete=models.CASCADE, null=True)
     zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
+    aufsichtsperson = models.ForeignKey(Personal, on_delete=models.CASCADE)
 class Aufenthalt(models.Model):                # Zuordnung wo sich Kinder befunden haben, wird mit löschen des Zeitraums auch gelöscht
-    tag = models.DateField
+    tag = models.DateField()
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
     raum_id = models.ForeignKey(Raum, on_delete=models.CASCADE)
     zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)

@@ -37,7 +37,7 @@
     <div class="navcontainer">
         <button class="historybutton" onclick="window.location.href = 'http://127.0.0.1:8000/feedback_history/';"> Feedbackhistorie </button>
         <button class="historybutton" onclick="window.location.href = 'http://127.0.0.1:8000/food_history/';"> Essenshistorie </button>
-        <button class="historybutton" onclick="window.location.href = 'http://127.0.0.1:8000/room_history/';"> Raumhistorie </button>
+        <button class="historybutton" onclick="location.href='{% url 'room_history' pupil=nutzer.id %}';"> Raumhistorie </button>
     </div>
 
 

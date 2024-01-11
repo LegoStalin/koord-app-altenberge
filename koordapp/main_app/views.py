@@ -28,6 +28,11 @@ from main_app.view.master_web.master_web_view import master_web_view
 from main_app.view.room.room_usage_history_view import room_usage_history_view
 from main_app.view.home.home_view import home_view
 from main_app.view.set_nfc_set.set_nfc_set_view import set_nfc_set_view
+from main_app.view.nfc_login.checked_out_view import checked_out_view
+from main_app.view.nfc_login.go_home import go_home_view
+from main_app.view.nfc_login.checked_in_view import checked_in_view
+from main_app.view.nfc_login.leave_room_view import leave_room_view
+from main_app.view.history_pages_students.room_history_view import room_history_view
 
 
 def master_web(request):
@@ -95,3 +100,21 @@ def home(request):
 
 def set_nfc_set(request, id):
     return set_nfc_set_view(request, id)
+
+def checked_out(request):
+    return checked_out_view(request)
+
+def go_home(request):
+    return go_home_view(request)
+
+def go_home_feedback(request, feedback):
+    return go_home_view(request, feedback)
+
+def checked_in(request):
+    return checked_in_view(request)
+
+def leave_room(request):
+    return leave_room_view(request)
+
+def room_history(request, pupil):
+    return room_history_view(request,pupil)

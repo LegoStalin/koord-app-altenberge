@@ -27,6 +27,12 @@ urlpatterns = [
     path('room_usage_history/<str:raum>', views.room_usage_history, name='room_usage_history'),
     path('home/', views.home, name='home'),
     path('set_nfc_set/<int:id>', views.set_nfc_set, name='set_nfc_set'),
+    path('checked_out/', views.checked_out, name='checked_out'),
+    path('go_home/', views.go_home, name='go_home'),
+    path('go_home/<str:feedback>', views.go_home_feedback, name='go_home_feedback'),
+    path('checked_in/', views.checked_in, name='checked_in'),
+    path('leave_room/', views.leave_room, name='leave_room'),
+    path('room_history/<int:pupil>', views.room_history, name='room_history'),
 ]
 
 
@@ -42,6 +48,11 @@ allowed_urls_android = [
     'set_new_pw',
     'home',
     'set_nfc_set',
+    'checked_out',
+    'go_home',
+    'go_home_feedback',
+    'checked_in',
+    'leave_room',
     ]
 main_url_android = 'master_tablet'
 
@@ -66,5 +77,6 @@ allowed_urls_web = [
     'room_information',
     'preferences',
     'room_usage_history',
+    'room_history',
     ]
 main_url_web = 'master_web'

@@ -29,7 +29,7 @@ def create_activity_view(request, raum):
                                         zeitraum = Zeitraum.objects.create(startzeit=datetime.now().time(), endzeit=None)
                                         
                                         ag = AG.objects.create(name=name_activity, max_anzahl=max_anzahl,offene_AG=True,leiter=aufsichtsperson,ag_kategorie=ag_kategorie)
-                                        raum_belegung = Raum_Belegung.objects.create(raum=raum, ag=ag, tablet_id=device_id, zeitraum=zeitraum)
+                                        raum_belegung = Raum_Belegung.objects.create(raum=raum, ag=ag, tablet_id=device_id, zeitraum=zeitraum, aufsichtsperson=aufsichtsperson)
                                         return redirect("home")  # Weiterleitung bei erfolgreichen erstellen des raumes
                                     else:
                                         # Error message wen kategorie nicht existiert
@@ -48,7 +48,7 @@ def create_activity_view(request, raum):
                 else:
                     gruppe = Gruppe.objects.get(raum=raum)
                     zeitraum = Zeitraum.objects.create(startzeit=datetime.now().time(), endzeit=None)
-                    raum_belegung = Raum_Belegung.objects.create(raum=raum, gruppe=gruppe, tablet_id=device_id, zeitraum=zeitraum)
+                    raum_belegung = Raum_Belegung.objects.create(raum=raum, gruppe=gruppe, tablet_id=device_id, zeitraum=zeitraum, aufsichtsperson=gruppe.gruppen_leiter)
                     return redirect("home")
             else:
                 pass

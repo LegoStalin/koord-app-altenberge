@@ -30,7 +30,7 @@
         </div>
 
         <h1 class="heading_2"> Raumhistorie </h1>
-        <h2 class="subheading_2"> kid_name </h2>
+        <h2 class="subheading_2"> {{user.vorname}} {{user.nachname}} </h2>
 
         <!-- TODO: Raumübersicht farblich kodieren, wo Platz ist und wo nicht, Raumnummer und Aktivität wird benötigt  -->
 
@@ -43,11 +43,11 @@
                 <h3 class = "column_title_type1"> Raum</h3>
             </div>
             <div class = "table_data">
-                <!--{%for kid_room in kid.rooms %} 
+                {%for history in historys %} 
                 <span class = "table_data_row">
-                   <span class="data_row_type1"> {{kid_room.date}}</span>  <span class="data_row_type1">{{kid_room.time}}</span> <span class="kid">{{kid_room.number}}</span>
+                    <span class = "table_data_row" id="room_history_row"><h4 class="data_row_type1">{{history.date}}</h4> <h4 class="data_row_type1">{{history.start_time}}</h4> <h4 class="data_row_type1">{{history.end_time}}</h4> <h4 class="data_row_type1">{{history.kategorie}}</h4> <h4 class="data_row_type1">{{history.raum.raum_nr}}</h4></span>
                 </span>
-                <{% endfor %}--> 
+                {% endfor %}
                 <span class = "table_data_row" id="room_history_row"><h4 class="data_row_type1">01.01.01</h4> <h4 class="data_row_type1">14.15</h4> <h4 class="data_row_type1">15.00</h4> <h4 class="data_row_type1">Sport</h4> <h4 class="data_row_type1">1.4</h4></span>
             </div>
         </div>

@@ -43,10 +43,16 @@
     </div>
 
     <div class="button_container">
+        {% if user.is_superuser %}
         <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/csv_import/';"> CSV-Import </button>
+        {% endif %}
         <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/preferences/';"> Persönliche Einstellungen </button>
-
     </div>
+    {% if user.is_superuser %}
+    <div class="button_container">
+        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/superuser/';"> Passwörter Zurücksetzten </button>
+    </div>
+    {% endif %}
 </div>
 
 </body>

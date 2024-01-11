@@ -15,22 +15,21 @@ def pupil_view(request, pupil):
                 aufenthalt = None
                 if(Aufenthalt.objects.filter(schueler_id=schueler).exists()):
                             aufenthalte = Aufenthalt.objects.filter(schueler_id=schueler)
-                            if(aufenthalte.zeitraum.filter(endzeit=None).exists()):
-                                aufenthalt = aufenthalte.zeitraum.get(endzeit=None)
+                            if(aufenthalte.filter(zeitraum__endzeit=None).exists()):
+                                aufenthalt = aufenthalte.get(zeitraum__endzeit=None)
                 if(gruppe.gruppen_leiter == personal) or (not aufenthalt == None and aufenthalt.ag.leiter == personal):
                     aufenthalt = "Abgemeldet"
                     aktuelle_ag = "Keine"
                     if schueler.angemeldet == True:
-                        if(Aufenthalt.objects.filter(schueler_id=schueler).exists()):
-                            aufenthalte = Aufenthalt.objects.filter(schueler_id=schueler)
-                            if(aufenthalte.zeitraum.filter(endzeit=None).exists()):
-                                aufenthalt = aufenthalte.zeitraum.get(endzeit=None)
-                                raum = aufenthalt.raum_id
-                                aufenthalt = "Raum " + raum.raum_nr
-                                if(Raum_Belegung.objects.filter(raum=raum).exists):
-                                    r_b = Raum_Belegung.get.filter(raum=raum)
-                                    if not (r_b.ag==None):
-                                        aktuelle_ag = r_b.ag.name
+                        aufenthalt = "Nicht bekannt"
+                        if(Aufenthalt.objects.filter(schueler_id=schueler, zeitraum__endzeit__isnull = True).exists()):
+                            aufenthalt = Aufenthalt.objects.get(schueler_id=schueler, zeitraum__endzeit__isnull = True)
+                            raum = aufenthalt.raum_id
+                            aufenthalt = "Raum " + raum.raum_nr
+                            if(Raum_Belegung.objects.filter(raum=raum).exists):
+                                r_b = Raum_Belegung.objects.get(raum=raum)
+                                if not (r_b.ag==None):
+                                    aktuelle_ag = r_b.ag.name
                     klassen = []
                     for schueler1 in Schueler.objects.all():
                         if not (schueler1.klasse in klassen):

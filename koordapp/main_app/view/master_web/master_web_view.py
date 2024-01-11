@@ -4,6 +4,6 @@ from main_app.models import Personal
 
 def master_web_view(request):
     if request.user.is_authenticated:
-        return render(request, 'master_overview/master_web.html')
+        return render(request, 'master_overview/master_web.html', {"user":request.user})
     else:
         return redirect("login")

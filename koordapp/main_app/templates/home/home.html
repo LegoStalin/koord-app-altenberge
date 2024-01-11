@@ -34,6 +34,10 @@
         <img src="{% static 'img/placeholder_nfc_scan_transparent.png' %}" alt="NFC-Scan" class="nfc_scan">
         <p class = "explanation">Halte dein Armband an das Logo um dich an- oder abzumelden!</p>
     </div>
+    <form method="post" class="input_container">{% csrf_token %}
+        <input type="text" class="inputfield" name="tag_id" placeholder="|"/>
+        <input type='submit' class="change_button" name="button_register_tag" value='Register Tag-ID'/>
+    </form>
     </body>
     </html>
 {% endblock %}

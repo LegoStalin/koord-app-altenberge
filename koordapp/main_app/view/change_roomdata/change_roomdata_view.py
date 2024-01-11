@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from main_app.models import Raum, Raum_Belegung, Personal, AGKategorie
+from main_app.models import Raum_Belegung, Raum_Belegung, Personal, AGKategorie
 from django.contrib.auth.models import Group, User
 from django.contrib.auth.decorators import login_required
 
@@ -25,6 +25,10 @@ def change_roomdata_view(request):
                             nutzer = personal.nutzer
                             ag.leiter = personal
                             ag.save()
+                            if(Raum_Belegung.objects.filter(ag=ag).exists()):
+                                r_b = Raum_Belegung.objects.get(ag=ag)
+                                r_b.aufsichtsperson = personal
+                                r_b.save()
                 elif 'change_button_activity' in request.POST:
                     ag_name = request.POST.get("activity")
                     ag.name = ag_name

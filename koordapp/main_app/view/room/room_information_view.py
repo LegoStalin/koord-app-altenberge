@@ -22,7 +22,8 @@ def room_information_view(request, raum):
         if(Gruppe.objects.filter(raum=raum).exists()):
             gruppe = Gruppe.objects.get(raum=raum)
             ogs_group = gruppe.name
-        kinder_in_raum = Aufenthalt.objects.filter(raum_id = raum)
+        kinder_in_raum = Aufenthalt.objects.filter(raum_id = raum, zeitraum__endzeit__isnull=True)
+        
         aktuelle_kinderanzahl = len(kinder_in_raum)
 
         return render(request, 'room_information/room_information.html', {"raum":raum,
