@@ -32,30 +32,31 @@
     </div>
     <h1 class="heading_2"> Hauptansicht </h1>
     <h2 class="subheading_2"> Wählen Sie eine der folgenden Aktionen aus: </h2>
-</div>
-<div class="selection_board">
-    <div class="button_container">
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/dashboard/';"> Dashboard </button>
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/ogs_group/';"> OGS-Gruppe </button>
-    </div>
-
-    <div class="button_container">
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/search_pupil/';"> Suche Kind </button>
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/select_room/';"> Raumübersicht </button>
-    </div>
-
-    <div class="button_container">
+    <div class="selection_board">
+        <div class="button_container">
+            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/dashboard/';"> Dashboard </button>
+            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/ogs_group/';"> OGS-Gruppe </button>
+        </div>
+    
+        <div class="button_container">
+            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/search_pupil/';"> Suche Kind </button>
+            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/select_room/';"> Raumübersicht </button>
+        </div>
+    
+        <div class="button_container">
+            {% if user.is_superuser %}
+            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/csv_import/';"> CSV-Import </button>
+            {% endif %}
+            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/preferences/';"> Persönliche Einstellungen </button>
+        </div>
         {% if user.is_superuser %}
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/csv_import/';"> CSV-Import </button>
+        <div class="button_container">
+            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/superuser/';"> Passwörter Zurücksetzten </button>
+        </div>
         {% endif %}
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/preferences/';"> Persönliche Einstellungen </button>
     </div>
-    {% if user.is_superuser %}
-    <div class="button_container">
-        <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/superuser/';"> Passwörter Zurücksetzten </button>
-    </div>
-    {% endif %}
 </div>
+
 
 </body>
 </html>
