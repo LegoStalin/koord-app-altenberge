@@ -42,11 +42,33 @@
     </div>
     
         <div class="input_container">
+            {% for tup in aufsichtspersonen %}
             <form method="post">{% csrf_token %}
                 <div class="inputblock">           
                     <label class = "category">Aufsichtsperson:</label>
 
-                    <label class = "current">{{nutzer.vorname}} {{nutzer.nachname}}</label>
+                    <label class = "current">{{tup.vorname}} {{tup.nachname}}</label>
+
+                    <div class="custom-select">
+                        <select name="user">
+                            <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                            {% for personal in personallist %}
+                            <option value="{{personal.user.username}}">{{personal.nutzer.vorname}} {{personal.nutzer.nachname}}</option>
+                            {% endfor %}
+                            <option value="delete" style="color:#f54257;">Löschen</option>
+                        </select>
+                    </div>
+
+                    <button type='submit' class="change_button" name="change_button_user" value='{{tup.personal_default}}'>Ändern</button>
+                
+                </div>
+            </form>
+            {%endfor%}
+            <form method="post">{% csrf_token %}
+                <div class="inputblock">           
+                    <label class = "category">Aufsichtsperson:</label>
+
+                    <label class = "current"> Hinzufügen </label>
 
                     <div class="custom-select">
                         <select name="user">
@@ -57,11 +79,10 @@
                         </select>
                     </div>
 
-                    <input type='submit' class="change_button" name="change_button_user" value='Ändern'/>
+                    <button type='submit' class="change_button" name="add_button_user" value='{{tup.personal_default}}'>Ändern</button>
                 
                 </div>
             </form>
-
             <div class = "line"></div>
             <form method="post">{% csrf_token %}
                 <div class = "inputblock">

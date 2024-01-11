@@ -1,14 +1,17 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from main_app.models import Nutzer, Personal
+from main_app.models import Nutzer, Personal, Schueler
+from itertools import chain
 
 @login_required(redirect_field_name="login")
 def set_nfc_set_view(request, id):
-    users = Nutzer.objects.all()
-    if not request.user.is_superuser:
+    schueler = Schueler.objects.all()
+    users = [s.user_id for s in schueler]
+    if request.user.is_superuser:
         personal = Personal.objects.all()
-        users = users.exclude(pk__in=personal)
+        personal_users = [p.nutzer for p in personal]
+        users = list(chain(users, personal_users))
     tag_username = "Niemand"
     nutzer = None
     if(Nutzer.objects.filter(tag_id=id).exists()):

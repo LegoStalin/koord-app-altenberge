@@ -39,21 +39,24 @@
     <h2 class="subheading_2"> Geben Sie folgende Informationen an: </h2>
 
     <form method="post" class="input_container">{% csrf_token %}
+        {% for tup in default_personal_list %}
         <div class="inputblock">
             <label class = "category">Aufsichtsperson:</label>
             <div class="custom-select">
-                <select name="aufsichtsperson">
+                <select name="aufsichtsperson_{{tup.value}}">
                     <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
                     {% for personal in personallist %}
-                    <option value="{{personal.user.username}}">{{personal.user.username}}</option>
+                    {% if not personal.user.username in p_in_form or personal.user.username == tup.personal_default %}
+                    <option value="{{personal.user.username}}" {% if personal.user.username == tup.personal_default %} selected {%endif%}>{{personal.user.username}}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
             </div>
         </div>
-
+        {% endfor %}
         <div class = "inputblock">
             <label class = "category">Aktivität:</label>
-            <input type="text" class="inputfield" name="activity" placeholder="Aktivität" required/>
+            <input type="text" class="inputfield" name="activity" placeholder="Aktivität" {% if not default_activity == None %} value="{{default_activity}}" {%endif%} required/>
         </div>
 
         <div class="inputblock">
@@ -62,7 +65,7 @@
                 <select name="ag_kategorie">
                     <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
                     {% for ag_kategorie in ag_kategorien %}
-                    <option value="{{ag_kategorie.name}}">{{ag_kategorie.name}}</option>
+                    <option value="{{ag_kategorie.name}}" {% if ag_kategorie.name == default_ag_kategorie%} selected {%endif%}>{{ag_kategorie.name}}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -70,14 +73,14 @@
 
         <div class = "inputblock">
             <label class = "category">Maximale Kinderanzahl:</label>
-            <input type="text" class="inputfield" name="capacity" placeholder="Maximal {{room.kapazitaet}}" required/>
+            <input type="text" class="inputfield" name="capacity" placeholder="Maximal {{room.kapazitaet}}" {% if not default_capacity == None %} value="{{default_capacity}}" {%endif%} required/>
         </div>
 
         <div class = "submit_container">
-            <input type='submit' class="submit_button" value='Auswählen'/>
+            <input type='submit' class="submit_button" name="button_create_activity" value='Auswählen'/>
+            <input type='submit' class="submit_button" name="button_add_personal" value='Aufsichtsperson hinzufügen'/>
+            <input type='submit' class="submit_button" name="button_remove_personal" value='Aufsichtsperson entfernen'/>
         </div>
-
-
     </form>
 
 

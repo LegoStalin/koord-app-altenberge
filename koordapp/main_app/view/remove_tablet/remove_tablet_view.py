@@ -24,10 +24,7 @@ def remove_tablet(request, device_id):
         zeitraum = raum_belegung.zeitraum
         zeitraum.endzeit = datetime.now().time()
         zeitraum.save()
-        if not(raum_belegung.ag == None):
-            raum_historie = Raum_Historie.objects.create(zeitraum=zeitraum,raum=raum,tag=datetime.now().date(),ag_name=raum_belegung.ag.name,ag_kategorie=raum_belegung.ag.ag_kategorie,leiter=raum_belegung.ag.leiter)
-        elif not raum_belegung.gruppe == None:
-            raum_historie = Raum_Historie.objects.create(zeitraum=zeitraum,raum=raum,tag=datetime.now().date(),gruppe=raum_belegung.gruppe, leiter=raum_belegung.gruppe.gruppen_leiter)
+        raum_historie = Raum_Historie.objects.create(zeitraum=zeitraum,raum=raum,tag=datetime.now().date(),ag_name=raum_belegung.ag.name,ag_kategorie=raum_belegung.ag.ag_kategorie,leiter=raum_belegung.ag.leiter)
         raum_belegung.delete()
         return redirect('choose_room')
     return redirect('home')

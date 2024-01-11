@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout
-from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitraum
+from django.contrib.auth import logout, login
+from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitraum, Personal
 from datetime import datetime
 
 def home_view(request):
@@ -20,11 +20,17 @@ def home_view(request):
                 if(Nutzer.objects.filter(tag_id=tag_id).exists()):
                     nutzer = Nutzer.objects.get(tag_id=tag_id)
                     if(Schueler.objects.filter(user_id=nutzer).exists()):
-                        schueler = Schueler.objects.get(user_id=nutzer)
-                        if(schueler.angemeldet == False):
-                            schueler.angemeldet = True
-                            schueler.save()
-                        zeitraum = Zeitraum.objects.create(startzeit = datetime.now().time(), endzeit = None)
-                        Aufenthalt.objects.create(raum_id=raum, zeitraum=zeitraum, schueler_id=schueler, tag=datetime.now().date())
-                        return redirect('checked_in')
+                        if len(raum.get_schueler_in_raum()) < r_b.ag.max_anzahl:
+                            schueler = Schueler.objects.get(user_id=nutzer)
+                            if(schueler.angemeldet == False):
+                                schueler.angemeldet = True
+                                schueler.save()
+                            zeitraum = Zeitraum.objects.create(startzeit = datetime.now().time(), endzeit = None)
+                            Aufenthalt.objects.create(raum_id=raum, zeitraum=zeitraum, schueler_id=schueler, tag=datetime.now().date())
+                            return redirect('checked_in')
+                    else:
+                        if(Personal.objects.filter(nutzer=nutzer).exists()):
+                            p = Personal.objects.get(nutzer=nutzer)
+                            login(request, p.user)
+                            return redirect("master_tablet")
     return render(request,"home/home.html")

@@ -32,6 +32,10 @@ class Raum(models.Model):
     raum_nr = models.CharField(max_length=12)
     geschoss = models.CharField(max_length=12)
     kapazitaet = models.SmallIntegerField()
+
+    def get_schueler_in_raum(self):
+        aufenthalte = Aufenthalt.objects.filter(raum_id=self, zeitraum__endzeit__isnull=True)
+        return [a.schueler_id for a in aufenthalte]
 class Gruppe(models.Model):
     name = models.CharField(max_length=50)
     gruppen_leiter = models.ForeignKey(Personal, on_delete=models.SET_NULL, null=True)        # ? mehere Gruppenleiter?
@@ -82,10 +86,10 @@ class Feedback(models.Model):
 class Raum_Belegung(models.Model):
     tablet_id = models.CharField(max_length=200,null=True)
     raum = models.ForeignKey(Raum, on_delete=models.CASCADE)
-    ag = models.ForeignKey(AG, on_delete=models.CASCADE, null = True)
+    ag = models.ForeignKey(AG, on_delete=models.CASCADE)
     gruppe = models.ForeignKey(Gruppe, on_delete=models.CASCADE, null=True)
     zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
-    aufsichtsperson = models.ForeignKey(Personal, on_delete=models.CASCADE)
+    aufsichtspersonen = models.ManyToManyField(Personal)
 class Aufenthalt(models.Model):                # Zuordnung wo sich Kinder befunden haben, wird mit löschen des Zeitraums auch gelöscht
     tag = models.DateField()
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
@@ -97,7 +101,6 @@ class Raum_Historie(models.Model):
     tag = models.DateField()
     zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
     ag_kategorie = models.ForeignKey(AGKategorie, on_delete=models.CASCADE, null = True)
-    gruppe = models.ForeignKey(Gruppe, on_delete=models.CASCADE, null=True)
     leiter = models.ForeignKey(Personal, on_delete=models.CASCADE)
 # class Buchung_AG(models.Model):            # Zuordunung zwischen Schüler und AGS
 #     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)

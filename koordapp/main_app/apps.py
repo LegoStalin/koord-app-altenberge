@@ -32,6 +32,14 @@ class LogsystemConfig(AppConfig):
                 models.AGKategorie.objects.create(name='Lernen')
             if not models.AGKategorie.objects.filter(name='Kreativ').exists():
                 models.AGKategorie.objects.create(name='Kreativ')
+            if not models.AGKategorie.objects.filter(name='Kochen').exists():
+                models.AGKategorie.objects.create(name='Kochen')
+            if not models.AGKategorie.objects.filter(name='Natur').exists():
+                models.AGKategorie.objects.create(name='Natur')
+            if not models.AGKategorie.objects.filter(name='Gruppenraum').exists():
+                models.AGKategorie.objects.create(name='Gruppenraum')
+            if not models.AGKategorie.objects.filter(name='Sonstiges').exists():
+                models.AGKategorie.objects.create(name='Sonstiges')
         except:
             pass
         try:
@@ -48,16 +56,15 @@ class LogsystemConfig(AppConfig):
                 zeitraum = raum_belegung.zeitraum
                 zeitraum.endzeit = datetime.now().time()
                 zeitraum.save()
-                if not(raum_belegung.ag == None):
-                    raum_historie = models.Raum_Historie.objects.create(zeitraum=zeitraum,raum=raum,tag=datetime.now().date(),ag_name=raum_belegung.ag.name,ag_kategorie=raum_belegung.ag.ag_kategorie,leiter=raum_belegung.ag.leiter)
-                elif not raum_belegung.gruppe == None:
-                    raum_historie = models.Raum_Historie.objects.create(zeitraum=zeitraum,raum=raum,tag=datetime.now().date(),gruppe=raum_belegung.gruppe, leiter=raum_belegung.gruppe.gruppen_leiter)
+                raum_historie = models.Raum_Historie.objects.create(zeitraum=zeitraum,raum=raum,tag=datetime.now().date(),ag_name=raum_belegung.ag.name,ag_kategorie=raum_belegung.ag.ag_kategorie,leiter=raum_belegung.ag.leiter)
                 raum_belegung.delete()
             models.AG.objects.all().delete()
             aufenthalte = models.Aufenthalt.objects.all()
             for aufenthalt in aufenthalte:
                 if aufenthalt.zeitraum.endzeit == None:
                     aufenthalt.delete()
-
+            for schueler in models.Schueler.objects.all():
+                schueler.angemeldet = False
+                schueler.save()
         except:
             pass
