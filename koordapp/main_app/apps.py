@@ -56,7 +56,7 @@ class LogsystemConfig(AppConfig):
                 zeitraum = raum_belegung.zeitraum
                 zeitraum.endzeit = datetime.now().time()
                 zeitraum.save()
-                raum_historie = models.Raum_Historie.objects.create(zeitraum=zeitraum,raum=raum,tag=datetime.now().date(),ag_name=raum_belegung.ag.name,ag_kategorie=raum_belegung.ag.ag_kategorie,leiter=raum_belegung.ag.leiter)
+                raum_historie = models.Raum_Historie.objects.create(zeitraum=zeitraum,raum=raum,tag=datetime.now().date(),ag_name=raum_belegung.ag.name,ag_kategorie=raum_belegung.ag.ag_kategorie,leiter=raum_belegung.ag.leiter, max_anzahl=raum_belegung.ag.max_anzahl)
                 raum_belegung.delete()
             models.AG.objects.all().delete()
             aufenthalte = models.Aufenthalt.objects.all()

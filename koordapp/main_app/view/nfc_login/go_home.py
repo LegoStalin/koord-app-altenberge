@@ -14,7 +14,7 @@ def go_home_view(request, feedback=None):
                     return redirect("home")
                 if(Schueler.objects.filter(user_id=nutzer).exists()):
                     schueler = Schueler.objects.get(user_id=nutzer)
-                    feedback = Feedback.objects.create(feedback_wert = feedback, schueler_id = schueler, tag = datetime.now().date())
+                    feedback = Feedback.objects.create(feedback_wert = feedback, schueler_id = schueler, tag = datetime.now().date(), zeit=datetime.now().time())
                     print("Feedback für " + nutzer.vorname + " wurde gesetzt: " + feedback.feedback_wert)     #Debugging
                     request.session['tag_id'] = None
                     redirect("home")

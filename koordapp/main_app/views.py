@@ -33,6 +33,7 @@ from main_app.view.nfc_login.go_home import go_home_view
 from main_app.view.nfc_login.checked_in_view import checked_in_view
 from main_app.view.nfc_login.leave_room_view import leave_room_view
 from main_app.view.history_pages_students.room_history_view import room_history_view
+from main_app.view.history_pages_students.feedback_history_view import feedback_history_view
 
 
 def master_web(request):
@@ -118,3 +119,7 @@ def leave_room(request):
 
 def room_history(request, pupil):
     return room_history_view(request,pupil)
+
+
+def feedback_history(request, pupil):
+    return feedback_history_view(request,pupil)

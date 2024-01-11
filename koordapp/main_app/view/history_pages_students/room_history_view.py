@@ -4,9 +4,9 @@ from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitrau
 from datetime import datetime
 
 def room_history_view(request, pupil):
-    if(Nutzer.objects.filter(id=pupil).exists):
+    if(Nutzer.objects.filter(id=pupil).exists()):
         nutzer = Nutzer.objects.get(id=pupil)
-        if(Schueler.objects.filter(user_id=nutzer).exists):
+        if(Schueler.objects.filter(user_id=nutzer).exists()):
             schueler = Schueler.objects.get(user_id=nutzer)
             aufenthalte = Aufenthalt.objects.filter(schueler_id = schueler)
             hist = []
@@ -30,9 +30,9 @@ def room_history_view(request, pupil):
                         kategorie = r_b.ag.ag_kategorie.name
                 
                 
-                history = History(date=datetime.now().date().strftime("%d.%m.%Y"),start_time=startzeit.strftime("%H:%M"),end_time=endzeit,kategorie=kategorie,raum=raum)
+                history = History(date=aufenthalt.tag.strftime("%d.%m.%y"),start_time=startzeit.strftime("%H:%M"),end_time=endzeit,kategorie=kategorie,raum=raum)
                 hist.append(history)
-            return render(request, 'history_pages/room_history.html', {"historys":hist,"user":nutzer})
+            return render(request, 'history_pages/room_history.html', {"historys":hist,"user":nutzer, 'pupil':pupil})
     return redirect("master_web")
 
 class History:

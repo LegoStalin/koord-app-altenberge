@@ -33,6 +33,7 @@ urlpatterns = [
     path('checked_in/', views.checked_in, name='checked_in'),
     path('leave_room/', views.leave_room, name='leave_room'),
     path('room_history/<int:pupil>', views.room_history, name='room_history'),
+    path('feedback_history/<int:pupil>', views.feedback_history, name='feedback_history'),
 ]
 
 
@@ -78,5 +79,6 @@ allowed_urls_web = [
     'preferences',
     'room_usage_history',
     'room_history',
+    'feedback_history',
     ]
 main_url_web = 'master_web'

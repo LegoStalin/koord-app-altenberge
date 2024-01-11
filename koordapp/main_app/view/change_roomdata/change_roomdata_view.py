@@ -81,7 +81,7 @@ def change_roomdata_view(request):
             #     r_b_ap_ids = r_b.aufsichtspersonen.values_list('id', flat=True)
             #     personallist = personallist.exclude(id__in=r_b_ap_ids)
             # personallist.exclude(ap_list)
-            i = 0
+            i = 1
             for ap in ap_list:
                 aufsichtspersonen.append(Tup(personal_default=ap.user.username, value=i, vorname=ap.nutzer.vorname, nachname=ap.nutzer.nachname))
                 i += 1

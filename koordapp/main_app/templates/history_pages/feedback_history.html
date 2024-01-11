@@ -11,7 +11,7 @@
     <body>
     <div class = "block_container">
         <div class="header_container_back_help">
-            <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/room_selection/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+            <button class="back" onclick="location.href='{% url 'pupil' pupil=pupil %}';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
 
             <a class="question" href="#popup1">Hilfe</a>
 
@@ -30,7 +30,7 @@
         </div>
 
         <h1 class="heading_2"> Feedbackhistorie </h1>
-        <h2 class="subheading_2"> kid_name </h2>
+        <h2 class="subheading_2"> {{nutzer.vorname}} {{nutzer.nachname}} </h2>
 
         <div class = "table_container">
             <div class =  "table_heading_row">
@@ -39,12 +39,13 @@
                 <h3 class = "column_title_type1"> Feedback</h3>
             </div>
             <div class = "table_data">
-                <!--{%for room in rooms %} 
+                {%for history in hist %} 
                 <span class = "table_data_row">
-                   <span class="data_row_type1"> {{room.date}}</span>  <span class="data_row_type1">{{room.time}}</span> <span class="data_row_type1">{{room.number}}</span>
+                   <!--<span class="data_row_type1"> {{room.date}}</span>  <span class="data_row_type1">{{room.time}}</span> <span class="data_row_type1">{{room.number}}</span>-->
+                   <span class = "table_data_row"><h4 class="data_row_type1">{{history.date}}</h4> <h4 class="data_row_type1">{{history.time}}</h4> <h4 class="data_row_type1">{{history.feedback}}</h4></span>
                 </span>
-                <{% endfor %}--> 
-                <span class = "table_data_row"><h4 class="data_row_type1">01.01.01</h4> <h4 class="data_row_type1">14.15</h4> <h4 class="data_row_type1">:)</h4></span>
+                {% endfor %}
+                <!--<span class = "table_data_row"><h4 class="data_row_type1">01.01.01</h4> <h4 class="data_row_type1">14.15</h4> <h4 class="data_row_type1">:)</h4></span>-->
             </div>
         </div>
 

@@ -82,6 +82,7 @@ class Feedback(models.Model):
 
     feedback_wert = models.CharField(choices=Feedbacks.choices, default=Feedbacks.MEDIUM, max_length=6)
     tag = models.DateField()
+    zeit = models.TimeField()
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
 class Raum_Belegung(models.Model):
     tablet_id = models.CharField(max_length=200,null=True)
@@ -102,6 +103,7 @@ class Raum_Historie(models.Model):
     zeitraum = models.ForeignKey(Zeitraum, on_delete=models.CASCADE)
     ag_kategorie = models.ForeignKey(AGKategorie, on_delete=models.CASCADE, null = True)
     leiter = models.ForeignKey(Personal, on_delete=models.CASCADE)
+    max_anzahl = models.SmallIntegerField()
 # class Buchung_AG(models.Model):            # Zuordunung zwischen Schüler und AGS
 #     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
 #     ag_id = models.ForeignKey(AG, on_delete=models.CASCADE)
