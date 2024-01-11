@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="xml adjustments">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Redesigned set_nfc_set">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,7 +375,63 @@
       <option name="project" value="LOCAL" />
       <updated>1704728252395</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="First draft of new dropdowns">
+      <option name="closed" value="true" />
+      <created>1704822921247</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1704822921247</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Fixed subline issue of choose_room">
+      <option name="closed" value="true" />
+      <created>1704916361356</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1704916361356</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Fixed help banner issue of choose_room">
+      <option name="closed" value="true" />
+      <created>1704916556814</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1704916556814</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Added back button of master_tablet">
+      <option name="closed" value="true" />
+      <created>1704916871356</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1704916871356</updated>
+    </task>
+    <task id="LOCAL-00041" summary="FIxed help text of master_tablet">
+      <option name="closed" value="true" />
+      <created>1704916970894</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1704916970894</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added logout button for master_web">
+      <option name="closed" value="true" />
+      <created>1704917151093</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1704917151093</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Redesigned set_nfc_set">
+      <option name="closed" value="true" />
+      <created>1704917525696</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1704917525696</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,13 +449,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bootstrap Backend Draft" />
-    <MESSAGE value="merge conflicts" />
-    <MESSAGE value="comments" />
-    <MESSAGE value="Created first Draft for create_activity Page" />
-    <MESSAGE value="Created new header with Back Button" />
-    <MESSAGE value="Created Dropdown" />
-    <MESSAGE value="Finished Input Container" />
     <MESSAGE value="xml changes" />
     <MESSAGE value="First Creation of set_nfc_set page" />
     <MESSAGE value="xml updates" />
@@ -419,6 +467,13 @@
     <MESSAGE value="updates" />
     <MESSAGE value="Initial setup of preferences" />
     <MESSAGE value="Developed first media query for PC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Developed first media query for PC" />
+    <MESSAGE value="First draft of new dropdowns" />
+    <MESSAGE value="Fixed subline issue of choose_room" />
+    <MESSAGE value="Fixed help banner issue of choose_room" />
+    <MESSAGE value="Added back button of master_tablet" />
+    <MESSAGE value="FIxed help text of master_tablet" />
+    <MESSAGE value="Added logout button for master_web" />
+    <MESSAGE value="Redesigned set_nfc_set" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redesigned set_nfc_set" />
   </component>
 </project>
