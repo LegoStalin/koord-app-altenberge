@@ -1,16 +1,4 @@
-/* Base styles */
-* {
-  box-sizing: border-box;
-}
 
-/*Popup Header Adjustments */
-#popupheaderstyle {
-  height: 40px;
-}
-
-.header_container {
-  padding-right: 0px;
-}
 /* Form styles */
 .form_container {
   width: 100%;
