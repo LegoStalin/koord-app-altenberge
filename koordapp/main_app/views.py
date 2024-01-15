@@ -47,6 +47,24 @@ class SetNfcSetView(TemplateView):
 class OgsGroupView(TemplateView):
     template_name = 'ogs_group/ogs_group.html'
 
+class UserLoginView(LoginView):
+    template_name = 'user_verification/user_login.html'
+
+class UserPwResetView(TemplateView):
+    template_name = 'user_verification/reset_pw_mail.html'
+
+class UserPwConfirmationView(TemplateView):
+    template_name = 'user_verification/reset_pw_confirmation.html'
+
+class UserSetNewPwView(TemplateView):
+    template_name = 'user_verification/set_new_pw.html'
+
+class UserNewOtpView(TemplateView):
+    template_name = 'user_verification/new_pw.html'
+
+class UserSuperuserView(TemplateView):
+    template_name = 'user_verification/superuser.html'
+
 class SearchPupilView(TemplateView):
     template_name = 'search_pupil/search_pupil.html'
 
