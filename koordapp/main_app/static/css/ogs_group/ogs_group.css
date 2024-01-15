@@ -146,8 +146,8 @@
         text-align: center;
         margin: auto;
         line-height: 65px;
-        background-color: var(--select_color_background);
-        color: var(--font_color);
+        background-color: #c6d3b6;
+        color: #8f8f8f;
         border-radius: 10px;
         border: none;
         font-size: 1.5rem;
@@ -161,18 +161,16 @@
         position: relative;
         box-sizing: border-box;
         overflow: hidden;
-        opacity: 0.5;
     }
     /* Style of listblock transparent */
     .text_pupil_transp {
         margin-top: 25px;
         font-size: 1.7rem;
         font-weight: 500;
-        color: var(--font_color);
+        color: #8f8f8f;
         margin-left: 30px;
         height: 1.6em;
         width: 760px;
-        opacity: 0.5;
     }
     .pupil_container_transp {
         display: flex;
@@ -181,10 +179,9 @@
         height: 5em;
         width: 100%;
         margin-top: 15px;
-        background-color: var(--listblock_background);
+        background-color: rgba(192, 192, 192, 0.2);
         border-radius: 18px;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-        opacity: 0.5;
     }
 }
 
@@ -270,8 +267,8 @@
         text-align: center;
         margin: auto;
         line-height: 65px;
-        background-color: var(--select_color_background);
-        color: var(--font_color);
+        background-color: #c6d3b6;
+        color: #8f8f8f;
         border-radius: 10px;
         border: none;
         font-size: 22px;
@@ -288,7 +285,7 @@
         margin-top: 20px;
         font-size: 22px;
         font-weight: 500;
-        color: var(--font_color);
+        color: #8f8f8f;
         margin-left: 30px;
         height: 1.6em;
         width: 760px;
@@ -301,7 +298,7 @@
         height: 4em;
         width: 100%;
         margin-top: 15px;
-        background-color: var(--listblock_background);
+        background-color: rgba(192, 192, 192, 0.2);
         border-radius: 18px;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
         opacity: 0.5;
@@ -390,8 +387,8 @@
         text-align: center;
         margin: auto;
         line-height: 65px;
-        background-color: var(--select_color_background);
-        color: var(--font_color);
+        background-color: #c6d3b6;
+        color: #8f8f8f;
         border-radius: 10px;
         border: none;
         font-size: 18px;
@@ -408,7 +405,7 @@
         margin-top: 20px;
         font-size: 20px;
         font-weight: 500;
-        color: var(--font_color);
+        color: #8f8f8f;
         margin-left: 30px;
         height: 1.6em;
         width: 400px;
@@ -421,7 +418,7 @@
         height: 4em;
         width: 100%;
         margin-top: 15px;
-        background-color: var(--listblock_background);
+        background-color: rgba(192, 192, 192, 0.2);
         border-radius: 18px;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
         opacity: 0.5;
