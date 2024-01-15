@@ -30,13 +30,13 @@
 
                 </div>
             </div>
-
+        <!-- TODO: Alle Bezeichnungnen auf Deutsch !!!! (z.B. Benutzername != Username ) -->
         </div>
         <h1 class='heading_type1'>Bitte melden Sie sich an:</h1>
         <form method='post' class="login_form">{% csrf_token %}
             <span class="form_fields">{{form.as_p}}</span>
             <div class="controls_container">
-                <a href="/reset_password_mail" class ="redirect">Passwort vergessen?</a>
+                <a href="/reset_pw_confirmation" class ="redirect">Passwort vergessen?</a>
                 <input type='submit' class="green_button" value='Anmelden'/>
             </div>
         </form>
