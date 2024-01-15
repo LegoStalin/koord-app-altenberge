@@ -102,3 +102,6 @@ class PupilView(TemplateView):
 class PreferencesView(TemplateView):
     template_name = 'preferences/preferences.html'
 
+class DashboardView(TemplateView):
+    template_name = 'dashboard/dashboard.html'
+
