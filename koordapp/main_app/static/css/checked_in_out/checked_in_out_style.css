@@ -1,19 +1,19 @@
 
-
+/* Main container of page */
 .mid_container {
     display: flex;
     align-items: center;
     justify-content:  center;
     flex-direction: column;
 }
-
+/* heading container */
 .default_heading_mid {
     margin-top: 10%;
     text-align: center;
     font-weight: bold;
     font-size: 70px;
 }
-
+/* logo container */
 .checked_in_out_logo {
     margin-left: 6%;
     margin-top: 4%;

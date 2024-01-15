@@ -1,7 +1,4 @@
-
-
 /* COMPLETE VIEW FOR TABLET ONLY */
-
 
 /* Specific header style */
 .big_heading{
@@ -24,8 +21,6 @@
     width: 770px;
     margin-bottom: 15px;
 }
-
-
 /*  Single Rooom Bars in List */
 .room_container{
     display: flex;
@@ -36,12 +31,7 @@
     margin-top: 15px;
     background-color: var(--listblock_background);
     border-radius: 18px;
-
-    /* Shadow Options
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;*/
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-
 }
 .text_room{
     margin-top: 25px;
