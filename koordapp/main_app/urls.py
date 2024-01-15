@@ -26,7 +26,7 @@ urlpatterns = [
     path('set_new_pw/', views.UserSetNewPwView.as_view(), name='set_new_pw'),
     path('new_pw/', views.UserNewOtpView.as_view(), name='new_pw'),
     path('superuser/', views.UserSuperuserView.as_view(), name='superuser'),
-
+    path('dashboard/', views.DashboardView.as_view(), name='dashboard'),
     path('search_pupil/', views.SearchPupilView.as_view(), name='search_pupil'),
     path('select_room/', views.SelectRoomView.as_view(), name='select_room'),
     path('room_selection/', views.RoomSelectionView.as_view(), name='room_selection'),
