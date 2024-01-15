@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Changed csv-import header" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="xml changes">
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/csv_import/csv_import.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/csv_import/csv_import.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,14 +86,6 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-    </task>
-    <task id="LOCAL-00002" summary="First Version of popup for tablet query">
-      <option name="closed" value="true" />
-      <created>1701599655298</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701599655298</updated>
     </task>
     <task id="LOCAL-00003" summary="adjustments">
       <option name="closed" value="true" />
@@ -476,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705345479917</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="xml changes">
+      <option name="closed" value="true" />
+      <created>1705351717530</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1705351717530</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First version of select room and changes link from master overview" />
     <MESSAGE value="Created infomation lists according to media queries" />
     <MESSAGE value="Refinement of logo position" />
     <MESSAGE value="Added TODO Comments" />
@@ -519,6 +521,7 @@
     <MESSAGE value="Changed Hover animations of csv page buttons" />
     <MESSAGE value="Fixed opacity issue" />
     <MESSAGE value="Changed csv-import header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed csv-import header" />
+    <MESSAGE value="xml changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml changes" />
   </component>
 </project>

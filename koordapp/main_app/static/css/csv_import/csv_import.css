@@ -159,7 +159,7 @@
 .upload_container {
   margin: auto;
   width: 80%;
-  margin-bottom: 10vh;
+  height: 175px;
 }
 .upload_button {
   display: flex;
@@ -192,6 +192,15 @@
 
 .dnd_file:active {
   background-color: #e0e0e0;
+}
+.errormessage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--red_color);
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /* Media query for larger computer screens */
