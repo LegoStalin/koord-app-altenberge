@@ -2,24 +2,6 @@
 * {
   box-sizing: border-box;
 }
-/*
-  body, h1, h2, h3, h4, p, a, input, label {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-  }
-  */
-/* Container styles */
-
-/*
-  .block_container {
-    width: 80%;
-    height:min(820px, 100%);
-    margin: auto;
-    padding: 20px;
-  }
-
-  */
 
 /*Popup Header Adjustments */
 #popupheaderstyle {
@@ -139,29 +121,51 @@
 
 /* Button styles */
 .submit_button {
-  width: 33%;
+  width: 32%;
   height: 5vh;
   font: bold 20px "Inter";
-
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.35s;
 }
-.submit_button:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
+
 .submit_button[value="Hochladen"] {
-  /*border: solid 3px black;*/
   background-color: var(--select_color_background);
+}
+.submit_button[value="Hochladen"]:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--select_color_background);
 }
 .submit_button[value="Vorlage herunterladen"] {
   background-color: var(--blue_color);
   color: white;
 }
+.submit_button[value="Vorlage herunterladen"]:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--blue_color);
+}
 .submit_button[value="Dateien entfernen"] {
   background-color: var(--red_color);
 }
+.submit_button[value="Dateien entfernen"]:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--red_color);
+}
+
 
 /* Upload container styles */
 .upload_container {
