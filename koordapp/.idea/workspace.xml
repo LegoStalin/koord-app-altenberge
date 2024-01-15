@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Changed Hover animations of csv page buttons">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Fixed opacity issue">
+      <change beforePath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -471,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705343989689</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Fixed opacity issue">
+      <option name="closed" value="true" />
+      <created>1705345128354</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1705345128354</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Setting up search_pupil page" />
     <MESSAGE value=" Block container adjustment" />
     <MESSAGE value="First version of select room and changes link from master overview" />
     <MESSAGE value="Created infomation lists according to media queries" />
@@ -514,6 +520,7 @@
     <MESSAGE value="Major fixes of tablet slides" />
     <MESSAGE value="Added hover animation of log in button" />
     <MESSAGE value="Changed Hover animations of csv page buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Hover animations of csv page buttons" />
+    <MESSAGE value="Fixed opacity issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed opacity issue" />
   </component>
 </project>
