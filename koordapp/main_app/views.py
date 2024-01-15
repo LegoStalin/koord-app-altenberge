@@ -36,6 +36,8 @@ class CheckedInView(TemplateView):
 class CheckedOutView(TemplateView):
     template_name = 'checked_out/checked_out.html'
 
+class CsvImportView(TemplateView):
+    template_name = 'csv_import/csv_import.html'
 class ChangeRoomDataView(TemplateView):
     template_name = 'change_roomdata/change_roomdata.html'
 
@@ -62,3 +64,34 @@ class UserNewOtpView(TemplateView):
 
 class UserSuperuserView(TemplateView):
     template_name = 'user_verification/superuser.html'
+
+class SearchPupilView(TemplateView):
+    template_name = 'search_pupil/search_pupil.html'
+
+class SelectRoomView(TemplateView):
+    template_name = 'select_room/select_room.html'
+
+class RoomSelectionView(TemplateView):
+    template_name = 'room_selection/room_selection.html'
+
+class RoomInformationView(TemplateView):
+    template_name = 'room_information/room_information.html'
+
+class RoomHistoryView(TemplateView):
+    template_name = 'history_pages/room_history.html'
+
+class FoodHistoryView(TemplateView):
+    template_name = 'history_pages/food_history.html'
+
+class FeedbackHistoryView(TemplateView):
+    template_name = 'history_pages/feedback_history.html'
+
+class RoomUsageHistoryView(TemplateView):
+    template_name = 'history_pages/room_usage_history.html'
+
+class PupilView(TemplateView):
+    template_name = 'pupil/pupil.html'
+
+class PreferencesView(TemplateView):
+    template_name = 'preferences/preferences.html'
+
