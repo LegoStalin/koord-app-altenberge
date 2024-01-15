@@ -36,8 +36,69 @@ class CheckedInView(TemplateView):
 class CheckedOutView(TemplateView):
     template_name = 'checked_out/checked_out.html'
 
+
 class LeaveRoomView(TemplateView):
     template_name = 'leave_room/leave_room.html'
 
 class GoHomeView(TemplateView):
     template_name = 'go_home/go_home.html'
+
+class CsvImportView(TemplateView):
+    template_name = 'csv_import/csv_import.html'
+class ChangeRoomDataView(TemplateView):
+    template_name = 'change_roomdata/change_roomdata.html'
+
+class SetNfcSetView(TemplateView):
+    template_name = 'set_nfc_set/set_nfc_set.html'
+
+class OgsGroupView(TemplateView):
+    template_name = 'ogs_group/ogs_group.html'
+
+class UserLoginView(LoginView):
+    template_name = 'user_verification/user_login.html'
+
+class UserPwResetView(TemplateView):
+    template_name = 'user_verification/reset_pw_mail.html'
+
+class UserPwConfirmationView(TemplateView):
+    template_name = 'user_verification/reset_pw_confirmation.html'
+
+class UserSetNewPwView(TemplateView):
+    template_name = 'user_verification/set_new_pw.html'
+
+class UserNewOtpView(TemplateView):
+    template_name = 'user_verification/new_pw.html'
+
+class UserSuperuserView(TemplateView):
+    template_name = 'user_verification/superuser.html'
+
+class SearchPupilView(TemplateView):
+    template_name = 'search_pupil/search_pupil.html'
+
+class SelectRoomView(TemplateView):
+    template_name = 'select_room/select_room.html'
+
+class RoomSelectionView(TemplateView):
+    template_name = 'room_selection/room_selection.html'
+
+class RoomInformationView(TemplateView):
+    template_name = 'room_information/room_information.html'
+
+class RoomHistoryView(TemplateView):
+    template_name = 'history_pages/room_history.html'
+
+class FoodHistoryView(TemplateView):
+    template_name = 'history_pages/food_history.html'
+
+class FeedbackHistoryView(TemplateView):
+    template_name = 'history_pages/feedback_history.html'
+
+class RoomUsageHistoryView(TemplateView):
+    template_name = 'history_pages/room_usage_history.html'
+
+class PupilView(TemplateView):
+    template_name = 'pupil/pupil.html'
+
+class PreferencesView(TemplateView):
+    template_name = 'preferences/preferences.html'
+

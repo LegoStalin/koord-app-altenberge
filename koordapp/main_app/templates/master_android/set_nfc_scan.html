@@ -9,10 +9,13 @@
 </head>
 
 <body>
-    
-    <div class="header_container">
 
-        <a class="question" id="help_right"href="#popup1">Hilfe</a>
+
+
+    <div class="header_container_back_help">
+        <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/master_tablet/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+
+        <a class="question" href="#popup1">Hilfe</a>
 
         <div id="popup1" class="popup">
             <div class="popup2">
@@ -27,13 +30,13 @@
 
                 <a class="close" href="#">&times;</a>
 
-            </div>
+            </div>"
         </div>
-            
     </div>
+
     <div class ="mid_container">
         <h1 class="default_heading_mid"> Scannen Sie den NFC-Chip den Sie neu setzen möchten. </h1>
-        <img src="{% static 'img/placeholder_nfc_scan.png' %}" alt="NFC-Scan" class="nfc_scan">
+        <img src="{% static 'img/placeholder_nfc_scan_transparent.png' %}" alt="NFC-Scan" class="nfc_scan">
         
     </div>
 </body>
