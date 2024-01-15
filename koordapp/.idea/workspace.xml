@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Changed csv-import header">
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/csv_import/csv_import.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/csv_import/csv_import.css" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Fixed Banner issue">
+      <change afterPath="$PROJECT_DIR$/main_app/static/css/dashboard/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_app/templates/dashboard/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -50,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "frontend",
+    "git-widget-placeholder": "f__dashboard",
     "last_opened_file_path": "/Users/flo/IdeaProjects/koord-app-altenberge/koordapp",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -85,14 +89,6 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-    </task>
-    <task id="LOCAL-00002" summary="First Version of popup for tablet query">
-      <option name="closed" value="true" />
-      <created>1701599655298</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701599655298</updated>
     </task>
     <task id="LOCAL-00003" summary="adjustments">
       <option name="closed" value="true" />
@@ -478,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705345479917</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Fixed Banner issue">
+      <option name="closed" value="true" />
+      <created>1705345713778</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1705345713778</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First version of select room and changes link from master overview" />
     <MESSAGE value="Created infomation lists according to media queries" />
     <MESSAGE value="Refinement of logo position" />
     <MESSAGE value="Added TODO Comments" />
@@ -521,6 +524,7 @@
     <MESSAGE value="Changed Hover animations of csv page buttons" />
     <MESSAGE value="Fixed opacity issue" />
     <MESSAGE value="Changed csv-import header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed csv-import header" />
+    <MESSAGE value="Fixed Banner issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Banner issue" />
   </component>
 </project>
