@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added placeholder for error or success messages on page csv_import">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="removed comment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,14 +85,6 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-    </task>
-    <task id="LOCAL-00004" summary="Created Popup For Ipads">
-      <option name="closed" value="true" />
-      <created>1701608993212</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1701608993212</updated>
     </task>
     <task id="LOCAL-00005" summary="adj">
       <option name="closed" value="true" />
@@ -478,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705352099309</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="removed comment">
+      <option name="closed" value="true" />
+      <created>1705399413853</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1705399413853</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refinement of logo position" />
     <MESSAGE value="Added TODO Comments" />
     <MESSAGE value="Added transparency feature for absent pupil" />
     <MESSAGE value="Added transparency feature for absent pupil in further media queries" />
@@ -521,6 +520,7 @@
     <MESSAGE value="Changed csv-import header" />
     <MESSAGE value="xml changes" />
     <MESSAGE value="Added placeholder for error or success messages on page csv_import" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added placeholder for error or success messages on page csv_import" />
+    <MESSAGE value="removed comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed comment" />
   </component>
 </project>
