@@ -19,7 +19,8 @@ def room_usage_history_view(request, raum):
             #     if raum_historie.zeitraum.startzeit < schueler_in_raum.zeitraum.startzeit:
             #         if schueler_in_raum.zeitraum.endzeit == None or schueler_in_raum.zeitraum.endzeit <= raum_historie.zeitraum.endzeit:
             #             number += 1
-            number = len(auf)
+            schueler_ids = auf.values_list('schueler_id', flat=True)
+            number = len(list(set(schueler_ids)))
 
             history = History(date, time, number)
             list_histories.append(history)
