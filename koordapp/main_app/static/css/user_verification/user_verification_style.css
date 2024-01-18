@@ -1,8 +1,5 @@
 /*general styles for all queries*/
-.invisible {
-  opacity: 0;
-  pointer-events: none;
-}
+
 .space_top {
   margin-top: 20vh;
 }

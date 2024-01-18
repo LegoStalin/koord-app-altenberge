@@ -37,17 +37,22 @@
 #very_well_smiley {
   background-color: rgb(115, 207, 123);
 }
+#very_well_smiley:hover {
+  background-color: rgba(115, 207, 123, 0.7);
+}
 #okay_smiley {
   background-color: rgb(214, 193, 117);
+}
+#okay_smiley {
+  background-color: rgba(214, 193, 117, 0.7);
 }
 #bad_smiley {
   background-color: rgb(214, 117, 117);
 }
-#bad_smiley,
-#okay_smiley,
-#very_well_smiley {
-  opacity: 0.8; /* or any other value between 0 and 1 */
+#bad_smiley {
+  background-color: rgba(214, 117, 117, 0.7);
 }
+
 #bad_smiley:hover,
 #okay_smiley:hover,
 #very_well_smiley:hover {
@@ -83,4 +88,22 @@
   font-weight: 600;
   opacity: 1;
   letter-spacing: 2px;
+}
+@media only screen and (max-width: 1400px) {
+  #icon_button_style img {
+    height: 15vh;
+    width: 20vw;
+  }
+  .icon_description {
+    font-size: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+  }
+  .button_container_row {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1vh;
+  }
 }

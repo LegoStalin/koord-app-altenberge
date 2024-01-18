@@ -9,52 +9,53 @@
 </head>
 
 <body>
+    <div class="header_container_back_help">
+        <!--<button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/choose_room/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>-->
+        <button class="back invisible" onclick="window.location.href = 'http://127.0.0.1:8000/master_web/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+        
+        <a class="question" href="#popup1" id="help_right">Hilfe</a>
 
-<div class="header_container">
-    <!--<button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/choose_room/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>-->
-    <a class="question" href="#popup1" id="help_right">Hilfe</a>
+        <div id="popup1" class="popup">
+            <div class="popup2">
+                <h3>Was muss ich in diesem Anzeigefenster beachten?</h3>
 
-    <div id="popup1" class="popup">
-        <div class="popup2">
-            <h3>Was muss ich in diesem Anzeigefenster beachten?</h3>
+                <div class="content">
+                    <p>In dieser Hauptansicht kann der Schüler sich aus diesem Raum abmelden und zwischen den Möglichkeiten entscheiden
+                        wo er sich hinbewegen möchte.</p>
+                </div>
 
-            <div class="content">
-                <p>In dieser Hauptansicht kann der Schüler sich aus diesem Raum abmelden und zwischen den Möglichkeiten entscheiden
-                    wo er sich hinbewegen möchte.</p>
-            </div>
+                <a class="close" href="#">&times;</a>
 
-            <a class="close" href="#">&times;</a>
-
-        </div>
-    </div>
-</div>
-<div class="mid_container">
-    <h1 class="default_heading_mid"> Tschüss Max! </h1>
-    <h2 class="default_subheading_mid"> Wohin möchtest du gehen? </h2>
-
-    <div class="selection_board">
-        <div class="button_container_row">
-            <div class="button_container_icon" id="leave_room_button">
-                <a href="" id="icon_button_style">
-                    <img src="{% static 'img/leave_room_icon.png' %}"">
-                    <p class="icon_description">Raum verlassen</p> 
-                </a>
-            </div>  
-            <div class="button_container_icon" id="toilet_button">
-                <a href="" id="icon_button_style">
-                    <img src="{% static 'img/toilet_icon.png' %}""> 
-                    <p class="icon_description">Toilette</p>
-                </a>
-            </div>
-            <div class="button_container_icon" id="school_yard_button">
-                <a href="" id="icon_button_style"> 
-                    <img src="{% static 'img/school_yard_icon.png' %}">
-                    <p class="icon_description">Schulhof</p> 
-                </a>   
             </div>
         </div>
     </div>
-</div>
+    <div class="mid_container">
+        <h1 class="default_heading_mid"> Tschüss Max! </h1>
+        <h2 class="default_subheading_mid"> Wohin möchtest du gehen? </h2>
+
+        <div class="selection_board">
+            <div class="button_container_row">
+                <div class="button_container_icon" id="leave_room_button">
+                    <a href="" id="icon_button_style">
+                        <img src="{% static 'img/leave_room_icon.png' %}"">
+                        <p class="icon_description">Raum verlassen</p> 
+                    </a>
+                </div>  
+                <div class="button_container_icon" id="toilet_button">
+                    <a href="" id="icon_button_style">
+                        <img src="{% static 'img/toilet_icon.png' %}""> 
+                        <p class="icon_description">Toilette</p>
+                    </a>
+                </div>
+                <div class="button_container_icon" id="school_yard_button">
+                    <a href="" id="icon_button_style"> 
+                        <img src="{% static 'img/school_yard_icon.png' %}">
+                        <p class="icon_description">Schulhof</p> 
+                    </a>   
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 {% endblock %}
