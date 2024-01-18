@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="block_container mid_container" id="user_login">
-        <div class="header_container_type2">
-            <h1 class='heading_type1'>Bitte melden Sie sich an:</h1>
-            <a class="question align_right" href="#popup1">Hilfe</a>
+        <div class="header_container_back_help">
+            <button class="back invisible" onclick="window.location.href = 'http://127.0.0.1:8000/master_web/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+            <a class="question" href="#popup1">Hilfe</a>
 
             <div id="popup1" class="popup">
                 <div class="popup2">
@@ -20,8 +20,7 @@
 
                     <div class="content">
                         <p>
-                            Hier können Sie sich ein neues Passwort für ihr Nutzerkonto vergeben. 
-                            Falls Sie noch kein Nutzerkonto besitzen, wenden Sie sich an einen Administrator.
+                            Hier können Sie sich das neue Passwort für das Nutzerkonto einsehen. 
                         </p>
                     </div>
 
@@ -31,24 +30,14 @@
             </div>
 
         </div>
-        <form method='post' class="login_form">{% csrf_token %}
-            <div class="form_fields" >
-                <div id ="set_new_pw_fields">
-                    <div class="input_group">
-                        <label for="new_password">Benutzername:</label>
-                        <input id="new_password"type="text"/>
-                    </div>
-                    <div class="input_group">
-                        <label for="repeat_new_password">Einmalpasswort:</label>
-                        <input id="repeat_new_password" type="password"/>
-                    </div>
-                </div>   
-            </div>
-            <div class="controls_container">
-                <input type='submit' class="green_button" value='Bestätigen'/>
-            </div>
-            
-        </form>
+        <h1 class='heading_type1'>Bitte melden Sie sich an:</h1>
+
+        <div id ="display_otp_info">
+            <label for="username">Benutzername:</label>
+            <label class="display_info"id="username"type="text">mahlmann</label>
+            <label for="otp_field">Einmalpasswort:</label>
+            <label class="display_info" id="otp_field" type="text">fofFOwsuiS</label>
+        </div> 
     </div>
 </body>
 {% endblock %}
