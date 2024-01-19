@@ -26,7 +26,7 @@ urlpatterns = [
     path('preferences/', views.preferences, name='preferences'),
     path('room_usage_history/<str:raum>', views.room_usage_history, name='room_usage_history'),
     path('home/', views.home, name='home'),
-    path('set_nfc_set/<int:id>', views.set_nfc_set, name='set_nfc_set'),
+    path('set_nfc_set/', views.set_nfc_set, name='set_nfc_set'),
     path('checked_out/', views.checked_out, name='checked_out'),
     path('go_home/', views.go_home, name='go_home'),
     path('go_home/<str:feedback>', views.go_home_feedback, name='go_home_feedback'),
@@ -34,6 +34,7 @@ urlpatterns = [
     path('leave_room/', views.leave_room, name='leave_room'),
     path('room_history/<int:pupil>', views.room_history, name='room_history'),
     path('feedback_history/<int:pupil>', views.feedback_history, name='feedback_history'),
+    path('set_nfc_scan/', views.set_nfc_scan, name='set_nfc_scan'),
 ]
 
 
