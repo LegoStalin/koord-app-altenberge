@@ -35,6 +35,7 @@ urlpatterns = [
     path('room_history/<int:pupil>', views.room_history, name='room_history'),
     path('feedback_history/<int:pupil>', views.feedback_history, name='feedback_history'),
     path('set_nfc_scan/', views.set_nfc_scan, name='set_nfc_scan'),
+    path('search_pupil/', views.search_pupil, name='search_pupil'),
 ]
 
 
@@ -55,6 +56,7 @@ allowed_urls_android = [
     'go_home_feedback',
     'checked_in',
     'leave_room',
+    'set_nfc_scan',
     ]
 main_url_android = 'master_tablet'
 
@@ -81,5 +83,6 @@ allowed_urls_web = [
     'room_usage_history',
     'room_history',
     'feedback_history',
+    'search_pupil',
     ]
 main_url_web = 'master_web'
