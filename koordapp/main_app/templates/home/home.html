@@ -9,9 +9,16 @@
     </head>
 
     <body>
+    
+    <form id="form" method="post" action="/your-django-endpoint/">
+        {% csrf_token %}
+        <input type="hidden" name="tag_id" id="tag_id" value="">
+        <input type="submit" value="">
+    </form>
+        
 
     <div class="header_container_mid">
-
+        <input id="info" value=""></p>
         <button class="login_button" onclick="window.location.href = 'http://127.0.0.1:8000/login/';">Login</button>
 
         <a class="question" href="#popup1">Hilfe</a>
@@ -34,10 +41,29 @@
         <img src="{% static 'img/placeholder_nfc_scan_transparent.png' %}" alt="NFC-Scan" class="nfc_scan">
         <p class = "explanation">Halte dein Armband an das Logo um dich an- oder abzumelden!</p>
     </div>
+    <!--
     <form method="post" class="input_container">{% csrf_token %}
         <input type="text" class="inputfield" name="tag_id" placeholder="|"/>
         <input type='submit' class="change_button" name="button_register_tag" value='Register Tag-ID'/>
     </form>
+    -->
+    <script type="module">
+        if ("NDEFReader" in window) {
+            document.getElementById('info').value = "Web NFC kann geladen werden";
+            const reader = new NDEFReader();
+            
+            reader.addEventListener("reading", ({ message, serialNumber }) => {
+                document.getElementById('tag_id').value = message;
+                document.getElementById('form').submit();
+                console.log(message.records);
+            });
+            
+            reader.scan();
+        } else {
+            document.getElementById('info').value = "Web NFC kann nicht geladen werden";
+            console.error("Web NFC not supported");
+        }
+    </script>
     </body>
     </html>
 {% endblock %}
