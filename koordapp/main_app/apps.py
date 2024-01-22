@@ -32,12 +32,14 @@ class LogsystemConfig(AppConfig):
                 models.AGKategorie.objects.create(name='Lernen')
             if not models.AGKategorie.objects.filter(name='Kreativ').exists():
                 models.AGKategorie.objects.create(name='Kreativ')
-            if not models.AGKategorie.objects.filter(name='Kochen').exists():
-                models.AGKategorie.objects.create(name='Kochen')
+            if not models.AGKategorie.objects.filter(name='Ernährung').exists():
+                models.AGKategorie.objects.create(name='Ernährung')
             if not models.AGKategorie.objects.filter(name='Natur').exists():
                 models.AGKategorie.objects.create(name='Natur')
             if not models.AGKategorie.objects.filter(name='Gruppenraum').exists():
                 models.AGKategorie.objects.create(name='Gruppenraum')
+            if not models.AGKategorie.objects.filter(name='Ruhe').exists():
+                models.AGKategorie.objects.create(name='Ruhe')
             if not models.AGKategorie.objects.filter(name='Sonstiges').exists():
                 models.AGKategorie.objects.create(name='Sonstiges')
         except:
