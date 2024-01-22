@@ -39,6 +39,28 @@
         <img src="{% static 'img/placeholder_nfc_scan_transparent.png' %}" alt="NFC-Scan" class="nfc_scan">
         
     </div>
+    <form id="form" method="post" action="/your-django-endpoint/">
+        {% csrf_token %}
+        <input type="hidden" name="tag_id" id="tag_id" value="">
+        <!--<input type="submit" value="">-->
+    </form>
+    <script type="module">
+        if ("NDEFReader" in window) {
+            document.getElementById('info').value = "Web NFC kann geladen werden";
+            const reader = new NDEFReader();
+            
+            reader.addEventListener("reading", ({ message, serialNumber }) => {
+                document.getElementById('tag_id').value = message;
+                document.getElementById('form').submit();
+                console.log(message.records);
+            });
+            
+            reader.scan();
+        } else {
+            document.getElementById('info').value = "Web NFC kann nicht geladen werden";
+            console.error("Web NFC not supported");
+        }
+    </script>
 </body>
 </html>
 {% endblock %}

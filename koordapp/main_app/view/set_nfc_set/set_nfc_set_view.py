@@ -6,7 +6,7 @@ from itertools import chain
 
 @login_required(redirect_field_name="login")
 def set_nfc_set_view(request):
-    tag_id = request.POST.get('tag_id', None)
+    tag_id = request.session.get('tag_id', None)
     if not tag_id == None:
         schueler = Schueler.objects.all()
         users = [s.user_id for s in schueler]
