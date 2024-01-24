@@ -8,6 +8,8 @@ WORKDIR /code
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
+RUN pip install django-extensions Werkzeug
+RUN pip install pyOpenSSL
 
 COPY . .
 

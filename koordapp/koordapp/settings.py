@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '192.168.0.21',
     '192.168.56.1',
+    '192.168.178.82'
 ]
 
 
@@ -139,3 +140,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main_app/static'),]
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+# HTTPS
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+INSTALLED_APPS += ['django_extensions']

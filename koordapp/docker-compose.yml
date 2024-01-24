@@ -6,7 +6,7 @@ services:
     volumes:
       - .:/code
     entrypoint: /entrypoint.sh
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver_plus --cert-file certificate/nginx-selfsigned.crt --key-file certificate/nginx-selfsigned.key 0.0.0.0:8000
     depends_on:
         - db
   db:
