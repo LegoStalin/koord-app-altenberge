@@ -9,4 +9,4 @@ def set_nfc_scan_view(request):
             request.session['tag_id'] = tag_id
             return redirect("set_nfc_set")
 
-    return render("master_android/set_nfc_scan")
+    return render(request, "master_android/set_nfc_scan.html")

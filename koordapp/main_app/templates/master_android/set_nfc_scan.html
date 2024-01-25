@@ -40,7 +40,7 @@
         </div>
 
 
-    <form id="form" method="post">
+    <form method="post" id="form">
         {% csrf_token %}
         <input type="hidden" name="tag_id" id="tag_id" value="">
         <!--<input type="submit" value="">-->
@@ -80,7 +80,8 @@
                 };
             }
             ndef.addEventListener("reading", ({ message, serialNumber }) => {
-                document.getElementById('tag_id').value = message;
+                const textDecoder = new TextDecoder();
+                document.getElementById('tag_id').value = textDecoder.decode(message.records[0].data);
                 document.getElementById('form').submit();
                 console.log(message.records);
             });
