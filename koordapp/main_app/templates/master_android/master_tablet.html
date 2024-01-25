@@ -12,7 +12,7 @@
 
 <div class = "block_container">
     <div class="header_container_back_help">
-        <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/home/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+        <button class="back" onclick="window.location.href = '/home/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
 
         <a class="question" href="#popup1">Hilfe</a>
 
@@ -43,7 +43,7 @@
         <button id="button_style1" onclick="window.location.href = '/set_nfc_scan/'"> NFC Chip neu zuweisen </button>
     </div>
 </div>
-
+<script type="module" src="{% static 'js/cancel_scan_tag.js' %}"></script>
 </body>
 </html>
 {% endblock %}

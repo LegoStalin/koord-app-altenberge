@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
 <form method='post'>{% csrf_token %}
@@ -7,5 +8,6 @@
         <button class="assign_button" name="button_leave_room" type="submit"> Raum Verlassen </button>
     </div>
 </form>
+<script type="module" src="{% static 'js/cancel_scan_tag.js' %}"></script>
 
 {% endblock %}
