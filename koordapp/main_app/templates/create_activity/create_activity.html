@@ -17,7 +17,7 @@
             </ul>
         {% endif %}-->
     <div class="header_container_back_help">
-        <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/choose_room/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+        <button class="back" onclick="location.href='{% url 'choose_room' %}';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
 
         <a class="question" href="#popup1">Hilfe</a>
 

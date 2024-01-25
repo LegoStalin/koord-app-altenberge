@@ -11,9 +11,8 @@
 <body>
 
 
-
     <div class="header_container_back_help">
-        <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/master_tablet/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+        <button class="back" onclick="window.location.href = '/master_tablet/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
 
         <a class="question" href="#popup1">Hilfe</a>
 
@@ -51,10 +50,10 @@
         checkIFNFCSupported();
         function checkIFNFCSupported(){
             if (!("NDEFReader" in window)) {
-                alert("NFC is not supported.");
+                //alert("NFC is not supported.");
                 document.getElementById("NFC-btn").disabled = true;
             }else{
-                alert("NFC is supported.");
+                //alert("NFC is supported.");
                 document.getElementById("NFC-btn").disabled = false;
             }
         }
@@ -99,7 +98,16 @@
         }
 
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('NFC-btn').addEventListener('click', toggleNFCScanning);
+            navigator.permissions.query({ name: "nfc" }).then(permissionStatus => {
+                console.log(`NFC user permission: ${permissionStatus.state}`);
+                if (permissionStatus.state === 'prompt') {
+                    alert("Bitte auf Bild des NFC-Tags klicken um Berechtigung anzufordern!");
+                    document.getElementById('NFC-btn').addEventListener('click', toggleNFCScanning);
+                } else if (permissionStatus.state === 'granted') {
+                    document.getElementById("NFC-btn").disabled = true;
+                    toggleNFCScanning();
+                }
+            });    
         });
 
     </script>

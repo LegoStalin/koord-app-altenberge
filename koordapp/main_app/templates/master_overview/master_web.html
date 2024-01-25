@@ -12,7 +12,7 @@
 
 <div class = "block_container">
     <div class="header_container_back_help">
-        <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/logout/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Logout</span>  </button>
+        <button class="back" onclick="window.location.href = '/logout/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Logout</span>  </button>
 
         <a class="question" href="#popup1">Hilfe</a>
 
@@ -34,24 +34,24 @@
     <h2 class="subheading_2"> Wählen Sie eine der folgenden Aktionen aus: </h2>
     <div class="selection_board">
         <div class="button_container">
-            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/dashboard/';"> Dashboard </button>
-            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/ogs_group/';"> OGS-Gruppe </button>
+            <button id="button_style1" onclick="window.location.href = '/dashboard/'"> Dashboard </button>
+            <button id="button_style1" onclick="window.location.href = '/ogs_group/'"> OGS-Gruppe </button>
         </div>
     
         <div class="button_container">
-            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/search_pupil/';"> Suche Kind </button>
-            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/select_room/';"> Raumübersicht </button>
+            <button id="button_style1" onclick="window.location.href = '/search_pupil/'"> Suche Kind </button>
+            <button id="button_style1" onclick="window.location.href = '/select_room/'"> Raumübersicht </button>
         </div>
     
         <div class="button_container">
             {% if user.is_superuser %}
-            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/csv_import/';"> CSV-Import </button>
+            <button id="button_style1" onclick="window.location.href = '/csv_import/'"> CSV-Import </button>
             {% endif %}
-            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/preferences/';"> Persönliche Einstellungen </button>
+            <button id="button_style1" onclick="window.location.href = '/preferences/'"> Persönliche Einstellungen </button>
         </div>
         {% if user.is_superuser %}
         <div class="button_container">
-            <button id="button_style1" onclick="window.location.href = 'http://127.0.0.1:8000/superuser/';"> Passwörter Zurücksetzten </button>
+            <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzten </button>
         </div>
         {% endif %}
     </div>
