@@ -102,7 +102,7 @@
         document.addEventListener('DOMContentLoaded', (event) => {
             navigator.permissions.query({ name: "nfc" }).then(permissionStatus => {
                 console.log(`NFC user permission: ${permissionStatus.state}`);
-                if (permissionStatus.state === 'prompt') {
+                if (permissionStatus.state === 'prompt') {                    
                     alert("Bitte auf Bild des NFC-Tags klicken um Berechtigung anzufordern!");
                     document.getElementById('NFC-btn').addEventListener('click', toggleNFCScanning);
                 } else if (permissionStatus.state === 'granted') {

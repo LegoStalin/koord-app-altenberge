@@ -38,7 +38,7 @@
     <h1 class="heading_2"> Raum {{room.raum_nr}} </h1>
     <h2 class="subheading_2"> Geben Sie folgende Informationen an: </h2>
 
-    <form method="post" class="input_container">{% csrf_token %}
+    <form method="post" class="input_container" id="form">{% csrf_token %}
         {% for tup in default_personal_list %}
         <div class="inputblock">
             <label class = "category">Aufsichtsperson:</label>
@@ -77,13 +77,123 @@
         </div>
 
         <div class = "submit_container">
-            <input type='submit' class="submit_button" name="button_create_activity" value='Auswählen'/>
+            <input class="submit_button" name="button_create_activity" value='Auswählen' id="NFC-btn" onclick="toggleNFCScanning();"/>
             <input type='submit' class="submit_button" name="button_add_personal" value='Aufsichtsperson hinzufügen'/>
             <input type='submit' class="submit_button" name="button_remove_personal" value='Aufsichtsperson entfernen'/>
         </div>
     </form>
 
-    <script type="module" src="{% static 'js/cancel_scan_tag.js' %}"></script>
+    <!--<script type="module" src="{% static 'js/cancel_scan_tag.js' %}"></script>-->
     </body>
+    <script type="module">
+
+        checkIFNFCSupported();
+        function checkIFNFCSupported(){
+            if (!("NDEFReader" in window)) {
+                //alert("NFC is not supported.");
+                document.getElementById("NFC-btn").disabled = true;
+            }else{
+                //alert("NFC is supported.");
+                document.getElementById("NFC-btn").disabled = false;
+            }
+        }
+        let ndef;
+        let abortController;
+        let NFCResults = [];
+        async function scanNFCTags(){
+            if (!ndef) {
+                abortController = new AbortController();
+                abortController.signal.onabort = event => {
+                    // All NFC operations have been aborted.
+                    console.log(event);
+                };
+                ndef = new NDEFReader();
+                ndef.onreadingerror = () => {
+                    console.log("Cannot read data from the NFC tag. Try another one?");
+                };
+                ndef.onreading = event => {
+                    console.log("NDEF message read.");
+                    console.log(event);
+                    NFCResults = [];
+                    NFCResults = NFCResults.concat(event.message.records);
+                };
+            }
+            ndef.addEventListener("reading", ({ message, serialNumber }) => {
+                const textDecoder = new TextDecoder();
+                //document.getElementById('tag_id').value = textDecoder.decode(message.records[0].data);
+                //document.getElementById('form').submit();
+                console.log(message.records);
+            });
+            ndef.scan({ signal: abortController.signal }).then(() => {
+                console.log("Scan started successfully.");
+                document.getElementById('form').submit();
+            }).catch(error => {
+                console.log(`Error! Scan failed to start: ${error}.`);
+            });
+        }
+        
+        async function scanNFCTags2(){
+            if (!ndef) {
+                abortController = new AbortController();
+                abortController.signal.onabort = event => {
+                    // All NFC operations have been aborted.
+                    console.log(event);
+                };
+                ndef = new NDEFReader();
+                ndef.onreadingerror = () => {
+                    console.log("Cannot read data from the NFC tag. Try another one?");
+                };
+                ndef.onreading = event => {
+                    console.log("NDEF message read.");
+                    console.log(event);
+                    NFCResults = [];
+                    NFCResults = NFCResults.concat(event.message.records);
+                };
+            }
+            ndef.addEventListener("reading", ({ message, serialNumber }) => {
+                const textDecoder = new TextDecoder();
+                console.log(message.records);
+            });
+            ndef.scan({ signal: abortController.signal }).then(() => {
+                console.log("Scan started successfully.");
+            }).catch(error => {
+                console.log(`Error! Scan failed to start: ${error}.`);
+            });
+        }
+
+        function toggleNFCScanning(){
+            const btn = document.getElementById("HeadingPNG");
+            navigator.permissions.query({ name: "nfc" }).then(permissionStatus => {
+                console.log(`NFC user permission: ${permissionStatus.state}`);
+                if (permissionStatus.state === 'prompt') {   
+                    scanNFCTags();                 
+                } else if (permissionStatus.state === 'granted') {
+                    document.getElementById('form').submit();
+                }
+            });
+                
+                //btn.innerText = "Es wird gescannt! Bitte deinen Chip hinten links an den Scanner halten.";
+        }
+        function toggleNFCScanning2(){
+            const btn = document.getElementById("HeadingPNG");
+                scanNFCTags2();
+                //btn.innerText = "Es wird gescannt! Bitte deinen Chip hinten links an den Scanner halten.";
+        }
+        document.addEventListener('DOMContentLoaded', (event) => {
+            navigator.permissions.query({ name: "nfc" }).then(permissionStatus => {
+                console.log(`NFC user permission: ${permissionStatus.state}`);
+                document.getElementById('NFC-btn').addEventListener('click', toggleNFCScanning);
+                if (permissionStatus.state === 'prompt') {                    
+                    //alert("Bitte auf Bild des NFC-Tags klicken um Berechtigung anzufordern!");
+                    
+                } else if (permissionStatus.state === 'granted') {
+                    //document.getElementById("NFC-btn").disabled = true;
+                    //document.getElementById('NFC-btn').addEventListener('click', submitForm);
+                    toggleNFCScanning2();
+                }
+            });    
+        });
+
+    </script>
     </html>
 {% endblock %}

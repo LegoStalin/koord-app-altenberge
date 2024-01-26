@@ -30,9 +30,9 @@ async function scanNFCTags(){
         };
     }
     ndef.addEventListener("reading", ({ message, serialNumber }) => {
-        const textDecoder = new TextDecoder();
-        document.getElementById('tag_id').value = textDecoder.decode(message.records[0].data);
-        document.getElementById('form').submit();
+        //const textDecoder = new TextDecoder();
+        //document.getElementById('tag_id').value = textDecoder.decode(message.records[0].data);
+        //document.getElementById('form').submit();
         console.log(message.records);
     });
     ndef.scan({ signal: abortController.signal }).then(() => {
