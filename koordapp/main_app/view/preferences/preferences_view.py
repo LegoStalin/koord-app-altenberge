@@ -10,9 +10,10 @@ def preferences_view(request):
     if request.method == "POST":
         if 'change_button_username' in request.POST:
             username = request.POST.get("username")
-            if not User.objects.filter(username=username).exists():
-                user.username = username
-                user.save()
+            if not firstname == '':
+                if not User.objects.filter(username=username).exists():
+                    user.username = username
+                    user.save()
         elif 'change_button_vorname' in request.POST:
             firstname = request.POST.get("firstname")
             if not firstname == '':
