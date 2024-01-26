@@ -11,7 +11,7 @@
     <body>
     <div class = "block_container">
         <div class="header_container_back_help">
-            <button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/master_web/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+            <button class="back" onclick="window.location.href = '/master_web/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
 
             <a class="question" href="#popup1">Hilfe</a>
 
@@ -37,17 +37,17 @@
                 <label class = "header">OGS-Gruppe</label>
                 <div class  =  "row">
                     <label class = "category">In Heimatraum:</label>
-                    <label class = "value"> 12 </label>
+                    <label class = "value"> {{students_in_room}} </label>
                 </div>
                 <div class = "line"></div>
                 <div class  =  "row">
                     <label class = "category">In Bewegung:</label>
-                    <label class = "value"> 16 </label>
+                    <label class = "value"> {{students_in_movement}} </label>
                 </div>
                 <div class = "line"></div>
                 <div class  =  "row">
                     <label class = "category">Bereits zuhause:</label>
-                    <label class = "value"> 2 </label>
+                    <label class = "value"> {{students_at_home}} </label>
                 </div>
             </div>
 
@@ -55,20 +55,20 @@
 
             <div class = "rooms">
 
-                <label class = "circle1">2</label>
-                <label class = "circle2">5</label>
-                <label class = "circle3">0</label>
-                <label class = "circle4">4</label>
+                <label class = "circle1">{{rooms_group}}</label>
+                <label class = "circle2">{{rooms_learn}}</label>
+                <label class = "circle3">{{rooms_sport}}</label>
+                <label class = "circle4">{{rooms_break}}</label>
 
                 <label class = "activity activity1" >Gruppenraum</label>
                 <label class = "activity activity2">Lernen</label>
                 <label class = "activity activity3">Sport</label>
                 <label class = "activity activity4">Ruhe</label>
 
-                <label class = "circle5">6</label>
-                <label class = "circle6">3</label>
-                <label class = "circle7">7</label>
-                <label class = "circle8">2</label>
+                <label class = "circle5">{{rooms_food}}</label>
+                <label class = "circle6">{{rooms_nature}}</label>
+                <label class = "circle7">{{rooms_creative}}</label>
+                <label class = "circle8">{{rooms_other}}</label>
 
                 <label class = "activity activity5">Ernährung</label>
                 <label class = "activity activity6">Natur</label>

@@ -11,19 +11,21 @@ def dashboard_view(request):
     except Gruppe.DoesNotExist:
         ogs_group = None
 
+    ogs_group_room = ogs_group.raum
     schuelers = Schueler.objects.filter(gruppen_id=ogs_group)
-    schuelers_in_room = Aufenthalt.objects.filter(zeitraum__endzeit__isnull=True, schueler_id__in=schuelers)
+    schuelers_in_room = Aufenthalt.objects.filter(zeitraum__endzeit__isnull=True, schueler_id__in=schuelers, raum_id=ogs_group_room)
     schuelers_at_home = schuelers.filter(angemeldet = False)
-    schuelers_in_movement = schuelers.exclude(id__in=schuelers_in_room.values('schueler_id'))
+    schuelers_in_movement = schuelers.filter(angemeldet=True)
+    schuelers_in_movement = schuelers_in_movement.exclude(id__in=schuelers_in_room.values('schueler_id'))
 
-    rooms_group_room = Raum_Belegung.objects.filter(ag_kategorie__name="Gruppenraum")
-    rooms_learn = Raum_Belegung.objects.filter(ag_kategorie__name="Lernen")
-    rooms_sport = Raum_Belegung.objects.filter(ag_kategorie__name="Sport")
-    rooms_pause = Raum_Belegung.objects.filter(ag_kategorie__name="Ruhe")
-    rooms_creative = Raum_Belegung.objects.filter(ag_kategorie__name="Kreativ")
-    rooms_nature = Raum_Belegung.objects.filter(ag_kategorie__name="Natur")
-    rooms_food = Raum_Belegung.objects.filter(ag_kategorie__name="Ernährung")
-    rooms_other = Raum_Belegung.objects.filter(ag_kategorie__name="Sonstige")
+    rooms_group_room = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Gruppenraum")
+    rooms_learn = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Lernen")
+    rooms_sport = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Sport")
+    rooms_pause = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Ruhe")
+    rooms_creative = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Kreativ")
+    rooms_nature = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Natur")
+    rooms_food = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Ernährung")
+    rooms_other = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Sonstige")
 
     return render(request, "dashboard/dashboard.html",
                   {"students_in_room":len(schuelers_in_room),

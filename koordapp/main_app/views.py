@@ -36,6 +36,7 @@ from main_app.view.history_pages_students.room_history_view import room_history_
 from main_app.view.history_pages_students.feedback_history_view import feedback_history_view
 from main_app.view.set_nfc_scan.set_nfc_scan_view import set_nfc_scan_view
 from main_app.view.search_pupil.search_pupil import search_pupil_view
+from main_app.view.dashboard.dashboard_view import dashboard_view
 
 
 def master_web(request):
@@ -130,3 +131,6 @@ def set_nfc_scan(request):
 
 def search_pupil(request):
     return search_pupil_view(request)
+
+def dashboard(request):
+    return dashboard_view(request)
