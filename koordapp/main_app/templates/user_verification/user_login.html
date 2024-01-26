@@ -43,9 +43,11 @@
             </div>
         </form>
         <!-- TODO: Chris muss hier noch die Fehlermeldung einbinden -->
-        <div class = "errormessage">
-            <p> Hier ist der Platz für eine Fehlermeldung, die Chris nur noch einbinden muss :)</p>
-        </div>
+        {% for message in messages%}
+            <div class = "errormessage">
+                <p> {{message}} </p>
+            </div>
+        {% endfor %}
     </div>
     <script type="module" src="{% static 'js/cancel_scan_tag.js' %}"></script>
 

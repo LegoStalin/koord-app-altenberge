@@ -71,6 +71,8 @@ class Schueler(models.Model):
     name_eb = models.CharField(max_length=100)
     kontakt_eb = models.CharField(max_length=300)
     angemeldet = models.BooleanField(default=False)      # Ist kind überhaupt an diesem Tag in der OGS
+    wc = models.BooleanField(default=False)
+    schulhof = models.BooleanField(default=False)
     user_id = models.ForeignKey(Nutzer, on_delete=models.CASCADE)
     gruppen_id = models.ForeignKey(Gruppe, on_delete=models.CASCADE)
     ag_buchungen = models.ManyToManyField(AG)
