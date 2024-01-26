@@ -20,7 +20,6 @@ def leave_room_view(request):
                         zeitraum = aufenthalt.zeitraum
                         zeitraum.endzeit = datetime.now().time()
                         zeitraum.save()
-                        print(zeitraum.startzeit.strftime("%H:%M"))
                         if('button_leave_room' in request.POST):   
                             return redirect('checked_out')
                         elif('button_leave_school' in request.POST):

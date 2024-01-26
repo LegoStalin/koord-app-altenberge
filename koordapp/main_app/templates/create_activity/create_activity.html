@@ -162,7 +162,7 @@
         }
 
         function toggleNFCScanning(){
-            const btn = document.getElementById("HeadingPNG");
+            //const btn = document.getElementById("HeadingPNG");
             navigator.permissions.query({ name: "nfc" }).then(permissionStatus => {
                 console.log(`NFC user permission: ${permissionStatus.state}`);
                 if (permissionStatus.state === 'prompt') {   

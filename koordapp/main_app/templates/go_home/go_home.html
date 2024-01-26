@@ -7,6 +7,25 @@
     <head>
         <link rel="stylesheet" type="text/css" href="{% static 'css/checked_in_out/checked_in_out_style.css' %}"/>
         <link rel="stylesheet" type="text/css" href="{% static 'css/go_home/go_home.css' %}"/>
+
+        <script>
+            // Funktion zum Umleiten nach einer Verzögerung
+            function umleitungNachVerzögerung() {
+                // Warte 3 Sekunden (3000 Millisekunden)
+                setTimeout(function () {
+                    // Umleitung zur gewünschten URL
+                    window.location.href = '/go_home/';
+                }, 3000);
+            }
+    
+            // Diese Funktion wird aufgerufen, wenn das Dokument vollständig geladen ist
+            document.addEventListener('DOMContentLoaded', function () {
+                // Hier kannst du andere JavaScript-Aktionen für dein Template hinzufügen
+    
+                // Starte die Verzögerung und Umleitung
+                umleitungNachVerzögerung();
+            });
+        </script>
     </head>
 
     <body>
@@ -15,20 +34,20 @@
         <h1 class="default_heading_mid">Auf Wiedersehen! </h1>
         <div class="selection_board">
             <div class="button_container_row">
-                <div class="button_container_icon" id="very_well_smiley">
-                    <a href="" id="icon_button_style">
-                        <img src="{% static 'img/smiley.png' %}"">
+                <div class="button_container_icon" id="very_well_smiley"  onclick="location.href='{% url 'go_home_feedback' feedback='good' %}';">
+                    <a href="/go_home/good" id="icon_button_style">
+                        <img src="{% static 'img/smiley.png' %}"" >
                         <p class="icon_description">Sehr gut!</p> 
                     </a>
                 </div>  
-                <div class="button_container_icon" id="okay_smiley">
-                    <a href="" id="icon_button_style">
+                <div class="button_container_icon" id="okay_smiley" onclick="location.href='{% url 'go_home_feedback' feedback='medium' %}';">
+                    <a href="/go_home/medium" id="icon_button_style">
                         <img src="{% static 'img/smiley.png' %}""> 
                         <p class="icon_description">Okay!</p>
                     </a>
                 </div>
-                <div class="button_container_icon" id="bad_smiley">
-                    <a href="" id="icon_button_style"> 
+                <div class="button_container_icon" id="bad_smiley" onclick="location.href='{% url 'go_home_feedback' feedback='bad' %}';">
+                    <a href="/go_home/bad" id="icon_button_style"> 
                         <img src="{% static 'img/bad_smiley.png' %}">
                         <p class="icon_description">Meh!</p> 
                     </a>   
