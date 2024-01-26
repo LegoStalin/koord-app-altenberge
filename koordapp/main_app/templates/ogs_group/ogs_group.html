@@ -52,7 +52,7 @@
             <div class = "pupil">
                 <div class="pupil_container_transp">
                     <p class="text_pupil_transp"> {{ schuler.user_id.vorname }} {{ schuler.user_id.nachname }} </p>
-                    <button class="assign_button_transp" onclick="location.href='{% url 'pupil' pupil=schuler.user_id.id %}';"> Auswählen </button>
+                    <button class="assign_button" onclick="location.href='{% url 'pupil' pupil=schuler.user_id.id %}';"> Auswählen </button>
                 </div>
             </div>
             {% endif %}

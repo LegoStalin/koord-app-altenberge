@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="removed pw from preferences">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added errormessage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/user_verification/user_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/user_verification/user_login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,15 +85,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="3571000" />
-    </task>
-    <task id="LOCAL-00007" summary="Created first Draft of Opening Page, Including Room List Block">
-      <option name="closed" value="true" />
-      <created>1702059876380</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1702059876380</updated>
+      <workItem from="1706273092114" duration="4521000" />
     </task>
     <task id="LOCAL-00008" summary="adjusted room_container">
       <option name="closed" value="true" />
@@ -480,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706275764472</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Added errormessage">
+      <option name="closed" value="true" />
+      <created>1706277133259</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1706277133259</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added transparency feature for absent pupil in further media queries" />
     <MESSAGE value="adjusted block container" />
     <MESSAGE value="xml adjustments" />
     <MESSAGE value="updates" />
@@ -523,6 +521,7 @@
     <MESSAGE value="removed comment" />
     <MESSAGE value="fixed line misplacement" />
     <MESSAGE value="removed pw from preferences" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed pw from preferences" />
+    <MESSAGE value="Added errormessage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added errormessage" />
   </component>
 </project>
