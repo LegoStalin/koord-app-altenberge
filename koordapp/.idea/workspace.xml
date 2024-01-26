@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="xml changes">
-      <change beforePath="$PROJECT_DIR$/../Protokolle/Bi-Weekly2_Präsentation_BiWeekly.pptx" beforeDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixed line misplacement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,15 +85,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="1037000" />
-    </task>
-    <task id="LOCAL-00005" summary="adj">
-      <option name="closed" value="true" />
-      <created>1701609347616</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1701609347616</updated>
+      <workItem from="1706273092114" duration="2354000" />
     </task>
     <task id="LOCAL-00006" summary="Setting up new Branch for Frame choose_room">
       <option name="closed" value="true" />
@@ -480,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705399413853</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="fixed line misplacement">
+      <option name="closed" value="true" />
+      <created>1706274172067</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1706274172067</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added TODO Comments" />
     <MESSAGE value="Added transparency feature for absent pupil" />
     <MESSAGE value="Added transparency feature for absent pupil in further media queries" />
     <MESSAGE value="adjusted block container" />
@@ -523,6 +521,7 @@
     <MESSAGE value="xml changes" />
     <MESSAGE value="Added placeholder for error or success messages on page csv_import" />
     <MESSAGE value="removed comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed comment" />
+    <MESSAGE value="fixed line misplacement" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed line misplacement" />
   </component>
 </project>
