@@ -37,17 +37,22 @@
 #leave_room_button {
   background-color: var(--color_icon_door);
 }
+#leave_room_button:hover {
+  background-color: var(--color_icon_door2);
+}
 #toilet_button {
   background-color: var(--color_icon_toilet);
+}
+#toilet_button:hover {
+  background-color: var(--color_icon_toilet2);
 }
 #school_yard_button {
   background-color: var(--color_icon_school_yard);
 }
-#school_yard_button,
-#toilet_button,
-#leave_room_button {
-  opacity: 0.8; /* or any other value between 0 and 1 */
+#school_yard_button:hover {
+  background-color: var(--color_icon_school_yard2);
 }
+
 #school_yard_button:hover,
 #toilet_button:hover,
 #leave_room_button:hover {
@@ -83,4 +88,18 @@
   font-weight: 600;
   opacity: 1;
   letter-spacing: 2px;
+}
+@media only screen and (max-width: 900px) {
+  #icon_button_style img {
+    height: 15vh;
+    width: 20vw;
+  }
+  .icon_description {
+    font-size: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+  }
+  .button_container_row {
+    padding: 0;
+  }
 }

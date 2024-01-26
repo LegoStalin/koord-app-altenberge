@@ -1,4 +1,26 @@
 /*general styles for all queries*/
+
+.space_top {
+  margin-top: 20vh;
+}
+#display_otp_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+.display_info {
+  background-color: var(--list_line_color);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  padding: 1vh 3vw 1vh 3vw;
+  /*width: 10vw;*/
+}
 .green_button {
   background-color: var(--select_color_background);
   color: var(--font_color);
@@ -51,6 +73,12 @@
   #user_login {
     max-width: 1000px;
   }
+  #display_otp_info label {
+    margin: 1vh 1vw 1vh 1vw;
+  }
+  #display_otp_info {
+    width: 70%;
+  }
 
   .form_container {
     display: flex;
@@ -84,6 +112,7 @@
     font-size: 5vh;
     font-weight: 600;
     margin-bottom: 5vh;
+    margin-top: 20vh;
   }
   .mid_container {
     height: 50vh;
@@ -93,6 +122,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 2vh;
   }
 
   #user_login input[type="text"],
@@ -162,6 +192,11 @@
 
 /*Tablet Media Quarry*/
 @media only screen and (min-width: 1050px) and (max-width: 1200px) {
+  #display_otp_info label {
+    margin: 1vh 1vw 1vh 1vw;
+    width: 50%;
+  }
+
   .form_container {
     display: flex;
     flex-direction: column;
@@ -394,5 +429,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+  }
+  #display_otp_info label {
+    margin: 1vh 1vw 1vh 1vw;
+    width: 50%;
+  }
+  #display_otp_info {
+    width: 100%;
+    flex-direction: column;
   }
 }
