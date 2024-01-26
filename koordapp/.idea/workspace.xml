@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Redesigned set_nfc_set">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="removed comment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="frontend" />
+        <entry key="$PROJECT_DIR$/.." value="f_dashboard" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -44,28 +43,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "frontend",
-    "last_opened_file_path": "/Users/flo/IdeaProjects/koord-app-altenberge/koordapp",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/flo/IdeaProjects/koord-app-altenberge/koordapp&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,38 +85,6 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-    </task>
-    <task id="LOCAL-00001" summary="Created Media Queries for Devices Desktop, Tablet, Handy.">
-      <option name="closed" value="true" />
-      <created>1701526767856</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1701526767856</updated>
-    </task>
-    <task id="LOCAL-00002" summary="First Version of popup for tablet query">
-      <option name="closed" value="true" />
-      <created>1701599655298</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701599655298</updated>
-    </task>
-    <task id="LOCAL-00003" summary="adjustments">
-      <option name="closed" value="true" />
-      <created>1701599961809</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1701599961809</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Created Popup For Ipads">
-      <option name="closed" value="true" />
-      <created>1701608993212</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1701608993212</updated>
     </task>
     <task id="LOCAL-00005" summary="adj">
       <option name="closed" value="true" />
@@ -431,7 +398,87 @@
       <option name="project" value="LOCAL" />
       <updated>1704917525696</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Added categories to create_activity">
+      <option name="closed" value="true" />
+      <created>1704967669233</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1704967669233</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Fixed div hierarchy">
+      <option name="closed" value="true" />
+      <created>1705331674146</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1705331674146</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Major fixes of tablet slides">
+      <option name="closed" value="true" />
+      <created>1705338292804</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1705338292804</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added hover animation of log in button">
+      <option name="closed" value="true" />
+      <created>1705343626069</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1705343626069</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Changed Hover animations of csv page buttons">
+      <option name="closed" value="true" />
+      <created>1705343989689</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1705343989689</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Fixed opacity issue">
+      <option name="closed" value="true" />
+      <created>1705345128354</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1705345128354</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Changed csv-import header">
+      <option name="closed" value="true" />
+      <created>1705345479916</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1705345479917</updated>
+    </task>
+    <task id="LOCAL-00051" summary="xml changes">
+      <option name="closed" value="true" />
+      <created>1705351717530</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1705351717530</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Added placeholder for error or success messages on page csv_import">
+      <option name="closed" value="true" />
+      <created>1705352099309</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1705352099309</updated>
+    </task>
+    <task id="LOCAL-00053" summary="removed comment">
+      <option name="closed" value="true" />
+      <created>1705399413853</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1705399413853</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,16 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="xml changes" />
-    <MESSAGE value="First Creation of set_nfc_set page" />
-    <MESSAGE value="xml updates" />
-    <MESSAGE value="First Version of ogs_group" />
-    <MESSAGE value="Added media queries, button revision and hover effects" />
-    <MESSAGE value="Setting up search_pupil page" />
-    <MESSAGE value=" Block container adjustment" />
-    <MESSAGE value="First version of select room and changes link from master overview" />
-    <MESSAGE value="Created infomation lists according to media queries" />
-    <MESSAGE value="Refinement of logo position" />
     <MESSAGE value="Added TODO Comments" />
     <MESSAGE value="Added transparency feature for absent pupil" />
     <MESSAGE value="Added transparency feature for absent pupil in further media queries" />
@@ -474,6 +511,16 @@
     <MESSAGE value="FIxed help text of master_tablet" />
     <MESSAGE value="Added logout button for master_web" />
     <MESSAGE value="Redesigned set_nfc_set" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redesigned set_nfc_set" />
+    <MESSAGE value="Added categories to create_activity" />
+    <MESSAGE value="Fixed div hierarchy" />
+    <MESSAGE value="Major fixes of tablet slides" />
+    <MESSAGE value="Added hover animation of log in button" />
+    <MESSAGE value="Changed Hover animations of csv page buttons" />
+    <MESSAGE value="Fixed opacity issue" />
+    <MESSAGE value="Changed csv-import header" />
+    <MESSAGE value="xml changes" />
+    <MESSAGE value="Added placeholder for error or success messages on page csv_import" />
+    <MESSAGE value="removed comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed comment" />
   </component>
 </project>
