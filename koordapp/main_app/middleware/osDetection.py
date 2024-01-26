@@ -17,10 +17,10 @@ class OsDetectionMiddleware:
             name_path = match.url_name
         except:
             pass
-        if not 'Android' in user_agent and not 'iOS' in user_agent:    #IOS for debugging and testing    
+        if not 'Android' in user_agent and not 'ios' in user_agent:    #IOS for debugging and testing    
             if not (path in allowed_urls_web or name_path in allowed_urls_web):
                 return HttpResponseRedirect(reverse(main_url_web)) 
-        elif 'Android' in user_agent or 'iOS' in user_agent:        #IOS for debugging and testing
+        elif 'Android' in user_agent or 'ios' in user_agent:        #IOS for debugging and testing
             if(path in allowed_urls_android or name_path in allowed_urls_android):
                 if 'device_id' in request.COOKIES:
                     device_id = request.COOKIES.get('device_id')                
