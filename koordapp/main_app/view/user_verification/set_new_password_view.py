@@ -33,9 +33,9 @@ def set_new_password_view(request):
                     login(request, user)
                     return redirect("master_web")
                 else:
-                    messages.error(request,"Passwörter erfüllen nicht die bedingungen") 
+                    messages.error(request,"Passwörter erfüllen die Bedingungen nicht") 
             else:
-                messages.error(request,"Passwoörter stimmen nicht überein")
+                messages.error(request,"Passwörter stimmen nicht miteinander überein")
         else:
             pass    #Wenn kein OTP
 
