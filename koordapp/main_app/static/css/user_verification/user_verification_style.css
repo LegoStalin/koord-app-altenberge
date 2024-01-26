@@ -1,4 +1,14 @@
 /*general styles for all queries*/
+.errormessage{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--red_color);
+  font-size: 18px;
+  font-weight: 500;
+}
 
 .space_top {
   margin-top: 20vh;
