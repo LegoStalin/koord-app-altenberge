@@ -160,6 +160,7 @@
   margin: auto;
   width: 80%;
   height: 175px;
+  margin-top: 3vh;
 }
 .upload_button {
   display: flex;
