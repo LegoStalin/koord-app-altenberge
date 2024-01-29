@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added errormessage">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Changed assign button style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/preferences/preferences.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/preferences/preferences.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,15 +87,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="4521000" />
-    </task>
-    <task id="LOCAL-00008" summary="adjusted room_container">
-      <option name="closed" value="true" />
-      <created>1702111242173</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1702111242173</updated>
+      <workItem from="1706273092114" duration="27391000" />
     </task>
     <task id="LOCAL-00009" summary="adj">
       <option name="closed" value="true" />
@@ -479,7 +473,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706277133259</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Changed assign button style">
+      <option name="closed" value="true" />
+      <created>1706278173977</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1706278173977</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +499,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjusted block container" />
     <MESSAGE value="xml adjustments" />
     <MESSAGE value="updates" />
     <MESSAGE value="Initial setup of preferences" />
@@ -522,6 +523,7 @@
     <MESSAGE value="fixed line misplacement" />
     <MESSAGE value="removed pw from preferences" />
     <MESSAGE value="Added errormessage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added errormessage" />
+    <MESSAGE value="Changed assign button style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed assign button style" />
   </component>
 </project>

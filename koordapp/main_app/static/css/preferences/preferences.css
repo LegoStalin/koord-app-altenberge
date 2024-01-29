@@ -137,6 +137,7 @@
         justify-self: center;
     }
 
+
     /* Style of change button*/
     .change_button {
         background-color: var(--select_color_background);

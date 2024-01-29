@@ -50,6 +50,16 @@
                 <input type='submit' class="change_button" name="change_button_username" value='Ändern'/>
             </div>
             <div class = "line"></div>
+
+            <div class="inputblock">
+                <label class = "category">Passwort:</label>
+                <label class = "current">•••••••••</label>
+                <input type="text" class="inputfield" name="pw" placeholder="Neues Passwort.."/>
+
+                <input type='button' onclick="window.location.href = '/set_new_pw/'" class="change_button" name="new_pw" value='Ändern'/>
+            </div>
+            <div class = "line"></div>
+
             <div class="inputblock">
                 <label class = "category">Vorname:</label>
                 <label class = "current">{{nutzer.vorname}}</label>
