@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required, permission_required
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.views import View
@@ -23,19 +23,23 @@ def set_new_password_view(request):
         if(Personal.objects.filter(user=user).exists()):
             personal = Personal.objects.get(user=user)
             passwort1 = request.POST["new_password"]
-            passwort2 = request.POST["repeat_new_password"]
+            passwort2 = request.POST["repeat_new_password"]         
             if(passwort1 == passwort2):
-                if(len(str(passwort1))>=5):       # TODO: Passwort requirements                       
-                    user.set_password(passwort1)
-                    user.save()
-                    personal.is_password_otp = False
-                    personal.save()
-                    login(request, user)
-                    return redirect("master_web")
+                passwort1 = passwort1.replace(" ", "")
+                if(passwort1 == passwort2):
+                    if(len(str(passwort1))>=5):       # TODO: Passwort requirements                       
+                        user.set_password(passwort1)
+                        user.save()
+                        personal.is_password_otp = False
+                        personal.save()
+                        login(request, user)
+                        return redirect("master_web")
+                    else:
+                        messages.error(request,"Es wurden nicht alle Passwortbedingungen erfüllt: Länge größer 5 Zeichen") 
                 else:
-                    messages.error(request,"Der eingegebene Benutzername oder das eingegebene Passwort sind nicht korrekt") 
+                    messages.error(request,"Die Passwörter dürfen keine Leerzeichen enthalten")
             else:
-                messages.error(request,"Der eingegebene Benutzername oder das eingegebene Passwort sind nicht korrekt")
+                messages.error(request,"Die beiden Passwörter stimmen nicht überein")
         else:
             pass    #Wenn kein OTP
 
