@@ -22,6 +22,10 @@ def pupil_view(request, pupil):
                     aktuelle_ag = "Keine"
                     if schueler.angemeldet == True:
                         aufenthalt = "Nicht bekannt"
+                        if(schueler.wc == True):
+                            aufenthalt = "Toilette"
+                        if(schueler.schulhof == True):
+                            aufenthalt = "Schulhof"
                         if(Aufenthalt.objects.filter(schueler_id=schueler, zeitraum__endzeit__isnull = True).exists()):
                             aufenthalt = Aufenthalt.objects.get(schueler_id=schueler, zeitraum__endzeit__isnull = True)
                             raum = aufenthalt.raum_id

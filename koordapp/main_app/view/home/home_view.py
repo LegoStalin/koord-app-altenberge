@@ -30,7 +30,11 @@ def home_view(request):
                             zeitraum.save()
                         if(schueler.angemeldet == False):
                             schueler.angemeldet = True
-                            schueler.save()
+                        if(schueler.wc == True):
+                            schueler.angemeldet = False
+                        if(schueler.schulhof == True):
+                            schueler.angemeldet = False
+                        schueler.save()
                         zeitraum = Zeitraum.objects.create(startzeit = datetime.now().time(), endzeit = None)
                         Aufenthalt.objects.create(raum_id=raum, zeitraum=zeitraum, schueler_id=schueler, tag=datetime.now().date())
                         return redirect('checked_in')
