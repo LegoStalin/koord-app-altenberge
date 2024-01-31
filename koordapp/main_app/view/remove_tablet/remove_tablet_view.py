@@ -1,11 +1,13 @@
 from django.shortcuts import redirect, render
 from main_app.models import Raum_Belegung, Aufenthalt, Raum_Historie
 from datetime import datetime
+from django.contrib.auth import logout
 
 def remove_tablet_view(request):
     if request.method == 'POST':
         if 'submit_rr' in request.POST:
             device_id = request.COOKIES.get('device_id')
+            logout(request)
             return remove_tablet(request, device_id)
         elif 'abort_rr' in request.POST:
             return redirect('master_tablet')
