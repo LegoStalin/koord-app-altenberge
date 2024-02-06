@@ -22,6 +22,7 @@
         padding-left: 20px;
         color: var(--font_color);
         justify-self: center;
+        overflow-x: auto;
     }
 
     /* Style of change button*/
@@ -33,7 +34,7 @@
         font-size: 1.5rem;
         font-weight: 600;
         height: 50px;
-        width: 120px;
+        width: 150px;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 
         justify-self: end;
@@ -45,7 +46,8 @@
         font-weight: 400;
         color: var(--font_color);
         align-self: center;
-        width: 250px;
+        width: 200px;
+
     }
 
     /* Style of inputfield */
@@ -59,6 +61,7 @@
         padding-left: 20px;
         color: var(--font_color);
         justify-self: center;
+        overflow-x: auto;
     }
 
     /* TABLE STYLE */
@@ -77,7 +80,7 @@
         font-weight: 600;
         color: var(--font_color);
         align-self: center;
-        width: 200px;
+        width: 150px;
     }
 
     .current_header {
@@ -165,7 +168,7 @@
         font-size: 1.5rem;
         font-weight: 600;
         height: 50px;
-        width: 120px;
+        width: 150px;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         justify-self: end;
         opacity: 0.5;
@@ -214,6 +217,7 @@
         padding-left: 20px;
         color: var(--font_color);
         justify-self: center;
+        overflow-x: auto;
     }
 
     /* Style of change button*/
@@ -251,6 +255,7 @@
         padding-left: 20px;
         color: var(--font_color);
         justify-self: center;
+        overflow-x: auto;
     }
 
 
@@ -404,6 +409,7 @@
         padding-left: 5px;
         color: var(--font_color);
         justify-self: center;
+        overflow-x: auto;
     }
 
     /* Style of change button*/
@@ -417,7 +423,7 @@
         height: 30px;
         width: 60px;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-        justify-self: end;
+        justify-self: center;
     }
 
     /* Style of text in front of input field*/
@@ -427,6 +433,7 @@
         color: var(--font_color);
         align-self: center;
         width: 80px;
+
     }
 
     /* Style of inputfield */
@@ -440,6 +447,7 @@
         padding-left: 5px;
         color: var(--font_color);
         justify-self: center;
+        overflow-x: auto;
     }
 
 
@@ -543,7 +551,7 @@
         height: 30px;
         width: 60px;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-        justify-self: end;
+        justify-self: center;
         opacity: 0.5;
     }
     /* Style of Dropdown Select */

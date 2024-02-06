@@ -22,7 +22,7 @@
     /* Style of search button*/
     .search_button {
         background-color: var(--blue_color);
-        color: whitesmoke;
+        color: var(--background_color);
         border-radius: 10px;
         font-size: 1.5rem;
         font-weight: 600;
@@ -186,7 +186,7 @@
     /* Style of search button*/
     .search_button {
         background-color: var(--blue_color);
-        color: whitesmoke;
+        color: var(--background_color);
         border-radius: 10px;
         font-size: 22px;
         font-weight: 600;
@@ -277,7 +277,7 @@
         border-radius: 10px;
         border: none;
         background-color: var(--inputfield_background);
-        font-size: 20px;
+        font-size: 17px;
         padding-left: 20px;
         color: var(--font_color);
         justify-self: center;
@@ -285,7 +285,7 @@
     /* Style of search button*/
     .search_button {
         background-color: var(--blue_color);
-        color: whitesmoke;
+        color: var(--background_color);
         border-radius: 10px;
         font-size: 18px;
         font-weight: 600;
@@ -317,7 +317,7 @@
     /* Style of listblock */
     .text_pupil {
         margin-top: 20px;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         color: var(--font_color);
         margin-left: 30px;
@@ -359,13 +359,12 @@
     /* Style of listblock transparent*/
     .text_pupil_transp {
         margin-top: 20px;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 500;
         color: #8f8f8f;
         margin-left: 30px;
         height: 1.6em;
         width: 400px;
-
     }
     .pupil_container_transp {
         display: flex;
