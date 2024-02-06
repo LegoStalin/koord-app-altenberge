@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added password change in preferences">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/dashboard/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/dashboard/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/dashboard/dashboard.html" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Changed Activity Labels">
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,15 +86,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="88475000" />
-    </task>
-    <task id="LOCAL-00010" summary="further development of room container and buttons">
-      <option name="closed" value="true" />
-      <created>1702143578135</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1702143578135</updated>
+      <workItem from="1706273092114" duration="88858000" />
     </task>
     <task id="LOCAL-00011" summary="unversioned files">
       <option name="closed" value="true" />
@@ -481,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706548328969</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Changed Activity Labels">
+      <option name="closed" value="true" />
+      <created>1707240571954</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1707240571954</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updates" />
     <MESSAGE value="Initial setup of preferences" />
     <MESSAGE value="Developed first media query for PC" />
     <MESSAGE value="First draft of new dropdowns" />
@@ -524,6 +522,7 @@
     <MESSAGE value="Added errormessage" />
     <MESSAGE value="Changed assign button style" />
     <MESSAGE value="Added password change in preferences" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added password change in preferences" />
+    <MESSAGE value="Changed Activity Labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Activity Labels" />
   </component>
 </project>
