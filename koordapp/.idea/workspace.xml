@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Changed assign button style">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Added password change in preferences">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/preferences/preferences.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/preferences/preferences.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/dashboard/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/dashboard/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/dashboard/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,15 +87,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="27391000" />
-    </task>
-    <task id="LOCAL-00009" summary="adj">
-      <option name="closed" value="true" />
-      <created>1702111662377</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1702111662377</updated>
+      <workItem from="1706273092114" duration="88475000" />
     </task>
     <task id="LOCAL-00010" summary="further development of room container and buttons">
       <option name="closed" value="true" />
@@ -481,7 +473,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706278173977</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Added password change in preferences">
+      <option name="closed" value="true" />
+      <created>1706548328969</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1706548328969</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +499,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="xml adjustments" />
     <MESSAGE value="updates" />
     <MESSAGE value="Initial setup of preferences" />
     <MESSAGE value="Developed first media query for PC" />
@@ -524,6 +523,7 @@
     <MESSAGE value="removed pw from preferences" />
     <MESSAGE value="Added errormessage" />
     <MESSAGE value="Changed assign button style" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed assign button style" />
+    <MESSAGE value="Added password change in preferences" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added password change in preferences" />
   </component>
 </project>
