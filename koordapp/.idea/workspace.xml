@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixes">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixed name rooms information">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,15 +85,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="99995000" />
-    </task>
-    <task id="LOCAL-00014" summary="Created first Draft for create_activity Page">
-      <option name="closed" value="true" />
-      <created>1702212738931</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1702212738931</updated>
+      <workItem from="1706273092114" duration="100839000" />
     </task>
     <task id="LOCAL-00015" summary="Created new header with Back Button">
       <option name="closed" value="true" />
@@ -480,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707316989878</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="fixed name rooms information">
+      <option name="closed" value="true" />
+      <created>1707318581200</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1707318581200</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed subline issue of choose_room" />
     <MESSAGE value="Fixed help banner issue of choose_room" />
     <MESSAGE value="Added back button of master_tablet" />
     <MESSAGE value="FIxed help text of master_tablet" />
@@ -523,6 +521,7 @@
     <MESSAGE value="Opacity changes" />
     <MESSAGE value="Overflow Fixes" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="fixed name rooms information" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed name rooms information" />
   </component>
 </project>
