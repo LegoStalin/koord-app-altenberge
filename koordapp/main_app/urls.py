@@ -36,6 +36,7 @@ urlpatterns = [
     path('set_nfc_scan/', views.set_nfc_scan, name='set_nfc_scan'),
     path('search_pupil/', views.search_pupil, name='search_pupil'),
     path('dashboard/', views.dashboard, name='dashboard'),
+    path('food_history/<int:pupil>', views.food_history, name='food_history'),
 ]
 
 
@@ -85,5 +86,6 @@ allowed_urls_web = [
     'feedback_history',
     'search_pupil',
     'dashboard',
+    'food_history',
     ]
 main_url_web = 'master_web'

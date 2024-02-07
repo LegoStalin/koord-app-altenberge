@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, login
-from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitraum, Personal
+from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitraum, Personal, Feedback
 from datetime import datetime
 from main_app.view.user_verification.login_view import logout_user_from_all_sessions
 
@@ -40,7 +40,7 @@ def home_view(request):
                         zeitraum = Zeitraum.objects.create(startzeit = datetime.now().time(), endzeit = None)
                         Aufenthalt.objects.create(raum_id=raum, zeitraum=zeitraum, schueler_id=schueler, tag=datetime.now().date())
                         if "mensa" in raum.raum_nr or "Mensa" in raum.raum_nr:
-                            return redirect('mensa')
+                            Feedback.objects.create(feedback_wert = Feedback.Feedbacks.GOOD, schueler_id = schueler, tag = datetime.now().date(), zeit=datetime.now().time(), mensa_feedback=True)
                         return redirect('checked_in')
                 else:
                     if(Personal.objects.filter(nutzer=nutzer).exists()):

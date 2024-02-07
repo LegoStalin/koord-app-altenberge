@@ -35,19 +35,19 @@
         <div class="selection_board">
             <div class="button_container_row">
                 <div class="button_container_icon" id="very_well_smiley"  onclick="location.href='{% url 'go_home_feedback' feedback='good' %}';">
-                    <a href="{{url}}good" id="icon_button_style">
+                    <a href="/go_home/good" id="icon_button_style">
                         <img src="{% static 'img/smiley.png' %}"" >
                         <p class="icon_description">Sehr gut!</p> 
                     </a>
                 </div>  
                 <div class="button_container_icon" id="okay_smiley" onclick="location.href='{% url 'go_home_feedback' feedback='medium' %}';">
-                    <a href="{{url}}medium" id="icon_button_style">
+                    <a href="/go_home/medium" id="icon_button_style">
                         <img src="{% static 'img/smiley.png' %}""> 
                         <p class="icon_description">Okay!</p>
                     </a>
                 </div>
                 <div class="button_container_icon" id="bad_smiley" onclick="location.href='{% url 'go_home_feedback' feedback='bad' %}';">
-                    <a href="{{url}}bad" id="icon_button_style"> 
+                    <a href="/go_home/bad" id="icon_button_style"> 
                         <img src="{% static 'img/bad_smiley.png' %}">
                         <p class="icon_description">Meh!</p> 
                     </a>   
