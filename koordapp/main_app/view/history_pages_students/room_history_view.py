@@ -19,15 +19,16 @@ def room_history_view(request, pupil):
                 kategorie = "Gruppenraum"
                 raum_historie = None
                 if not endzeit == None:
-                    endzeit = endzeit.strftime("%H:%M")
+                    #endzeit = endzeit.strftime("%H:%M")
                     if(Raum_Historie.objects.filter(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__gte=endzeit).exists()):
-                        raum_historie = Raum_Historie.objects.get(raum=raum,zeitraum__startzeit__lt=startzeit,zeitraum__endzeit__gte=endzeit)
+                        raum_historie = Raum_Historie.objects.get(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__gte=endzeit)
                         if not raum_historie.ag_kategorie == None:
                             kategorie = raum_historie.ag_kategorie.name
                     if(Raum_Belegung.objects.filter(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__isnull=True).exists()):
                         r_b = Raum_Belegung.objects.get(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__isnull=True)
                         if not r_b.ag.ag_kategorie == None:
                             kategorie = r_b.ag.ag_kategorie.name
+                    endzeit = endzeit.strftime("%H:%M")
                 elif(Raum_Belegung.objects.filter(raum=raum).exists()):
                     r_b = Raum_Belegung.objects.get(raum=raum)
                     endzeit = "In Benutzung"

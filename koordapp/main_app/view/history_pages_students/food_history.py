@@ -24,7 +24,8 @@ def food_history_view(request, pupil):
             # lookup feedbacks contains an element where feedback.tag == date
             
 
-    return render(request, "history_pages/food_history.html", {'pupil':pupil, "hist":hist})
+        return render(request, "history_pages/food_history.html", {'pupil':pupil, "hist":hist, "nutzer":nutzer})
+    return redirect('master_web')
 
 class Tup:
     def __init__(self, date, feed):

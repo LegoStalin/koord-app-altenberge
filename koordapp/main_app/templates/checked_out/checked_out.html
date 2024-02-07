@@ -32,7 +32,12 @@
         <h1 class="default_heading_mid"> Tschüss {{nutzer.vorname}}! </h1>
         <img src="{% static 'img/checked_out.png' %}" alt="Checked-Out" class="checked_in_out_logo">
     </div>
-    <script type="module" src="{% static 'js/cancel_scan_tag.js' %}"></script>
+    <form method="post" id="form">
+        {% csrf_token %}
+        <input type="hidden" name="tag_id" id="tag_id" value="">
+        <!--<input type="submit" value="">-->
+    </form>
+    <script type="module" src="{% static 'js/home_scan_tag.js' %}"></script>
     </body>
     </html>
 {% endblock %}
