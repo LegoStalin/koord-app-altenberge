@@ -31,8 +31,8 @@
 
         <h1 class="heading_2"> Dashboard</h1>
         <h2 class="subheading_2"> Aktueller Überblick </h2>
-
         <div class = "information_container">
+            {% if not ogs_group == None %}
             <div class =  "information_row">
                 <label class = "header">OGS-Gruppe</label>
                 <div class  =  "row">
@@ -50,7 +50,7 @@
                     <label class = "value"> {{students_at_home}} </label>
                 </div>
             </div>
-
+            {% endif %}
             <p class = "inlineheader">Raumverfügbarkeit</p>
 
             <div class = "rooms">

@@ -4,4 +4,5 @@ from django.contrib.auth.decorators import login_required
 
 # @login_required(login_url="/login")
 def choose_room_view(request):  
-    return render(request, "choose_room/choose_room.html", {"rooms":Raum.objects.all(),"room_occupancy":Raum_Belegung.objects.all(),"username":request.user.username, "groups":Gruppe.objects.all()})
+    sorted_rooms = Raum.objects.all().order_by('raum_nr')
+    return render(request, "choose_room/choose_room.html", {"rooms":sorted_rooms,"room_occupancy":Raum_Belegung.objects.all(),"username":request.user.username, "groups":Gruppe.objects.all()})

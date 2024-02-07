@@ -33,25 +33,55 @@
     <h1 class="heading_2"> Hauptansicht </h1>
     <h2 class="subheading_2"> Wählen Sie eine der folgenden Aktionen aus: </h2>
     <div class="selection_board">
-        <div class="button_container">
-            <button id="button_style1" onclick="window.location.href = '/dashboard/'"> Dashboard </button>
-            <button id="button_style1" onclick="window.location.href = '/ogs_group/'"> OGS-Gruppe </button>
-        </div>
-    
-        <div class="button_container">
-            <button id="button_style1" onclick="window.location.href = '/search_pupil/'"> Suche Kind </button>
-            <button id="button_style1" onclick="window.location.href = '/select_room/'"> Raumübersicht </button>
-        </div>
-    
-        <div class="button_container">
+
+        {% if not user.username == "root" %}
+            {% if has_ogs == True %}
+            <div class="button_container">
+                <button id="button_style1" onclick="window.location.href = '/dashboard/'"> Dashboard </button>
+                <button id="button_style1" onclick="window.location.href = '/ogs_group/'"> OGS-Gruppe </button>
+            </div>
+        
+            <div class="button_container">
+                <button id="button_style1" onclick="window.location.href = '/search_pupil/'"> Suche Kind </button>
+                <button id="button_style1" onclick="window.location.href = '/select_room/'"> Raumübersicht </button>
+            </div>
+        
+            <div class="button_container">
+                {% if user.is_superuser %}
+                <button id="button_style1" onclick="window.location.href = '/csv_import/'"> CSV-Import </button>
+                {% endif %}
+                <button id="button_style1" onclick="window.location.href = '/preferences/'"> Persönliche Einstellungen </button>
+            </div>
             {% if user.is_superuser %}
-            <button id="button_style1" onclick="window.location.href = '/csv_import/'"> CSV-Import </button>
+            <div class="button_container">
+                <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>
+            </div>
             {% endif %}
-            <button id="button_style1" onclick="window.location.href = '/preferences/'"> Persönliche Einstellungen </button>
-        </div>
-        {% if user.is_superuser %}
+            {% else %}
+            <div class="button_container">
+                <button id="button_style1" onclick="window.location.href = '/dashboard/'"> Dashboard </button>
+                <button id="button_style1" onclick="window.location.href = '/search_pupil/'"> Suche Kind </button>
+            </div>
+        
+            <div class="button_container">
+                <button id="button_style1" onclick="window.location.href = '/select_room/'"> Raumübersicht </button>
+                <button id="button_style1" onclick="window.location.href = '/preferences/'"> Persönliche Einstellungen </button>
+            </div>
+        
+            <div class="button_container">
+                {% if user.is_superuser %}
+                <button id="button_style1" onclick="window.location.href = '/csv_import/'"> CSV-Import </button>
+                <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>
+                {% endif %}
+            </div>
+            {% endif %}
+        {% else %}
         <div class="button_container">
+            <button id="button_style1" onclick="window.location.href = '/csv_import/'"> CSV-Import </button>
             <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>
+        </div>
+        <div class="button_container">
+            <button id="button_style1" onclick="window.location.href = '/set_new_pw/'"> Root Passwort Ändern </button>
         </div>
         {% endif %}
     </div>

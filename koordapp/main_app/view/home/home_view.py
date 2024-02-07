@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, login
 from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitraum, Personal
 from datetime import datetime
+from main_app.view.user_verification.login_view import logout_user_from_all_sessions
 
 def home_view(request):
     if request.user.is_authenticated:
@@ -41,6 +42,8 @@ def home_view(request):
                 else:
                     if(Personal.objects.filter(nutzer=nutzer).exists()):
                         p = Personal.objects.get(nutzer=nutzer)
+                        logout_user_from_all_sessions(p.user)
+                        request.session['was_logged_in'] = True
                         login(request, p.user)
                         return redirect("master_tablet")
     return render(request,"home/home.html", {"room":raum})

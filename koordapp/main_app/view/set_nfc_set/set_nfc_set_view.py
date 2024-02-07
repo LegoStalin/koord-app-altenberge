@@ -41,5 +41,6 @@ def set_nfc_set_view(request):
                     request.session['tag_id'] = None
                 else:
                     return redirect(request.path)
+        users = sorted(users, key=lambda user: (user.vorname, user.nachname))
         return render(request, 'set_nfc_set/set_nfc_set.html', {"id":tag_id, "users":users, "tag_username":tag_username})
     return redirect("set_nfc_scan")

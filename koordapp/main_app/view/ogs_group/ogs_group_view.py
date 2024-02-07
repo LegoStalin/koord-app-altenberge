@@ -28,5 +28,14 @@ def ogs_group_view(request):
     else:
         #fehler Nachricht?
         return redirect("master_web")
+    schueler_active = []
+    schueler_passiv = []
+    for s in schueler:
+        if s.angemeldet:
+            schueler_active.append(s)
+        else:
+            schueler_passiv.append(s)
+    schueler_active = sorted(schueler_active, key=lambda schueler: (schueler.user_id.vorname, schueler.user_id.nachname))
+    schueler_passiv = sorted(schueler_passiv, key=lambda schueler: (schueler.user_id.vorname, schueler.user_id.nachname))
 
-    return render(request, "ogs_group/ogs_group.html",{"schueler":schueler, "search":search, "group_name":gruppe.name})
+    return render(request, "ogs_group/ogs_group.html",{"schueler_active":schueler_active, "schueler_passiv":schueler_passiv, "search":search, "group_name":gruppe.name})

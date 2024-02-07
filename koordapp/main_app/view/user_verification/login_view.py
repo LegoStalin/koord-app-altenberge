@@ -1,8 +1,10 @@
-from django.contrib.auth import login as auth_login, authenticate
+from django.contrib.auth import login as auth_login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.shortcuts import render
+from django.contrib.sessions.models import Session
+from django.utils import timezone
 
 from main_app.models import Personal
 
@@ -18,6 +20,7 @@ def login_view(request):
                                     password=cleandata['password'])
                     if user is not None:
                         if user.is_active:
+                            logout_user_from_all_sessions(user)
                             auth_login(request, user)
                             if(Personal.objects.filter(user=user).exists()):
                                 personal = Personal.objects.get(user=user)
@@ -47,3 +50,25 @@ class LoginForm(AuthenticationForm):
         self.error_messages = {}
         self.fields['username'].label = "Benutzername"
         self.fields['password'].label = "Passwort"
+
+
+def logout_user_from_all_sessions(user):
+    # user_sessions = Session.objects.filter(expire_date__gte=timezone.now(), 
+    #                                        session_data__contains=user.pk)
+    # for s in user_sessions:
+    #     req = get_request_from_session(s)
+    #     if not req == None:
+    #         logout(req)
+    # user_sessions.delete()
+    # # print("logout user")
+    # [s.delete() for s in Session.objects.all() if s.get_decoded().get('_auth_user_id') == user.id]
+    all_sessions  = Session.objects.filter(expire_date__gte=timezone.now())
+    for session in Session.objects.all():
+        if str(user.pk) == session.get_decoded().get('_auth_user_id'):
+            session.delete()
+
+def get_request_from_session(session):
+    try:
+        return session.get_decoded()['_auth_user_id']
+    except Session.DoesNotExist:
+        return None

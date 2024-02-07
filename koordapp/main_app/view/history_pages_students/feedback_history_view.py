@@ -19,6 +19,7 @@ def feedback_history_view(request, pupil):
                 elif s_h.feedback_wert=="BAD":
                     feedback = ":("
                 hist.append(History(date=s_h.tag.strftime("%d.%m.%y"), time=s_h.zeit.strftime("%H:%M"),feedback=feedback))
+            hist = sorted(hist, key=custom_sort_key)
             return render(request, 'history_pages/feedback_history.html', {'hist':hist,'nutzer':nutzer,'pupil':pupil})
     return redirect("master_web")
 
@@ -27,3 +28,9 @@ class History:
         self.date = date
         self.time = time
         self.feedback = feedback
+
+def custom_sort_key(history):
+    now = datetime.now()
+    date_time_str = history.date + ' ' + history.time
+    history_time = datetime.strptime(date_time_str, "%d.%m.%y %H:%M")
+    return abs((history_time - now).total_seconds())

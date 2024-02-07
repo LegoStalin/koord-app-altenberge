@@ -19,10 +19,14 @@ def room_history_view(request, pupil):
                 raum_historie = None
                 if not endzeit == None:
                     endzeit = endzeit.strftime("%H:%M")
-                    if(Raum_Historie.objects.filter(raum=raum,zeitraum__startzeit__lt=startzeit,zeitraum__endzeit__gte=endzeit).exists()):
+                    if(Raum_Historie.objects.filter(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__gte=endzeit).exists()):
                         raum_historie = Raum_Historie.objects.get(raum=raum,zeitraum__startzeit__lt=startzeit,zeitraum__endzeit__gte=endzeit)
                         if not raum_historie.ag_kategorie == None:
                             kategorie = raum_historie.ag_kategorie.name
+                    if(Raum_Belegung.objects.filter(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__isnull=True).exists()):
+                        r_b = Raum_Belegung.objects.get(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__isnull=True)
+                        if not r_b.ag.ag_kategorie == None:
+                            kategorie = r_b.ag.ag_kategorie.name
                 elif(Raum_Belegung.objects.filter(raum=raum).exists()):
                     r_b = Raum_Belegung.objects.get(raum=raum)
                     endzeit = "In Benutzung"
@@ -32,6 +36,7 @@ def room_history_view(request, pupil):
                 
                 history = History(date=aufenthalt.tag.strftime("%d.%m.%y"),start_time=startzeit.strftime("%H:%M"),end_time=endzeit,kategorie=kategorie,raum=raum)
                 hist.append(history)
+            hist = sorted(hist, key=custom_sort_key)
             return render(request, 'history_pages/room_history.html', {"historys":hist,"user":nutzer, 'pupil':pupil})
     return redirect("master_web")
 
@@ -42,3 +47,9 @@ class History:
         self.end_time = end_time
         self.kategorie = kategorie
         self.raum = raum
+
+def custom_sort_key(history):
+    now = datetime.now()
+    date_time_str = history.date + ' ' + history.start_time
+    history_time = datetime.strptime(date_time_str, "%d.%m.%y %H:%M")
+    return abs((history_time - now).total_seconds())

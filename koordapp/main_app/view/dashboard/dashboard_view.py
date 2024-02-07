@@ -6,17 +6,23 @@ from main_app.models import Personal, Gruppe, Schueler, Aufenthalt, Raum_Belegun
 def dashboard_view(request):
     user = request.user
     personal = Personal.objects.get(user=user)
+
+    schuelers_in_room = {}
+    schuelers_at_home = {}
+    schuelers_in_movement = {}
+
     try:
         ogs_group = Gruppe.objects.get(gruppen_leiter=personal)
+        ogs_group_room = ogs_group.raum
+        schuelers = Schueler.objects.filter(gruppen_id=ogs_group)
+        schuelers_in_room = Aufenthalt.objects.filter(zeitraum__endzeit__isnull=True, schueler_id__in=schuelers, raum_id=ogs_group_room)
+        schuelers_at_home = schuelers.filter(angemeldet = False)
+        schuelers_in_movement = schuelers.filter(angemeldet=True)
+        schuelers_in_movement = schuelers_in_movement.exclude(id__in=schuelers_in_room.values('schueler_id'))
     except Gruppe.DoesNotExist:
         ogs_group = None
 
-    ogs_group_room = ogs_group.raum
-    schuelers = Schueler.objects.filter(gruppen_id=ogs_group)
-    schuelers_in_room = Aufenthalt.objects.filter(zeitraum__endzeit__isnull=True, schueler_id__in=schuelers, raum_id=ogs_group_room)
-    schuelers_at_home = schuelers.filter(angemeldet = False)
-    schuelers_in_movement = schuelers.filter(angemeldet=True)
-    schuelers_in_movement = schuelers_in_movement.exclude(id__in=schuelers_in_room.values('schueler_id'))
+    
 
     rooms_group_room = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Gruppenraum")
     rooms_learn = Raum_Belegung.objects.filter(ag__ag_kategorie__name="Lernen")
@@ -39,4 +45,5 @@ def dashboard_view(request):
                    "rooms_nature":len(rooms_nature),
                    "rooms_break":len(rooms_pause),
                    "rooms_other":len(rooms_other),
+                   "ogs_group":ogs_group,
                    })

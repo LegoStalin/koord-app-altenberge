@@ -22,4 +22,5 @@ def search_pupil_view(request):
                 if(search.lower() in name.lower()):
                     schueler2.append(schueler1)
             schueler = schueler2
+    schueler = sorted(schueler, key=lambda schueler: (schueler.user_id.vorname, schueler.user_id.nachname))
     return render(request, "search_pupil/search_pupil.html", {"schueler":schueler})
