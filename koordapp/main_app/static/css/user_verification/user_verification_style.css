@@ -89,6 +89,9 @@
   #display_otp_info {
     width: 70%;
   }
+  #display_otp_info > * {
+    flex: 0 1 35%;
+  }
 
   .form_container {
     display: flex;
@@ -139,14 +142,14 @@
   #user_login input[type="password"],
   #user_login input[type="email"],
   #user_login label {
-    font-size: 3vh;
+    font-size: 1.5em;
   }
 
   .form_fields p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
   }
 
@@ -180,7 +183,7 @@
   }
   #user_login input[type="text"],
   #user_login input[type="password"] {
-    width: 61%;
+    width: 50%;
   }
   #user_login input[type="email"] {
     width: min(64vw, 900px);
