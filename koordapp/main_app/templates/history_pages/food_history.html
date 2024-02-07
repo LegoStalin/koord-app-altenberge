@@ -38,12 +38,12 @@
                 <h3 class = "column_title_type1"> Gegessen?</h3>
             </div>
             <div class = "table_data">
-                <!--{%for room in rooms %} 
+                {%for t in hist %} 
                 <span class = "table_data_row">
-                   <span class="data_row_type1"> {{room.date}}</span>  <span class="data_row_type1">{{room.time}}</span> <span class="data_row_type1">{{room.number}}</span>
+                    <span class = "table_data_row"><h4 class="data_row_type1">{{t.date}}</h4> <h4 class="data_row_type1">{{t.feed}}</h4></span>
                 </span>
-                <{% endfor %}--> 
-                <span class = "table_data_row"><h4 class="data_row_type1">01.01.01</h4> <h4 class="data_row_type1">ja</h4></span>
+                {% endfor %}
+                <!--<span class = "table_data_row"><h4 class="data_row_type1">01.01.01</h4> <h4 class="data_row_type1">ja</h4></span>-->
             </div>
         </div>
 
