@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Changed assign button style">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Opacity changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/preferences/preferences.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/preferences/preferences.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/ogs_group/ogs_group.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/preferences/preferences.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/preferences/preferences.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/search_pupil/search_pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/search_pupil/search_pupil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/dashboard/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,31 +92,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="27391000" />
-    </task>
-    <task id="LOCAL-00009" summary="adj">
-      <option name="closed" value="true" />
-      <created>1702111662377</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1702111662377</updated>
-    </task>
-    <task id="LOCAL-00010" summary="further development of room container and buttons">
-      <option name="closed" value="true" />
-      <created>1702143578135</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1702143578135</updated>
-    </task>
-    <task id="LOCAL-00011" summary="unversioned files">
-      <option name="closed" value="true" />
-      <created>1702193190341</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1702193190341</updated>
+      <workItem from="1706273092114" duration="95106000" />
     </task>
     <task id="LOCAL-00012" summary="Bootstrap Backend Draft">
       <option name="closed" value="true" />
@@ -481,7 +462,31 @@
       <option name="project" value="LOCAL" />
       <updated>1706278173977</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Added password change in preferences">
+      <option name="closed" value="true" />
+      <created>1706548328969</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1706548328969</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Changed Activity Labels">
+      <option name="closed" value="true" />
+      <created>1707240571954</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1707240571954</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Opacity changes">
+      <option name="closed" value="true" />
+      <created>1707240938248</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1707240938248</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,9 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="xml adjustments" />
-    <MESSAGE value="updates" />
-    <MESSAGE value="Initial setup of preferences" />
     <MESSAGE value="Developed first media query for PC" />
     <MESSAGE value="First draft of new dropdowns" />
     <MESSAGE value="Fixed subline issue of choose_room" />
@@ -524,6 +526,9 @@
     <MESSAGE value="removed pw from preferences" />
     <MESSAGE value="Added errormessage" />
     <MESSAGE value="Changed assign button style" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed assign button style" />
+    <MESSAGE value="Added password change in preferences" />
+    <MESSAGE value="Changed Activity Labels" />
+    <MESSAGE value="Opacity changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Opacity changes" />
   </component>
 </project>

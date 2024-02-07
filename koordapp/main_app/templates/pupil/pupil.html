@@ -58,7 +58,7 @@
                     <label class = "current">{{schueler.gruppen_id.name}}</label>
                     <div class="custom-select">
                         <select name="ogs_group">
-                            <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                            <option value="0" style="color:#ffff00;">...</option>
                             {% for group in ogs_groups %}
                             <option value="{{group.name}}">{{group.name}}</option>
                             {% endfor %}
@@ -96,7 +96,7 @@
                     <label class = "current">{{schueler.klasse}}</label>
                     <div class="custom-select">
                         <select name="klasse">
-                            <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                            <option value="0" style="color:#ffff00;">...</option>
                             {% for klasse in klassen %}
                             <option value="{{klasse}}">{{klasse}}</option>
                             {% endfor %}
@@ -110,7 +110,7 @@
                     <label class = "current">{{bus_kind}}</label>
                     <div class="custom-select">
                         <select name="bus_kind">
-                            <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
+                            <option value="0" style="color:#ffff00;">...</option>
                             <option value="1">Ja</option>
                             <option value="2">Nein</option>
                         </select>
