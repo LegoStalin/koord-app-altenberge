@@ -3,13 +3,14 @@ from django.contrib.auth.decorators import login_required
 from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitraum, Feedback
 from datetime import datetime
 
+@login_required(redirect_field_name="login")
 def feedback_history_view(request, pupil):
     if(Nutzer.objects.filter(id=pupil).exists()):
         nutzer = Nutzer.objects.get(id=pupil)
         if(Schueler.objects.filter(user_id=nutzer).exists()):
             schueler = Schueler.objects.get(user_id=nutzer)
             hist = []
-            students_hist = Feedback.objects.filter(schueler_id = schueler)
+            students_hist = Feedback.objects.filter(schueler_id = schueler, mensa_feedback = False)
             for s_h in students_hist:
                 feedback = ""
                 if s_h.feedback_wert=="GOOD":

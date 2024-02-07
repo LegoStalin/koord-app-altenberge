@@ -59,6 +59,7 @@ def create_activity_view(request, raum):
                                     if AGKategorie.objects.filter(name=name_ag_kategorie).exists():
                                         ag_kategorie = AGKategorie.objects.get(name=name_ag_kategorie)
                                         name_activity = request.POST["activity"]
+                                        #hier
                                         zeitraum = Zeitraum.objects.create(startzeit=datetime.now().time(), endzeit=None)
                                         
                                         for p in aufsichtspersonen:
@@ -72,14 +73,14 @@ def create_activity_view(request, raum):
                                             return redirect("home")  # Weiterleitung bei erfolgreichen erstellen des raumes
                                     else:
                                         # Error message wen kategorie nicht existiert
-                                        messages.error(request, 'AG Kategorie existiert nicht')
+                                        messages.error(request, 'Bitte wählen sie eine AG Kategorie')
                                 else:
-                                    messages.error(request, 'Maximale Anzahl ist zu groß')
+                                    messages.error(request, 'Die angegebene Maximale Anzahl ist größer als die Raum Kapazität. Raum Kapazität: ' + raum.kapazitaet)
                             except ValueError:
                                 #error message wenn capazitaet keine Zahl ist!
-                                messages.error(request, 'Ungültige kapazitätsanzahl')
+                                messages.error(request, 'Bitte geben sie eine Maximale Anzahl an Teilnehmern an')
                         else:
-                            messages.error(request, 'Ungültige Personaleingabe')
+                            messages.error(request, 'Bitte wählen sie eine Aufsichtsperson aus')
                     elif ("button_add_personal" in request.POST):
                         last_item = default_personal_list[-1]
                         if not(last_item.personal_default=='0'):

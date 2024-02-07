@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitraum, Raum_Historie
 from datetime import datetime
 
+@login_required(redirect_field_name="login")
 def room_history_view(request, pupil):
     if(Nutzer.objects.filter(id=pupil).exists()):
         nutzer = Nutzer.objects.get(id=pupil)

@@ -86,6 +86,7 @@ class Feedback(models.Model):
     tag = models.DateField()
     zeit = models.TimeField()
     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
+    mensa_feedback = models.BooleanField(default=False)
 class Raum_Belegung(models.Model):
     tablet_id = models.CharField(max_length=200,null=True)
     raum = models.ForeignKey(Raum, on_delete=models.CASCADE)

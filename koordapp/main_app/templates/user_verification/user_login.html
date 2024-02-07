@@ -13,8 +13,11 @@
     <div class="block_container mid_container" id="user_login">
     
         <div class="header_container_back_help">
-            <button class="back invisible" onclick="window.location.href = 'http://127.0.0.1:8000/master_web/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
-
+            {% if back_button_login %}
+            <button class="back" onclick="window.location.href = '/home/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+            {% else %}
+            <button class="back invisible" onclick="window.location.href = 'http://127.0.0.1:8000/master_android/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+            {% endif %}
             <a class="question" href="#popup1">Hilfe</a>
 
             <div id="popup1" class="popup">

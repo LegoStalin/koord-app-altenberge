@@ -75,7 +75,11 @@
             <label class = "category">Maximale Kinderanzahl:</label>
             <input type="text" class="inputfield" name="capacity" placeholder="Maximal {{room.kapazitaet}}" {% if not default_capacity == None %} value="{{default_capacity}}" {%endif%} required/>
         </div>
-
+        {% for message in messages%}
+        <div class = "errormessage">
+            <p> {{message}} </p>
+        </div>
+        {% endfor %}
         <div class = "submit_container">
             <input class="submit_button" name="button_create_activity" value='Auswählen' id="NFC-btn" onclick="toggleNFCScanning();"/>
             <!--

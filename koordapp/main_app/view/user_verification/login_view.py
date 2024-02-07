@@ -40,7 +40,8 @@ def login_view(request):
     else:
         return redirect("master_web")
 
-    return render(request, "user_verification/user_login.html", {'form':form})
+    back_button = request.session.get("back_button_login", False)
+    return render(request, "user_verification/user_login.html", {'form':form, "back_button_login":back_button})
 
 
 class LoginForm(AuthenticationForm):

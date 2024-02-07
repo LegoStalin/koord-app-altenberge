@@ -8,6 +8,7 @@ from main_app.view.user_verification.login_view import logout_user_from_all_sess
 def home_view(request):
     if request.user.is_authenticated:
         logout(request)
+    request.session["back_button_login"] = True
     device_id = request.COOKIES.get('device_id')
     if not (Raum_Belegung.objects.filter(tablet_id=device_id).exists()):
         return redirect("choose_room")
@@ -38,6 +39,8 @@ def home_view(request):
                         schueler.save()
                         zeitraum = Zeitraum.objects.create(startzeit = datetime.now().time(), endzeit = None)
                         Aufenthalt.objects.create(raum_id=raum, zeitraum=zeitraum, schueler_id=schueler, tag=datetime.now().date())
+                        if "mensa" in raum.raum_nr or "Mensa" in raum.raum_nr:
+                            return redirect('mensa')
                         return redirect('checked_in')
                 else:
                     if(Personal.objects.filter(nutzer=nutzer).exists()):
