@@ -24,7 +24,7 @@ def create_activity_view(request, raum):
                     personallist = personallist.exclude(id__in=ap_ids)
                 if (Gruppe.objects.filter(raum=raum).exists()):
                     gruppe = Gruppe.objects.get(raum=raum)
-                    defaul_user = gruppe.gruppen_leiter
+                    # defaul_user = gruppe.gruppen_leiter
                 default_personal_list = [Tup(personal_default='0', value=0)]
                 default_capacity = None
                 default_ag_kategorie = None
@@ -42,7 +42,9 @@ def create_activity_view(request, raum):
                             p_in_form.append(aufsichtsperson)                      
                            
                         i += 1
-                    if("button_create_activity" in request.POST):                   
+                    a = request.POST.get('submit_through_button',None)
+
+                    if not a == None:                   
                         if(len(default_personal_list)>=1 and not default_personal_list[0].personal_default=="0"):
                             aufsichtspersonen = []
                             for tup in default_personal_list:

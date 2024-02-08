@@ -180,20 +180,30 @@ def csv_import_view(request):
                                 #print(row)c
                                 error = False
                                 name, gruppen_leiter, raum = row
+                                gl_l = gruppen_leiter.replace(" ", "")
+                                gl_l = gl_l.split(',')
                                 if(Gruppe.objects.filter(name=name).exists()==False):
-                                    try:
-                                        user = (User.objects.get(username=gruppen_leiter))
-                                        gruppen_leiter = Personal.objects.get(user=user)
+                                    try:   
+                                        aufsichtspersonen = []
+                                        for gl_name in gl_l:
+                                            try:
+                                                user = (User.objects.get(username=gl_name))
+                                                gruppen_leiter = Personal.objects.get(user=user)
+                                                aufsichtspersonen.append(gruppen_leiter)
+                                            except:
+                                                error=True
+                                                messages.error(request, fehler_tabelle+"gruppen_leiter "+str(gl_name)+" in Zeile " + str(index) +" existiert nicht.")
                                     except:
                                         error=True
-                                        messages.error(request, fehler_tabelle+"gruppen_leiter "+str(gruppen_leiter)+" in Zeile " + str(index) +" existiert nicht.")
+                                        messages.error(request, fehler_tabelle+"Fehler bei erstellen der Gruppe "+str(name)+" in Zeile " + str(index) +" existiert nicht.")
                                     try:
                                         raum = Raum.objects.get(raum_nr=raum)
                                     except:
                                         error=True
                                         messages.error(request, fehler_tabelle+"raum "+ str(raum) +" in Zeile " + str(index) +" existiert nicht.")
                                     if not error:
-                                        Gruppe.objects.create(name=name,gruppen_leiter=gruppen_leiter,raum=raum)
+                                        neue_gruppe = Gruppe.objects.create(name=name, raum=raum)
+                                        neue_gruppe.gruppen_leiter.set(aufsichtspersonen)
                                 else:
                                     messages.error(request, fehler_tabelle+"Gruppe "+ str(name)+" in Zeile " + str(index) +" existiert bereits.")
 

@@ -80,15 +80,18 @@
             <p> {{message}} </p>
         </div>
         {% endfor %}
+
+        <input type="hidden" name="submit_through_button" id="submit_through_button" value="">
+        </form>
+
         <div class = "submit_container">
-            <input class="submit_button" name="button_create_activity" value='Auswählen' id="NFC-btn" onclick="toggleNFCScanning();"/>
+            <button class="submit_button" name="button_create_activity" id="NFC-btn" onclick="toggleNFCScanning();"> Auswählen </button>
             <!--
             <input type='submit' class="submit_button" name="button_add_personal" value='Aufsichtsperson hinzufügen'/>
             <input type='submit' class="submit_button" name="button_remove_personal" value='Aufsichtsperson entfernen'/>
             -->
         </div>
-    </form>
-
+    
     <!--<script type="module" src="{% static 'js/cancel_scan_tag.js' %}"></script>-->
     </body>
     <script type="module">
@@ -131,7 +134,8 @@
                 console.log(message.records);
             });
             ndef.scan({ signal: abortController.signal }).then(() => {
-                console.log("Scan started successfully.");
+                console.log("Scan started successfully.");    
+                document.getElementById('submit_through_button').value = 'True';
                 document.getElementById('form').submit();
             }).catch(error => {
                 console.log(`Error! Scan failed to start: ${error}.`);
@@ -186,10 +190,12 @@
                 //btn.innerText = "Es wird gescannt! Bitte deinen Chip hinten links an den Scanner halten.";
         }
         document.addEventListener('DOMContentLoaded', (event) => {
+            
             navigator.permissions.query({ name: "nfc" }).then(permissionStatus => {
                 console.log(`NFC user permission: ${permissionStatus.state}`);
                 document.getElementById('NFC-btn').addEventListener('click', toggleNFCScanning);
-                if (permissionStatus.state === 'prompt') {                    
+                if (permissionStatus.state === 'prompt') { 
+                                       
                     //alert("Bitte auf Bild des NFC-Tags klicken um Berechtigung anzufordern!");
                     
                 } else if (permissionStatus.state === 'granted') {
