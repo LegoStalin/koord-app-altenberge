@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="tablet check in fixes">
+      <change afterPath="$PROJECT_DIR$/main_app/static/img/home.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/checked_in_out/checked_in_out_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/checked_in_out/checked_in_out_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/create_activity/create_activity_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/create_activity/create_activity_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/leave_room/leave_room.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/leave_room/leave_room.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/go_home/go_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/go_home/go_home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/leave_room/leave_room.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/leave_room/leave_room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,15 +92,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="112894000" />
-    </task>
-    <task id="LOCAL-00021" summary="First Version of ogs_group">
-      <option name="closed" value="true" />
-      <created>1703369636121</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1703369636121</updated>
+      <workItem from="1706273092114" duration="113709000" />
     </task>
     <task id="LOCAL-00022" summary="Added media queries, button revision and hover effects">
       <option name="closed" value="true" />
@@ -489,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707393463827</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="tablet check in fixes">
+      <option name="closed" value="true" />
+      <created>1707395089617</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1707395089617</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
