@@ -77,19 +77,15 @@
   margin-right: 11vw;
 }
 .mid_container {
-  margin-top: 15vh;
-  height: 60vh;
 }
 
 .default_heading_mid {
   text-align: center;
   font: 600 max(64px, 6vw) "Inter";
-  margin-bottom: min(30px, 3vw);
 }
 .default_subheading_mid {
   text-align: center;
   font: max(32px, 2vw) "Inter";
-  margin-bottom: min(30px, 3vw);
 }
 .icon_description,
 .icon_description a:hover {
