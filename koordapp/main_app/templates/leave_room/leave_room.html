@@ -71,7 +71,26 @@
         document.getElementById('leave_school_button').addEventListener('click', function() {
             submitForm(this.getAttribute('name'));
         });
+
+        
+        // Funktion zum Umleiten nach einer Verzögerung
+        function umleitungNachVerzögerung() {
+            // Warte 3 Sekunden (3000 Millisekunden)
+            setTimeout(function () {
+                // Umleitung zur gewünschten URL
+                submitForm('leave_room_button');
+            }, 5000);
+        }
+
+        // Diese Funktion wird aufgerufen, wenn das Dokument vollständig geladen ist
+        document.addEventListener('DOMContentLoaded', function () {
+            // Hier kannst du andere JavaScript-Aktionen für dein Template hinzufügen
+
+            // Starte die Verzögerung und Umleitung
+            umleitungNachVerzögerung();
+        });
     </script>
+
 
 </body>
 </html>

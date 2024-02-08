@@ -58,6 +58,7 @@ allowed_urls_android = [
     'checked_in',
     'leave_room',
     'set_nfc_scan',
+    'reset_pw_confirmation',
     ]
 main_url_android = 'master_tablet'
 

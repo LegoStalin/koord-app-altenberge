@@ -28,12 +28,12 @@ def login_view(request):
                                     return redirect("set_new_pw")
                             return redirect("master_web")
                     else:
-                        messages.error(request,"Benutzername oder Passwort Falsch")
+                        messages.error(request,"Benutzername oder Passwort falsch")
                         return redirect("login")
                 else:
-                    messages.error(request,"Benutzername oder Passwort Falsch")
+                    messages.error(request,"Benutzername oder Passwort falsch")
             except:
-                messages.error(request,"Benutzername oder Passwort Falsch")
+                messages.error(request,"Benutzername oder Passwort falsch")
         else:
             form=LoginForm()
             

@@ -37,13 +37,15 @@ def leave_room_view(request):
                             elif('toilet_button' == s):
                                 schueler.wc = True
                                 schueler.save() 
-                                request.session['tag_id'] = None  
-                                return redirect('home')
+                                return redirect('checked_out')
+                                # request.session['tag_id'] = None  
+                                # return redirect('home')
                             elif('school_yard_button' == s):  
                                 schueler.schulhof = True
                                 schueler.save()
-                                request.session['tag_id'] = None
-                                return redirect('home')
+                                return redirect('checked_out')
+                                # request.session['tag_id'] = None
+                                # return redirect('home')
                         else:
                             return redirect('checked_out')
                     elif(Personal.objects.filter(user=nutzer).exists()):
