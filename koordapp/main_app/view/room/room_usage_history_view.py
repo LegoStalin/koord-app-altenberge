@@ -36,16 +36,6 @@ def room_usage_history_view(request, raum):
             ag_kategorie = r_b.ag.ag_kategorie.name
             history = History(date, time, number, start_time, ag_kategorie)
             list_histories.append(history)
-        h1 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 5, datetime.now().strftime("%H:%M"), 'Sport')
-        h2 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 10, datetime.now().strftime("%H:%M"), 'Ernährung')
-        h3 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 8, datetime.now().strftime("%H:%M"), 'Gruppenraum')
-        h4 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 5, datetime.now().strftime("%H:%M"), 'Natur')
-        h5 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 1, datetime.now().strftime("%H:%M"), 'Kreativ')
-        list_histories.append(h1)
-        list_histories.append(h2)
-        list_histories.append(h3)
-        list_histories.append(h4)
-        list_histories.append(h5)
 
         list_histories = sorted(list_histories, key=custom_sort_key)
         return render(request, 'history_pages/room_usage_history.html', {"historien":list_histories,"raum":raum})
