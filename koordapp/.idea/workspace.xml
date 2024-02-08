@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="xml changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="login query fix">
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/static/css/user_verification/user_verification_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/user_verification/user_verification_style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,15 +86,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="107580000" />
-    </task>
-    <task id="LOCAL-00016" summary="Created Dropdown">
-      <option name="closed" value="true" />
-      <created>1702313296375</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1702313296375</updated>
+      <workItem from="1706273092114" duration="107904000" />
     </task>
     <task id="LOCAL-00017" summary="Finished Input Container">
       <option name="closed" value="true" />
@@ -480,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707319346931</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="login query fix">
+      <option name="closed" value="true" />
+      <created>1707389777126</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1707389777126</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed help banner issue of choose_room" />
     <MESSAGE value="Added back button of master_tablet" />
     <MESSAGE value="FIxed help text of master_tablet" />
     <MESSAGE value="Added logout button for master_web" />
@@ -523,6 +522,7 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="fixed name rooms information" />
     <MESSAGE value="xml changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml changes" />
+    <MESSAGE value="login query fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="login query fix" />
   </component>
 </project>

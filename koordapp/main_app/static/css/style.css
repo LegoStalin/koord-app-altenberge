@@ -516,6 +516,16 @@
     font-weight: 600;
     color: var(--font_color);
   }
+  .errormessage{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--red_color);
+    font-size: 24px;
+    font-weight: 500;
+  }
 }
 
 /* Tablet Ansicht */
@@ -852,6 +862,16 @@
     font-size: 23px;
     font-weight: 600;
     color: var(--font_color);
+  }
+  .errormessage{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--red_color);
+    font-size: 19px;
+    font-weight: 500;
   }
 }
 
@@ -1191,14 +1211,15 @@
     font-weight: 600;
     color: var(--font_color);
   }
+  .errormessage{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--red_color);
+    font-size: 15px;
+    font-weight: 500;
+  }
 }
-.errormessage{
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--red_color);
-  font-size: 18px;
-  font-weight: 500;
-}
+
