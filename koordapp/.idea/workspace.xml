@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Leave Room fixes and overflow fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" afterDir="false" />
-    </list>
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,15 +88,7 @@
       <workItem from="1702050840994" duration="1698000" />
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
-      <workItem from="1706273092114" duration="118015000" />
-    </task>
-    <task id="LOCAL-00024" summary=" Block container adjustment">
-      <option name="closed" value="true" />
-      <created>1703875465996</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1703875465996</updated>
+      <workItem from="1706273092114" duration="118348000" />
     </task>
     <task id="LOCAL-00025" summary="First version of select room and changes link from master overview">
       <option name="closed" value="true" />
@@ -485,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707400440204</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1707401354077</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1707401354077</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +516,6 @@
     <MESSAGE value="Changed Activity Labels" />
     <MESSAGE value="Opacity changes" />
     <MESSAGE value="Overflow Fixes" />
-    <MESSAGE value="fixes" />
     <MESSAGE value="fixed name rooms information" />
     <MESSAGE value="xml changes" />
     <MESSAGE value="login query fix" />
@@ -528,6 +524,7 @@
     <MESSAGE value="tablet check in fixes" />
     <MESSAGE value="Changed spelling" />
     <MESSAGE value="Leave Room fixes and overflow fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Leave Room fixes and overflow fixes" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
 </project>
