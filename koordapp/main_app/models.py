@@ -24,6 +24,7 @@ class Personal(models.Model):
     nutzer = models.ForeignKey(Nutzer, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null= True)    # null=True rausmachen
     is_password_otp = models.BooleanField(default=True)
+    vertretung = models.BooleanField(default=False)
 
     class Meta:
         permissions = [("can_import", "Can import excel data")]
@@ -38,7 +39,7 @@ class Raum(models.Model):
         return [a.schueler_id for a in aufenthalte]
 class Gruppe(models.Model):
     name = models.CharField(max_length=50)
-    gruppen_leiter = models.ForeignKey(Personal, on_delete=models.SET_NULL, null=True)        # ? mehere Gruppenleiter?
+    gruppen_leiter = models.ManyToManyField(Personal)        # ? mehere Gruppenleiter?
     raum = models.ForeignKey(Raum, on_delete=models.SET_NULL, null=True)
 
 class AGZeit(models.Model):

@@ -39,10 +39,15 @@
                 <button class="search_button">Suchen</button>
             </div>
 
-
+            {% if len_sa > 0 %}
             <div class = "no_results">
                 <p>Ihre Suche konnte keine Ergebnisse erzielen. Ist der Name korrekt geschrieben?</p>
             </div>
+            {% else %}
+            <div class = "no_results">
+                <p>Es konnten keine angemeldeten Schüler gefunden werden.</p>
+            </div>
+            {% endif %}
 
             <!--
             <div class = "no_results">
@@ -50,22 +55,14 @@
             </div>
             -->
 
-            {% for schuler in schueler%}
-            {% if schuler.angemeldet == True %}
+            {% for schuler in schueler_active %}
+            
             <div class = "pupil">
                 <div class="pupil_container">
                     <p class="text_pupil"> {{ schuler.user_id.vorname }} {{ schuler.user_id.nachname }} </p>
                     <button class="assign_button" onclick="location.href='{% url 'pupil' pupil=schuler.user_id.id %}';"> Auswählen </input>
                 </div>
             </div>
-            {% else %}
-            <div class = "pupil">
-                <div class="pupil_container_transp">
-                    <p class="text_pupil_transp"> {{ schuler.user_id.vorname }} {{ schuler.user_id.nachname }} </p>
-                    <button class="assign_button_transp" onclick="location.href='{% url 'pupil' pupil=schuler.user_id.id %}';"> Auswählen </button>
-                </div>
-            </div>
-            {% endif %}
             {% endfor %}
             <!--
                         <div class = "pupil">

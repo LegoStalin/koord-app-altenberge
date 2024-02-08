@@ -11,7 +11,7 @@ def ogs_group_view(request):
     if(Personal.objects.filter(user=user).exists()):
         personal = Personal.objects.get(user=user)
         if(Gruppe.objects.filter(gruppen_leiter=personal).exists()):
-            gruppe = Gruppe.objects.get(gruppen_leiter=personal)
+            gruppe = Gruppe.objects.filter(gruppen_leiter=personal)[0]
             schueler = Schueler.objects.filter(gruppen_id=gruppe)
             if request.method == 'POST':
                 search = request.POST.get('search')
