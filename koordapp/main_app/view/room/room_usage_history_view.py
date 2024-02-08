@@ -22,8 +22,9 @@ def room_usage_history_view(request, raum):
             #             number += 1
             schueler_ids = auf.values_list('schueler_id', flat=True)
             number = len(list(set(schueler_ids)))
+            ag_kategorie = raum_historie.ag_kategorie.name
 
-            history = History(date, time, number, start_time)
+            history = History(date, time, number, start_time, ag_kategorie)
             list_histories.append(history)
         if(Raum_Belegung.objects.filter(raum=raum).exists()):
             r_b = Raum_Belegung.objects.get(raum=raum)
@@ -32,19 +33,31 @@ def room_usage_history_view(request, raum):
             time = "Start - " + start_time
             kinder_in_raum = Aufenthalt.objects.filter(raum_id = raum, zeitraum__endzeit__isnull=True)      
             number = len(kinder_in_raum)
-            history = History(date, time, number, start_time)
+            ag_kategorie = r_b.ag.ag_kategorie.name
+            history = History(date, time, number, start_time, ag_kategorie)
             list_histories.append(history)
+        h1 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 5, datetime.now().strftime("%H:%M"), 'Sport')
+        h2 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 10, datetime.now().strftime("%H:%M"), 'Ernährung')
+        h3 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 8, datetime.now().strftime("%H:%M"), 'Gruppenraum')
+        h4 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 5, datetime.now().strftime("%H:%M"), 'Natur')
+        h5 = History(datetime.now().strftime("%d-%m-%y"), datetime.now().strftime("%H:%M"), 1, datetime.now().strftime("%H:%M"), 'Kreativ')
+        list_histories.append(h1)
+        list_histories.append(h2)
+        list_histories.append(h3)
+        list_histories.append(h4)
+        list_histories.append(h5)
 
         list_histories = sorted(list_histories, key=custom_sort_key)
         return render(request, 'history_pages/room_usage_history.html', {"historien":list_histories,"raum":raum})
     return redirect('master_web')
 
 class History:
-    def __init__(self, date, time, number, start_time):
+    def __init__(self, date, time, number, start_time, kategorie):
         self.date = date
         self.time = time
         self.number = number
         self.start_time = start_time
+        self.kategorie = kategorie
 
 def custom_sort_key(history):
     now = datetime.now()
