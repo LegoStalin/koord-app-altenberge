@@ -21,7 +21,10 @@ def room_history_view(request, pupil):
                 if not endzeit == None:
                     #endzeit = endzeit.strftime("%H:%M")
                     if(Raum_Historie.objects.filter(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__gte=endzeit).exists()):
-                        raum_historie = Raum_Historie.objects.get(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__gte=endzeit)
+                        if(len(Raum_Historie.objects.filter(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__gte=endzeit))>1):
+                            raum_historie = Raum_Historie.objects.filter(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__gte=endzeit)[0]
+                        else:
+                            raum_historie = Raum_Historie.objects.get(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__gte=endzeit)
                         if not raum_historie.ag_kategorie == None:
                             kategorie = raum_historie.ag_kategorie.name
                     if(Raum_Belegung.objects.filter(raum=raum,zeitraum__startzeit__lte=startzeit,zeitraum__endzeit__isnull=True).exists()):
