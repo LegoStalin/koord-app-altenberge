@@ -58,6 +58,11 @@
         <h2 class="default_subheading_mid">Wie war dein Tag heute?</h2>
     </div>
     </body>
-    <script type="module" src="{% static 'js/cancel_scan_tag.js' %}"></script>
+    <form method="post" id="form">
+        {% csrf_token %}
+        <input type="hidden" name="tag_id" id="tag_id" value="">
+        <!--<input type="submit" value="">-->
+    </form>
+    <script type="module" src="{% static 'js/home_scan_tag.js' %}"></script>
     </html>
 {% endblock %}

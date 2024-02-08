@@ -5,7 +5,7 @@ from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitrau
 from datetime import datetime
 from main_app.view.user_verification.login_view import logout_user_from_all_sessions
 
-def home_view(request):
+def home_view(request, tag_id = None):
     if request.user.is_authenticated:
         logout(request)
     request.session["back_button_login"] = True
@@ -15,7 +15,8 @@ def home_view(request):
     r_b = Raum_Belegung.objects.get(tablet_id=device_id)
     raum = r_b.raum
     if request.method == 'POST':
-        tag_id = request.POST.get('tag_id')
+        if(tag_id == None):
+            tag_id = request.POST.get('tag_id')
         request.session['tag_id'] = tag_id
         if(Aufenthalt.objects.filter(raum_id=raum, schueler_id__user_id__tag_id=tag_id, zeitraum__endzeit__isnull=True).exists()):
             return redirect("leave_room")
@@ -33,9 +34,9 @@ def home_view(request):
                         if(schueler.angemeldet == False):
                             schueler.angemeldet = True
                         if(schueler.wc == True):
-                            schueler.angemeldet = False
+                            schueler.wc = False
                         if(schueler.schulhof == True):
-                            schueler.angemeldet = False
+                            schueler.schulhof = False
                         schueler.save()
                         zeitraum = Zeitraum.objects.create(startzeit = datetime.now().time(), endzeit = None)
                         Aufenthalt.objects.create(raum_id=raum, zeitraum=zeitraum, schueler_id=schueler, tag=datetime.now().date())

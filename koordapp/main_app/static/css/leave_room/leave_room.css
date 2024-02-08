@@ -1,16 +1,22 @@
 .button_container_row {
   padding: 2vw 2vw 2vw 2vw;
-  width: 100%;
+  /*width: 100%;*/
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 1vh;
+  column-gap: 1vh;
+}
+.button_container_row > * {
+  flex: 0 1 min(40%, 30vh); /* This line ensures that each item will take up at least 50% of the container's width */
 }
 .button_container_icon {
   padding: 2vw 2vw 2vw 2vw;
   height: 27vh;
   width: 20vw;
-  border: 5px solid #000000;
+  border: 5px solid hsl(0, 0%, 0%);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -51,6 +57,12 @@
 }
 #school_yard_button:hover {
   background-color: var(--color_icon_school_yard2);
+}
+#leave_school_button {
+  background-color: var(--color_icon_leave_school);
+}
+#leave_school_button:hover {
+  background-color: var(--color_icon_leave_school2);
 }
 
 #school_yard_button:hover,
