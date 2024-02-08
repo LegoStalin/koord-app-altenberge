@@ -112,10 +112,9 @@
     margin-left: auto;
   }
   .heading_type1 {
-    font-size: 5vh;
+    font-size: 4em;
     font-weight: 600;
-    margin-bottom: 5vh;
-    margin-top: 20vh;
+    margin-bottom: 1vh;
   }
   .mid_container {
     height: 50vh;
@@ -132,15 +131,27 @@
   #user_login input[type="password"],
   #user_login input[type="email"],
   #user_login label {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .form_fields p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     width: 100%;
+    gap: 10%;
+  }
+  .buffer4space {
+    height: 14vh;
+    display: block;
+  }
+  .form_fields p label {
+    width: 30%;
+  }
+  .form_fields {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
   }
 
   .header_container {
@@ -152,7 +163,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 8vh;
     font-size: 2vh;
     gap: 1vh;
   }
@@ -173,7 +183,7 @@
   }
   #user_login input[type="text"],
   #user_login input[type="password"] {
-    width: 50%;
+    width: 60%;
   }
   #user_login input[type="email"] {
     width: min(64vw, 900px);
@@ -224,7 +234,7 @@
   }
 
   .heading_type1 {
-    font-size: 4.7vh;
+    font-size: 3.1em;
     font-weight: 600;
     margin-bottom: 5vh;
   }
@@ -233,7 +243,7 @@
   #user_login input[type="password"],
   #user_login input[type="email"],
   #user_login label {
-    font-size: 3vh;
+    font-size: 2em;
   }
   .form_fields p {
     display: flex;
@@ -241,6 +251,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    gap: 5%;
   }
 
   .header_container {
@@ -271,7 +282,7 @@
   }
   #user_login input[type="text"],
   #user_login input[type="password"] {
-    width: 61%;
+    width: 50%;
   }
   #pw_mail {
     display: flex;
@@ -295,7 +306,7 @@
   }
   #user_login input[type="password"],
   #user_login input[type="text"] {
-    height: 6vh;
+    height: 4vh;
   }
   .vertically_mid_container {
     margin-top: 15vh;
