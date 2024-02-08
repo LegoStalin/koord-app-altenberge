@@ -8,13 +8,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/leave_room/leave_room.css' %}"/>
 </head>
 
-<body>
-    <div class="header_container_back_help">
-        <!--<button class="back" onclick="window.location.href = 'http://127.0.0.1:8000/choose_room/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>-->
-        <button class="back invisible" onclick="window.location.href = 'http://127.0.0.1:8000/master_web/';"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
-        
+<body id="tabletbody">
 
-    </div>
     <form method='post' id="form1">{% csrf_token %}
     <div class="mid_container">
         <h1 class="default_heading_mid"> Tschüss {{nutzer.vorname}}! </h1>
@@ -25,7 +20,7 @@
                 <div class="button_container_icon" id="leave_room_button" name="leave_room_button">
                     <a id="icon_button_style">
                         <img src="{% static 'img/leave_room_icon.png' %}"">
-                        <p class="icon_description">Raum verlassen</p> 
+                        <p class="icon_description">Raum wechseln</p>
                     </a>
                 </div>  
                 <div class="button_container_icon" id="toilet_button" name="toilet_button">
@@ -42,7 +37,7 @@
                 </div>
                 <div class="button_container_icon" id="leave_school_button" name="leave_school_button">
                     <a id="icon_button_style">
-                        <img src="{% static 'img/home.jpeg' %}">
+                        <img src="{% static 'img/home.png' %}">
                         <p class="icon_description">Nach Hause</p>
                     </a>   
                 </div>

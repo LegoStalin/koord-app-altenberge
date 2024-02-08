@@ -10,7 +10,6 @@
   padding: 2vw 2vw 2vw 2vw;
   height: 27vh;
   width: 20vw;
-  border: 5px solid #000000;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -36,18 +35,21 @@
 
 #very_well_smiley {
   background-color: rgb(115, 207, 123);
+  box-shadow: 0px 8px 15px rgb(115, 207, 123);
 }
 #very_well_smiley:hover {
   background-color: rgba(115, 207, 123, 0.7);
 }
 #okay_smiley {
   background-color: rgb(214, 193, 117);
+  box-shadow: 0px 8px 15px rgb(214, 193, 117);
 }
 #okay_smiley {
   background-color: rgba(214, 193, 117, 0.7);
 }
 #bad_smiley {
   background-color: rgb(214, 117, 117);
+  ox-shadow: 0px 8px 15px rgb(214, 117, 117);
 }
 #bad_smiley {
   background-color: rgba(214, 117, 117, 0.7);
