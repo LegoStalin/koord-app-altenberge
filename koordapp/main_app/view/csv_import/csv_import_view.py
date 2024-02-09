@@ -73,7 +73,7 @@ def csv_import_view(request):
                                     error=True
                                     messages.error(request, fehler_tabelle+"rechte_gruppe "+str(rechte)+" vom Personal "+str(vorname)+" "+str(nachname)+" in Zeile " + str(index) +" existiert nicht. Options: (Admin, Gruppenleitung, Raumbetreuer, Ohne Rolle)")
                                 randompw = ''.join(random.choice(string.ascii_letters+string.digits) for _ in range(6))     #erstellung random passwort
-                                username = (vorname+nachname).lower()
+                                username = (str(vorname)+str(nachname)).lower()
                                 zahl = 0
                                 is_username_unique = False
                                 while not is_username_unique:
@@ -241,7 +241,7 @@ def csv_import_view(request):
         
         return render(request, 'csv_import/csv_import.html')
     else:
-        return redirect("master_web")
+        return redirect("csv_import")
     
 
 def create_ag_zeiten(list, day, ag):
