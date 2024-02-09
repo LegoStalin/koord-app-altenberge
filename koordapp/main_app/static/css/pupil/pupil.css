@@ -191,6 +191,16 @@
         padding-left: 20px;
         cursor: pointer;
     }
+    /* Style for else block in html - restricted view */
+    .information_row{
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        margin: 0em 0em 2% 0em;
+    }
+    .information_container{
+        margin-top: 30px;
+    }
 }
 
 /* Tablet Ansicht */
@@ -383,6 +393,15 @@
         padding-left: 20px;
         cursor: pointer;
     }
+    .information_row{
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        margin: 0em 0em 2% 0em;
+    }
+    .information_container{
+        margin-top: 30px;
+    }
 }
 
 /* Mobile Endgeräte Ansicht */
@@ -571,5 +590,15 @@
         font-size: 12px;
         padding-left: 20px;
         cursor: pointer;
+    }
+    .information_row {
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        margin: 0em 0em 20px 0em;
+    }
+
+    .information_container {
+        margin-top: 30px;
     }
 }

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixes" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/search_pupil/search_pupil.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/search_pupil/search_pupil.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
