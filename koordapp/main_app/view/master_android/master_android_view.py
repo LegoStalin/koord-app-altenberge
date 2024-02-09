@@ -7,5 +7,5 @@ def master_android_view(request):
     if request.user.is_authenticated:
         return render(request, 'master_android/master_tablet.html')
     else:
-        return redirect("login")
+        return redirect("home")
     

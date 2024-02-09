@@ -6,6 +6,10 @@ from django.db.models import Q
 @login_required(login_url="login")
 def search_pupil_view(request):
     schueler = Schueler.objects.all()
+    len_sa = 0
+    for s in schueler:
+        if s.angemeldet:
+            len_sa = len_sa + 1
     if request.method == 'POST':
         search = request.POST.get('search')
         if 'button_search' in request.POST:
@@ -20,4 +24,4 @@ def search_pupil_view(request):
         if s.angemeldet:
             schueler_active.append(s)
     schueler_active = sorted(schueler_active, key=lambda schueler: (schueler.user_id.vorname, schueler.user_id.nachname))
-    return render(request, "search_pupil/search_pupil.html", {"schueler":schueler, "schueler_active":schueler_active, "len_sa":len(schueler_active)})
+    return render(request, "search_pupil/search_pupil.html", {"schueler":schueler, "schueler_active":schueler_active, "len_sa":len_sa, "len_ss":len(schueler_active)})

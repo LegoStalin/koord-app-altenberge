@@ -34,18 +34,21 @@
 
 
         <div class = "list">
-            <div class = "searchcontainer">
-                <input type="text" class="searchbar" name="search" placeholder="Namen eingeben.." />
-                <button class="search_button">Suchen</button>
-            </div>
 
-            {% if len_sa > 0 %}
+            <form method="post">{% csrf_token %}
+            <div class = "searchcontainer">               
+                <input type="text" class="searchbar" name="search" placeholder="Namen eingeben.." />
+                <button type="submit" class="search_button" name="button_search">Suchen</button>              
+            </div>
+            </form>
+
+            {% if len_sa == 0 %}
+            <div class = "no_results">
+                <p>Alle Kinder sind bereits zuhause.</p>              
+            </div>
+            {% elif len_ss == 0 %}
             <div class = "no_results">
                 <p>Ihre Suche konnte keine Ergebnisse erzielen. Ist der Name korrekt geschrieben?</p>
-            </div>
-            {% else %}
-            <div class = "no_results">
-                <p>Alle Kinder sind bereits zuhause.</p>
             </div>
             {% endif %}
 

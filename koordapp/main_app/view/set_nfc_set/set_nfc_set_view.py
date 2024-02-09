@@ -14,11 +14,10 @@ def set_nfc_set_view(request):
         b = True
     if not tag_id == None:
         schueler = Schueler.objects.all()
-        users = [s.user_id for s in schueler]
+        s_users = [s.user_id for s in schueler]
         if request.user.is_superuser:
             personal = Personal.objects.all()
-            personal_users = [p.nutzer for p in personal]
-            users = list(chain(users, personal_users))
+            p_users = [p.nutzer for p in personal]
         tag_username = "Niemand"
         nutzer = None
         if(Nutzer.objects.filter(tag_id=tag_id).exists()):
@@ -27,12 +26,18 @@ def set_nfc_set_view(request):
         if request.method == 'POST' and b == False:
             search = request.POST.get('search')
             if 'button_search' in request.POST:
-                users2 = []
-                for user in users:
+                s_users2 = []
+                for user in s_users:
                     name = user.vorname + " " + user.nachname
                     if(search.lower() in name.lower()):
-                        users2.append(user)
-                users = users2
+                        s_users2.append(user)
+                s_users = s_users2
+                p_users2 = []
+                for user in p_users:
+                    name = user.vorname + " " + user.nachname
+                    if(search.lower() in name.lower()):
+                        p_users2.append(user)
+                p_users = p_users2
             if 'button_change_tag' in request.POST:
                 new_tag_owner_id = request.POST.get('button_change_tag')
                 if not nutzer == None:
@@ -47,6 +52,7 @@ def set_nfc_set_view(request):
                     request.session['tag_id'] = None
                 else:
                     return redirect(request.path)
-        users = sorted(users, key=lambda user: (user.vorname, user.nachname))
-        return render(request, 'set_nfc_set/set_nfc_set.html', {"id":tag_id, "users":users, "tag_username":tag_username})
+        s_users = sorted(s_users, key=lambda user: (user.vorname, user.nachname))
+        p_users = sorted(p_users, key=lambda user: (user.vorname, user.nachname))
+        return render(request, 'set_nfc_set/set_nfc_set.html', {"id":tag_id, "s_users":s_users,"p_users":p_users, "tag_username":tag_username})
     return redirect("set_nfc_scan")

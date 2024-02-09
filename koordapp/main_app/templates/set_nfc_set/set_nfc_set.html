@@ -49,7 +49,13 @@
             </div>
 
             <div class = "results">
-                {% for user in users %}
+                {% for user in p_users %}
+                <div class="pupil_container">
+                    <p class="text_pupil"> {{user.vorname}} {{user.nachname}} </p>
+                    <button class="assign_button_orange" name="button_change_tag" value="{{user.id}}" type="submit"> Zuweisen </button>
+                </div>
+                {% endfor %}
+                {% for user in s_users %}
                 <div class="pupil_container">
                     <p class="text_pupil"> {{user.vorname}} {{user.nachname}} </p>
                     <button class="assign_button" name="button_change_tag" value="{{user.id}}" type="submit"> Zuweisen </button>
