@@ -1,6 +1,8 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import Group
+from django.db.models.signals import pre_delete
+from django.dispatch import receiver
 
 
 # Create your models here.
@@ -74,7 +76,7 @@ class Schueler(models.Model):
     angemeldet = models.BooleanField(default=False)      # Ist kind überhaupt an diesem Tag in der OGS
     wc = models.BooleanField(default=False)
     schulhof = models.BooleanField(default=False)
-    user_id = models.ForeignKey(Nutzer, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(Nutzer, on_delete=models.SET_NULL, null=True)
     gruppen_id = models.ForeignKey(Gruppe, on_delete=models.CASCADE)
     ag_buchungen = models.ManyToManyField(AG)
 class Feedback(models.Model):
@@ -112,3 +114,9 @@ class Raum_Historie(models.Model):
 #     schueler_id = models.ForeignKey(Schueler, on_delete=models.CASCADE)
 #     ag_id = models.ForeignKey(AG, on_delete=models.CASCADE)
     
+@receiver(pre_delete, sender=Schueler)
+def delete_related_user(sender, instance, **kwargs):
+    if instance.user_id:
+        user = instance.user_id
+        instance.user_id = None  # Um eine Endlosschleife zu verhindern, setzen Sie das ForeignKey-Feld auf None
+        user.delete()

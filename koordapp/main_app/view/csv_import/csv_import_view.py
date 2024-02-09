@@ -29,7 +29,7 @@ def csv_import_view(request):
             
             if(excel_file.name.endswith(".xlsx")):              # check if xlsx datei
 
-                try:
+                # try:
                         wb = load_workbook(excel_file, read_only=True)  # save workbook as Excel Workbook (*.xlsx) and not as Strict Open XML Spreadsheet (*.xlsx)
                                 # Parameter setzten
                         
@@ -207,6 +207,7 @@ def csv_import_view(request):
                                     if not error:
                                         neue_gruppe = Gruppe.objects.create(name=name, raum=raum)
                                         neue_gruppe.gruppen_leiter.set(aufsichtspersonen)
+                                        neue_gruppe.save()
                                 else:
                                     messages.error(request, fehler_tabelle+"Gruppe "+ str(name)+" in Zeile " + str(index) +" existiert bereits.")
 
@@ -216,6 +217,7 @@ def csv_import_view(request):
                                 for s in Schueler.objects.all():
                                     nutzer = s.user_id
                                     s.delete()
+                                    print(nutzer.vorname + " " + nutzer.nachname)
                                     nutzer.delete()
                             wss = wb['Schueler']
                             for index, row in enumerate(wss.iter_rows(min_row=2, values_only=True)):              # Erstellung Nutzer
@@ -232,15 +234,16 @@ def csv_import_view(request):
                                     error=True
                                     messages.error(request, fehler_tabelle+"Gruppe "+str(gruppen_id)+" in Zeile " + str(index) +" existiert nicht.")
                                 new_nutzer = Nutzer.objects.create(vorname=vorname,nachname=nachname)
-                                Schueler.objects.create(klasse=klasse, bus_kind=bus_kind, name_eb=name_eb, kontakt_eb=kontakt_eb, user_id=new_nutzer,gruppen_id=gruppen_id)
-                  
+                                schueler = Schueler.objects.create(klasse=klasse, bus_kind=bus_kind, name_eb=name_eb, kontakt_eb=kontakt_eb, user_id=new_nutzer,gruppen_id=gruppen_id)
+                                schueler.save()
+
                         if 'option_user' in optionlist:
                             return response                            # Site after Download
                         return redirect('csv_import')
                     # return response           # Weiterleitung wenn alles funktioniert hat
-                except:
-                    messages.error(request, "Fehler bei importieren der Excel datei. Bitte überprüfe ob die Datei als 'Excel Arbeitsmappe (*.xlsx)' gespeichter ist, alle Tabellen die importier oder zurückgesetzt werden sollen existieren und ob die Spalten, wie in der Vorlage, richtig bennant sind.")              
-                    return redirect('master_web')      # Weiterleitung bei falscher xlsx datei
+                # except:
+                #     messages.error(request, "Fehler bei importieren der Excel datei. Bitte überprüfe ob die Datei als 'Excel Arbeitsmappe (*.xlsx)' gespeichter ist, alle Tabellen die importier oder zurückgesetzt werden sollen existieren und ob die Spalten, wie in der Vorlage, richtig bennant sind.")              
+                #     return redirect('master_web')      # Weiterleitung bei falscher xlsx datei
                                     
             print('Falscher Dateityp')        
             return render(request, 'csv_import/csv_import.html')      # Weiterleitung bei flaschen datei Typen
