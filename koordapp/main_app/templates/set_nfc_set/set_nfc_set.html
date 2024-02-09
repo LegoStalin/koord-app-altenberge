@@ -11,7 +11,7 @@
     <body>
 
     <div class="header_container_back_help">
-        <button class="back" onclick="window.location.href = '/master_web/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
+        <button class="back" onclick="window.location.href = '/set_nfc_scan/'"> <span class = "arrow"> <i class="arrow_left"></i> </span> <span class="backtext">Zurück</span>  </button>
 
         <a class="question" href="#popup1">Hilfe</a>
 
@@ -59,7 +59,12 @@
 
         </div>
     </form>
-    <script type="module" src="{% static 'js/cancel_scan_tag.js' %}"></script>
+    <form method="post" id="form">
+        {% csrf_token %}
+        <input type="hidden" name="tag_id" id="tag_id" value="">
+        <!--<input type="submit" value="">-->
+    </form>
+    <script type="module" src="{% static 'js/home_scan_tag.js' %}"></script>
     </body>
     </html>
 {% endblock %}

@@ -20,10 +20,16 @@
 }
 .column_title_type1,
 .data_row_type1 {
-  margin-left: 6%;
-  margin-right: 6%;
+  /* margin-left: 6%;
+  margin-right: 6%; */
   text-align: center;
+
   width: 20%;
+}
+
+.data_row_type1 h4 {
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .table_data {
@@ -51,16 +57,16 @@
   #room_history_row .data_row_type1 {
     font-size: 2.5vw;
   } */
-  .column_title_type1,
+  /* .column_title_type1,
   .data_row_type1 {
     margin-left: 3%;
     margin-right: 3%;
-  }
+  } */
   /*Phone extra Media Quarry*/
   @media only screen and (min-width: 400px) and (max-width: 700px) {
     .column_title_type1,
     .data_row_type1 {
-      font-size: 2.3vw;
+      font-size: 0.6em;
     }
   }
 }

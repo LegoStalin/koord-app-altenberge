@@ -36,15 +36,16 @@
             <div class =  "table_heading_row">
                 <h3 class = "column_title_type1"> Datum</h3>
                 <h3 class = "column_title_type1"> Uhrzeit</h3>
+                <h3 class = "column_title_type1"> Kategorie</h3>
                 <h3 class = "column_title_type1"> Anzahl <br> Kinder</h3>
             </div>
             <div class = "table_data">
                 {%for historie in historien %} 
                 <!--<span class = "table_data_row">-->
-                    <span class = "table_data_row"><h4 class="data_row_type1">{{historie.date}}</h4> <h4 class="data_row_type1">{{historie.time}}</h4> <h4 class="data_row_type1">{{historie.number}}</h4></span>
+                    <span class = "table_data_row"><h4 class="data_row_type1">{{historie.date}}</h4> <h4 class="data_row_type1">{{historie.time}}</h4> <h4 class="data_row_type1">{{historie.kategorie}}</h4> <h4 class="data_row_type1">{{historie.number}}</h4></span>
                     <!--<span class="data_row_type1"> {{historie.date}}</span>  <span class="data_row_type1">{{historie.time}}</span> <span class="data_row_type1">{{historie.number}}</span>-->
                 <!--</span>-->
-                {% endfor %} 
+                {% endfor %}
                 <!--<span class = "table_data_row"><h4 class="data_row_type1">01.01.01</h4> <h4 class="data_row_type1">14.15</h4> <h4 class="data_row_type1">7</h4></span>-->
             </div>
         </div>

@@ -62,24 +62,27 @@ def create_activity_view(request, raum):
                                         ag_kategorie = AGKategorie.objects.get(name=name_ag_kategorie)
                                         name_activity = request.POST["activity"]
                                         if(len(name_activity.strip(" "))>0):
-                                            zeitraum = Zeitraum.objects.create(startzeit=datetime.now().time(), endzeit=None)
-                                            
-                                            for p in aufsichtspersonen:
-                                                if not is_personal_avaiable(p):
-                                                    aufsichtspersonen.remove(p)
-                                            if(len(aufsichtspersonen)>=1):
-                                                ag = AG.objects.create(name=name_activity, max_anzahl=max_anzahl,offene_AG=True,leiter=aufsichtspersonen[0],ag_kategorie=ag_kategorie)
-                                                raum_belegung = Raum_Belegung.objects.create(raum=raum, ag=ag, tablet_id=device_id, zeitraum=zeitraum)
-                                                raum_belegung.aufsichtspersonen.add(*aufsichtspersonen)
-                                                raum_belegung.save()
-                                                return redirect("home")  # Weiterleitung bei erfolgreichen erstellen des raumes
+                                            if(max_anzahl>0):
+                                                zeitraum = Zeitraum.objects.create(startzeit=datetime.now().time(), endzeit=None)
+                                                
+                                                for p in aufsichtspersonen:
+                                                    if not is_personal_avaiable(p):
+                                                        aufsichtspersonen.remove(p)
+                                                if(len(aufsichtspersonen)>=1):
+                                                    ag = AG.objects.create(name=name_activity, max_anzahl=max_anzahl,offene_AG=True,leiter=aufsichtspersonen[0],ag_kategorie=ag_kategorie)
+                                                    raum_belegung = Raum_Belegung.objects.create(raum=raum, ag=ag, tablet_id=device_id, zeitraum=zeitraum)
+                                                    raum_belegung.aufsichtspersonen.add(*aufsichtspersonen)
+                                                    raum_belegung.save()
+                                                    return redirect("home")  # Weiterleitung bei erfolgreichen erstellen des raumes
+                                            else:
+                                                messages.error(request, 'Die Maximale Kapatizät muss größer als Null sein')
                                         else:
-                                            messages.error(request, 'Bitte gib einen Namen für die AG an')
+                                            messages.error(request, 'Bitte gib einen Namen für die Aktivität an')
                                     else:
                                         # Error message wen kategorie nicht existiert
-                                        messages.error(request, 'Bitte wählen sie eine AG Kategorie')
+                                        messages.error(request, 'Bitte wählen sie eine Aktivitätkategorie aus')
                                 else:
-                                    messages.error(request, 'Die angegebene Maximale Anzahl ist größer als die Raum Kapazität. Raum Kapazität: ' + str(raum.kapazitaet))
+                                    messages.error(request, 'Die angegebene maximale Anzahl ist größer als die Raum Kapazität. Raum Kapazität: ' + str(raum.kapazitaet))
                             except ValueError:
                                 #error message wenn capazitaet keine Zahl ist!
                                 messages.error(request, 'Bitte geben sie eine Maximale Anzahl an Teilnehmern an')
