@@ -37,6 +37,7 @@ urlpatterns = [
     path('search_pupil/', views.search_pupil, name='search_pupil'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('food_history/<int:pupil>', views.food_history, name='food_history'),
+    path('representation/', views.representation, name='representation'),
 ]
 
 
@@ -88,5 +89,6 @@ allowed_urls_web = [
     'search_pupil',
     'dashboard',
     'food_history',
+    'representation',
     ]
 main_url_web = 'master_web'
