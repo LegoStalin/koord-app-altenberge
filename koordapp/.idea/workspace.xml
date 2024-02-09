@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixes, pupil restricted view">
       <change beforePath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/pupil/pupil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/search_pupil/search_pupil.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/search_pupil/search_pupil.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,14 +91,6 @@
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
       <workItem from="1706273092114" duration="118348000" />
-    </task>
-    <task id="LOCAL-00025" summary="First version of select room and changes link from master overview">
-      <option name="closed" value="true" />
-      <created>1703921955537</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1703921955537</updated>
     </task>
     <task id="LOCAL-00026" summary="Created infomation lists according to media queries">
       <option name="closed" value="true" />
@@ -488,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707401354077</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="fixes, pupil restricted view">
+      <option name="closed" value="true" />
+      <created>1707500731854</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1707500731854</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed div hierarchy" />
     <MESSAGE value="Major fixes of tablet slides" />
     <MESSAGE value="Added hover animation of log in button" />
     <MESSAGE value="Changed Hover animations of csv page buttons" />
@@ -531,6 +526,7 @@
     <MESSAGE value="Changed spelling" />
     <MESSAGE value="Leave Room fixes and overflow fixes" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="fixes, pupil restricted view" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes, pupil restricted view" />
   </component>
 </project>

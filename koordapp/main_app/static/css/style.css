@@ -500,6 +500,7 @@
     padding-left: 20px;
     padding-right: 20px;
     color: var(--font_color);
+    overflow-x: auto;
   }
 
   .label_style2 {
@@ -515,6 +516,7 @@
     font-size: 26px;
     font-weight: 600;
     color: var(--font_color);
+    overflow-x: auto;
   }
   .errormessage{
     margin-top: 50px;
@@ -847,6 +849,7 @@
     padding-left: 20px;
     padding-right: 20px;
     color: var(--font_color);
+    overflow-x: auto;
   }
 
   .label_style2 {
@@ -862,6 +865,7 @@
     font-size: 23px;
     font-weight: 600;
     color: var(--font_color);
+    overflow-x: auto;
   }
   .errormessage{
     margin-top: 50px;
@@ -1195,6 +1199,7 @@
     padding-left: 20px;
     padding-right: 20px;
     color: var(--font_color);
+    overflow-x: auto;
   }
 
   .label_style2 {
@@ -1210,6 +1215,7 @@
     font-size: 19px;
     font-weight: 600;
     color: var(--font_color);
+    overflow-x: auto;
   }
   .errormessage{
     margin-top: 50px;
