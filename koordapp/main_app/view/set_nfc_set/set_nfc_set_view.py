@@ -7,8 +7,11 @@ from itertools import chain
 @login_required(redirect_field_name="login")
 def set_nfc_set_view(request):
     tag_id = request.session.get('tag_id', None)
+    b = False
     if not request.POST.get('tag_id', None) == None:
         tag_id = request.POST.get('tag_id')
+        request.session['tag_id'] = tag_id
+        b = True
     if not tag_id == None:
         schueler = Schueler.objects.all()
         users = [s.user_id for s in schueler]
@@ -21,7 +24,7 @@ def set_nfc_set_view(request):
         if(Nutzer.objects.filter(tag_id=tag_id).exists()):
             nutzer = Nutzer.objects.get(tag_id=tag_id)
             tag_username = nutzer.vorname + " " + nutzer.nachname
-        if request.method == 'POST':
+        if request.method == 'POST' and b == False:
             search = request.POST.get('search')
             if 'button_search' in request.POST:
                 users2 = []
@@ -35,6 +38,7 @@ def set_nfc_set_view(request):
                 if not nutzer == None:
                     nutzer.tag_id = None
                     nutzer.save()
+                    request.session['tag_id'] = None
                 if Nutzer.objects.filter(id=new_tag_owner_id).exists():
                     new_nutzer = Nutzer.objects.get(id=new_tag_owner_id)
                     tag_username = new_nutzer.vorname + " " + new_nutzer.nachname

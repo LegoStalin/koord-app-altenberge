@@ -50,7 +50,10 @@ def csv_import_view(request):
 
                         if 'option_user' in optionlist:
                             if 'option_overwrite' in optionlist_reset:
-                                Personal.objects.all().delete()
+                                for p in Personal.objects.all():
+                                    nutzer = p.nutzer
+                                    p.delete()
+                                    nutzer.delete()
                                 for user in User.objects.all():
                                     if not user.username == "root":
                                         user.delete()
@@ -210,7 +213,10 @@ def csv_import_view(request):
                         if 'option_pupil' in optionlist:
                             fehler_tabelle='Fehler in Tabelle Schueler: '
                             if 'option_overwrite' in optionlist_reset:
-                                Schueler.objects.all().delete()
+                                for s in Schueler.objects.all():
+                                    nutzer = s.user_id
+                                    s.delete()
+                                    nutzer.delete()
                             wss = wb['Schueler']
                             for index, row in enumerate(wss.iter_rows(min_row=2, values_only=True)):              # Erstellung Nutzer
                                 
