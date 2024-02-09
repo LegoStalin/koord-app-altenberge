@@ -89,6 +89,22 @@
     margin-right: 25px;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
+.assign_button_orange{
+    margin: auto;
+    background-color: var(--color_icon_leave_school);
+    color: var(--font_color);
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 0px;
+    height:  2.5em;
+    width: 200px;
+    margin-right: 25px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+
 .text_pupil{
     margin-top: 25px;
     font-size: 1.7rem;
@@ -108,5 +124,4 @@
     background-color: var(--listblock_background);
     border-radius: 18px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-
 }
