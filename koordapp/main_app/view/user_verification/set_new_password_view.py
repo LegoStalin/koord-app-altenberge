@@ -23,32 +23,34 @@ def set_new_password_view(request):
     if(Personal.objects.filter(user=user).exists()):
         personal = Personal.objects.get(user=user)
         otp = personal.is_password_otp
-        if request.method == "POST":        
-            passwort1 = request.POST["new_password"]
-            passwort2 = request.POST["repeat_new_password"]         
+    if request.method == "POST":        
+        passwort1 = request.POST["new_password"]
+        passwort2 = request.POST["repeat_new_password"]         
+        if(passwort1 == passwort2):
+            passwort1 = passwort1.replace(" ", "")
             if(passwort1 == passwort2):
-                passwort1 = passwort1.replace(" ", "")
-                if(passwort1 == passwort2):
-                    if(len(str(passwort1))>=5):       # TODO: Passwort requirements  
-                        if(otp==False):    
-                            old_passwort = request.POST["old_password"] 
-                            user2=authenticate(username=user.username,password=old_passwort)
-                            if user2 == None:                
-                                messages.error(request,"Altes Passwort ist nicht korrekt")
-                                return render(request, "user_verification/set_new_pw.html", {"otp":otp})   
-                        user.set_password(passwort1)
-                        user.save()
+                if(len(str(passwort1))>=5):       # TODO: Passwort requirements  
+                    if(otp==False):    
+                        old_passwort = request.POST["old_password"] 
+                        user2=authenticate(username=user.username,password=old_passwort)
+                        if user2 == None:                
+                            messages.error(request,"Altes Passwort ist nicht korrekt")
+                            return render(request, "user_verification/set_new_pw.html", {"otp":otp})   
+                    user.set_password(passwort1)
+                    user.save()
+                    if(Personal.objects.filter(user=user).exists()):
+                        personal = Personal.objects.get(user=user)
                         personal.is_password_otp = False
                         personal.save()
-                        login(request, user)
-                        return redirect("master_web")  
-                    else:
-                        messages.error(request,"Es wurden nicht alle Passwortbedingungen erfüllt: Länge größer 5 Zeichen") 
+                    login(request, user)
+                    return redirect("master_web")  
                 else:
-                    messages.error(request,"Die Passwörter dürfen keine Leerzeichen enthalten")
+                    messages.error(request,"Es wurden nicht alle Passwortbedingungen erfüllt: Länge größer 5 Zeichen") 
             else:
-                messages.error(request,"Die beiden Passwörter stimmen nicht überein")
+                messages.error(request,"Die Passwörter dürfen keine Leerzeichen enthalten")
         else:
-            pass    #Wenn kein OTP
+            messages.error(request,"Die beiden Passwörter stimmen nicht überein")
+    else:
+        pass    #Wenn kein OTP
 
     return render(request, "user_verification/set_new_pw.html", {"otp":otp})
