@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="supervisor orange assignment button">
-      <change afterPath="$PROJECT_DIR$/main_app/static/css/representation/representation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_app/templates/representation/representation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_app/view/representation/representation.py" afterDir="false" />
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="first draft representation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/representation/representation.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/representation/representation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/representation/representation.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/representation/representation.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,14 +94,6 @@
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
       <workItem from="1706273092114" duration="118348000" />
-    </task>
-    <task id="LOCAL-00029" summary="Added transparency feature for absent pupil">
-      <option name="closed" value="true" />
-      <created>1704643926533</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1704643926533</updated>
     </task>
     <task id="LOCAL-00030" summary="Added transparency feature for absent pupil in further media queries">
       <option name="closed" value="true" />
@@ -490,7 +479,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707502378579</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="first draft representation">
+      <option name="closed" value="true" />
+      <created>1707505880228</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1707505880228</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added hover animation of log in button" />
     <MESSAGE value="Changed Hover animations of csv page buttons" />
     <MESSAGE value="Fixed opacity issue" />
     <MESSAGE value="Changed csv-import header" />
@@ -533,6 +529,7 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="fixes, pupil restricted view" />
     <MESSAGE value="supervisor orange assignment button" />
-    <option name="LAST_COMMIT_MESSAGE" value="supervisor orange assignment button" />
+    <MESSAGE value="first draft representation" />
+    <option name="LAST_COMMIT_MESSAGE" value="first draft representation" />
   </component>
 </project>
