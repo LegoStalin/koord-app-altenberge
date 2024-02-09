@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixes, pupil restricted view">
-      <change beforePath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/pupil/pupil.css" afterDir="false" />
-    </list>
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="fixes, pupil restricted view" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,14 +89,6 @@
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
       <workItem from="1706273092114" duration="118348000" />
-    </task>
-    <task id="LOCAL-00026" summary="Created infomation lists according to media queries">
-      <option name="closed" value="true" />
-      <created>1703929657754</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1703929657754</updated>
     </task>
     <task id="LOCAL-00027" summary="Refinement of logo position">
       <option name="closed" value="true" />
@@ -484,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707500731854</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="fixes, pupil restricted view">
+      <option name="closed" value="true" />
+      <created>1707501338109</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1707501338109</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
