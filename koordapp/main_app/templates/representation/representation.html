@@ -42,26 +42,37 @@
                 <label class="submit_header"></label>
 
             </div>
-            <form method="post" class="input_container">{% csrf_token %}
+            <!--<form class="input_container">-->
                 <div class="input_container">
 
+                    <form method="post" class="input_container">{% csrf_token %}
+                    {% for group in groups %}
+                    
+                        <input type="hidden" name="group" id="group" value="{{group.name}}">
                     <div class="inputblock">
-                        <label class = "category">OGS-Gruppe1:</label>
-
-                        <label class = "current">{{schueler.gruppen_id.name}}</label>
+                        <label class = "category">{{group.name}}:</label>
+                        {% if group.vertreter == None %}
+                        <label class = "current"> Keine Vertretung </label>
+                        {% else %}
+                        <label class = "current"> {{group.vertreter.nutzer.vorname}} {{group.vertreter.nutzer.nachname}}</label>
+                        {% endif %}
                         <div class="custom-select">
-                            <select name="ogs_group">
+                            <select name="representation_{{group.name}}">
                                 <option value="0" style="color:#ffff00;">...</option>
-                                {% for group in ogs_groups %}
-                                    <option value="{{group.name}}">{{group.name}}</option>
+                                {% for user in users %}
+                                    <option value="{{user.user.username}}">{{user.nutzer.vorname}} {{user.nutzer.nachname}}</option>
                                 {% endfor %}
                             </select>
                         </div>
-                        <input type='submit' class="change_button" name="change_button_ogs_group" value='Zuweisen'/>
+                        <button type='submit' class="change_button" id="change_button_representation" name="change_button_representation" value='{{group.name}}'> Zuweisen </button>
                     </div>
 
                     <div class = "line"></div>
+                    
+                    {% endfor %}
+                    </form>
 
+                    
                     <div class = "inputblock">
                         <label class = "category">OGS-Gruppe2:</label>
 
@@ -79,7 +90,7 @@
 
 
                 </div>
-            </form>
+            <!--</form>-->
         </div>
     </body>
     </html>

@@ -55,6 +55,7 @@
             {% if user.is_superuser %}
             <div class="button_container">
                 <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>
+                <button id="button_style1" onclick="window.location.href = '/representation/'"> Vertretungen </button>
             </div>
             {% endif %}
             {% else %}
@@ -67,13 +68,16 @@
                 <button id="button_style1" onclick="window.location.href = '/select_room/'"> Raumübersicht </button>
                 <button id="button_style1" onclick="window.location.href = '/preferences/'"> Persönliche Einstellungen </button>
             </div>
-        
-            <div class="button_container">
-                {% if user.is_superuser %}
+            
+            {% if user.is_superuser %}
+            <div class="button_container">          
                 <button id="button_style1" onclick="window.location.href = '/csv_import/'"> CSV-Import </button>
-                <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>
-                {% endif %}
+                <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>          
             </div>
+            <div class="button_container">
+                <button id="button_style1" onclick="window.location.href = '/representation/'"> Vertretungen </button>
+            </div>
+            {% endif %}
             {% endif %}
         {% else %}
         <div class="button_container">

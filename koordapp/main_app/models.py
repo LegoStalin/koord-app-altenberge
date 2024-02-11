@@ -26,7 +26,6 @@ class Personal(models.Model):
     nutzer = models.ForeignKey(Nutzer, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null= True)    # null=True rausmachen
     is_password_otp = models.BooleanField(default=True)
-    vertretung = models.BooleanField(default=False)
 
     class Meta:
         permissions = [("can_import", "Can import excel data")]
@@ -42,7 +41,8 @@ class Raum(models.Model):
 class Gruppe(models.Model):
     name = models.CharField(max_length=50)
     gruppen_leiter = models.ManyToManyField(Personal)        # ? mehere Gruppenleiter?
-    raum = models.ForeignKey(Raum, on_delete=models.SET_NULL, null=True)
+    raum = models.ForeignKey(Raum, on_delete=models.SET_NULL, null=True, related_name='leitende_gruppen')
+    vertreter = models.ForeignKey(Personal, on_delete=models.SET_NULL, null=True, related_name='vertretende_gruppen')
 
 class AGZeit(models.Model):
     class WOCHENTAG(models.TextChoices):

@@ -79,3 +79,12 @@ class LogsystemConfig(AppConfig):
                 newuser.save()
         except:
             pass
+
+        try:
+            models = importlib.import_module('main_app.models')
+            groups = models.Gruppe.objects.all()
+            for group in groups:
+                group.vertreter = None
+                group.save()
+        except:
+            pass

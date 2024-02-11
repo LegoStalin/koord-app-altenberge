@@ -83,7 +83,9 @@ def pupil_view(request, pupil):
                     r_b = Raum_Belegung.objects.get(raum=gruppen_raum)
                     gruppen_leiter = r_b.ag.leiter
                 if not gruppe == None:
-                    if(personal in gruppe.gruppen_leiter.all()):
+                    if(personal in gruppe.gruppen_leiter.all() and gruppe.vertreter == None):
+                        is_personal_gruppenleiter = True
+                    elif gruppe.vertreter == personal:
                         is_personal_gruppenleiter = True
 
                 return render(request, "pupil/pupil.html", {"schueler":schueler, "nutzer":nutzer, "bus_kind":bus_kind, "aufenthalt":aufenthalt, "aktuelle_ag":aktuelle_ag, "ogs_groups":ogs_groups, "klassen":klassen, "user":user, "gruppen_leiter":gruppen_leiter, "is_personal_gruppenleiter":is_personal_gruppenleiter})
