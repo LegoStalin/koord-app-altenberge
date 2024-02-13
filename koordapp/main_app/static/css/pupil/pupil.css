@@ -38,8 +38,17 @@
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 
         justify-self: end;
+        transition: 0.35s;
+        cursor: pointer;
     }
-
+    .change_button:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+        box-shadow: 0 0 20px var(--select_color_background);
+    }
     /* Style of text in front of input field*/
     .category {
         font-size: 24px;
@@ -243,8 +252,17 @@
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 
         justify-self: end;
+        transition: 0.35s;
+        cursor: pointer;
     }
-
+    .change_button:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+        box-shadow: 0 0 20px var(--select_color_background);
+    }
     /* Style of text in front of input field*/
     .category {
         font-size: 20px;
@@ -443,8 +461,17 @@
         width: 70px;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         justify-self: center;
+        transition: 0.35s;
+        cursor: pointer;
     }
-
+    .change_button:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+        box-shadow: 0 0 20px var(--select_color_background);
+    }
     /* Style of text in front of input field*/
     .category {
         font-size: 12px;

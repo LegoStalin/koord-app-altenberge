@@ -37,6 +37,16 @@
         width: 150px;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         justify-self: end;
+        transition: 0.35s;
+        cursor: pointer;
+    }
+    .change_button:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+        box-shadow: 0 0 20px var(--select_color_background);
     }
 
     /* Style of text in front of input field*/
@@ -46,7 +56,7 @@
         color: var(--font_color);
         align-self: center;
         width: 200px;
-        overflow-x: auto;
+
     }
 
     /* Style of inputfield */
@@ -240,8 +250,17 @@
         height: 50px;
         width: 120px;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-
+        transition: 0.35s;
+        cursor: pointer;
         justify-self: end;
+    }
+    .change_button:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+        box-shadow: 0 0 20px var(--select_color_background);
     }
 
     /* Style of text in front of input field*/
@@ -251,7 +270,6 @@
         color: var(--font_color);
         align-self: center;
         width: 170px;
-        overflow-x: auto;
     }
 
     /* Style of inputfield */
@@ -286,7 +304,7 @@
         font-weight: 600;
         color: var(--font_color);
         align-self: center;
-        width: 200px;
+        width: 210px;
     }
 
     .current_header {
@@ -443,6 +461,16 @@
         width: 70px;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         justify-self: center;
+        transition: 0.35s;
+        cursor: pointer;
+    }
+    .change_button:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+        box-shadow: 0 0 20px var(--select_color_background);
     }
 
     /* Style of text in front of input field*/
@@ -452,12 +480,11 @@
         color: var(--font_color);
         align-self: center;
         width: 80px;
-        overflow-x: auto;
 
     }
 
     /* Style of inputfield */
-    .inputfield {
+    .inputfield{
         height: 30px;
         width: 60px; /* 250px*/
         border-radius: 10px;
