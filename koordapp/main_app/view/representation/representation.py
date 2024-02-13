@@ -17,7 +17,6 @@ def representation_view(request):
                         gruppe.vertreter = None
                         gruppe.save()
                     # gruppe_name = request.POST.get("group")
-                    print(gruppe_name)
                     if Gruppe.objects.filter(name=gruppe_name).exists():
                         gruppe = Gruppe.objects.get(name=gruppe_name)
                         gruppe.vertreter = p_neu
@@ -25,5 +24,6 @@ def representation_view(request):
         users = Personal.objects.all()
         # raum_belegung_ids = Raum_Belegung.objects.filter(aufsichtspersonen__in=users).values_list('id', flat=True)
         # users = users.exclude(raum_belegung__id__in=raum_belegung_ids)
-        return render(request, 'representation/representation.html', {"groups": Gruppe.objects.all(),"users":users})
+        groups = Gruppe.objects.all().order_by('name')
+        return render(request, 'representation/representation.html', {"groups": groups,"users":users})
     return redirect("master_web")

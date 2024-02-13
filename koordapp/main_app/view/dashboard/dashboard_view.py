@@ -12,8 +12,11 @@ def dashboard_view(request):
     schuelers_in_movement = {}
 
     try:
-        ogs_gruppen = Gruppe.objects.filter(gruppen_leiter=personal)
-        ogs_group = ogs_gruppen[0]
+        if Gruppe.objects.filter(gruppen_leiter=personal).exists():
+            ogs_gruppen = Gruppe.objects.filter(gruppen_leiter=personal)
+            ogs_group = ogs_gruppen[0]
+        elif Gruppe.objects.filter(vertreter=personal).exists():
+            ogs_group = Gruppe.objects.get(vertreter=personal)
         ogs_group_room = ogs_group.raum
         schuelers = Schueler.objects.filter(gruppen_id=ogs_group)
         schuelers_in_room = Aufenthalt.objects.filter(zeitraum__endzeit__isnull=True, schueler_id__in=schuelers, raum_id=ogs_group_room)
