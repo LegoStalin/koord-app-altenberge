@@ -46,7 +46,7 @@
         color: var(--font_color);
         align-self: center;
         width: 200px;
-        overflow-x: auto;
+
     }
 
     /* Style of inputfield */
@@ -251,7 +251,6 @@
         color: var(--font_color);
         align-self: center;
         width: 170px;
-        overflow-x: auto;
     }
 
     /* Style of inputfield */
@@ -286,7 +285,7 @@
         font-weight: 600;
         color: var(--font_color);
         align-self: center;
-        width: 200px;
+        width: 210px;
     }
 
     .current_header {
@@ -452,12 +451,11 @@
         color: var(--font_color);
         align-self: center;
         width: 80px;
-        overflow-x: auto;
 
     }
 
     /* Style of inputfield */
-    .inputfield {
+    .inputfield{
         height: 30px;
         width: 60px; /* 250px*/
         border-radius: 10px;
