@@ -15,6 +15,7 @@ def set_nfc_set_view(request):
     if not tag_id == None:
         schueler = Schueler.objects.all()
         s_users = [s.user_id for s in schueler]
+        p_users = []
         if request.user.is_superuser:
             personal = Personal.objects.all()
             p_users = [p.nutzer for p in personal]
