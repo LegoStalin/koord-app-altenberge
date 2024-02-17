@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="added hover animations">
+    <list default="true" id="f8382234-08f2-411f-ac34-deb2f3edfe3b" name="Changes" comment="Changed spelling and names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/change_roomdata/change_roomdata.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/change_roomdata/change_roomdata.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/choose_room/choose_room.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/choose_room/choose_room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/create_activity/create_activity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/csv_import/csv_import.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/dashboard/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/history_pages/room_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/history_pages/room_history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/history_pages/room_usage_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/history_pages/room_usage_history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/room_information/room_information.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/room_information/room_information.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/user_verification/set_new_pw.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/user_verification/set_new_pw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/representation/representation.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/representation/representation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/set_nfc_set/set_nfc_set.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/set_nfc_set/set_nfc_set.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/user_verification/new_pw.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/user_verification/new_pw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/user_verification/reset_pw_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/user_verification/reset_pw_confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/user_verification/superuser.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/user_verification/superuser.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +97,6 @@
       <workItem from="1702126435765" duration="8126000" />
       <workItem from="1703685846204" duration="592000" />
       <workItem from="1706273092114" duration="118348000" />
-    </task>
-    <task id="LOCAL-00033" summary="xml adjustments">
-      <option name="closed" value="true" />
-      <created>1704718882441</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1704718882441</updated>
     </task>
     <task id="LOCAL-00034" summary="updates">
       <option name="closed" value="true" />
@@ -494,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707852297527</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Changed spelling and names">
+      <option name="closed" value="true" />
+      <created>1708195902005</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1708195902005</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added placeholder for error or success messages on page csv_import" />
     <MESSAGE value="removed comment" />
     <MESSAGE value="fixed line misplacement" />
     <MESSAGE value="removed pw from preferences" />
@@ -537,6 +532,7 @@
     <MESSAGE value="representation site" />
     <MESSAGE value="fixed overflow property" />
     <MESSAGE value="added hover animations" />
-    <option name="LAST_COMMIT_MESSAGE" value="added hover animations" />
+    <MESSAGE value="Changed spelling and names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed spelling and names" />
   </component>
 </project>

@@ -458,7 +458,7 @@
         font-size: 12px;
         font-weight: 600;
         height: 30px;
-        width: 70px;
+        width: 80px;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         justify-self: center;
         transition: 0.35s;
@@ -480,6 +480,7 @@
         color: var(--font_color);
         align-self: center;
         width: 80px;
+        overflow-x: auto;
 
     }
 
