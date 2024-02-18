@@ -45,7 +45,7 @@ def set_new_password_view(request):
                     login(request, user)
                     return redirect("master_web")  
                 else:
-                    messages.error(request,"Es wurden nicht alle Passwortbedingungen erfüllt: Länge größer 5 Zeichen") 
+                    messages.error(request,"Es wurden nicht alle Passwortbedingungen erfüllt: Die Länge muss größer als 5 Zeichen sein") 
             else:
                 messages.error(request,"Die Passwörter dürfen keine Leerzeichen enthalten")
         else:

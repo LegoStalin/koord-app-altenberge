@@ -75,19 +75,19 @@ def create_activity_view(request, raum):
                                                     raum_belegung.save()
                                                     return redirect("home")  # Weiterleitung bei erfolgreichen erstellen des raumes
                                             else:
-                                                messages.error(request, 'Die Maximale Kapatizät muss größer als Null sein')
+                                                messages.error(request, 'Die maximale Kapazität muss größer als Null sein')
                                         else:
-                                            messages.error(request, 'Bitte gib einen Namen für die Aktivität an')
+                                            messages.error(request, 'Bitte geben Sie einen Namen für die Aktivität an')
                                     else:
                                         # Error message wen kategorie nicht existiert
-                                        messages.error(request, 'Bitte wählen sie eine Aktivitätkategorie aus')
+                                        messages.error(request, 'Bitte wählen Sie eine Kategorie für die Aktivität aus')
                                 else:
-                                    messages.error(request, 'Die angegebene maximale Anzahl ist größer als die Raum Kapazität. Raum Kapazität: ' + str(raum.kapazitaet))
+                                    messages.error(request, 'Die angegebene maximale Anzahl ist größer als die Raumkapazität. Raumkapazität: ' + str(raum.kapazitaet))
                             except ValueError:
                                 #error message wenn capazitaet keine Zahl ist!
-                                messages.error(request, 'Bitte geben sie eine Maximale Anzahl an Teilnehmern an')
+                                messages.error(request, 'Bitte geben Sie die maximale Anzahl an Teilnehmern an')
                         else:
-                            messages.error(request, 'Bitte wählen sie eine Aufsichtsperson aus')
+                            messages.error(request, 'Bitte wählen Sie eine Aufsichtsperson aus')
                     elif ("button_add_personal" in request.POST):
                         last_item = default_personal_list[-1]
                         if not(last_item.personal_default=='0'):

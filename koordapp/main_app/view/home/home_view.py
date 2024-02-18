@@ -4,6 +4,7 @@ from django.contrib.auth import logout, login
 from main_app.models import Raum_Belegung, Aufenthalt, Nutzer, Schueler, Zeitraum, Personal, Feedback
 from datetime import datetime
 from main_app.view.user_verification.login_view import logout_user_from_all_sessions
+from django.contrib import messages
 
 def home_view(request, tag_id = None):
     if request.user.is_authenticated:
@@ -43,6 +44,8 @@ def home_view(request, tag_id = None):
                         if "mensa" in raum.raum_nr or "Mensa" in raum.raum_nr:
                             Feedback.objects.create(feedback_wert = Feedback.Feedbacks.GOOD, schueler_id = schueler, tag = datetime.now().date(), zeit=datetime.now().time(), mensa_feedback=True)
                         return redirect('checked_in')
+                    else:
+                        messages.error(request,"Die maximale Raumkapazität wurde bereits erreicht")
                 else:
                     if(Personal.objects.filter(nutzer=nutzer).exists()):
                         p = Personal.objects.get(nutzer=nutzer)

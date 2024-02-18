@@ -29,6 +29,11 @@
         <input type='submit' class="change_button" name="button_register_tag" value='Register Tag-ID'/>
     </form>
     -->
+        {% for message in messages%}
+            <div class = "errormessage">
+                <p> {{message}} </p>
+            </div>
+        {% endfor %}
     <form method="post" id="form">
         {% csrf_token %}
         <input type="hidden" name="tag_id" id="tag_id" value="">
