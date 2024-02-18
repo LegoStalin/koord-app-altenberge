@@ -6,7 +6,7 @@
 #display_otp_info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   width: 80%;
@@ -132,7 +132,9 @@
   #user_login input[type="email"],
   #user_login label {
     font-size: 2em;
-    min-width: 25%;
+    min-width: 20%;
+    max-width: 40%;
+    overflow: hidden;
   }
   #user_login label[for="otp_field"],
   #user_login label[for="username"] {
@@ -211,7 +213,9 @@
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   #display_otp_info label {
     margin: 1vh 1vw 1vh 1vw;
-    width: 50%;
+    min-width: 70%;
+    max-width: 80%;
+    overflow: hidden;
   }
 
   .form_container {
@@ -359,7 +363,7 @@
   }
 
   .heading_type1 {
-    font-size: 4vh;
+    font-size: 1.8em;
     font-weight: 600;
     margin-top: 15vh;
   }
@@ -373,7 +377,7 @@
   #user_login input[type="password"],
   #user_login input[type="email"],
   #user_login label {
-    font-size: 3vh;
+    font-size: 1.5em;
   }
   .form_fields p {
     display: flex;
@@ -450,7 +454,9 @@
   }
   #display_otp_info label {
     margin: 1vh 1vw 1vh 1vw;
-    width: 50%;
+    min-width: 70%;
+    max-width: 80%;
+    overflow: hidden;
   }
   #display_otp_info {
     width: 100%;
