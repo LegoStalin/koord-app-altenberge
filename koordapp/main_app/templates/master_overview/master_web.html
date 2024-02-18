@@ -70,6 +70,12 @@
                 <button id="button_style1" onclick="window.location.href = '/select_room/'"> Raumübersicht </button>
                 <button id="button_style1" onclick="window.location.href = '/representation/'"> Vertretungen </button>
             </div>
+            {% if request.user_agent.is_mobile %}
+            <div class="button_container">          
+                <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>          
+                <button id="button_style1" onclick="window.location.href = '/preferences/'"> Persönliche Einstellungen </button>
+            </div>
+            {% else %}
             <div class="button_container">          
                 <button id="button_style1" onclick="window.location.href = '/csv_import/'"> CSV-Import </button>
                 <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>          
@@ -77,6 +83,7 @@
             <div class="button_container">
                 <button id="button_style1" onclick="window.location.href = '/preferences/'"> Persönliche Einstellungen </button>
             </div>
+            {% endif %}            
             {% else %}
             <div class="button_container">
                 <button id="button_style1" onclick="window.location.href = '/select_room/'"> Raumübersicht </button>
@@ -85,6 +92,12 @@
             {% endif %}
             {% endif %}
         {% else %}
+        {% if request.user_agent.is_mobile %}
+        <div class="button_container">
+            <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>
+            <button id="button_style1" onclick="window.location.href = '/set_new_pw/'"> Root Passwort Ändern </button>
+        </div>
+        {% else %}
         <div class="button_container">
             <button id="button_style1" onclick="window.location.href = '/csv_import/'"> CSV-Import </button>
             <button id="button_style1" onclick="window.location.href = '/superuser/'"> Passwörter Zurücksetzen </button>
@@ -92,6 +105,7 @@
         <div class="button_container">
             <button id="button_style1" onclick="window.location.href = '/set_new_pw/'"> Root Passwort Ändern </button>
         </div>
+        {% endif %}
         {% endif %}
     </div>
 </div>
