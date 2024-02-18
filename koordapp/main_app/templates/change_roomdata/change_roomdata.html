@@ -20,7 +20,7 @@
                 <h3>Was muss ich in diesem Anzeigefenster beachten?</h3>
 
                 <div class="content">
-                    <p>In dieser Ansicht können Sie bei Bedarf die <strong>Rauminformationen ändern</strong>. Geben sie hierzu ihre neuen Daten in das entsprechende <strong>Eingabefeld</strong> ein.
+                    <p>In dieser Ansicht können Sie bei Bedarf die <strong>Rauminformationen ändern</strong>. Geben Sie hierzu Ihre neuen Daten in das entsprechende <strong>Eingabefeld</strong> ein.
                         Tippen Sie auf <strong>"Ändern"</strong>, um die neuen Daten zu speichen.</p>
                 </div>
 
@@ -87,7 +87,7 @@
             <div class = "line"></div>
             <form method="post">{% csrf_token %}
                 <div class = "inputblock">
-                    <label class = "category">Aktivität:</label>
+                    <label class = "category">Aktivitätsname:</label>
                     <label class = "current">{{ag.name}}</label>
                     <input type="text" class="inputfield" name="activity" placeholder="Neue Aktivität.." />
                     <input type='submit' class="change_button" name="change_button_activity" value='Ändern'/>
@@ -96,7 +96,7 @@
             <div class = "line"></div>
             <form method="post">{% csrf_token %}
                 <div class="inputblock">
-                    <label class = "category">Kategorie:</label>
+                    <label class = "category">AG-Kategorie:</label>
                     <label class = "current">{{ag.ag_kategorie.name}}</label>
                     <div class="custom-select">
                         <select name="category_name">

@@ -55,12 +55,12 @@
         </div>
         {% endfor %}
         <div class = "inputblock">
-            <label class = "category">Aktivitätskategorie:</label>
-            <input type="text" class="inputfield" name="activity" placeholder="Aktivitätskategorie" {% if not default_activity == None %} value="{{default_activity}}" {%endif%} required/>
+            <label class = "category">Aktivitätsname:</label>
+            <input type="text" class="inputfield" name="activity" placeholder="Aktivitätsname" {% if not default_activity == None %} value="{{default_activity}}" {%endif%} required/>
         </div>
 
         <div class="inputblock">
-            <label class = "category">Kategorie:</label>
+            <label class = "category">AG-Kategorie:</label>
             <div class="custom-select">
                 <select name="ag_kategorie">
                     <option value="0" style="color:#ffff00;">Bitte auswählen..</option>
