@@ -36,8 +36,8 @@
         <div class = "list">
             <form method="post" class="input_container">{% csrf_token %}
                 <div class = "searchcontainer">
-                    <input type="text" class="searchbar" name="search" placeholder="Namen eingeben.." value="{{search}}"/>
-                    <input type="submit" name="button_search" class="search_button" value="Suchen"></input>
+                    <input type="text" class="searchbar" name="search" placeholder="Namen eingeben.." value="{{search}}">
+                    <input type="submit" class="search_button" name="button_search"  value="Suchen">
                 </div>
             </form>
             {% for schuler in schueler_active %}
