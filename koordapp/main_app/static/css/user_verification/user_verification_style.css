@@ -42,7 +42,7 @@
   color: black;
 }
 .login_form {
-  width: 90%;
+  width: 75%;
   margin: auto;
 }
 #user_login input {
@@ -144,7 +144,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     gap: 10%;
   }
@@ -189,7 +189,7 @@
   }
   #user_login input[type="text"],
   #user_login input[type="password"] {
-    width: 60%;
+    width: 80%;
   }
   #user_login input[type="email"] {
     width: min(64vw, 900px);
